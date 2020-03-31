@@ -32,9 +32,6 @@ psychoJS.scheduleCondition(function() { return (psychoJS.gui.dialogComponent.but
 // flowScheduler gets run if the participants presses OK
 flowScheduler.add(updateInfo); // add timeStamp
 flowScheduler.add(experimentInit);
-flowScheduler.add(setupRoutineBegin());
-flowScheduler.add(setupRoutineEachFrame());
-flowScheduler.add(setupRoutineEnd());
 const run_1LoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(run_1LoopBegin, run_1LoopScheduler);
 flowScheduler.add(run_1LoopScheduler);
@@ -71,14 +68,11 @@ function updateInfo() {
 }
 
 
-var setupClock;
 var trials_run_1Clock;
 var main_image;
 var globalClock;
 var routineTimer;
 function experimentInit() {
-  // Initialize components for Routine "setup"
-  setupClock = new util.Clock();
   // Initialize components for Routine "trials_run_1"
   trials_run_1Clock = new util.Clock();
   main_image = new visual.ImageStim({
@@ -98,81 +92,6 @@ function experimentInit() {
 }
 
 
-var t;
-var frameN;
-var setupComponents;
-function setupRoutineBegin(trials) {
-  return function () {
-    //------Prepare to start Routine 'setup'-------
-    t = 0;
-    setupClock.reset(); // clock
-    frameN = -1;
-    // update component parameters for each repeat
-    // keep track of which components have finished
-    setupComponents = [];
-    
-    setupComponents.forEach( function(thisComponent) {
-      if ('status' in thisComponent)
-        thisComponent.status = PsychoJS.Status.NOT_STARTED;
-       });
-    
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
-var continueRoutine;
-function setupRoutineEachFrame(trials) {
-  return function () {
-    //------Loop for each frame of Routine 'setup'-------
-    let continueRoutine = true; // until we're told otherwise
-    // get current time
-    t = setupClock.getTime();
-    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
-    // update/draw components on each frame
-    // check for quit (typically the Esc key)
-    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
-      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
-    }
-    
-    // check if the Routine should terminate
-    if (!continueRoutine) {  // a component has requested a forced-end of Routine
-      return Scheduler.Event.NEXT;
-    }
-    
-    continueRoutine = false;  // reverts to True if at least one component still running
-    setupComponents.forEach( function(thisComponent) {
-      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
-        continueRoutine = true;
-      }
-    });
-    
-    // refresh the screen if continuing
-    if (continueRoutine) {
-      return Scheduler.Event.FLIP_REPEAT;
-    } else {
-      return Scheduler.Event.NEXT;
-    }
-  };
-}
-
-
-function setupRoutineEnd(trials) {
-  return function () {
-    //------Ending Routine 'setup'-------
-    setupComponents.forEach( function(thisComponent) {
-      if (typeof thisComponent.setAutoDraw === 'function') {
-        thisComponent.setAutoDraw(false);
-      }
-    });
-    // the Routine "setup" was not non-slip safe, so reset the non-slip timer
-    routineTimer.reset();
-    
-    return Scheduler.Event.NEXT;
-  };
-}
-
-
 var run_1;
 var currentLoop;
 function run_1LoopBegin(thisScheduler) {
@@ -181,7 +100,7 @@ function run_1LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, '0:83'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'encoding_table.csv', '0:83'),
     seed: undefined, name: 'run_1'
   });
   psychoJS.experiment.addLoop(run_1); // add the loop to the experiment
@@ -209,6 +128,8 @@ function run_1LoopEnd() {
 }
 
 
+var t;
+var frameN;
 var trials_run_1Components;
 function trials_run_1RoutineBegin(trials) {
   return function () {
@@ -235,6 +156,7 @@ function trials_run_1RoutineBegin(trials) {
 
 
 var frameRemains;
+var continueRoutine;
 function trials_run_1RoutineEachFrame(trials) {
   return function () {
     //------Loop for each frame of Routine 'trials_run_1'-------

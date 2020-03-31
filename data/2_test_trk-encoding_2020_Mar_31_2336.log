@@ -1,0 +1,9 @@
+0.6402 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+8.8264 	WARNING 	Monitor specification not found. Creating a temporary one...
+8.8357 	WARNING 	Trying to use a framebuffer object but GL_EXT_framebuffer_object is not supported. Disabled
+8.8357 	WARNING 	Trying to use a framebuffer object but GL_ARB_texture_float is not supported. Disabling
+9.1209 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x000001D09AB8C908>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x000001D099833320>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=False, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+9.1209 	EXP 	window1: recordFrameIntervals = False
+9.1270 	EXP 	window1: recordFrameIntervals = True
+9.1338 	EXP 	window1: recordFrameIntervals = False
+9.2075 	EXP 	window1: mouseVisible = True

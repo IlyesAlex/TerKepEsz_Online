@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on March 31, 2020, at 23:36
+    on March 31, 2020, at 23:43
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -80,6 +80,17 @@ else:
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
+# Initialize components for Routine "select_stimuli_table"
+select_stimuli_tableClock = core.Clock()
+setup_text = visual.TextStim(win=win, name='setup_text',
+    text='A vizsgálati változók beállítása...',
+    font='Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color='white', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
+stimuli_table = 'encoding_table.csv'
+
 # Initialize components for Routine "trials_run_1"
 trials_run_1Clock = core.Clock()
 main_image = visual.ImageStim(
@@ -94,6 +105,75 @@ main_image = visual.ImageStim(
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
 routineTimer = core.CountdownTimer()  # to track time remaining of each (non-slip) routine 
+
+# ------Prepare to start Routine "select_stimuli_table"-------
+continueRoutine = True
+routineTimer.add(1.000000)
+# update component parameters for each repeat
+# keep track of which components have finished
+select_stimuli_tableComponents = [setup_text]
+for thisComponent in select_stimuli_tableComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+select_stimuli_tableClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "select_stimuli_table"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = select_stimuli_tableClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=select_stimuli_tableClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *setup_text* updates
+    if setup_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        setup_text.frameNStart = frameN  # exact frame index
+        setup_text.tStart = t  # local t and not account for scr refresh
+        setup_text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(setup_text, 'tStartRefresh')  # time at next scr refresh
+        setup_text.setAutoDraw(True)
+    if setup_text.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > setup_text.tStartRefresh + 1.0-frameTolerance:
+            # keep track of stop time/frame for later
+            setup_text.tStop = t  # not accounting for scr refresh
+            setup_text.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(setup_text, 'tStopRefresh')  # time at next scr refresh
+            setup_text.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in select_stimuli_tableComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "select_stimuli_table"-------
+for thisComponent in select_stimuli_tableComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('setup_text.started', setup_text.tStartRefresh)
+thisExp.addData('setup_text.stopped', setup_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
 run_1 = data.TrialHandler(nReps=1, method='sequential', 

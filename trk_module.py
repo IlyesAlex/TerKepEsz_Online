@@ -1,18 +1,12 @@
-# TODO:
-# add function descriptions
-# imrove OLP foil location
-# add comments
+# This module contais functions necessary for creating unique stimuli tables for
+# each participant based on the queasi-randomized structure laid out in the
+# StimuliTable-Encoding and StimTable-Recognition
+# Taken from the offline TerKepEsz experiment version.
+# Modified for online use and 'hard-coded' trial order.
 
 import pandas as pd
 import numpy as np
 import random as rd
-
-def read_jitters(fname):
-    jitters_file = open(fname, 'r')
-    jitters = jitters_file.read().split('\n')
-    jitters = [float(jitter)/1000 for jitter in jitters]
-    jitters_file.close()
-    return jitters
 
 def select_images(n_images_used = 121, n_all_images= 180):
     images = [im for im in range(1,n_all_images+1)]
@@ -79,7 +73,7 @@ def set_image(stim_table, tr, task):
 
 def set_position(stim_table, tr):
     position = (0,0)
-    if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2: #in the recognition table, StimType is always FOIL, TARGET or LURE. in the encodint stim_table, StimType is LLP, ERP or LLP 
+    if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2: #in the recognition table, StimType is always FOIL, TARGET or LURE. in the encodint stim_table, StimType is LLP, ERP or LLP
         position = (stim_table.at[tr, 'Xcoordinate_lure1'], stim_table.at[tr, 'Ycoordinate_lure1'])
     else:
         position = (stim_table.at[tr, 'Xcoordinate'], stim_table.at[tr, 'Ycoordinate'])

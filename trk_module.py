@@ -4,9 +4,23 @@
 # Taken from the offline TerKepEsz experiment version.
 # Modified for online use and 'hard-coded' trial order.
 
+# Abbreviations:
+# OLP - Object Lure Pair
+# LLP - Location Lure Pair
+# ERP - Exact Repeat Pair
+# BL - Baseline (repeated more than once)
+
 import pandas as pd
 import numpy as np
 import random as rd
+
+def get_exp_parameters(encoding_table, recognition_table):
+    '''Read dataframes and return the number of encoding images, BL trials, and foil images'''
+    n_bl = encoding_trials.groupby('BL').count()
+    # define number of images based on the number of rows in the StimuliTable
+    # and the count of BL trials
+    n_encoding_images = ((len(encoding_trials.index) - n_bl)/2) + 1 # add 1 for the baseline image
+    return None
 
 def select_images(n_images_used = 121, n_all_images= 180):
     images = [im for im in range(1,n_all_images+1)]
@@ -20,7 +34,7 @@ def select_images(n_images_used = 121, n_all_images= 180):
         vars = variants.copy()
         rd.shuffle(vars)
         for v in vars:
-            file = 'Stimuli/Fractals/' + str(im) + v + '.jpg'
+            file = 'stimuli/fractals/' + str(im) + v + '.jpg'
             image_files.append(file)
     image_files = np.reshape(image_files, (n_images_used, 3))
 
@@ -28,34 +42,11 @@ def select_images(n_images_used = 121, n_all_images= 180):
         vars = variants.copy()
         rd.shuffle(vars)
         for v in vars:
-            file = 'Stimuli/Fractals/' + str(f) + v + '.jpg'
+            file = 'stimuli/fractals/' + str(f) + v + '.jpg'
             foil_files.append(file)
     foil_files = np.reshape(foil_files, (n_all_images - n_images_used, 3))
 
     return image_files, foil_files
-
-def create_stimtable(images, fname):
-    stim_table = pd.read_excel(fname)
-    TripletMembers = ['TripletMemberA','TripletMemberB','TripletMemberC']
-    for TripletMember in TripletMembers:
-        stim_table[TripletMember] = stim_table[TripletMember].astype(str) #change None (float) to 'None' (string)
-
-    im_index = 1 #index used to loop through the images - starts at 1 because BL is always image 0
-    for i, row in stim_table.iterrows():
-        delay = i + stim_table.at[i, 'Delay'] + 1
-        # select image for BL #
-        if row['Order'] == 0:
-            for TripletMember, j in zip(TripletMembers, [0,1,2]):
-                stim_table.at[i, TripletMember] = images[0][j]
-        #select image for non-BL trials, first and second presentation
-        elif row['Order'] == 1:
-            for TripletMember, j in zip(TripletMembers, [0,1,2]):
-                stim_table.at[i, TripletMember] = images[im_index][j] # first presentation
-                stim_table.at[delay, TripletMember] = images[im_index][j] # second presentation (based on 'Delay' value)
-
-            im_index += 1
-
-    return stim_table
 
 def set_image(stim_table, tr, task):
     image = 'Error - no image found'
@@ -79,6 +70,30 @@ def set_position(stim_table, tr):
         position = (stim_table.at[tr, 'Xcoordinate'], stim_table.at[tr, 'Ycoordinate'])
 
     return position
+
+def set_encoding_trials(encoding_table, n_encoding_images, n_all_images):
+    encoding_trials = encoding_table
+    images, foil_images = select_images(n_encoding_images, n_all_images)
+    TripletMembers = ['TripletMemberA','TripletMemberB','TripletMemberC']
+    for TripletMember in TripletMembers:
+        encoding_trials[TripletMember] = encoding_trials[TripletMember].astype(str) #change None (float) to 'None' (string)
+
+    im_index = 1 #index used to loop through the images - starts at 1 because BL is always image 0
+    for i, row in encoding_trials.iterrows():
+        delay = i + encoding_trials.at[i, 'Delay'] + 1
+        # select image for BL #
+        if row['Order'] == 0:
+            for TripletMember, j in zip(TripletMembers, [0,1,2]):
+                encoding_trials.at[i, TripletMember] = images[0][j]
+        #select image for non-BL trials, first and second presentation
+        elif row['Order'] == 1:
+            for TripletMember, j in zip(TripletMembers, [0,1,2]):
+                encoding_trials.at[i, TripletMember] = images[im_index][j] # first presentation
+                encoding_trials.at[delay, TripletMember] = images[im_index][j] # second presentation (based on 'Delay' value)
+
+            im_index += 1
+
+    return encoding_trials
 
 def set_recognition_row(recognition_table, i, trial_type, recognition_type, stimuli_table, stimuli_index, foilx = None, foily = None):
     if trial_type == 'LOC':

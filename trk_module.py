@@ -48,21 +48,19 @@ def select_images(n_images_used, n_all_images):
 
     return image_files, foil_files
 
-def set_image(stim_table, tr, task):
-    image = 'Error - no image found'
-    #for encoding
-    if task == 'encoding':
-        if stim_table.at[tr, 'StimType'] == 'OLP' and stim_table.at[tr, 'Order'] == 2:
-            image = stim_table.at[tr, 'TripletMemberB']
-        else:
-            image = stim_table.at[tr, 'TripletMemberA']
-    elif task == 'recognition' or task=='practice':
-        image = stim_table.at[tr, 'ImagePresented']
+def set_encoding_image(stim_table, trial_index):
+    '''Set currently presented image for each trial based on trial type and
+    order of presentation.'''
+    image = None
+    if stim_table.at[trial_index, 'StimType'] == 'OLP' and stim_table.at[trial_index, 'Order'] == 2:
+        image = stim_table.at[trial_index, 'TripletMemberB']
     else:
-        print('Task unknown. Choose encoding, recognition or practice')
+        image = stim_table.at[trial_index, 'TripletMemberA']
     return image
 
-def set_position(stim_table, tr):
+def set_encoding_position(stim_table, tr):
+    '''Set X and Y coordinate of currently presented image for each trial based
+    on trial type and order of presentation. Returns with tuple (CurrentX, CurrentY).'''
     position = (0,0)
     if stim_table.at[tr, 'StimType'] == 'LLP' and stim_table.at[tr, 'Order'] == 2: #in the recognition table, StimType is always FOIL, TARGET or LURE. in the encodint stim_table, StimType is LLP, ERP or LLP
         position = (stim_table.at[tr, 'Xcoordinate_lure1'], stim_table.at[tr, 'Ycoordinate_lure1'])
@@ -72,11 +70,15 @@ def set_position(stim_table, tr):
     return position
 
 def set_encoding_trials(encoding_table, n_encoding_images, n_all_images):
+    '''Create table of trials based on the StimuliTable-Encoding where images are
+     randomized but bound by trial type and presentation order between pairs.'''
     encoding_trials = encoding_table
     images, foil_images = select_images(n_encoding_images, n_all_images)
     TripletMembers = ['TripletMemberA','TripletMemberB','TripletMemberC']
+    # change None (float) to 'None' (string) for image name columns
     for TripletMember in TripletMembers:
-        encoding_trials[TripletMember] = encoding_trials[TripletMember].astype(str) #change None (float) to 'None' (string)
+        encoding_trials[TripletMember] = encoding_trials[TripletMember].astype(str)
+    encoding_trials['CurrentImage'] = encoding_trials['CurrentImage'].astype(str)
 
     im_index = 1 #index used to loop through the images - starts at 1 because BL is always image 0
     for i, row in encoding_trials.iterrows():
@@ -90,9 +92,10 @@ def set_encoding_trials(encoding_table, n_encoding_images, n_all_images):
             for TripletMember, j in zip(TripletMembers, [0,1,2]):
                 encoding_trials.at[i, TripletMember] = images[im_index][j] # first presentation
                 encoding_trials.at[delay, TripletMember] = images[im_index][j] # second presentation (based on 'Delay' value)
-
+            # increase image index only once per image pair (when Order==1)
             im_index += 1
-
+        encoding_trials.at[i, 'CurrentImage'] = set_encoding_image(encoding_trials, i)
+        encoding_trials.at[i, 'CurrentX'], encoding_trials.at[i, 'CurrentY'] = set_encoding_position(encoding_trials, i)
     return encoding_trials
 
 def set_recognition_row(recognition_table, i, trial_type, recognition_type, stimuli_table, stimuli_index, foilx = None, foily = None):

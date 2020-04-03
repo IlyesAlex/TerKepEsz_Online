@@ -22,7 +22,7 @@ def get_exp_parameters(encoding_table, recognition_table):
     n_encoding_images = ((len(encoding_trials.index) - n_bl)/2) + 1 # add 1 for the baseline image
     return None
 
-def select_images(n_images_used = 121, n_all_images= 180):
+def select_images(n_images_used, n_all_images):
     images = [im for im in range(1,n_all_images+1)]
     rd.shuffle(images)
     foils = images[n_images_used:]

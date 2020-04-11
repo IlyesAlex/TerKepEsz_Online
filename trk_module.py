@@ -16,13 +16,26 @@ import random as rd
 
 def get_exp_parameters(encoding_table, recognition_table):
     '''Read dataframes and return the number of encoding images, BL trials, and foil images'''
-    n_bl = encoding_trials.groupby('BL').count()
+    n_bl = encoding_table[encoding_table.StimType == 'BL'].shape[0]
     # define number of images based on the number of rows in the StimuliTable
     # and the count of BL trials
-    n_encoding_images = ((len(encoding_trials.index) - n_bl)/2) + 1 # add 1 for the baseline image
-    return None
+    n_encoding_images = ((len(encoding_table.index) - n_bl)/2) + 1 # add 1 for the baseline image
+    n_encoding_images = int(n_encoding_images)
+
+    # define number of all images as encoding images plus Object trial - foil images
+    object = recognition_table.TrialType == 'OBJ'
+    foil = recognition_table.StimType == 'FOIL'
+    object_foil = object & foil
+    n_foils = recognition_table[object_foil].shape[0]
+    n_all_images = n_foils + n_encoding_images
+    n_all_images = int(n_all_images)
+
+    return n_encoding_images, n_all_images
 
 def select_images(n_images_used, n_all_images):
+    '''Randomize image type order and select encoding and foil images. Images
+    are organized in a 3 by n_all_images shape array.
+    First dimensions are variants a,b and c, in random order.'''
     images = [im for im in range(1,n_all_images+1)]
     rd.shuffle(images)
     foils = images[n_images_used:]

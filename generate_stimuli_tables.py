@@ -16,5 +16,9 @@ for i in range(n_files):
     outpath = 'stimuli_tables'
     encoding_trials_fname = 'encoding_trials_{}.csv'.format(str(i))
     regognition_trials_fname = 'recognition_trials_{}.csv'.format(str(i))
-    encoding_trials = trk.set_encoding_trials(encoding_table, 121, 145)
+    images, foil_images = trk.select_images(121, 145)
+    encoding_trials = trk.set_encoding_trials(encoding_table, images)
     encoding_trials.to_csv(op.join(outpath, encoding_trials_fname), index=False)
+
+    recognition_trials = trk.set_recognition_trials(recognition_table, encoding_trials, foil_images)
+    recognition_trials.to_csv(op.join(outpath, regognition_trials_fname), index=False)

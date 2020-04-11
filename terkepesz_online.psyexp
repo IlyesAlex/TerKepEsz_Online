@@ -32,33 +32,6 @@
     <Param name="logging level" updates="None" val="exp" valType="code"/>
   </Settings>
   <Routines>
-    <Routine name="trials_run_1">
-      <ImageComponent name="main_image">
-        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
-        <Param name="disabled" updates="None" val="False" valType="bool"/>
-        <Param name="durationEstim" updates="None" val="" valType="code"/>
-        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
-        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="set every repeat" val="$TripletMemberA" valType="str"/>
-        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
-        <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="main_image" valType="code"/>
-        <Param name="opacity" updates="constant" val="1" valType="code"/>
-        <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="set every repeat" val="(Xcoordinate,Ycoordinate)" valType="code"/>
-        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(300, 300)" valType="code"/>
-        <Param name="startEstim" updates="None" val="" valType="code"/>
-        <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
-        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
-        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
-      </ImageComponent>
-    </Routine>
     <Routine name="select_stimuli_table">
       <TextComponent name="setup_text">
         <Param name="color" updates="constant" val="white" valType="str"/>
@@ -85,8 +58,8 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <CodeComponent name="select_trials">
-        <Param name="Begin Experiment" updates="constant" val="tables = [0,1]&amp;#10;selected = np.random.choice(tables)&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="tables = [0, 1];&amp;#10;selected = tables[Math.floor(Math.random() * tables.length)];&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="tables = [0]&amp;#10;selected = np.random.choice(tables)&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="tables = [0];&amp;#10;selected = tables[Math.floor(Math.random() * tables.length)];&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
@@ -99,11 +72,28 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="select_trials" valType="code"/>
       </CodeComponent>
+      <CodeComponent name="selection_setup">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = 0;&amp;#10;end = 0;&amp;#10;step = 1;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = 0&amp;#10;end = 0&amp;#10;step = 1&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="selection_setup" valType="code"/>
+      </CodeComponent>
+    </Routine>
+    <Routine name="take_selection">
       <CodeComponent name="code">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="n = 5;&amp;#10;selection = Array.from({length: N}, (_, index) =&gt; index + 1);&amp;#10;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="n = 5&amp;#10;selection = np.arange(0, 5, 1)" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 5);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 5&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -115,10 +105,75 @@
         <Param name="name" updates="None" val="code" valType="code"/>
       </CodeComponent>
     </Routine>
+    <Routine name="pause">
+      <TextComponent name="text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="name" updates="None" val="text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Szünet" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="trial">
+      <ImageComponent name="main_image">
+        <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
+        <Param name="flipVert" updates="constant" val="False" valType="bool"/>
+        <Param name="image" updates="set every repeat" val="$TripletMemberA" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="mask" updates="constant" val="None" valType="str"/>
+        <Param name="name" updates="None" val="main_image" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every repeat" val="(Xcoordinate,Ycoordinate)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="size" updates="constant" val="(300, 300)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="texture resolution" updates="constant" val="128" valType="code"/>
+        <Param name="units" updates="None" val="pix" valType="str"/>
+      </ImageComponent>
+    </Routine>
   </Routines>
   <Flow>
     <Routine name="select_stimuli_table"/>
-    <LoopInitiator loopType="TrialHandler" name="run_1">
+    <LoopInitiator loopType="TrialHandler" name="runs">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="name" updates="None" val="runs" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="take_selection"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
       <Param name="Selected rows" updates="None" val="$selection" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$stimuli_table" valType="str"/>
@@ -126,10 +181,12 @@
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
       <Param name="nReps" updates="None" val="1" valType="code"/>
-      <Param name="name" updates="None" val="run_1" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <Routine name="trials_run_1"/>
-    <LoopTerminator name="run_1"/>
+    <Routine name="trial"/>
+    <LoopTerminator name="trials"/>
+    <Routine name="pause"/>
+    <LoopTerminator name="runs"/>
   </Flow>
 </PsychoPy2experiment>

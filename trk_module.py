@@ -97,11 +97,20 @@ def set_encoding_trials(encoding_table, images):
         encoding_trials.at[i, 'CurrentX'], encoding_trials.at[i, 'CurrentY'] = set_encoding_position(encoding_trials, i)
     return encoding_trials
 
-def fill_from_encoding(recognition_trials):
+def fill_from_encoding(recognition_trials, i, encoding_trials, stimuli_index):
+    '''Copy corrsponding values from the encoding trials to the recognition trials'''
     TripletMembers = ['TripletMemberA', 'TripletMemberB', 'TripletMemberC']
-    return None
+    Coordinates = ['Xcoordinate', 'Ycoordinate',\
+                  'Xcoordinate_lure1', 'Ycoordinate_lure1',\
+                  'Xcoordinate_lure2', 'Ycoordinate_lure2',\
+                  'Xcoordinate_foil','Ycoordinate_foil']
+    recognition_trials.loc[i, TripletMembers] = encoding_trials.loc[stimuli_index, TripletMembers]
+    recognition_trials.loc[i, Coordinates] = encoding_trials.loc[stimuli_index, Coordinates]
 
-def set_recognition_row(recognition_trials, i, trial_type, recognition_type,stimuli_table, stimuli_index, foilx = None, foily = None):
+    return recognition_trials
+
+def set_recognition_row(recognition_trials, i, trial_type, recognition_type,\
+                        stimuli_table, stimuli_index, foilx=None, foily=None):
     if trial_type == 'LOC':
         image = 'TripletMemberA'
         if recognition_type == 'FOIL':
@@ -141,10 +150,11 @@ def set_recognition_row(recognition_trials, i, trial_type, recognition_type,stim
         recognition_trials.at[i, 'CurrentImage'] = stimuli_table.at[stimuli_index, image]
         recognition_trials.at[i, 'CurrentX'] = stimuli_table.at[stimuli_index, coordX]
         recognition_trials.at[i, 'CurrentY'] = stimuli_table.at[stimuli_index, coordY]
-        recognition_trials.at[i, 'EncodingImage'] = stimuli_table.at[stimuli_index, 'TripletMemberA']
-        recognition_trials.at[i, 'EncodingXcoordinate'] = stimuli_table.at[stimuli_index, 'Xcoordinate']
-        recognition_trials.at[i, 'EncodingYcoordinate'] = stimuli_table.at[stimuli_index, 'Ycoordinate']
+        recognition_trials.at[i, 'EncodingImage'] = stimuli_table.at[stimuli_index, 'CurrentImage']
+        recognition_trials.at[i, 'EncodingXcoordinate'] = stimuli_table.at[stimuli_index, 'CurrentX']
+        recognition_trials.at[i, 'EncodingYcoordinate'] = stimuli_table.at[stimuli_index, 'CurrentY']
         recognition_trials.at[i, 'EncodingTrialIndex'] = stimuli_table.at[stimuli_index, 'TrialIndex']
+        fill_from_encoding(recognition_trials, i, stimuli_table, stimuli_index)
 
     return recognition_trials
 

@@ -80,13 +80,13 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A vizsgálati változók beállítása..." valType="str"/>
+        <Param name="text" updates="set every repeat" val="$stimuli_table" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <CodeComponent name="code">
-        <Param name="Begin Experiment" updates="constant" val="stimuli_table = 'encoding_table.csv'" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="stimuli_table = &quot;encoding_table.csv&quot;;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="tables = [0,1]&amp;#10;selected = np.random.choice(tables)&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;selection = [0,1,2,3]" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="tables = [0, 1];&amp;#10;selected = np.random.choice(tables);&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;selection = [0, 1, 2, 3];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
@@ -104,7 +104,7 @@
   <Flow>
     <Routine name="select_stimuli_table"/>
     <LoopInitiator loopType="TrialHandler" name="run_1">
-      <Param name="Selected rows" updates="None" val="0:83" valType="str"/>
+      <Param name="Selected rows" updates="None" val="$selection" valType="str"/>
       <Param name="conditions" updates="None" val="None" valType="str"/>
       <Param name="conditionsFile" updates="None" val="$stimuli_table" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>

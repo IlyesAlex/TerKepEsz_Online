@@ -1,0 +1,159 @@
+0.4187 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+1.0074 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+4.0952 	WARNING 	Monitor specification not found. Creating a temporary one...
+4.4463 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7fd05222ee80>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7fd0500910f0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.4464 	EXP 	window1: recordFrameIntervals = False
+4.4557 	EXP 	window1: recordFrameIntervals = True
+4.4600 	WARNING 	t of last frame was 1.54ms (=1/650)
+4.4671 	EXP 	window1: recordFrameIntervals = False
+4.5185 	EXP 	Created setup_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='setup_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+4.5206 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+4.5294 	EXP 	setup_text: text = 'stimuli_tables/encoding_trials_0.csv'
+4.5294 	EXP 	setup_text: autoDraw = True
+5.7279 	EXP 	Imported stimuli_tables/encoding_trials_0.csv as conditions, 83 conditions, 20 params
+5.7283 	EXP 	Created sequence: sequential, trialTypes=83, nReps=1, seed=None
+5.7288 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/101b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/101b.jpg'), ('TripletMemberB', 'stimuli/fractals/101a.jpg'), ('TripletMemberC', 'stimuli/fractals/101c.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+5.8110 	EXP 	setup_text: autoDraw = False
+5.8110 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+5.8110 	EXP 	main_image: image = 'stimuli/fractals/101b.jpg'
+5.8110 	EXP 	main_image: autoDraw = True
+6.5220 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/97b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/97b.jpg'), ('TripletMemberB', 'stimuli/fractals/97c.jpg'), ('TripletMemberC', 'stimuli/fractals/97a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+6.6707 	EXP 	main_image: autoDraw = False
+6.6707 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+6.6707 	EXP 	main_image: image = 'stimuli/fractals/97b.jpg'
+6.6707 	EXP 	main_image: autoDraw = True
+7.5213 	EXP 	New trial (rep=0, index=2): OrderedDict([('TrialIndex', 3), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'LLP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/76b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/76b.jpg'), ('TripletMemberB', 'stimuli/fractals/76c.jpg'), ('TripletMemberC', 'stimuli/fractals/76a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', 300.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+7.6812 	EXP 	main_image: autoDraw = False
+7.6812 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+7.6812 	EXP 	main_image: image = 'stimuli/fractals/76b.jpg'
+7.6812 	EXP 	main_image: autoDraw = True
+8.5211 	EXP 	New trial (rep=0, index=3): OrderedDict([('TrialIndex', 4), ('Jitter', 1000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 1), ('Delay', 2), ('CurrentImage', 'stimuli/fractals/19a.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/19a.jpg'), ('TripletMemberB', 'stimuli/fractals/19c.jpg'), ('TripletMemberC', 'stimuli/fractals/19b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', -300.0), ('Ycoordinate_foil', 0.0)])
+8.6461 	EXP 	main_image: autoDraw = False
+8.6461 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+8.6461 	EXP 	main_image: image = 'stimuli/fractals/19a.jpg'
+8.6461 	EXP 	main_image: autoDraw = True
+9.5214 	EXP 	New trial (rep=0, index=4): OrderedDict([('TrialIndex', 5), ('Jitter', 5000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/101a.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/101b.jpg'), ('TripletMemberB', 'stimuli/fractals/101a.jpg'), ('TripletMemberC', 'stimuli/fractals/101c.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+9.5556 	EXP 	main_image: autoDraw = False
+9.5556 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+9.5556 	EXP 	main_image: image = 'stimuli/fractals/101b.jpg'
+9.5556 	EXP 	main_image: autoDraw = True
+10.5215 	EXP 	New trial (rep=0, index=5): OrderedDict([('TrialIndex', 6), ('Jitter', 3000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/97c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/97b.jpg'), ('TripletMemberB', 'stimuli/fractals/97c.jpg'), ('TripletMemberC', 'stimuli/fractals/97a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+10.5556 	EXP 	main_image: autoDraw = False
+10.5556 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+10.5556 	EXP 	main_image: image = 'stimuli/fractals/97b.jpg'
+10.5556 	EXP 	main_image: autoDraw = True
+11.5215 	EXP 	New trial (rep=0, index=6): OrderedDict([('TrialIndex', 7), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/19a.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/19a.jpg'), ('TripletMemberB', 'stimuli/fractals/19c.jpg'), ('TripletMemberC', 'stimuli/fractals/19b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', -300.0), ('Ycoordinate_foil', 0.0)])
+11.5553 	EXP 	main_image: autoDraw = False
+11.5553 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+11.5553 	EXP 	main_image: image = 'stimuli/fractals/19a.jpg'
+11.5553 	EXP 	main_image: autoDraw = True
+12.5219 	EXP 	New trial (rep=0, index=7): OrderedDict([('TrialIndex', 8), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/14c.jpg'), ('CurrentX', -212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/14c.jpg'), ('TripletMemberB', 'stimuli/fractals/14b.jpg'), ('TripletMemberC', 'stimuli/fractals/14a.jpg'), ('Xcoordinate', -212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', -300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', 212.1320344), ('Ycoordinate_foil', 212.1320344)])
+12.6809 	EXP 	main_image: autoDraw = False
+12.6809 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+12.6809 	EXP 	main_image: image = 'stimuli/fractals/14c.jpg'
+12.6809 	EXP 	main_image: autoDraw = True
+13.5219 	EXP 	New trial (rep=0, index=8): OrderedDict([('TrialIndex', 9), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'LLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/76b.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('TripletMemberA', 'stimuli/fractals/76b.jpg'), ('TripletMemberB', 'stimuli/fractals/76c.jpg'), ('TripletMemberC', 'stimuli/fractals/76a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', 300.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+13.5557 	EXP 	main_image: autoDraw = False
+13.5557 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+13.5557 	EXP 	main_image: image = 'stimuli/fractals/76b.jpg'
+13.5557 	EXP 	main_image: autoDraw = True
+14.5215 	EXP 	New trial (rep=0, index=9): OrderedDict([('TrialIndex', 10), ('Jitter', 3000), ('ScannerRun', 1), ('StimType', 'LLP'), ('Order', 1), ('Delay', 4), ('CurrentImage', 'stimuli/fractals/27a.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/27a.jpg'), ('TripletMemberB', 'stimuli/fractals/27c.jpg'), ('TripletMemberC', 'stimuli/fractals/27b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', -300.0), ('Ycoordinate_foil', 0.0)])
+14.6789 	EXP 	main_image: autoDraw = False
+14.6789 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+14.6789 	EXP 	main_image: image = 'stimuli/fractals/27a.jpg'
+14.6789 	EXP 	main_image: autoDraw = True
+15.5212 	EXP 	New trial (rep=0, index=10): OrderedDict([('TrialIndex', 11), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 1), ('Delay', 1), ('CurrentImage', 'stimuli/fractals/63c.jpg'), ('CurrentX', 0.0), ('CurrentY', 300.0), ('TripletMemberA', 'stimuli/fractals/63c.jpg'), ('TripletMemberB', 'stimuli/fractals/63b.jpg'), ('TripletMemberC', 'stimuli/fractals/63a.jpg'), ('Xcoordinate', 0.0), ('Ycoordinate', 300.0), ('Xcoordinate_lure1', -212.1320344), ('Ycoordinate_lure1', 212.1320344), ('Xcoordinate_lure2', 212.1320344), ('Ycoordinate_lure2', 212.1320344), ('Xcoordinate_foil', 0.0), ('Ycoordinate_foil', -300.0)])
+15.6665 	EXP 	main_image: autoDraw = False
+15.6665 	EXP 	main_image: pos = array([  0., 300.])
+15.6665 	EXP 	main_image: image = 'stimuli/fractals/63c.jpg'
+15.6665 	EXP 	main_image: autoDraw = True
+16.5214 	EXP 	New trial (rep=0, index=11): OrderedDict([('TrialIndex', 12), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 4), ('CurrentImage', 'stimuli/fractals/15b.jpg'), ('CurrentX', -212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/15b.jpg'), ('TripletMemberB', 'stimuli/fractals/15a.jpg'), ('TripletMemberC', 'stimuli/fractals/15c.jpg'), ('Xcoordinate', -212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', -300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', 212.1320344), ('Ycoordinate_foil', 212.1320344)])
+16.5554 	EXP 	main_image: autoDraw = False
+16.5554 	EXP 	main_image: pos = array([-212.1320344, -212.1320344])
+16.5554 	EXP 	main_image: image = 'stimuli/fractals/15b.jpg'
+16.5554 	EXP 	main_image: autoDraw = True
+17.3362 	DATA 	Keypress: escape
+17.3399 	EXP 	window1: mouseVisible = True
+0.3968 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+0.9736 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+4.3920 	WARNING 	Monitor specification not found. Creating a temporary one...
+4.7370 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f1eb2061e80>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7f1eb00e50f0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.7370 	EXP 	window1: recordFrameIntervals = False
+4.7479 	EXP 	window1: recordFrameIntervals = True
+4.7540 	WARNING 	t of last frame was 1.54ms (=1/649)
+4.7592 	EXP 	window1: recordFrameIntervals = False
+4.8106 	EXP 	Created setup_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='setup_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+4.8126 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+4.8215 	EXP 	setup_text: text = 'stimuli_tables/encoding_trials_1.csv'
+4.8215 	EXP 	setup_text: autoDraw = True
+5.8470 	EXP 	Imported stimuli_tables/encoding_trials_1.csv as conditions, 83 conditions, 20 params
+5.8475 	EXP 	Created sequence: sequential, trialTypes=83, nReps=1, seed=None
+5.8478 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/28c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/28c.jpg'), ('TripletMemberB', 'stimuli/fractals/28a.jpg'), ('TripletMemberC', 'stimuli/fractals/28b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+5.8904 	EXP 	setup_text: autoDraw = False
+5.8904 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+5.8904 	EXP 	main_image: image = 'stimuli/fractals/28c.jpg'
+5.8904 	EXP 	main_image: autoDraw = True
+6.8136 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/96b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/96b.jpg'), ('TripletMemberB', 'stimuli/fractals/96c.jpg'), ('TripletMemberC', 'stimuli/fractals/96a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+6.9706 	EXP 	main_image: autoDraw = False
+6.9706 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+6.9706 	EXP 	main_image: image = 'stimuli/fractals/96b.jpg'
+6.9706 	EXP 	main_image: autoDraw = True
+7.8135 	EXP 	New trial (rep=0, index=2): OrderedDict([('TrialIndex', 3), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'LLP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/30c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/30c.jpg'), ('TripletMemberB', 'stimuli/fractals/30b.jpg'), ('TripletMemberC', 'stimuli/fractals/30a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', 300.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+7.8756 	EXP 	main_image: autoDraw = False
+7.8756 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+7.8756 	EXP 	main_image: image = 'stimuli/fractals/30c.jpg'
+7.8756 	EXP 	main_image: autoDraw = True
+8.8139 	EXP 	New trial (rep=0, index=3): OrderedDict([('TrialIndex', 4), ('Jitter', 1000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 1), ('Delay', 2), ('CurrentImage', 'stimuli/fractals/36c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/36c.jpg'), ('TripletMemberB', 'stimuli/fractals/36a.jpg'), ('TripletMemberC', 'stimuli/fractals/36b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', -300.0), ('Ycoordinate_foil', 0.0)])
+8.9658 	EXP 	main_image: autoDraw = False
+8.9658 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+8.9658 	EXP 	main_image: image = 'stimuli/fractals/36c.jpg'
+8.9658 	EXP 	main_image: autoDraw = True
+9.8142 	EXP 	New trial (rep=0, index=4): OrderedDict([('TrialIndex', 5), ('Jitter', 5000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/28a.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/28c.jpg'), ('TripletMemberB', 'stimuli/fractals/28a.jpg'), ('TripletMemberC', 'stimuli/fractals/28b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+9.8498 	EXP 	main_image: autoDraw = False
+9.8498 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+9.8498 	EXP 	main_image: image = 'stimuli/fractals/28c.jpg'
+9.8498 	EXP 	main_image: autoDraw = True
+10.8132 	EXP 	New trial (rep=0, index=5): OrderedDict([('TrialIndex', 6), ('Jitter', 3000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/96c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/96b.jpg'), ('TripletMemberB', 'stimuli/fractals/96c.jpg'), ('TripletMemberC', 'stimuli/fractals/96a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+10.8499 	EXP 	main_image: autoDraw = False
+10.8499 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+10.8499 	EXP 	main_image: image = 'stimuli/fractals/96b.jpg'
+10.8499 	EXP 	main_image: autoDraw = True
+11.8136 	EXP 	New trial (rep=0, index=6): OrderedDict([('TrialIndex', 7), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 2), ('Delay', 0), ('CurrentImage', 'stimuli/fractals/36c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/36c.jpg'), ('TripletMemberB', 'stimuli/fractals/36a.jpg'), ('TripletMemberC', 'stimuli/fractals/36b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', -300.0), ('Ycoordinate_foil', 0.0)])
+11.8478 	EXP 	main_image: autoDraw = False
+11.8478 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+11.8478 	EXP 	main_image: image = 'stimuli/fractals/36c.jpg'
+11.8478 	EXP 	main_image: autoDraw = True
+12.8135 	EXP 	New trial (rep=0, index=7): OrderedDict([('TrialIndex', 8), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/140b.jpg'), ('CurrentX', -212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/140b.jpg'), ('TripletMemberB', 'stimuli/fractals/140a.jpg'), ('TripletMemberC', 'stimuli/fractals/140c.jpg'), ('Xcoordinate', -212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', -300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', 212.1320344), ('Ycoordinate_foil', 212.1320344)])
+12.9491 	DATA 	Keypress: escape
+12.9551 	EXP 	window1: mouseVisible = True
+0.4239 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+0.9919 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+4.5638 	WARNING 	Monitor specification not found. Creating a temporary one...
+4.9050 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f1796ac2e80>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7f17949230f0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.9050 	EXP 	window1: recordFrameIntervals = False
+4.9150 	EXP 	window1: recordFrameIntervals = True
+4.9252 	WARNING 	t of last frame was 1.51ms (=1/661)
+4.9253 	EXP 	window1: recordFrameIntervals = False
+4.9786 	EXP 	Created setup_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='setup_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+4.9807 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+4.9895 	EXP 	setup_text: text = 'stimuli_tables/encoding_trials_0.csv'
+4.9895 	EXP 	setup_text: autoDraw = True
+6.0144 	EXP 	Imported stimuli_tables/encoding_trials_0.csv as conditions, 83 conditions, 20 params
+6.0148 	EXP 	Created sequence: sequential, trialTypes=83, nReps=1, seed=None
+6.0152 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/101b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/101b.jpg'), ('TripletMemberB', 'stimuli/fractals/101a.jpg'), ('TripletMemberC', 'stimuli/fractals/101c.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+6.0554 	EXP 	setup_text: autoDraw = False
+6.0554 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+6.0554 	EXP 	main_image: image = 'stimuli/fractals/101b.jpg'
+6.0554 	EXP 	main_image: autoDraw = True
+6.9816 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/97b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/97b.jpg'), ('TripletMemberB', 'stimuli/fractals/97c.jpg'), ('TripletMemberC', 'stimuli/fractals/97a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+7.0188 	EXP 	main_image: autoDraw = False
+7.0188 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+7.0188 	EXP 	main_image: image = 'stimuli/fractals/97b.jpg'
+7.0188 	EXP 	main_image: autoDraw = True
+7.9812 	EXP 	New trial (rep=0, index=2): OrderedDict([('TrialIndex', 3), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'LLP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/76b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/76b.jpg'), ('TripletMemberB', 'stimuli/fractals/76c.jpg'), ('TripletMemberC', 'stimuli/fractals/76a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', 300.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+8.0154 	EXP 	main_image: autoDraw = False
+8.0154 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+8.0154 	EXP 	main_image: image = 'stimuli/fractals/76b.jpg'
+8.0154 	EXP 	main_image: autoDraw = True
+8.2302 	DATA 	Keypress: escape
+8.2339 	EXP 	window1: mouseVisible = True

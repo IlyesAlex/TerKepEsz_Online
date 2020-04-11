@@ -1,0 +1,36 @@
+0.4334 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+1.0082 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+8.0072 	WARNING 	Monitor specification not found. Creating a temporary one...
+8.3661 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7f9d731cde48>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7f9d710300b8>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+8.3662 	EXP 	window1: recordFrameIntervals = False
+8.3856 	EXP 	window1: recordFrameIntervals = True
+8.4022 	WARNING 	t of last frame was 3.44ms (=1/290)
+8.4060 	EXP 	window1: recordFrameIntervals = False
+8.4561 	EXP 	Created setup_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='setup_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+8.4583 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+8.4685 	EXP 	setup_text: text = 'stimuli_tables/encoding_trials_0.csv'
+8.4685 	EXP 	setup_text: autoDraw = True
+9.4925 	EXP 	Imported stimuli_tables/encoding_trials_0.csv as conditions, 4 conditions, 20 params
+9.4930 	EXP 	Created sequence: sequential, trialTypes=4, nReps=1, seed=None
+9.4934 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/101b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/101b.jpg'), ('TripletMemberB', 'stimuli/fractals/101a.jpg'), ('TripletMemberC', 'stimuli/fractals/101c.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+9.5338 	EXP 	setup_text: autoDraw = False
+9.5338 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+9.5338 	EXP 	main_image: image = 'stimuli/fractals/101b.jpg'
+9.5338 	EXP 	main_image: autoDraw = True
+10.4600 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/97b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/97b.jpg'), ('TripletMemberB', 'stimuli/fractals/97c.jpg'), ('TripletMemberC', 'stimuli/fractals/97a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+10.4972 	EXP 	main_image: autoDraw = False
+10.4972 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+10.4972 	EXP 	main_image: image = 'stimuli/fractals/97b.jpg'
+10.4972 	EXP 	main_image: autoDraw = True
+11.4598 	EXP 	New trial (rep=0, index=2): OrderedDict([('TrialIndex', 3), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'LLP'), ('Order', 1), ('Delay', 5), ('CurrentImage', 'stimuli/fractals/76b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/76b.jpg'), ('TripletMemberB', 'stimuli/fractals/76c.jpg'), ('TripletMemberC', 'stimuli/fractals/76a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', 300.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+11.4939 	EXP 	main_image: autoDraw = False
+11.4939 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+11.4939 	EXP 	main_image: image = 'stimuli/fractals/76b.jpg'
+11.4939 	EXP 	main_image: autoDraw = True
+12.4602 	EXP 	New trial (rep=0, index=3): OrderedDict([('TrialIndex', 4), ('Jitter', 1000), ('ScannerRun', 1), ('StimType', 'ERP'), ('Order', 1), ('Delay', 2), ('CurrentImage', 'stimuli/fractals/19a.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/19a.jpg'), ('TripletMemberB', 'stimuli/fractals/19c.jpg'), ('TripletMemberC', 'stimuli/fractals/19b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 300.0), ('Ycoordinate_lure1', 0.0), ('Xcoordinate_lure2', 0.0), ('Ycoordinate_lure2', -300.0), ('Xcoordinate_foil', -300.0), ('Ycoordinate_foil', 0.0)])
+12.4942 	EXP 	main_image: autoDraw = False
+12.4942 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+12.4942 	EXP 	main_image: image = 'stimuli/fractals/19a.jpg'
+12.4942 	EXP 	main_image: autoDraw = True
+13.4610 	EXP 	main_image: autoDraw = False
+13.4665 	EXP 	window1: mouseVisible = True

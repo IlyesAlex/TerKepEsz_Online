@@ -73,7 +73,10 @@ function updateInfo() {
 
 var select_stimuli_tableClock;
 var setup_text;
+var tables;
+var selected;
 var stimuli_table;
+var selection;
 var trials_run_1Clock;
 var main_image;
 var globalClock;
@@ -84,7 +87,7 @@ function experimentInit() {
   setup_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'setup_text',
-    text: 'A vizsgálati változók beállítása...',
+    text: 'default text',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
@@ -92,7 +95,11 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  stimuli_table = "encoding_table.csv";
+  tables = [0, 1];
+  selected = np.random.choice(tables);
+  selected = selected.toString();
+  stimuli_table = (("stimuli_tables/encoding_trials_" + selected) + ".csv");
+  selection = [0, 1, 2, 3];
   
   // Initialize components for Routine "trials_run_1"
   trials_run_1Clock = new util.Clock();
@@ -124,6 +131,7 @@ function select_stimuli_tableRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(1.000000);
     // update component parameters for each repeat
+    setup_text.setText(stimuli_table);
     // keep track of which components have finished
     select_stimuli_tableComponents = [];
     select_stimuli_tableComponents.push(setup_text);
@@ -210,7 +218,7 @@ function run_1LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, '0:83'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, selection),
     seed: undefined, name: 'run_1'
   });
   psychoJS.experiment.addLoop(run_1); // add the loop to the experiment

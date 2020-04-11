@@ -1,0 +1,27 @@
+0.4338 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+1.0158 	WARNING 	Import Error: No module named 'psychtoolbox'. Using event module for keyboard component.
+4.1921 	WARNING 	Monitor specification not found. Creating a temporary one...
+4.5596 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0., 0., 0.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x7ffb73ce3e80>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x7ffb71b440f0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+4.5596 	EXP 	window1: recordFrameIntervals = False
+4.5798 	EXP 	window1: recordFrameIntervals = True
+4.5963 	WARNING 	t of last frame was 3.43ms (=1/291)
+4.6009 	WARNING 	t of last frame was 4.58ms (=1/218)
+4.6126 	EXP 	window1: recordFrameIntervals = False
+4.6648 	EXP 	Created setup_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='setup_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+4.6669 	EXP 	Created main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+4.6758 	EXP 	setup_text: text = 'stimuli_tables/encoding_trials_1.csv'
+4.6758 	EXP 	setup_text: autoDraw = True
+5.7002 	EXP 	Imported stimuli_tables/encoding_trials_1.csv as conditions, 83 conditions, 20 params
+5.7006 	EXP 	Created sequence: sequential, trialTypes=83, nReps=1, seed=None
+5.7010 	EXP 	New trial (rep=0, index=0): OrderedDict([('TrialIndex', 1), ('Jitter', 2000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/28c.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('TripletMemberA', 'stimuli/fractals/28c.jpg'), ('TripletMemberB', 'stimuli/fractals/28a.jpg'), ('TripletMemberC', 'stimuli/fractals/28b.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', 212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', 300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', -212.1320344)])
+5.7425 	EXP 	setup_text: autoDraw = False
+5.7425 	EXP 	main_image: pos = array([212.1320344, 212.1320344])
+5.7425 	EXP 	main_image: image = 'stimuli/fractals/28c.jpg'
+5.7425 	EXP 	main_image: autoDraw = True
+6.6677 	EXP 	New trial (rep=0, index=1): OrderedDict([('TrialIndex', 2), ('Jitter', 6000), ('ScannerRun', 1), ('StimType', 'OLP'), ('Order', 1), ('Delay', 3), ('CurrentImage', 'stimuli/fractals/96b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', -212.1320344), ('TripletMemberA', 'stimuli/fractals/96b.jpg'), ('TripletMemberB', 'stimuli/fractals/96c.jpg'), ('TripletMemberC', 'stimuli/fractals/96a.jpg'), ('Xcoordinate', 212.1320344), ('Ycoordinate', -212.1320344), ('Xcoordinate_lure1', 0.0), ('Ycoordinate_lure1', -300.0), ('Xcoordinate_lure2', 300.0), ('Ycoordinate_lure2', 0.0), ('Xcoordinate_foil', -212.1320344), ('Ycoordinate_foil', 212.1320344)])
+6.7061 	EXP 	main_image: autoDraw = False
+6.7061 	EXP 	main_image: pos = array([ 212.1320344, -212.1320344])
+6.7061 	EXP 	main_image: image = 'stimuli/fractals/96b.jpg'
+6.7061 	EXP 	main_image: autoDraw = True
+6.9964 	DATA 	Keypress: escape
+7.0006 	EXP 	window1: mouseVisible = True

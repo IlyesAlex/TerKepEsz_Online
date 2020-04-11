@@ -104,7 +104,7 @@ function experimentInit() {
   });
   
   tables = [0, 1];
-  selected = np.random.choice(tables);
+  selected = tables[Math.floor(Math.random() * tables.length)];;
   selected = selected.toString();
   stimuli_table = (("stimuli_tables/encoding_trials_" + selected) + ".csv");
   selection = [0, 1, 2, 3];

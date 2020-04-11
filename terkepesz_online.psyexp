@@ -86,10 +86,10 @@
       </TextComponent>
       <CodeComponent name="code">
         <Param name="Begin Experiment" updates="constant" val="tables = [0,1]&amp;#10;selected = np.random.choice(tables)&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;selection = [0,1,2,3]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="tables = [0, 1];&amp;#10;selected = np.random.choice(tables);&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;selection = [0, 1, 2, 3];&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="tables = [0, 1];&amp;#10;selected = tables[Math.floor(Math.random() * tables.length)];;&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;selection = [0, 1, 2, 3];&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>

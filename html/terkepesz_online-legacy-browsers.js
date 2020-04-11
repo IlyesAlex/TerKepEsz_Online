@@ -134,7 +134,7 @@ function select_stimuli_tableRoutineBegin(trials) {
     // update component parameters for each repeat
     setup_text.setText(stimuli_table);
     n = 5;
-    selection = Array.from({length: N}, (_, index) => index + 1);
+    selection = Array.from({length: n}, (_, index) => index + 1);
     
     
     // keep track of which components have finished

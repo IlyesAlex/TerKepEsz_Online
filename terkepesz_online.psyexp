@@ -84,11 +84,26 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <CodeComponent name="code">
-        <Param name="Begin Experiment" updates="constant" val="tables = [0,1]&amp;#10;selected = np.random.choice(tables)&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;selection = [0,1,2,3]" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="tables = [0, 1];&amp;#10;selected = tables[Math.floor(Math.random() * tables.length)];;&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;selection = [0, 1, 2, 3];&amp;#10;" valType="extendedCode"/>
+      <CodeComponent name="select_trials">
+        <Param name="Begin Experiment" updates="constant" val="tables = [0,1]&amp;#10;selected = np.random.choice(tables)&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="tables = [0, 1];&amp;#10;selected = tables[Math.floor(Math.random() * tables.length)];&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="select_trials" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="code">
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="n = 5;&amp;#10;selection = Array.from({length: N}, (_, index) =&gt; index + 1);&amp;#10;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="n = 5&amp;#10;selection = np.arange(0, 5, 1)" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>

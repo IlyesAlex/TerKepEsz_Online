@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Sat 11 Apr 2020 05:17:10 PM CEST
+    on Sat 11 Apr 2020 06:41:24 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -93,7 +93,7 @@ tables = [0,1]
 selected = np.random.choice(tables)
 selected = str(selected)
 stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'
-selection = [0,1,2,3]
+
 
 # Initialize components for Routine "trials_run_1"
 trials_run_1Clock = core.Clock()
@@ -115,6 +115,8 @@ continueRoutine = True
 routineTimer.add(1.000000)
 # update component parameters for each repeat
 setup_text.setText(stimuli_table)
+n = 5
+selection = np.arange(0, 5, 1)
 # keep track of which components have finished
 select_stimuli_tableComponents = [setup_text]
 for thisComponent in select_stimuli_tableComponents:

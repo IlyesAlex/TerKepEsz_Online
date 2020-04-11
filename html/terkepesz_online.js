@@ -84,7 +84,6 @@ var setup_text;
 var tables;
 var selected;
 var stimuli_table;
-var selection;
 var trials_run_1Clock;
 var main_image;
 var globalClock;
@@ -104,10 +103,10 @@ function experimentInit() {
   });
   
   tables = [0, 1];
-  selected = tables[Math.floor(Math.random() * tables.length)];;
+  selected = tables[Math.floor(Math.random() * tables.length)];
   selected = selected.toString();
   stimuli_table = (("stimuli_tables/encoding_trials_" + selected) + ".csv");
-  selection = [0, 1, 2, 3];
+  
   
   // Initialize components for Routine "trials_run_1"
   trials_run_1Clock = new util.Clock();
@@ -130,6 +129,8 @@ function experimentInit() {
 
 var t;
 var frameN;
+var n;
+var selection;
 var select_stimuli_tableComponents;
 function select_stimuli_tableRoutineBegin(trials) {
   return function () {
@@ -140,6 +141,10 @@ function select_stimuli_tableRoutineBegin(trials) {
     routineTimer.add(1.000000);
     // update component parameters for each repeat
     setup_text.setText(stimuli_table);
+    n = 5;
+    selection = Array.from({length: N}, (_, index) => index + 1);
+    
+    
     // keep track of which components have finished
     select_stimuli_tableComponents = [];
     select_stimuli_tableComponents.push(setup_text);
@@ -374,6 +379,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   psychoJS.window.close();

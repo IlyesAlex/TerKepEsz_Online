@@ -6,6 +6,9 @@ __pycache__/
 *.pyd
 *.so
 
+# lastrun
+*_lastrun.py
+
 # Backup files
 *.bak
 ~$*.xls*

@@ -1,0 +1,6 @@
+StimType,Order,CurrentImage,CurrentX,CurrentY,Jitter,Section
+practice,practice,stimuli/fractals/166a.jpg,-300,0,1500,Encoding
+practice,practice,stimuli/fractals/167a.jpg,300,0,500,Encoding
+practice,practice,stimuli/fractals/148b.jpg,212.1320344,212.1320344,1000,Encoding
+practice,practice,stimuli/fractals/159a.jpg,0,300,5000,Encoding
+practice,practice,stimuli/fractals/177b.jpg,300,0,800,Encoding

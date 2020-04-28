@@ -1726,7 +1726,7 @@ function enc_practice_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'encoding_practice_trials.csv',
+    trialList: 'stimuli_tables/encoding_practice_trials.csv',
     seed: undefined, name: 'enc_practice_trials'
   });
   psychoJS.experiment.addLoop(enc_practice_trials); // add the loop to the experiment
@@ -1847,7 +1847,7 @@ function demo_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'stimuli_demo.csv',
+    trialList: 'stimuli_tables/stimuli_demo.csv',
     seed: undefined, name: 'demo_trials'
   });
   psychoJS.experiment.addLoop(demo_trials); // add the loop to the experiment
@@ -1914,7 +1914,7 @@ function rec_practice_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'recognition_practice_trials.csv', rec_practice_block),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', rec_practice_block),
     seed: undefined, name: 'rec_practice_trials'
   });
   psychoJS.experiment.addLoop(rec_practice_trials); // add the loop to the experiment

@@ -710,7 +710,7 @@ function experimentInit() {
     text: '[F - Régi]      [J - Hasonló]     [K - Új]',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.045)], height: 0.045,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.45)], height: 0.045,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -4.0 
   });
@@ -854,7 +854,7 @@ function experimentInit() {
     text: '[F - Régi]      [J - Hasonló]     [K - Új]',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.045)], height: 0.045,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.45)], height: 0.045,  wrapWidth: undefined, ori: 0,
     color: new util.Color('white'),  opacity: 1,
     depth: -4.0 
   });

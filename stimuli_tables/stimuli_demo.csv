@@ -1,6 +1,6 @@
 Task,TrialType,StimType,CurrentImage,DemoImage,CurrentX,CurrentY,DemoX,DemoY,InPractice,DemoText,Jitter
-Demo,OBJ,LURE,stimuli/fractals//181b.jpg,stimuli/fractals//181c.jpg,300,0,-300,0,-,Hasonló Képek,2300
 Demo,OBJ,LURE,stimuli/fractals//149a.jpg,stimuli/fractals//149b.jpg,300,0,-300,0,-,Hasonló Képek,1000
+Demo,OBJ,LURE,stimuli/fractals//181b.jpg,stimuli/fractals//181c.jpg,300,0,-300,0,-,Hasonló Képek,2300
 Demo,OBJ,LURE,stimuli/fractals//177b.jpg,stimuli/fractals//177c.jpg,300,0,-300,0,-,Hasonló Képek,800
 Demo,OBJ,LURE,stimuli/fractals//167a.jpg,stimuli/fractals//167b.jpg,300,0,-300,0,OBJ-TARGET,Hasonló Képek,1500
 Demo,OBJ,FOIL,stimuli/fractals//163a.jpg,stimuli/fractals//173c.jpg,300,0,-300,0,-,Új Képek,600

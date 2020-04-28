@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Tue 28 Apr 2020 04:30:32 PM CEST
+    on Tue 28 Apr 2020 08:23:23 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1300,7 +1300,7 @@ thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 # set up handler to look after randomisation of conditions etc
 enc_practice_trials = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('encoding_practice_trials.csv'),
+    trialList=data.importConditions('stimuli_tables/encoding_practice_trials.csv'),
     seed=None, name='enc_practice_trials')
 thisExp.addLoop(enc_practice_trials)  # add the loop to the experiment
 thisEnc_practice_trial = enc_practice_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -2872,7 +2872,7 @@ thisExp.nextEntry()
 # set up handler to look after randomisation of conditions etc
 demo_trials = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli_demo.csv'),
+    trialList=data.importConditions('stimuli_tables/stimuli_demo.csv'),
     seed=None, name='demo_trials')
 thisExp.addLoop(demo_trials)  # add the loop to the experiment
 thisDemo_trial = demo_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -3341,7 +3341,7 @@ for thisRec_practice_block in rec_practice_blocks:
     # set up handler to look after randomisation of conditions etc
     rec_practice_trials = data.TrialHandler(nReps=1, method='sequential', 
         extraInfo=expInfo, originPath=-1,
-        trialList=data.importConditions('recognition_practice_trials.csv', selection=rec_practice_block),
+        trialList=data.importConditions('stimuli_tables/recognition_practice_trials.csv', selection=rec_practice_block),
         seed=None, name='rec_practice_trials')
     thisExp.addLoop(rec_practice_trials)  # add the loop to the experiment
     thisRec_practice_trial = rec_practice_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -3528,14 +3528,14 @@ for thisRec_practice_block in rec_practice_blocks:
         
         # ------Prepare to start Routine "rec_trial"-------
         continueRoutine = True
-        routineTimer.add(3.000000)
+        routineTimer.add(4.000000)
         # update component parameters for each repeat
         rec_trial_main_image.setPos((CurrentX, CurrentY))
         rec_trial_main_image.setImage(CurrentImage)
         rec_trial_key.keys = []
         rec_trial_key.rt = []
         _rec_trial_key_allKeys = []
-        rec_trial_text_block.setText(TrialType)
+        rec_trial_text_block.setText(block_name)
         # keep track of which components have finished
         rec_trialComponents = [rec_trial_map, rec_trial_main_image, rec_trial_key, rec_trial_text_block, rec_trial_instructions_text]
         for thisComponent in rec_trialComponents:
@@ -3570,7 +3570,7 @@ for thisRec_practice_block in rec_practice_blocks:
                 rec_trial_map.setAutoDraw(True)
             if rec_trial_map.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_trial_map.tStartRefresh + 3.0-frameTolerance:
+                if tThisFlipGlobal > rec_trial_map.tStartRefresh + 4.0-frameTolerance:
                     # keep track of stop time/frame for later
                     rec_trial_map.tStop = t  # not accounting for scr refresh
                     rec_trial_map.frameNStop = frameN  # exact frame index
@@ -3587,7 +3587,7 @@ for thisRec_practice_block in rec_practice_blocks:
                 rec_trial_main_image.setAutoDraw(True)
             if rec_trial_main_image.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_trial_main_image.tStartRefresh + 3.0-frameTolerance:
+                if tThisFlipGlobal > rec_trial_main_image.tStartRefresh + 4.0-frameTolerance:
                     # keep track of stop time/frame for later
                     rec_trial_main_image.tStop = t  # not accounting for scr refresh
                     rec_trial_main_image.frameNStop = frameN  # exact frame index
@@ -3609,7 +3609,7 @@ for thisRec_practice_block in rec_practice_blocks:
                 win.callOnFlip(rec_trial_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if rec_trial_key.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_trial_key.tStartRefresh + 3.0-frameTolerance:
+                if tThisFlipGlobal > rec_trial_key.tStartRefresh + 4.0-frameTolerance:
                     # keep track of stop time/frame for later
                     rec_trial_key.tStop = t  # not accounting for scr refresh
                     rec_trial_key.frameNStop = frameN  # exact frame index
@@ -3632,7 +3632,7 @@ for thisRec_practice_block in rec_practice_blocks:
                 rec_trial_text_block.setAutoDraw(True)
             if rec_trial_text_block.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_trial_text_block.tStartRefresh + 3.0-frameTolerance:
+                if tThisFlipGlobal > rec_trial_text_block.tStartRefresh + 4.0-frameTolerance:
                     # keep track of stop time/frame for later
                     rec_trial_text_block.tStop = t  # not accounting for scr refresh
                     rec_trial_text_block.frameNStop = frameN  # exact frame index
@@ -3649,7 +3649,7 @@ for thisRec_practice_block in rec_practice_blocks:
                 rec_trial_instructions_text.setAutoDraw(True)
             if rec_trial_instructions_text.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_trial_instructions_text.tStartRefresh + 3.0-frameTolerance:
+                if tThisFlipGlobal > rec_trial_instructions_text.tStartRefresh + 4.0-frameTolerance:
                     # keep track of stop time/frame for later
                     rec_trial_instructions_text.tStop = t  # not accounting for scr refresh
                     rec_trial_instructions_text.frameNStop = frameN  # exact frame index
@@ -4282,14 +4282,14 @@ for thisRec_run in rec_runs:
             
             # ------Prepare to start Routine "rec_trial"-------
             continueRoutine = True
-            routineTimer.add(3.000000)
+            routineTimer.add(4.000000)
             # update component parameters for each repeat
             rec_trial_main_image.setPos((CurrentX, CurrentY))
             rec_trial_main_image.setImage(CurrentImage)
             rec_trial_key.keys = []
             rec_trial_key.rt = []
             _rec_trial_key_allKeys = []
-            rec_trial_text_block.setText(TrialType)
+            rec_trial_text_block.setText(block_name)
             # keep track of which components have finished
             rec_trialComponents = [rec_trial_map, rec_trial_main_image, rec_trial_key, rec_trial_text_block, rec_trial_instructions_text]
             for thisComponent in rec_trialComponents:
@@ -4324,7 +4324,7 @@ for thisRec_run in rec_runs:
                     rec_trial_map.setAutoDraw(True)
                 if rec_trial_map.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_trial_map.tStartRefresh + 3.0-frameTolerance:
+                    if tThisFlipGlobal > rec_trial_map.tStartRefresh + 4.0-frameTolerance:
                         # keep track of stop time/frame for later
                         rec_trial_map.tStop = t  # not accounting for scr refresh
                         rec_trial_map.frameNStop = frameN  # exact frame index
@@ -4341,7 +4341,7 @@ for thisRec_run in rec_runs:
                     rec_trial_main_image.setAutoDraw(True)
                 if rec_trial_main_image.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_trial_main_image.tStartRefresh + 3.0-frameTolerance:
+                    if tThisFlipGlobal > rec_trial_main_image.tStartRefresh + 4.0-frameTolerance:
                         # keep track of stop time/frame for later
                         rec_trial_main_image.tStop = t  # not accounting for scr refresh
                         rec_trial_main_image.frameNStop = frameN  # exact frame index
@@ -4363,7 +4363,7 @@ for thisRec_run in rec_runs:
                     win.callOnFlip(rec_trial_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
                 if rec_trial_key.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_trial_key.tStartRefresh + 3.0-frameTolerance:
+                    if tThisFlipGlobal > rec_trial_key.tStartRefresh + 4.0-frameTolerance:
                         # keep track of stop time/frame for later
                         rec_trial_key.tStop = t  # not accounting for scr refresh
                         rec_trial_key.frameNStop = frameN  # exact frame index
@@ -4386,7 +4386,7 @@ for thisRec_run in rec_runs:
                     rec_trial_text_block.setAutoDraw(True)
                 if rec_trial_text_block.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_trial_text_block.tStartRefresh + 3.0-frameTolerance:
+                    if tThisFlipGlobal > rec_trial_text_block.tStartRefresh + 4.0-frameTolerance:
                         # keep track of stop time/frame for later
                         rec_trial_text_block.tStop = t  # not accounting for scr refresh
                         rec_trial_text_block.frameNStop = frameN  # exact frame index
@@ -4403,7 +4403,7 @@ for thisRec_run in rec_runs:
                     rec_trial_instructions_text.setAutoDraw(True)
                 if rec_trial_instructions_text.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_trial_instructions_text.tStartRefresh + 3.0-frameTolerance:
+                    if tThisFlipGlobal > rec_trial_instructions_text.tStartRefresh + 4.0-frameTolerance:
                         # keep track of stop time/frame for later
                         rec_trial_instructions_text.tStop = t  # not accounting for scr refresh
                         rec_trial_instructions_text.frameNStop = frameN  # exact frame index

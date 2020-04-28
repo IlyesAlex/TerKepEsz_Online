@@ -202,6 +202,8 @@ var rec_instructions_4_text;
 var rec_instructions_4_key;
 var demoClock;
 var demo_map;
+var demo_main_image;
+var demo_image;
 var demo_text;
 var demo_key;
 var demo_endClock;
@@ -599,6 +601,24 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
+  demo_main_image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'demo_main_image', units : 'pix', 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [300, 300],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -1.0 
+  });
+  demo_image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'demo_image', units : 'pix', 
+    image : undefined, mask : undefined,
+    ori : 0, pos : [0, 0], size : [300, 300],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -2.0 
+  });
   demo_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'demo_text',
@@ -607,7 +627,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0.45], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -1.0 
+    depth: -3.0 
   });
   
   demo_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
@@ -3477,6 +3497,10 @@ function demoRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(300.000000);
     // update component parameters for each repeat
+    demo_main_image.setPos([CurrentX, CurrentY]);
+    demo_main_image.setImage(CurrentImage);
+    demo_image.setPos([DemoX, DemoY]);
+    demo_image.setImage(DemoImage);
     demo_text.setText(DemoText);
     demo_key.keys = undefined;
     demo_key.rt = undefined;
@@ -3484,6 +3508,8 @@ function demoRoutineBegin(trials) {
     // keep track of which components have finished
     demoComponents = [];
     demoComponents.push(demo_map);
+    demoComponents.push(demo_main_image);
+    demoComponents.push(demo_image);
     demoComponents.push(demo_text);
     demoComponents.push(demo_key);
     
@@ -3517,6 +3543,34 @@ function demoRoutineEachFrame(trials) {
     frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (demo_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       demo_map.setAutoDraw(false);
+    }
+    
+    // *demo_main_image* updates
+    if (t >= 0.0 && demo_main_image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      demo_main_image.tStart = t;  // (not accounting for frame time here)
+      demo_main_image.frameNStart = frameN;  // exact frame index
+      
+      demo_main_image.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (demo_main_image.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      demo_main_image.setAutoDraw(false);
+    }
+    
+    // *demo_image* updates
+    if (t >= 0.0 && demo_image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      demo_image.tStart = t;  // (not accounting for frame time here)
+      demo_image.frameNStart = frameN;  // exact frame index
+      
+      demo_image.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (demo_image.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      demo_image.setAutoDraw(false);
     }
     
     // *demo_text* updates
@@ -4378,7 +4432,7 @@ function start_rec_blockRoutineBegin(trials) {
     // update component parameters for each repeat
     start = end;
     end = (start + 3);
-    selection = np.arange(start, end, step);
+    selection = Array.from({length: end - start}, (_, index) => index + start)
     if ((block_counter === 0)) {
         block_name = "K\u00e9p";
     } else {

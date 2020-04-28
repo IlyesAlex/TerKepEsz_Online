@@ -6,7 +6,7 @@
     <Param name="Completed URL" updates="None" val="" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': '', 'session': '001'}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': 'pilot'}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -33,7 +33,74 @@
   </Settings>
   <Routines>
     <Routine name="break_2"/>
-    <Routine name="inter_task_break"/>
+    <Routine name="inter_task_break">
+      <TextComponent name="inter_task_break_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="inter_task_break_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1195.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Ha úgy érzi készen áll, nyomja le a jobb nyilat." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="inter_task_break_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="inter_task_break_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1200.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Mielőtt tovább lépne a következő feladathoz, tartson egy rövid szünetet, hogy felfrissüljön. Álljon fel a számítógéptől, pihentesse szemeit, igyon egy pohár vizet, stb. Ügyeljen, hogy ez a szünet ne tartson 10 percnél tovább. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="inter_task_break_key">
+        <Param name="allowedKeys" updates="constant" val="'right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="inter_task_break_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1195" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+    </Routine>
     <Routine name="start_encoding">
       <TextComponent name="start_encoding_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -165,8 +232,8 @@
       <CodeComponent name="enc_run_counter">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="run_counter = (run_counter + 1);&amp;#10;end_run_text = &quot;Sz\u00fcnet\nA folytat\u00e1shoz nyomja le a jobb nyilat&quot;;&amp;#10;if ((run_counter &gt;= 3)) {&amp;#10;    end_run_text = &quot;V\u00e9ge az els\u0151 feladatnak&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="run_counter = run_counter + 1&amp;#10;end_run_text = 'Szünet\nA folytatáshoz nyomja le a jobb nyilat'&amp;#10;&amp;#10;if run_counter &gt;= 3:&amp;#10;    end_run_text = 'Vége az első feladatnak'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="run_counter = (run_counter + 1);&amp;#10;end_run_text = &quot;R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat&quot;;&amp;#10;if ((run_counter &gt;= 3)) {&amp;#10;    end_run_text = &quot;V\u00e9ge az els\u0151 feladatnak. A folytat\u00e1shoz nyomja le a jobb nyilat&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="run_counter = run_counter + 1&amp;#10;end_run_text = 'Rövid szünet\nA feladat folytatáshoz nyomja le a jobb nyilat'&amp;#10;&amp;#10;if run_counter &gt;= 3:&amp;#10;    end_run_text = 'Vége az első feladatnak. A folytatáshoz nyomja le a jobb nyilat'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -272,7 +339,74 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="consent"/>
+    <Routine name="consent">
+      <TextComponent name="consent_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.022" valType="code"/>
+        <Param name="name" updates="None" val="consent_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A tervezett vizsgálattal kapcsolatban minden számomra fontos információt megkaptam, a tájékoztatót elolvastam. A vizsgálatban önszántamból, saját felelősségemre veszek részt.&amp;#10;&amp;#10;Kérjük, olvassa el az alábbi állításokat! Amennyiben egyetért velük, haladjon tovább a jobb nyíllal.&amp;#10;&amp;#10;    • Tudomásul veszem, hogy a kísérlet anonim, és semmilyen, személyem azonosítására alkalmas adat rögzítésére nem kerül sor.&amp;#10;&amp;#10;    • Tudomásul veszem, hogy a kitöltés bármikor, indoklás nélkül, akár végleg is megszakítható, és ebben az esetben a megadott adatok nem kerülnek feldolgozásra.&amp;#10;&amp;#10;    • Tudomásul veszem, hogy adataimat a 2018. május 25-től hatályos 2016/679/EU Európai Unió általános adatvédelmi irányelvét és a magyarországi jogszabályokat (2011. évi CXII. adatvédelmi tv.) is betartva fogják kezelni.&amp;#10;&amp;#10;    • Hozzájárulok ahhoz, hogy a vizsgálathoz szükséges személyes adataimat, valamint a vizsgálat során rólam nyert adatokat a kísérletet végzők egymástól elkülönítve rögzítsék, azokat egymástól elkülönítve, elektronikus úton tárolják, és kutatási célból felhasználják, úgy, hogy harmadik fél részére személyem azonosítására alkalmas információt nem szolgáltatnak ki.&amp;#10;&amp;#10;    • Hozzájárulok, hogy a vizsgálat során megadott válaszaimat és böngészőm információit a https://pavlovia.org/ (Pavlovia) szervere tárolja.&amp;#10;&amp;#10;    • Hozzájárulok, hogy anonimizált, személyes beazonosításomra nem alkalmas adataimat a tudományos közösséggel megosszák a https://osf.io/ (Open Science Foundation [magyarul: Nyílt Tudomány Alapítvány]) és a https://openneuro.org/ (OpenNeuro) szerverein.&amp;#10;&amp;#10;    • Megértettem, hogy a vizsgálat végén kapott egyedi kóddal tudom igazolni, hogy a vizsgálatot elvégeztem. Az egyedi kód megadásával válok a kompenzációra jogosulttá.&amp;#10;&amp;#10;Elolvastam és megértettem a felsorolt állításokat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="consent_key">
+        <Param name="allowedKeys" updates="constant" val="'right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="consent_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="consent_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="consent_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
     <Routine name="info"/>
     <Routine name="lab_introduction">
       <TextComponent name="lab_thanks">
@@ -317,6 +451,30 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="lab_introduction_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="lab_introduction_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="119.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="enc_instructions_1">
       <TextComponent name="enc_instructions_1_text">
@@ -339,7 +497,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ön ennek a modern képgalériának a kurátora. &amp;#10;&amp;#10;A legújabb kiállításra a vártnál több kép érkezett.&amp;#10;&amp;#10;Kurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára. &amp;#10;&amp;#10;Az Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz.&amp;#10;&amp;#10;A folytatáshoz nyomja le a jobb nyilat.&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Ön ennek a modern képgalériának a kurátora. &amp;#10;&amp;#10;A legújabb kiállításra a vártnál több kép érkezett.&amp;#10;&amp;#10;Kurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára. &amp;#10;&amp;#10;Az Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="0.9" valType="code"/>
       </TextComponent>
@@ -379,13 +537,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="instructions_1_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="instructions_1_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="enc_instructions_2">
       <TextComponent name="enc_instructions_2_text">
@@ -408,7 +590,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ez a galéria térképe felülről, nézze meg figyelmesen. &amp;#10;&amp;#10;A feladat során a képek a térképre vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek.&amp;#10;&amp;#10;Döntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. &amp;#10;&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ. &amp;#10;&amp;#10;A folytatáshoz nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="Ez a galéria térképe felülről, nézze meg figyelmesen. &amp;#10;&amp;#10;A feladat során a képek a térképre vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.&amp;#10;&amp;#10;Döntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. &amp;#10;&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="0.7" valType="code"/>
       </TextComponent>
@@ -448,13 +630,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="instructions_2_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="instructions_2_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="enc_fx">
       <ImageComponent name="enc_fx_map">
@@ -529,8 +735,8 @@
       <CodeComponent name="rec_run_counter">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="run_counter = (run_counter + 1);&amp;#10;end_run_text = &quot;Sz\u00fcnet\nA folytat\u00e1shoz nyomja le a jobb nyilat&quot;;&amp;#10;if ((run_counter &gt;= n_runs)) {&amp;#10;    end_run_text = &quot;V\u00e9ge a m\u00e1sodik feladatnak&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="run_counter = run_counter + 1&amp;#10;end_run_text = 'Szünet\nA folytatáshoz nyomja le a jobb nyilat'&amp;#10;&amp;#10;if run_counter &gt;= n_runs:&amp;#10;    end_run_text = 'Vége a második feladatnak'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="run_counter = (run_counter + 1);&amp;#10;end_run_text = &quot;Sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat&quot;;&amp;#10;if ((run_counter &gt;= n_runs)) {&amp;#10;    end_run_text = &quot;V\u00e9ge a m\u00e1sodik feladatnak. A jobb ny\u00edl lenyom\u00e1s\u00e1val megkapja a vizsg\u00e1lat befejez\u00e9s\u00e9t igazol\u00f3 k\u00f3dot.&quot;;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="run_counter = run_counter + 1&amp;#10;end_run_text = 'Szünet\nA feladat folytatáshoz nyomja le a jobb nyilat'&amp;#10;&amp;#10;if run_counter &gt;= n_runs:&amp;#10;    end_run_text = 'Vége a második feladatnak. A jobb nyíl lenyomásával megkapja a vizsgálat befejezését igazoló kódot.'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -549,7 +755,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
         <Param name="name" updates="None" val="start_rec_run_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -703,7 +909,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <TextComponent name="rec_fx_instructions_text">
-        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="durationEstim" updates="None" val="1.5" valType="code"/>
@@ -854,7 +1060,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
         <Param name="name" updates="None" val="rec_instructions_1_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -864,9 +1070,9 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="120.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, műalkotás válogató feladataban, és hogy ugyanott látta-e őket.&amp;#10;&amp;#10;A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.&amp;#10;&amp;#10;A folytatáshoz nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, műalkotás válogató feladataban, és hogy ugyanott látta-e őket.&amp;#10;&amp;#10;A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -881,13 +1087,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="120.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="rec_instructions_1_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rec_instructions_1_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="rec_instructions_2">
       <TextComponent name="rec_instructions2_text">
@@ -910,7 +1140,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.&amp;#10;&amp;#10;Három csoportba oszthatóak a megjelenő képek:&amp;#10; - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.&amp;#10; - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.&amp;#10; - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. &amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;Régi - F&amp;#10;Hasonló - J&amp;#10;Új - K&amp;#10;&amp;#10;A folytatáshoz nyomja le a jobb nyilat" valType="str"/>
+        <Param name="text" updates="constant" val="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.&amp;#10;&amp;#10;Három csoportba oszthatóak a megjelenő képek:&amp;#10; - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.&amp;#10; - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.&amp;#10; - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. &amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;Régi - F&amp;#10;Hasonló - J&amp;#10;Új - K" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1" valType="code"/>
       </TextComponent>
@@ -925,13 +1155,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="rec_instructions_2_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rec_instructions_2_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="enc_instructions_3">
       <TextComponent name="enc_instructions_3_text">
@@ -954,7 +1208,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.&amp;#10;&amp;#10;Az 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. &amp;#10;&amp;#10;Most a gyakorló feladat következik. &amp;#10;Ha készen áll a gyakorlásra, nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="Az első feladat nagyjából 20 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. &amp;#10;&amp;#10;A 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.&amp;#10;&amp;#10;Az 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. &amp;#10;&amp;#10;Most a gyakorló feladat következik. &amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -969,13 +1223,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="enc_instructions_3_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="enc_instructions_3_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Ha készen áll a gyakorlásra, nyomja le a jobb nyilat." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="start_practice">
       <TextComponent name="start_practice_text">
@@ -1024,7 +1302,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ez volt a gyakorlás. A feladat következik. &amp;#10;&amp;#10;A feladat elkezdéséhez nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="Ez volt a gyakorlás. A feladat következik. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="0.8" valType="code"/>
       </TextComponent>
@@ -1039,9 +1317,9 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -1061,6 +1339,30 @@
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="name" updates="None" val="end_practice_block_counter" valType="code"/>
       </CodeComponent>
+      <TextComponent name="end_practice_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="end_practice_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="enc_practice_feedback">
       <CodeComponent name="enc_practice_feedback_code">
@@ -1136,7 +1438,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
         <Param name="name" updates="None" val="enc_practice_feedback_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -1218,7 +1520,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A Hely nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.&amp;#10;Ebben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. &amp;#10;&amp;#10;A helyek azonban három csoportba oszthatóak:&amp;#10; - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.&amp;#10; - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.&amp;#10; - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;A döntését így jelölje:&amp;#10;Régi - F&amp;#10;Hasonló - J&amp;#10;Új - K&amp;#10;&amp;#10;A folytatáshoz nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="A Hely nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.&amp;#10;Ebben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. &amp;#10;&amp;#10;A helyek azonban három csoportba oszthatóak:&amp;#10; - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.&amp;#10; - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.&amp;#10; - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;A döntését így jelölje:&amp;#10;Régi - F&amp;#10;Hasonló - J&amp;#10;Új - K" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1" valType="code"/>
       </TextComponent>
@@ -1233,13 +1535,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0" valType="code"/>
+        <Param name="startVal" updates="None" val="5" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300" valType="code"/>
+        <Param name="stopVal" updates="constant" val="295" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="rec_instructions_3_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rec_instructions_3_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="rec_instructions_4">
       <TextComponent name="rec_instructions_4_text">
@@ -1262,7 +1588,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek. &amp;#10;&amp;#10;A bemutató alatt jobb nyillal tud továbblépni." valType="str"/>
+        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1277,13 +1603,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="rec_instructions_4_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="rec_instructions_4_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="demo">
       <ImageComponent name="demo_map">
@@ -1403,6 +1753,30 @@
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="demo_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="demo_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="298.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="demo_end">
       <TextComponent name="demo_end_text">
@@ -1423,9 +1797,9 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="120.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ez volt a bemutató. Most a gyakorlás következik.&amp;#10;&amp;#10;Ha készen áll a gyakorlásra, nyomja le a jobb nyilat." valType="str"/>
+        <Param name="text" updates="constant" val="Ez volt a bemutató. Most a gyakorlás következik." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1440,13 +1814,37 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="115.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="299.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
+      <TextComponent name="demo_end_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="demo_end_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0,-0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
     </Routine>
     <Routine name="start_rec_block">
       <CodeComponent name="start_block_code">
@@ -1573,8 +1971,146 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
     </Routine>
+    <Routine name="data_protection">
+      <TextComponent name="data_protection_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.022" valType="code"/>
+        <Param name="name" updates="None" val="data_protection_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban.&amp;#10;&amp;#10;A vizsgálat során a fentebb leírt feladatra adott válaszai mellett a következő adatok kerülnek rögzítésre: nem, kor, oktatás éve. Ezen adatok szolgáltatása a vizsgálat előfeltétele.&amp;#10;&amp;#10;A kísérlet anonim, és semmilyen, az Ön személyének azonosítására alkalmas adat rögzítésére nem kerül sor. Anonim adatait szeretnénk megosztani a tudományos közösséggel, hogy azokat más kutatók is fel tudják majd használni elemzéseikben, kutatásaikban. Ezzel értékes információt és időt nyerhet a világ tudományos közössége. Az adatok kezelésével és a titoktartással kapcsolatban bővebb információt az Adatkezelés nevű dokumentumunkban olvashat.&amp;#10;&amp;#10;A vizsgálat online végezhető el, a Pavlovia (https://pavlovia.org/) online kísérleti felületén. A résztvevők a vizsgálat végén kapott egyedi kód későbbi bemutatásával válnak a kompenzációra jogosulttá.&amp;#10;&amp;#10;Ez az egyedi kód csak azzal az információval lesz összekapcsolva, hogy Ön elvégezte a kísérletet; a megadott adatai közül (nem, kor, okatatás éve) egyik sem lesz e kódhoz hozzárendelve semmilyen adatbázisban. A vizsgálat befejeztével lehetősége nyílik egy online űrlap kitöltésére, ahol az egyedi kódja illetve az e-mail címe megadását fogjuk kérni Öntől. A megadott email címre fogjuk elküldeni a kompenzációt." valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="data_protection_key">
+        <Param name="allowedKeys" updates="constant" val="'right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="data_protection_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="data_procetion_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="data_procetion_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="5.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="295.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="experiment_information">
+      <TextComponent name="experiment_information_text">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="experiment_information_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!&amp;#10;A vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. &amp;#10;A kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 45-50 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.&amp;#10;&amp;#10;A vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. &amp;#10;&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <KeyboardComponent name="experiment_information_key">
+        <Param name="allowedKeys" updates="constant" val="'right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="experiment_information_key" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="10.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="290.0" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <TextComponent name="experiment_information_continue">
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.03" valType="code"/>
+        <Param name="name" updates="None" val="experiment_information_continue" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.4)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="10.0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="290.0" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="A folytatáshoz nyomja le a jobb nyilat. " valType="str"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+    </Routine>
   </Routines>
   <Flow>
+    <Routine name="experiment_information"/>
+    <Routine name="data_protection"/>
     <Routine name="consent"/>
     <Routine name="lab_introduction"/>
     <Routine name="start_encoding"/>

@@ -1370,7 +1370,7 @@ function experimentInit() {
     text: 'Köszönjük a részvételt!\n\nJegyezze meg a következő kódot, amellyel a részvételét igazolja:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.2], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.2], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });

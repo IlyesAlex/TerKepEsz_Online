@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'terkepesz_online';  // from the Builder filename that created this script
-let expInfo = {'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
+let expInfo = {'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({

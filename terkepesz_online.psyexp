@@ -6,7 +6,7 @@
     <Param name="Completed URL" updates="None" val="" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/home) ) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -1302,7 +1302,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Ez volt a gyakorlás. A feladat következik. " valType="str"/>
+        <Param name="text" updates="constant" val="Ez volt a gyakorlás. A feladat következik. &amp;#10;A feladat során már nem kap visszajelzést a döntéséről. &amp;#10;Válaszát így jelölje:&amp;#10;F - A kép nem marad a bemutatott helyen.&amp;#10;J - A kép marad a bemutatott helyen." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="0.8" valType="code"/>
       </TextComponent>
@@ -2060,7 +2060,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!&amp;#10;A vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. &amp;#10;A kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 45-50 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.&amp;#10;&amp;#10;A vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. &amp;#10;&amp;#10;&amp;#10;" valType="str"/>
+        <Param name="text" updates="constant" val="Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!&amp;#10;A vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. &amp;#10;A kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.&amp;#10;&amp;#10;A vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. &amp;#10;&amp;#10;&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -2203,7 +2203,7 @@
         <Param name="name" updates="None" val="comprehension_feedback_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0.3)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -2241,7 +2241,7 @@
     <Routine name="enc_instructions_2"/>
     <Routine name="enc_instructions_3"/>
     <LoopInitiator loopType="TrialHandler" name="comprehension_questions_2">
-      <Param name="Selected rows" updates="None" val="2:3" valType="str"/>
+      <Param name="Selected rows" updates="None" val="2:4" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Question', 'Mennyi id\\u0151t vesz ig\\u00e9nybe a vizsg\\u00e1lat? V\\u00e1lasz\\u00e1t jel\\u00f6lje a megadott billenty\\u0171vel.'), ('Answer', 'A:20-30 perc    B: 50-60 perc    C: 70-80 perc'), ('CorrectResponse', 'b'), ('CorrectAnswer', 'A helyes v\\u00e1lasz: 50-60 perc')]), OrderedDict([('Question', 'Megbizonyosodott r\\u00f3la, hogy biztos\\u00edtottak a vizsg\\u00e1lat elv\\u00e9gz\\u00e9s\\u00e9hez sz\\u00fcks\\u00e9ges felt\\u00e9telek? V\\u00e1aslz\\u00e1t jel\\u00f6lje a megadott billenty\\u0171vel.'), ('Answer', 'A: Igen, k\\u00f6r\\u00fclm\\u00e9nyeim nyugodtak, az internet kapcsolat stabil, a feladatra r\\u00e1 tudok sz\\u00e1nni 60 percet.    B: Nem, nincs lehet\\u0151s\\u00e9gem nyugodt k\\u00fcr\\u00fclm\\u00e9nyek k\\u00f6z\\u00f6tt elv\\u00e9gezni a feladatot.'), ('CorrectResponse', 'a'), ('CorrectAnswer', 'K\\u00f6sz\\u00f6nj\\u00fck!')])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="stimuli_tables/comprehension_questions.csv" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
@@ -2305,6 +2305,20 @@
     <Routine name="rec_instructions_2"/>
     <Routine name="rec_instructions_3"/>
     <Routine name="rec_instructions_4"/>
+    <LoopInitiator loopType="TrialHandler" name="comprehension_questions_3">
+      <Param name="Selected rows" updates="None" val="4:6" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="code"/>
+      <Param name="name" updates="None" val="comprehension_questions_3" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="comprehension_question"/>
+    <Routine name="comprehension_feedback"/>
+    <LoopTerminator name="comprehension_questions_3"/>
     <LoopInitiator loopType="TrialHandler" name="demo_trials">
       <Param name="Selected rows" updates="None" val="" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Task', 'Demo'), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//181b.jpg'), ('DemoImage', 'stimuli/fractals//181c.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -300.0), ('DemoY', 0.0), ('InPractice', '-'), ('DemoText', 'Hasonló Képek'), ('Jitter', 2300)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//149a.jpg'), ('DemoImage', 'stimuli/fractals//149b.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -300.0), ('DemoY', 0.0), ('InPractice', '-'), ('DemoText', 'Hasonló Képek'), ('Jitter', 1000)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//177b.jpg'), ('DemoImage', 'stimuli/fractals//177c.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -300.0), ('DemoY', 0.0), ('InPractice', '-'), ('DemoText', 'Hasonló Képek'), ('Jitter', 800)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//167a.jpg'), ('DemoImage', 'stimuli/fractals//167b.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -300.0), ('DemoY', 0.0), ('InPractice', 'OBJ-TARGET'), ('DemoText', 'Hasonló Képek'), ('Jitter', 1500)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'OBJ'), ('StimType', 'FOIL'), ('CurrentImage', 'stimuli/fractals//163a.jpg'), ('DemoImage', 'stimuli/fractals//173c.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -300.0), ('DemoY', 0.0), ('InPractice', '-'), ('DemoText', 'Új Képek'), ('Jitter', 600)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'LOC'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//166a.jpg'), ('DemoImage', 'stimuli/fractals//166a.jpg'), ('CurrentX', -300.0), ('CurrentY', 0.0), ('DemoX', -212.1320344), ('DemoY', -212.1320344), ('InPractice', 'LOC-TARGET, OBJ-LURE'), ('DemoText', 'Hasonló Helyek'), ('Jitter', 800)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'LOC'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//159a.jpg'), ('DemoImage', 'stimuli/fractals//159a.jpg'), ('CurrentX', 0.0), ('CurrentY', 300.0), ('DemoX', -212.1320344), ('DemoY', 212.1320344), ('InPractice', 'LOC-LURE'), ('DemoText', 'Hasonló Helyek'), ('Jitter', 1500)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'LOC'), ('StimType', 'LURE'), ('CurrentImage', 'stimuli/fractals//148b.jpg'), ('DemoImage', 'stimuli/fractals//148b.jpg'), ('CurrentX', 212.1320344), ('CurrentY', 212.1320344), ('DemoX', 0.0), ('DemoY', 300.0), ('InPractice', 'LOC-FOIL'), ('DemoText', 'Hasonló Helyek'), ('Jitter', 800)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'LOC'), ('StimType', 'FOIL'), ('CurrentImage', 'stimuli/fractals//177b.jpg'), ('DemoImage', 'stimuli/fractals//177b.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -212.1320344), ('DemoY', 212.1320344), ('InPractice', 'OBJ-LURE'), ('DemoText', 'Új Helyek'), ('Jitter', 800)]), OrderedDict([('Task', 'Demo'), ('TrialType', 'LOC'), ('StimType', 'FOIL'), ('CurrentImage', 'stimuli/fractals//177b.jpg'), ('DemoImage', 'stimuli/fractals//177b.jpg'), ('CurrentX', 300.0), ('CurrentY', 0.0), ('DemoX', -300.0), ('DemoY', 0.0), ('InPractice', 'OBJ-LURE'), ('DemoText', 'Új Helyek'), ('Jitter', 1200)])]" valType="str"/>

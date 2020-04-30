@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'terkepesz_online';  // from the Builder filename that created this script
-let expInfo = {'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/home) ) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
+let expInfo = {'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -96,6 +96,10 @@ flowScheduler.add(rec_instructions_3RoutineEnd());
 flowScheduler.add(rec_instructions_4RoutineBegin());
 flowScheduler.add(rec_instructions_4RoutineEachFrame());
 flowScheduler.add(rec_instructions_4RoutineEnd());
+const comprehension_questions_3LoopScheduler = new Scheduler(psychoJS);
+flowScheduler.add(comprehension_questions_3LoopBegin, comprehension_questions_3LoopScheduler);
+flowScheduler.add(comprehension_questions_3LoopScheduler);
+flowScheduler.add(comprehension_questions_3LoopEnd);
 const demo_trialsLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(demo_trialsLoopBegin, demo_trialsLoopScheduler);
 flowScheduler.add(demo_trialsLoopScheduler);
@@ -283,7 +287,7 @@ function experimentInit() {
   experiment_information_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'experiment_information_text',
-    text: 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. \nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 45-50 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. \n\n\n',
+    text: 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. \nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. \n\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -348,7 +352,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.0], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -589,7 +593,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.0], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -689,7 +693,7 @@ function experimentInit() {
   end_practice_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_practice_text',
-    text: 'Ez volt a gyakorlás. A feladat következik. ',
+    text: 'Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. \nVálaszát így jelölje:\nF - A kép nem marad a bemutatott helyen.\nJ - A kép marad a bemutatott helyen.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: 0.8, ori: 0,
@@ -927,6 +931,55 @@ function experimentInit() {
     depth: -2.0 
   });
   
+  // Initialize components for Routine "comprehension_question"
+  comprehension_questionClock = new util.Clock();
+  string1 = "Mennyi id\u0151t vesz ig\u00e9nybe a vizsg\u00e1lat? V\u00e1lasz\u00e1t jel\u00f6lje a megadott billenty\u0171vel";
+  string2 = "A:20-30 perc    B: 40-50 perc    C: 70-80 perc";
+  string3 = "A helyes v\u00e1lasz: 40-50 perc.";
+  string1 = "Megbizonyosodott r\u00f3la, hogy biztos\u00edtottak a vizsg\u00e1lat elv\u00e9gz\u00e9s\u00e9hez sz\u00fcks\u00e9ges felt\u00e9telek? V\u00e1aslz\u00e1t jel\u00f6lje a megadott billenty\u0171vel";
+  string2 = "A: Igen, k\u00f6r\u00fclm\u00e9nyeim nyugodtak, az internet kapcsolat stabil, a feladatra r\u00e1 tudok sz\u00e1nni 60 percet.    B: Nem, nincs lehet\u0151s\u00e9gem nyugodt k\u00fcr\u00fclm\u00e9nyek k\u00f6z\u00f6tt elv\u00e9gezni a feladatot.";
+  string3 = "K\u00f6sz\u00f6nj\u00fck!";
+  string1 = "Mely billenty\u0171 jelzi azokat a k\u00e9peket, amelyek maradhatnak a gal\u00e9ri\u00e1ban, a bemutatott helyen?";
+  string2 = "A billenyt\u0171    S billenty\u0171    D billenty\u0171    F billenty\u0171";
+  string3 = "A helyes v\u00e1lasz: F billenyt";
+  
+  comprehension_question_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_question_text',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  comprehension_question_answers = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_question_answers',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.3)], height: 0.06,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  key_resp = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "comprehension_feedback"
+  comprehension_feedbackClock = new util.Clock();
+  comprehension_feedback_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_feedback_text',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.0], height: 0.06,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
   // Initialize components for Routine "demo"
   demoClock = new util.Clock();
   demo_map = new visual.ImageStim({
@@ -1144,7 +1197,7 @@ function experimentInit() {
   end_practice_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_practice_text',
-    text: 'Ez volt a gyakorlás. A feladat következik. ',
+    text: 'Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. \nVálaszát így jelölje:\nF - A kép nem marad a bemutatott helyen.\nJ - A kép marad a bemutatott helyen.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: 0.8, ori: 0,
@@ -1457,7 +1510,7 @@ function comprehension_questions_1LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.csv', '0:1'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.csv', '0:2'),
     seed: undefined, name: 'comprehension_questions_1'
   });
   psychoJS.experiment.addLoop(comprehension_questions_1); // add the loop to the experiment
@@ -1495,7 +1548,7 @@ function comprehension_questions_2LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.csv', '2:3'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.csv', '2:4'),
     seed: undefined, name: 'comprehension_questions_2'
   });
   psychoJS.experiment.addLoop(comprehension_questions_2); // add the loop to the experiment
@@ -1642,6 +1695,44 @@ function enc_trialsLoopEnd() {
 
 function enc_runsLoopEnd() {
   psychoJS.experiment.removeLoop(enc_runs);
+
+  return Scheduler.Event.NEXT;
+}
+
+
+var comprehension_questions_3;
+function comprehension_questions_3LoopBegin(thisScheduler) {
+  // set up handler to look after randomisation of conditions etc
+  comprehension_questions_3 = new TrialHandler({
+    psychoJS: psychoJS,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    extraInfo: expInfo, originPath: undefined,
+    trialList: undefined,
+    seed: undefined, name: 'comprehension_questions_3'
+  });
+  psychoJS.experiment.addLoop(comprehension_questions_3); // add the loop to the experiment
+  currentLoop = comprehension_questions_3;  // we're now the current loop
+
+  // Schedule all the trials in the trialList:
+  comprehension_questions_3.forEach(function() {
+    const snapshot = comprehension_questions_3.getSnapshot();
+
+    thisScheduler.add(importConditions(snapshot));
+    thisScheduler.add(comprehension_questionRoutineBegin(snapshot));
+    thisScheduler.add(comprehension_questionRoutineEachFrame(snapshot));
+    thisScheduler.add(comprehension_questionRoutineEnd(snapshot));
+    thisScheduler.add(comprehension_feedbackRoutineBegin(snapshot));
+    thisScheduler.add(comprehension_feedbackRoutineEachFrame(snapshot));
+    thisScheduler.add(comprehension_feedbackRoutineEnd(snapshot));
+    thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
+  });
+
+  return Scheduler.Event.NEXT;
+}
+
+
+function comprehension_questions_3LoopEnd() {
+  psychoJS.experiment.removeLoop(comprehension_questions_3);
 
   return Scheduler.Event.NEXT;
 }

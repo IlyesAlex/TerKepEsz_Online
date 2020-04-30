@@ -326,7 +326,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -337,7 +337,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.3)], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.3)], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -567,7 +567,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -578,7 +578,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.3)], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.3)], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -949,7 +949,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.3], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.3], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -960,7 +960,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, (- 0.3)], height: 0.06,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 0.3)], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
@@ -1510,7 +1510,7 @@ function comprehension_questions_1LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.csv', '0:2'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '0:2'),
     seed: undefined, name: 'comprehension_questions_1'
   });
   psychoJS.experiment.addLoop(comprehension_questions_1); // add the loop to the experiment
@@ -1548,7 +1548,7 @@ function comprehension_questions_2LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.csv', '2:4'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '2:4'),
     seed: undefined, name: 'comprehension_questions_2'
   });
   psychoJS.experiment.addLoop(comprehension_questions_2); // add the loop to the experiment
@@ -1707,7 +1707,7 @@ function comprehension_questions_3LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: undefined,
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4:6'),
     seed: undefined, name: 'comprehension_questions_3'
   });
   psychoJS.experiment.addLoop(comprehension_questions_3); // add the loop to the experiment

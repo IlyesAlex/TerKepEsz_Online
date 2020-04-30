@@ -121,6 +121,9 @@ const rec_runsLoopScheduler = new Scheduler(psychoJS);
 flowScheduler.add(rec_runsLoopBegin, rec_runsLoopScheduler);
 flowScheduler.add(rec_runsLoopScheduler);
 flowScheduler.add(rec_runsLoopEnd);
+flowScheduler.add(end_experimentRoutineBegin());
+flowScheduler.add(end_experimentRoutineEachFrame());
+flowScheduler.add(end_experimentRoutineEnd());
 flowScheduler.add(quitPsychoJS, '', true);
 
 // quit if user presses Cancel in dialog box:
@@ -279,6 +282,8 @@ var start_rec_block_text;
 var end_rec_runClock;
 var end_rec_run_text;
 var end_rec_run_key;
+var end_experimentClock;
+var end_experiment_text;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -414,7 +419,7 @@ function experimentInit() {
   lab_thanks = new visual.TextStim({
     win: psychoJS.window,
     name: 'lab_thanks',
-    text: 'Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n',
+    text: "Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n(Image of lab members would come here - if you consent/think it's ok)\n\n",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -693,7 +698,7 @@ function experimentInit() {
   end_practice_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_practice_text',
-    text: 'Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. \nVálaszát így jelölje:\nF - A kép nem marad a bemutatott helyen.\nJ - A kép marad a bemutatott helyen.',
+    text: 'Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: 0.8, ori: 0,
@@ -858,7 +863,7 @@ function experimentInit() {
   rec_instructions2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions2_text',
-    text: 'A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.\n\nHárom csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.\n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.\n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nHasonló - J\nÚj - K',
+    text: 'A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.\n\nHárom csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.\n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.\n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nHasonló - J\nÚj - K',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: 1, ori: 0,
@@ -884,7 +889,7 @@ function experimentInit() {
   rec_instrauction_3_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instrauction_3_text',
-    text: 'A Hely nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban három csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.\n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nHasonló - J\nÚj - K',
+    text: 'A Hely nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban három csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.\n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nHasonló - J\nÚj - K',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: 1, ori: 0,
@@ -1197,7 +1202,7 @@ function experimentInit() {
   end_practice_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_practice_text',
-    text: 'Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. \nVálaszát így jelölje:\nF - A kép nem marad a bemutatott helyen.\nJ - A kép marad a bemutatott helyen.',
+    text: 'Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: 0.8, ori: 0,
@@ -1348,6 +1353,19 @@ function experimentInit() {
   });
   
   end_rec_run_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "end_experiment"
+  end_experimentClock = new util.Clock();
+  end_experiment_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'end_experiment_text',
+    text: 'Köszönjük a részvételt!\n\nJegyezze meg a következő kódot, amellyel a részvételét igazolja:',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.2], height: 0.1,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
   
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
@@ -1745,7 +1763,7 @@ function demo_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'stimuli_tables/stimuli_demo.csv',
+    trialList: 'stimuli_tables/stimuli_demo.xlsx',
     seed: undefined, name: 'demo_trials'
   });
   psychoJS.experiment.addLoop(demo_trials); // add the loop to the experiment
@@ -6044,6 +6062,91 @@ function end_rec_runRoutineEnd(trials) {
         }
     
     end_rec_run_key.stop();
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+var end_experimentComponents;
+function end_experimentRoutineBegin(trials) {
+  return function () {
+    //------Prepare to start Routine 'end_experiment'-------
+    t = 0;
+    end_experimentClock.reset(); // clock
+    frameN = -1;
+    routineTimer.add(300.000000);
+    // update component parameters for each repeat
+    // keep track of which components have finished
+    end_experimentComponents = [];
+    end_experimentComponents.push(end_experiment_text);
+    
+    end_experimentComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent)
+        thisComponent.status = PsychoJS.Status.NOT_STARTED;
+       });
+    
+    return Scheduler.Event.NEXT;
+  };
+}
+
+
+function end_experimentRoutineEachFrame(trials) {
+  return function () {
+    //------Loop for each frame of Routine 'end_experiment'-------
+    let continueRoutine = true; // until we're told otherwise
+    // get current time
+    t = end_experimentClock.getTime();
+    frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
+    // update/draw components on each frame
+    
+    // *end_experiment_text* updates
+    if (t >= 0.0 && end_experiment_text.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      end_experiment_text.tStart = t;  // (not accounting for frame time here)
+      end_experiment_text.frameNStart = frameN;  // exact frame index
+      
+      end_experiment_text.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (end_experiment_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      end_experiment_text.setAutoDraw(false);
+    }
+    // check for quit (typically the Esc key)
+    if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
+      return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
+    }
+    
+    // check if the Routine should terminate
+    if (!continueRoutine) {  // a component has requested a forced-end of Routine
+      return Scheduler.Event.NEXT;
+    }
+    
+    continueRoutine = false;  // reverts to True if at least one component still running
+    end_experimentComponents.forEach( function(thisComponent) {
+      if ('status' in thisComponent && thisComponent.status !== PsychoJS.Status.FINISHED) {
+        continueRoutine = true;
+      }
+    });
+    
+    // refresh the screen if continuing
+    if (continueRoutine && routineTimer.getTime() > 0) {
+      return Scheduler.Event.FLIP_REPEAT;
+    } else {
+      return Scheduler.Event.NEXT;
+    }
+  };
+}
+
+
+function end_experimentRoutineEnd(trials) {
+  return function () {
+    //------Ending Routine 'end_experiment'-------
+    end_experimentComponents.forEach( function(thisComponent) {
+      if (typeof thisComponent.setAutoDraw === 'function') {
+        thisComponent.setAutoDraw(false);
+      }
+    });
     return Scheduler.Event.NEXT;
   };
 }

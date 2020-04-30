@@ -633,7 +633,7 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -749,7 +749,7 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -1111,7 +1111,7 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -1266,7 +1266,7 @@ function experimentInit() {
     text: '+',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Thu 30 Apr 2020 01:56:19 PM CEST
+    on Thu 30 Apr 2020 06:21:12 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.0'
 expName = 'TRK-online'  # from the Builder filename that created this script
-expInfo = {'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/home) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/home) ) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}
+expInfo = {'participant': 'pilot', 'A feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -83,7 +83,7 @@ defaultKeyboard = keyboard.Keyboard()
 # Initialize components for Routine "experiment_information"
 experiment_informationClock = core.Clock()
 experiment_information_text = visual.TextStim(win=win, name='experiment_information_text',
-    text='Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. \nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 45-50 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. \n\n\n',
+    text='Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. \nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. \n\n\n',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -114,14 +114,14 @@ string3 = "A helyes válasz: F billenytű"
 comprehension_question_text = visual.TextStim(win=win, name='comprehension_question_text',
     text='default text',
     font='Arial',
-    pos=(0, 0.3), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, 0.3), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 comprehension_question_answers = visual.TextStim(win=win, name='comprehension_question_answers',
     text='default text',
     font='Arial',
-    pos=(0, -0.3), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, -0.3), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -132,7 +132,7 @@ comprehension_feedbackClock = core.Clock()
 comprehension_feedback_text = visual.TextStim(win=win, name='comprehension_feedback_text',
     text='default text',
     font='Arial',
-    pos=(0, 0.3), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, 0.0), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -176,7 +176,7 @@ consent_continue = visual.TextStim(win=win, name='consent_continue',
 # Initialize components for Routine "lab_introduction"
 lab_introductionClock = core.Clock()
 lab_thanks = visual.TextStim(win=win, name='lab_thanks',
-    text='Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n',
+    text="Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n(Image of lab members would come here - if you consent/think it's ok)\n\n",
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -292,14 +292,14 @@ string3 = "A helyes válasz: F billenytű"
 comprehension_question_text = visual.TextStim(win=win, name='comprehension_question_text',
     text='default text',
     font='Arial',
-    pos=(0, 0.3), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, 0.3), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
 comprehension_question_answers = visual.TextStim(win=win, name='comprehension_question_answers',
     text='default text',
     font='Arial',
-    pos=(0, -0.3), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, -0.3), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
@@ -310,7 +310,7 @@ comprehension_feedbackClock = core.Clock()
 comprehension_feedback_text = visual.TextStim(win=win, name='comprehension_feedback_text',
     text='default text',
     font='Arial',
-    pos=(0, 0.3), height=0.06, wrapWidth=None, ori=0, 
+    pos=(0, 0.0), height=0.06, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -338,7 +338,7 @@ enc_fx_map = visual.ImageStim(
 enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -393,7 +393,7 @@ enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedbac
 # Initialize components for Routine "end_practice"
 end_practiceClock = core.Clock()
 end_practice_text = visual.TextStim(win=win, name='end_practice_text',
-    text='Ez volt a gyakorlás. A feladat következik. ',
+    text='Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. ',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=0.8, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -431,7 +431,7 @@ enc_fx_map = visual.ImageStim(
 enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -517,7 +517,7 @@ rec_instructions_1_continue = visual.TextStim(win=win, name='rec_instructions_1_
 # Initialize components for Routine "rec_instructions_2"
 rec_instructions_2Clock = core.Clock()
 rec_instructions2_text = visual.TextStim(win=win, name='rec_instructions2_text',
-    text='A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.\n\nHárom csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.\n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.\n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nHasonló - J\nÚj - K',
+    text='A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket az első, műalkotás válogató feladataban.\n\nHárom csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek majd az első feladatban látott képek egyikével.\n - Hasonló: Ezek a képek nagyon hasonlítanak az első feladatban látott képek egyikéhez.\n - Új: Teljesen új képek, amelyek nem jelentek meg az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint az első feladatban, melyik hasonló, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nHasonló - J\nÚj - K',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -535,7 +535,7 @@ rec_instructions_2_continue = visual.TextStim(win=win, name='rec_instructions_2_
 # Initialize components for Routine "rec_instructions_3"
 rec_instructions_3Clock = core.Clock()
 rec_instrauction_3_text = visual.TextStim(win=win, name='rec_instrauction_3_text',
-    text='A Hely nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban három csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.\n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nHasonló - J\nÚj - K',
+    text='A Hely nevű alfeladatban azt kell eldöntenie, a képek ugyanott jelennek-e meg, mint az első, műalkotás válogató feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban három csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép az első feladatban.\n - Hasonló: Egy hasonló helyen jelent meg ez a kép az első feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép az első feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nHasonló - J\nÚj - K',
     font='Arial',
     pos=(0, 0), height=0.03, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -567,6 +567,45 @@ rec_instructions_4_continue = visual.TextStim(win=win, name='rec_instructions_4_
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
+
+# Initialize components for Routine "comprehension_question"
+comprehension_questionClock = core.Clock()
+string1 = 'Mennyi időt vesz igénybe a vizsgálat? Válaszát jelölje a megadott billentyűvel'
+string2 = 'A:20-30 perc    B: 40-50 perc    C: 70-80 perc'
+string3 = "A helyes válasz: 40-50 perc."
+
+string1 = 'Megbizonyosodott róla, hogy biztosítottak a vizsgálat elvégzéséhez szükséges feltételek? Váaslzát jelölje a megadott billentyűvel'
+string2 = 'A: Igen, körülményeim nyugodtak, az internet kapcsolat stabil, a feladatra rá tudok szánni 60 percet.    B: Nem, nincs lehetőségem nyugodt kürülmények között elvégezni a feladatot.'
+string3 = "Köszönjük!"
+
+string1 = 'Mely billentyű jelzi azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen?'
+string2 = 'A billenytű    S billentyű    D billentyű    F billentyű'
+string3 = "A helyes válasz: F billenytű"
+comprehension_question_text = visual.TextStim(win=win, name='comprehension_question_text',
+    text='default text',
+    font='Arial',
+    pos=(0, 0.3), height=0.04, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-1.0);
+comprehension_question_answers = visual.TextStim(win=win, name='comprehension_question_answers',
+    text='default text',
+    font='Arial',
+    pos=(0, -0.3), height=0.04, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=-2.0);
+key_resp = keyboard.Keyboard()
+
+# Initialize components for Routine "comprehension_feedback"
+comprehension_feedbackClock = core.Clock()
+comprehension_feedback_text = visual.TextStim(win=win, name='comprehension_feedback_text',
+    text='default text',
+    font='Arial',
+    pos=(0, 0.0), height=0.06, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # Initialize components for Routine "demo"
 demoClock = core.Clock()
@@ -664,7 +703,7 @@ rec_fx_map = visual.ImageStim(
 rec_fx_cross = visual.TextStim(win=win, name='rec_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -731,7 +770,7 @@ rec_practice_feedback_text = visual.TextStim(win=win, name='rec_practice_feedbac
 # Initialize components for Routine "end_practice"
 end_practiceClock = core.Clock()
 end_practice_text = visual.TextStim(win=win, name='end_practice_text',
-    text='Ez volt a gyakorlás. A feladat következik. ',
+    text='Ez volt a gyakorlás. A feladat következik. \nA feladat során már nem kap visszajelzést a döntéséről. ',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=0.8, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -779,7 +818,7 @@ rec_fx_map = visual.ImageStim(
 rec_fx_cross = visual.TextStim(win=win, name='rec_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -843,6 +882,16 @@ end_rec_run_text = visual.TextStim(win=win, name='end_rec_run_text',
     languageStyle='LTR',
     depth=0.0);
 end_rec_run_key = keyboard.Keyboard()
+
+# Initialize components for Routine "end_experiment"
+end_experimentClock = core.Clock()
+end_experiment_text = visual.TextStim(win=win, name='end_experiment_text',
+    text='Köszönjük a részvételt!\n\nJegyezze meg a következő kódot, amellyel a részvételét igazolja:',
+    font='Arial',
+    pos=(0, 0.2), height=0.1, wrapWidth=None, ori=0, 
+    color='black', colorSpace='rgb', opacity=1, 
+    languageStyle='LTR',
+    depth=0.0);
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -981,7 +1030,7 @@ thisExp.addData('experiment_information_continue.stopped', experiment_informatio
 # set up handler to look after randomisation of conditions etc
 comprehension_questions_1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli_tables/comprehension_questions.csv', selection='0:1'),
+    trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='0:2'),
     seed=None, name='comprehension_questions_1')
 thisExp.addLoop(comprehension_questions_1)  # add the loop to the experiment
 thisComprehension_question_1 = comprehension_questions_1.trialList[0]  # so we can initialise stimuli with some values
@@ -1086,7 +1135,7 @@ for thisComprehension_question_1 in comprehension_questions_1:
                 win.timeOnFlip(key_resp, 'tStopRefresh')  # time at next scr refresh
                 key_resp.status = FINISHED
         if key_resp.status == STARTED and not waitOnFlip:
-            theseKeys = key_resp.getKeys(keyList=['a', 'b', 'c'], waitRelease=False)
+            theseKeys = key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], waitRelease=False)
             _key_resp_allKeys.extend(theseKeys)
             if len(_key_resp_allKeys):
                 key_resp.keys = _key_resp_allKeys[0].name  # just the first key pressed
@@ -2110,7 +2159,7 @@ thisExp.addData('enc_instructions_3_continue.stopped', enc_instructions_3_contin
 # set up handler to look after randomisation of conditions etc
 comprehension_questions_2 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli_tables/comprehension_questions.csv', selection='2:3'),
+    trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='2:4'),
     seed=None, name='comprehension_questions_2')
 thisExp.addLoop(comprehension_questions_2)  # add the loop to the experiment
 thisComprehension_question_2 = comprehension_questions_2.trialList[0]  # so we can initialise stimuli with some values
@@ -2215,7 +2264,7 @@ for thisComprehension_question_2 in comprehension_questions_2:
                 win.timeOnFlip(key_resp, 'tStopRefresh')  # time at next scr refresh
                 key_resp.status = FINISHED
         if key_resp.status == STARTED and not waitOnFlip:
-            theseKeys = key_resp.getKeys(keyList=['a', 'b', 'c'], waitRelease=False)
+            theseKeys = key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], waitRelease=False)
             _key_resp_allKeys.extend(theseKeys)
             if len(_key_resp_allKeys):
                 key_resp.keys = _key_resp_allKeys[0].name  # just the first key pressed
@@ -4159,9 +4208,245 @@ thisExp.addData('rec_instructions_4_continue.started', rec_instructions_4_contin
 thisExp.addData('rec_instructions_4_continue.stopped', rec_instructions_4_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
+comprehension_questions_3 = data.TrialHandler(nReps=1, method='sequential', 
+    extraInfo=expInfo, originPath=-1,
+    trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='4:6'),
+    seed=None, name='comprehension_questions_3')
+thisExp.addLoop(comprehension_questions_3)  # add the loop to the experiment
+thisComprehension_question_3 = comprehension_questions_3.trialList[0]  # so we can initialise stimuli with some values
+# abbreviate parameter names if possible (e.g. rgb = thisComprehension_question_3.rgb)
+if thisComprehension_question_3 != None:
+    for paramName in thisComprehension_question_3:
+        exec('{} = thisComprehension_question_3[paramName]'.format(paramName))
+
+for thisComprehension_question_3 in comprehension_questions_3:
+    currentLoop = comprehension_questions_3
+    # abbreviate parameter names if possible (e.g. rgb = thisComprehension_question_3.rgb)
+    if thisComprehension_question_3 != None:
+        for paramName in thisComprehension_question_3:
+            exec('{} = thisComprehension_question_3[paramName]'.format(paramName))
+    
+    # ------Prepare to start Routine "comprehension_question"-------
+    continueRoutine = True
+    routineTimer.add(300.000000)
+    # update component parameters for each repeat
+    comprehension_question_text.setText(Question)
+    comprehension_question_answers.setText(Answer)
+    key_resp.keys = []
+    key_resp.rt = []
+    _key_resp_allKeys = []
+    # keep track of which components have finished
+    comprehension_questionComponents = [comprehension_question_text, comprehension_question_answers, key_resp]
+    for thisComponent in comprehension_questionComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    comprehension_questionClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "comprehension_question"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = comprehension_questionClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=comprehension_questionClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *comprehension_question_text* updates
+        if comprehension_question_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            comprehension_question_text.frameNStart = frameN  # exact frame index
+            comprehension_question_text.tStart = t  # local t and not account for scr refresh
+            comprehension_question_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(comprehension_question_text, 'tStartRefresh')  # time at next scr refresh
+            comprehension_question_text.setAutoDraw(True)
+        if comprehension_question_text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > comprehension_question_text.tStartRefresh + 300.0-frameTolerance:
+                # keep track of stop time/frame for later
+                comprehension_question_text.tStop = t  # not accounting for scr refresh
+                comprehension_question_text.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(comprehension_question_text, 'tStopRefresh')  # time at next scr refresh
+                comprehension_question_text.setAutoDraw(False)
+        
+        # *comprehension_question_answers* updates
+        if comprehension_question_answers.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            comprehension_question_answers.frameNStart = frameN  # exact frame index
+            comprehension_question_answers.tStart = t  # local t and not account for scr refresh
+            comprehension_question_answers.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(comprehension_question_answers, 'tStartRefresh')  # time at next scr refresh
+            comprehension_question_answers.setAutoDraw(True)
+        if comprehension_question_answers.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > comprehension_question_answers.tStartRefresh + 300.0-frameTolerance:
+                # keep track of stop time/frame for later
+                comprehension_question_answers.tStop = t  # not accounting for scr refresh
+                comprehension_question_answers.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(comprehension_question_answers, 'tStopRefresh')  # time at next scr refresh
+                comprehension_question_answers.setAutoDraw(False)
+        
+        # *key_resp* updates
+        waitOnFlip = False
+        if key_resp.status == NOT_STARTED and tThisFlip >= 1.0-frameTolerance:
+            # keep track of start time/frame for later
+            key_resp.frameNStart = frameN  # exact frame index
+            key_resp.tStart = t  # local t and not account for scr refresh
+            key_resp.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(key_resp, 'tStartRefresh')  # time at next scr refresh
+            key_resp.status = STARTED
+            # keyboard checking is just starting
+            waitOnFlip = True
+            win.callOnFlip(key_resp.clock.reset)  # t=0 on next screen flip
+            win.callOnFlip(key_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
+        if key_resp.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > key_resp.tStartRefresh + 299.0-frameTolerance:
+                # keep track of stop time/frame for later
+                key_resp.tStop = t  # not accounting for scr refresh
+                key_resp.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(key_resp, 'tStopRefresh')  # time at next scr refresh
+                key_resp.status = FINISHED
+        if key_resp.status == STARTED and not waitOnFlip:
+            theseKeys = key_resp.getKeys(keyList=['d', 'f', 'j', 'k'], waitRelease=False)
+            _key_resp_allKeys.extend(theseKeys)
+            if len(_key_resp_allKeys):
+                key_resp.keys = _key_resp_allKeys[0].name  # just the first key pressed
+                key_resp.rt = _key_resp_allKeys[0].rt
+                # was this correct?
+                if (key_resp.keys == str(CorrectResponse)) or (key_resp.keys == CorrectResponse):
+                    key_resp.corr = 1
+                else:
+                    key_resp.corr = 0
+                # a response ends the routine
+                continueRoutine = False
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in comprehension_questionComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "comprehension_question"-------
+    for thisComponent in comprehension_questionComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    comprehension_questions_3.addData('comprehension_question_text.started', comprehension_question_text.tStartRefresh)
+    comprehension_questions_3.addData('comprehension_question_text.stopped', comprehension_question_text.tStopRefresh)
+    comprehension_questions_3.addData('comprehension_question_answers.started', comprehension_question_answers.tStartRefresh)
+    comprehension_questions_3.addData('comprehension_question_answers.stopped', comprehension_question_answers.tStopRefresh)
+    # check responses
+    if key_resp.keys in ['', [], None]:  # No response was made
+        key_resp.keys = None
+        # was no response the correct answer?!
+        if str(CorrectResponse).lower() == 'none':
+           key_resp.corr = 1;  # correct non-response
+        else:
+           key_resp.corr = 0;  # failed to respond (incorrectly)
+    # store data for comprehension_questions_3 (TrialHandler)
+    comprehension_questions_3.addData('key_resp.keys',key_resp.keys)
+    comprehension_questions_3.addData('key_resp.corr', key_resp.corr)
+    if key_resp.keys != None:  # we had a response
+        comprehension_questions_3.addData('key_resp.rt', key_resp.rt)
+    comprehension_questions_3.addData('key_resp.started', key_resp.tStartRefresh)
+    comprehension_questions_3.addData('key_resp.stopped', key_resp.tStopRefresh)
+    
+    # ------Prepare to start Routine "comprehension_feedback"-------
+    continueRoutine = True
+    routineTimer.add(1.500000)
+    # update component parameters for each repeat
+    comprehension_feedback_text.setText(CorrectAnswer)
+    # keep track of which components have finished
+    comprehension_feedbackComponents = [comprehension_feedback_text]
+    for thisComponent in comprehension_feedbackComponents:
+        thisComponent.tStart = None
+        thisComponent.tStop = None
+        thisComponent.tStartRefresh = None
+        thisComponent.tStopRefresh = None
+        if hasattr(thisComponent, 'status'):
+            thisComponent.status = NOT_STARTED
+    # reset timers
+    t = 0
+    _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+    comprehension_feedbackClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+    frameN = -1
+    
+    # -------Run Routine "comprehension_feedback"-------
+    while continueRoutine and routineTimer.getTime() > 0:
+        # get current time
+        t = comprehension_feedbackClock.getTime()
+        tThisFlip = win.getFutureFlipTime(clock=comprehension_feedbackClock)
+        tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+        frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+        # update/draw components on each frame
+        
+        # *comprehension_feedback_text* updates
+        if comprehension_feedback_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # keep track of start time/frame for later
+            comprehension_feedback_text.frameNStart = frameN  # exact frame index
+            comprehension_feedback_text.tStart = t  # local t and not account for scr refresh
+            comprehension_feedback_text.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(comprehension_feedback_text, 'tStartRefresh')  # time at next scr refresh
+            comprehension_feedback_text.setAutoDraw(True)
+        if comprehension_feedback_text.status == STARTED:
+            # is it time to stop? (based on global clock, using actual start)
+            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 1.5-frameTolerance:
+                # keep track of stop time/frame for later
+                comprehension_feedback_text.tStop = t  # not accounting for scr refresh
+                comprehension_feedback_text.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(comprehension_feedback_text, 'tStopRefresh')  # time at next scr refresh
+                comprehension_feedback_text.setAutoDraw(False)
+        
+        # check for quit (typically the Esc key)
+        if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+            core.quit()
+        
+        # check if all components have finished
+        if not continueRoutine:  # a component has requested a forced-end of Routine
+            break
+        continueRoutine = False  # will revert to True if at least one component still running
+        for thisComponent in comprehension_feedbackComponents:
+            if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                continueRoutine = True
+                break  # at least one component has not yet finished
+        
+        # refresh the screen
+        if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+            win.flip()
+    
+    # -------Ending Routine "comprehension_feedback"-------
+    for thisComponent in comprehension_feedbackComponents:
+        if hasattr(thisComponent, "setAutoDraw"):
+            thisComponent.setAutoDraw(False)
+    comprehension_questions_3.addData('comprehension_feedback_text.started', comprehension_feedback_text.tStartRefresh)
+    comprehension_questions_3.addData('comprehension_feedback_text.stopped', comprehension_feedback_text.tStopRefresh)
+    thisExp.nextEntry()
+    
+# completed 1 repeats of 'comprehension_questions_3'
+
+
+# set up handler to look after randomisation of conditions etc
 demo_trials = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli_tables/stimuli_demo.csv'),
+    trialList=data.importConditions('stimuli_tables/stimuli_demo.xlsx'),
     seed=None, name='demo_trials')
 thisExp.addLoop(demo_trials)  # add the loop to the experiment
 thisDemo_trial = demo_trials.trialList[0]  # so we can initialise stimuli with some values
@@ -5912,6 +6197,75 @@ for thisRec_run in rec_runs:
     rec_runs.addData('end_rec_run_key.stopped', end_rec_run_key.tStopRefresh)
 # completed 3 repeats of 'rec_runs'
 
+
+# ------Prepare to start Routine "end_experiment"-------
+continueRoutine = True
+routineTimer.add(300.000000)
+# update component parameters for each repeat
+# keep track of which components have finished
+end_experimentComponents = [end_experiment_text]
+for thisComponent in end_experimentComponents:
+    thisComponent.tStart = None
+    thisComponent.tStop = None
+    thisComponent.tStartRefresh = None
+    thisComponent.tStopRefresh = None
+    if hasattr(thisComponent, 'status'):
+        thisComponent.status = NOT_STARTED
+# reset timers
+t = 0
+_timeToFirstFrame = win.getFutureFlipTime(clock="now")
+end_experimentClock.reset(-_timeToFirstFrame)  # t0 is time of first possible flip
+frameN = -1
+
+# -------Run Routine "end_experiment"-------
+while continueRoutine and routineTimer.getTime() > 0:
+    # get current time
+    t = end_experimentClock.getTime()
+    tThisFlip = win.getFutureFlipTime(clock=end_experimentClock)
+    tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+    frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+    # update/draw components on each frame
+    
+    # *end_experiment_text* updates
+    if end_experiment_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        end_experiment_text.frameNStart = frameN  # exact frame index
+        end_experiment_text.tStart = t  # local t and not account for scr refresh
+        end_experiment_text.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(end_experiment_text, 'tStartRefresh')  # time at next scr refresh
+        end_experiment_text.setAutoDraw(True)
+    if end_experiment_text.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > end_experiment_text.tStartRefresh + 300.0-frameTolerance:
+            # keep track of stop time/frame for later
+            end_experiment_text.tStop = t  # not accounting for scr refresh
+            end_experiment_text.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(end_experiment_text, 'tStopRefresh')  # time at next scr refresh
+            end_experiment_text.setAutoDraw(False)
+    
+    # check for quit (typically the Esc key)
+    if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
+        core.quit()
+    
+    # check if all components have finished
+    if not continueRoutine:  # a component has requested a forced-end of Routine
+        break
+    continueRoutine = False  # will revert to True if at least one component still running
+    for thisComponent in end_experimentComponents:
+        if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+            continueRoutine = True
+            break  # at least one component has not yet finished
+    
+    # refresh the screen
+    if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+        win.flip()
+
+# -------Ending Routine "end_experiment"-------
+for thisComponent in end_experimentComponents:
+    if hasattr(thisComponent, "setAutoDraw"):
+        thisComponent.setAutoDraw(False)
+thisExp.addData('end_experiment_text.started', end_experiment_text.tStartRefresh)
+thisExp.addData('end_experiment_text.stopped', end_experiment_text.tStopRefresh)
 
 # Flip one final time so any remaining win.callOnFlip() 
 # and win.timeOnFlip() tasks get executed before quitting

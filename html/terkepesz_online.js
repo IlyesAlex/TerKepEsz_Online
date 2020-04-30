@@ -295,7 +295,7 @@ function experimentInit() {
   experiment_information_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'experiment_information_text',
-    text: 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. \nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. \n\n\n',
+    text: 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. \nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. \n\n\n',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -326,7 +326,7 @@ function experimentInit() {
   string3 = "K\u00f6sz\u00f6nj\u00fck!";
   string1 = "Mely billenty\u0171 jelzi azokat a k\u00e9peket, amelyek maradhatnak a gal\u00e9ri\u00e1ban, a bemutatott helyen?";
   string2 = "A billenyt\u0171    S billenty\u0171    D billenty\u0171    F billenty\u0171";
-  string3 = "A helyes v\u00e1lasz: F billenyt";
+  string3 = "A helyes v\u00e1lasz: F billenyt\u0171";
   
   comprehension_question_text = new visual.TextStim({
     win: psychoJS.window,
@@ -567,7 +567,7 @@ function experimentInit() {
   string3 = "K\u00f6sz\u00f6nj\u00fck!";
   string1 = "Mely billenty\u0171 jelzi azokat a k\u00e9peket, amelyek maradhatnak a gal\u00e9ri\u00e1ban, a bemutatott helyen?";
   string2 = "A billenyt\u0171    S billenty\u0171    D billenty\u0171    F billenty\u0171";
-  string3 = "A helyes v\u00e1lasz: F billenyt";
+  string3 = "A helyes v\u00e1lasz: F billenyt\u0171";
   
   comprehension_question_text = new visual.TextStim({
     win: psychoJS.window,
@@ -949,7 +949,7 @@ function experimentInit() {
   string3 = "K\u00f6sz\u00f6nj\u00fck!";
   string1 = "Mely billenty\u0171 jelzi azokat a k\u00e9peket, amelyek maradhatnak a gal\u00e9ri\u00e1ban, a bemutatott helyen?";
   string2 = "A billenyt\u0171    S billenty\u0171    D billenty\u0171    F billenty\u0171";
-  string3 = "A helyes v\u00e1lasz: F billenyt";
+  string3 = "A helyes v\u00e1lasz: F billenyt\u0171";
   
   comprehension_question_text = new visual.TextStim({
     win: psychoJS.window,

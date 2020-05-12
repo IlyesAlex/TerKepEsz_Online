@@ -159,7 +159,8 @@ function updateInfo() {
 
   // add info from the URL:
   util.addInfoFromUrl(expInfo);
-  
+  psychoJS.setRedirectUrls('https://docs.google.com/forms/d/e/1FAIpQLSe-JyQOJB2rcwl0jYrK_pOr_J8RNK4YRzq_I4WmRa4Pfox_aA/viewform?usp=sf_link', '');
+
   return Scheduler.Event.NEXT;
 }
 
@@ -292,6 +293,8 @@ var end_rec_run_text;
 var end_rec_run_key;
 var end_experimentClock;
 var end_experiment_text;
+var end_experiment_code;
+var end_experiment_continue;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -1367,12 +1370,34 @@ function experimentInit() {
   end_experiment_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_experiment_text',
-    text: 'Köszönjük a részvételt!\n\nJegyezze meg a következő kódot, amellyel a részvételét igazolja:',
+    text: 'Köszönjük a részvételt!\n\nJegyezze fel az alábbi kódot, amellyel a részvételét igazolja:',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0.2], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
+  });
+  
+  end_experiment_code = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'end_experiment_code',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.06,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
+  });
+  
+  end_experiment_continue = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'end_experiment_continue',
+    text: 'A jobb nyíl lenyomásával átirányítjuk egy felületre, ahol részvételét igazolhatja. ',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
   });
   
   // Create some handy timers
@@ -6031,6 +6056,7 @@ function end_rec_runRoutineEnd(trials) {
 }
 
 
+var code;
 var end_experimentComponents;
 function end_experimentRoutineBegin(trials) {
   return function () {
@@ -6040,9 +6066,14 @@ function end_experimentRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(300.000000);
     // update component parameters for each repeat
+    code = Math.floor(100000 + Math.random() * 900000)
+    
+    end_experiment_code.setText(code);
     // keep track of which components have finished
     end_experimentComponents = [];
     end_experimentComponents.push(end_experiment_text);
+    end_experimentComponents.push(end_experiment_code);
+    end_experimentComponents.push(end_experiment_continue);
     
     for (const thisComponent of end_experimentComponents)
       if ('status' in thisComponent)
@@ -6074,6 +6105,34 @@ function end_experimentRoutineEachFrame(trials) {
     frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_experiment_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_experiment_text.setAutoDraw(false);
+    }
+    
+    // *end_experiment_code* updates
+    if (t >= 0.0 && end_experiment_code.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      end_experiment_code.tStart = t;  // (not accounting for frame time here)
+      end_experiment_code.frameNStart = frameN;  // exact frame index
+      
+      end_experiment_code.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (end_experiment_code.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      end_experiment_code.setAutoDraw(false);
+    }
+    
+    // *end_experiment_continue* updates
+    if (t >= 10.0 && end_experiment_continue.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      end_experiment_continue.tStart = t;  // (not accounting for frame time here)
+      end_experiment_continue.frameNStart = frameN;  // exact frame index
+      
+      end_experiment_continue.setAutoDraw(true);
+    }
+
+    frameRemains = 10.0 + 290.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (end_experiment_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      end_experiment_continue.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -6151,6 +6210,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   

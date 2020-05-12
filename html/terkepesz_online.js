@@ -179,13 +179,7 @@ var key_resp;
 var comprehension_feedbackClock;
 var comprehension_feedback_text;
 var data_protectionClock;
-var data_protection_text;
-var data_protection_key;
-var data_procetion_continue;
 var consentClock;
-var consent_text;
-var consent_key;
-var consent_continue;
 var lab_introductionClock;
 var lab_thanks;
 var lab_key;
@@ -295,6 +289,7 @@ var end_experimentClock;
 var end_experiment_text;
 var end_experiment_code;
 var end_experiment_continue;
+var end_experiment_key;
 var globalClock;
 var routineTimer;
 function experimentInit() {
@@ -375,56 +370,8 @@ function experimentInit() {
   
   // Initialize components for Routine "data_protection"
   data_protectionClock = new util.Clock();
-  data_protection_text = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'data_protection_text',
-    text: 'Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban.\n\nA vizsgálat során a fentebb leírt feladatra adott válaszai mellett a következő adatok kerülnek rögzítésre: nem, kor, oktatás éve. Ezen adatok szolgáltatása a vizsgálat előfeltétele.\n\nA kísérlet anonim, és semmilyen, az Ön személyének azonosítására alkalmas adat rögzítésére nem kerül sor. Anonim adatait szeretnénk megosztani a tudományos közösséggel, hogy azokat más kutatók is fel tudják majd használni elemzéseikben, kutatásaikban. Ezzel értékes információt és időt nyerhet a világ tudományos közössége. Az adatok kezelésével és a titoktartással kapcsolatban bővebb információt az Adatkezelés nevű dokumentumunkban olvashat.\n\nA vizsgálat online végezhető el, a Pavlovia (https://pavlovia.org/) online kísérleti felületén. A résztvevők a vizsgálat végén kapott egyedi kód későbbi bemutatásával válnak a kompenzációra jogosulttá.\n\nEz az egyedi kód csak azzal az információval lesz összekapcsolva, hogy Ön elvégezte a kísérletet; a megadott adatai közül (nem, kor, okatatás éve) egyik sem lesz e kódhoz hozzárendelve semmilyen adatbázisban. A vizsgálat befejeztével lehetősége nyílik egy online űrlap kitöltésére, ahol az egyedi kódja illetve az e-mail címe megadását fogjuk kérni Öntől. A megadott email címre fogjuk elküldeni a kompenzációt.',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.022,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: 0.0 
-  });
-  
-  data_protection_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  data_procetion_continue = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'data_procetion_continue',
-    text: 'A folytatáshoz nyomja le a jobb nyilat. ',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
-  });
-  
   // Initialize components for Routine "consent"
   consentClock = new util.Clock();
-  consent_text = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'consent_text',
-    text: 'A tervezett vizsgálattal kapcsolatban minden számomra fontos információt megkaptam, a tájékoztatót elolvastam. A vizsgálatban önszántamból, saját felelősségemre veszek részt.\n\nKérjük, olvassa el az alábbi állításokat! Amennyiben egyetért velük, haladjon tovább a jobb nyíllal.\n\n    • Tudomásul veszem, hogy a kísérlet anonim, és semmilyen, személyem azonosítására alkalmas adat rögzítésére nem kerül sor.\n\n    • Tudomásul veszem, hogy a kitöltés bármikor, indoklás nélkül, akár végleg is megszakítható, és ebben az esetben a megadott adatok nem kerülnek feldolgozásra.\n\n    • Tudomásul veszem, hogy adataimat a 2018. május 25-től hatályos 2016/679/EU Európai Unió általános adatvédelmi irányelvét és a magyarországi jogszabályokat (2011. évi CXII. adatvédelmi tv.) is betartva fogják kezelni.\n\n    • Hozzájárulok ahhoz, hogy a vizsgálathoz szükséges személyes adataimat, valamint a vizsgálat során rólam nyert adatokat a kísérletet végzők egymástól elkülönítve rögzítsék, azokat egymástól elkülönítve, elektronikus úton tárolják, és kutatási célból felhasználják, úgy, hogy harmadik fél részére személyem azonosítására alkalmas információt nem szolgáltatnak ki.\n\n    • Hozzájárulok, hogy a vizsgálat során megadott válaszaimat és böngészőm információit a https://pavlovia.org/ (Pavlovia) szervere tárolja.\n\n    • Hozzájárulok, hogy anonimizált, személyes beazonosításomra nem alkalmas adataimat a tudományos közösséggel megosszák a https://osf.io/ (Open Science Foundation [magyarul: Nyílt Tudomány Alapítvány]) és a https://openneuro.org/ (OpenNeuro) szerverein.\n\n    • Megértettem, hogy a vizsgálat végén kapott egyedi kóddal tudom igazolni, hogy a vizsgálatot elvégeztem. Az egyedi kód megadásával válok a kompenzációra jogosulttá.\n\nElolvastam és megértettem a felsorolt állításokat. ',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, 0], height: 0.022,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: 0.0 
-  });
-  
-  consent_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  consent_continue = new visual.TextStim({
-    win: psychoJS.window,
-    name: 'consent_continue',
-    text: 'A folytatáshoz nyomja le a jobb nyilat. ',
-    font: 'Arial',
-    units: undefined, 
-    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
-    color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
-  });
-  
   // Initialize components for Routine "lab_introduction"
   lab_introductionClock = new util.Clock();
   lab_thanks = new visual.TextStim({
@@ -1392,13 +1339,15 @@ function experimentInit() {
   end_experiment_continue = new visual.TextStim({
     win: psychoJS.window,
     name: 'end_experiment_continue',
-    text: 'A jobb nyíl lenyomásával átirányítjuk egy felületre, ahol részvételét igazolhatja. ',
+    text: 'A jobb nyíl lenyomásával megjelenik a vizsgálat végét jelző üzenet. Ezt fogadja el az OK gombbal, majd átirányítjuk egy felületre, ahol a kód megadásával igazolni tudja a részvételét.\nProbléma esetén írjon nekünk a terkep@ttk.hu email címen. ',
     font: 'Arial',
     units: undefined, 
     pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -2.0 
   });
+  
+  end_experiment_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
   
   // Create some handy timers
   globalClock = new util.Clock();  // to track the time since experiment started
@@ -2253,7 +2202,6 @@ function comprehension_feedbackRoutineEnd(trials) {
 }
 
 
-var _data_protection_key_allKeys;
 var data_protectionComponents;
 function data_protectionRoutineBegin(trials) {
   return function () {
@@ -2261,16 +2209,9 @@ function data_protectionRoutineBegin(trials) {
     t = 0;
     data_protectionClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(300.000000);
     // update component parameters for each repeat
-    data_protection_key.keys = undefined;
-    data_protection_key.rt = undefined;
-    _data_protection_key_allKeys = [];
     // keep track of which components have finished
     data_protectionComponents = [];
-    data_protectionComponents.push(data_protection_text);
-    data_protectionComponents.push(data_protection_key);
-    data_protectionComponents.push(data_procetion_continue);
     
     for (const thisComponent of data_protectionComponents)
       if ('status' in thisComponent)
@@ -2289,63 +2230,6 @@ function data_protectionRoutineEachFrame(trials) {
     t = data_protectionClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *data_protection_text* updates
-    if (t >= 0.0 && data_protection_text.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      data_protection_text.tStart = t;  // (not accounting for frame time here)
-      data_protection_text.frameNStart = frameN;  // exact frame index
-      
-      data_protection_text.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (data_protection_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      data_protection_text.setAutoDraw(false);
-    }
-    
-    // *data_protection_key* updates
-    if (t >= 5.0 && data_protection_key.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      data_protection_key.tStart = t;  // (not accounting for frame time here)
-      data_protection_key.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { data_protection_key.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { data_protection_key.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { data_protection_key.clearEvents(); });
-    }
-
-    frameRemains = 5.0 + 295.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (data_protection_key.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      data_protection_key.status = PsychoJS.Status.FINISHED;
-  }
-
-    if (data_protection_key.status === PsychoJS.Status.STARTED) {
-      let theseKeys = data_protection_key.getKeys({keyList: ['right'], waitRelease: false});
-      _data_protection_key_allKeys = _data_protection_key_allKeys.concat(theseKeys);
-      if (_data_protection_key_allKeys.length > 0) {
-        data_protection_key.keys = _data_protection_key_allKeys[_data_protection_key_allKeys.length - 1].name;  // just the last key pressed
-        data_protection_key.rt = _data_protection_key_allKeys[_data_protection_key_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
-      }
-    }
-    
-    
-    // *data_procetion_continue* updates
-    if (t >= 5.0 && data_procetion_continue.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      data_procetion_continue.tStart = t;  // (not accounting for frame time here)
-      data_procetion_continue.frameNStart = frameN;  // exact frame index
-      
-      data_procetion_continue.setAutoDraw(true);
-    }
-
-    frameRemains = 5.0 + 295.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (data_procetion_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      data_procetion_continue.setAutoDraw(false);
-    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2364,7 +2248,7 @@ function data_protectionRoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -2381,19 +2265,14 @@ function data_protectionRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('data_protection_key.keys', data_protection_key.keys);
-    if (typeof data_protection_key.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('data_protection_key.rt', data_protection_key.rt);
-        routineTimer.reset();
-        }
+    // the Routine "data_protection" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
     
-    data_protection_key.stop();
     return Scheduler.Event.NEXT;
   };
 }
 
 
-var _consent_key_allKeys;
 var consentComponents;
 function consentRoutineBegin(trials) {
   return function () {
@@ -2401,16 +2280,9 @@ function consentRoutineBegin(trials) {
     t = 0;
     consentClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(300.000000);
     // update component parameters for each repeat
-    consent_key.keys = undefined;
-    consent_key.rt = undefined;
-    _consent_key_allKeys = [];
     // keep track of which components have finished
     consentComponents = [];
-    consentComponents.push(consent_text);
-    consentComponents.push(consent_key);
-    consentComponents.push(consent_continue);
     
     for (const thisComponent of consentComponents)
       if ('status' in thisComponent)
@@ -2429,63 +2301,6 @@ function consentRoutineEachFrame(trials) {
     t = consentClock.getTime();
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
-    
-    // *consent_text* updates
-    if (t >= 0.0 && consent_text.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      consent_text.tStart = t;  // (not accounting for frame time here)
-      consent_text.frameNStart = frameN;  // exact frame index
-      
-      consent_text.setAutoDraw(true);
-    }
-
-    frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (consent_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      consent_text.setAutoDraw(false);
-    }
-    
-    // *consent_key* updates
-    if (t >= 5.0 && consent_key.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      consent_key.tStart = t;  // (not accounting for frame time here)
-      consent_key.frameNStart = frameN;  // exact frame index
-      
-      // keyboard checking is just starting
-      psychoJS.window.callOnFlip(function() { consent_key.clock.reset(); });  // t=0 on next screen flip
-      psychoJS.window.callOnFlip(function() { consent_key.start(); }); // start on screen flip
-      psychoJS.window.callOnFlip(function() { consent_key.clearEvents(); });
-    }
-
-    frameRemains = 5.0 + 295 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (consent_key.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      consent_key.status = PsychoJS.Status.FINISHED;
-  }
-
-    if (consent_key.status === PsychoJS.Status.STARTED) {
-      let theseKeys = consent_key.getKeys({keyList: ['right'], waitRelease: false});
-      _consent_key_allKeys = _consent_key_allKeys.concat(theseKeys);
-      if (_consent_key_allKeys.length > 0) {
-        consent_key.keys = _consent_key_allKeys[_consent_key_allKeys.length - 1].name;  // just the last key pressed
-        consent_key.rt = _consent_key_allKeys[_consent_key_allKeys.length - 1].rt;
-        // a response ends the routine
-        continueRoutine = false;
-      }
-    }
-    
-    
-    // *consent_continue* updates
-    if (t >= 5.0 && consent_continue.status === PsychoJS.Status.NOT_STARTED) {
-      // keep track of start time/frame for later
-      consent_continue.tStart = t;  // (not accounting for frame time here)
-      consent_continue.frameNStart = frameN;  // exact frame index
-      
-      consent_continue.setAutoDraw(true);
-    }
-
-    frameRemains = 5.0 + 295.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (consent_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      consent_continue.setAutoDraw(false);
-    }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -2504,7 +2319,7 @@ function consentRoutineEachFrame(trials) {
       }
     
     // refresh the screen if continuing
-    if (continueRoutine && routineTimer.getTime() > 0) {
+    if (continueRoutine) {
       return Scheduler.Event.FLIP_REPEAT;
     } else {
       return Scheduler.Event.NEXT;
@@ -2521,13 +2336,9 @@ function consentRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
-    psychoJS.experiment.addData('consent_key.keys', consent_key.keys);
-    if (typeof consent_key.keys !== 'undefined') {  // we had a response
-        psychoJS.experiment.addData('consent_key.rt', consent_key.rt);
-        routineTimer.reset();
-        }
+    // the Routine "consent" was not non-slip safe, so reset the non-slip timer
+    routineTimer.reset();
     
-    consent_key.stop();
     return Scheduler.Event.NEXT;
   };
 }
@@ -6057,6 +5868,7 @@ function end_rec_runRoutineEnd(trials) {
 
 
 var code;
+var _end_experiment_key_allKeys;
 var end_experimentComponents;
 function end_experimentRoutineBegin(trials) {
   return function () {
@@ -6069,11 +5881,15 @@ function end_experimentRoutineBegin(trials) {
     code = Math.floor(100000 + Math.random() * 900000)
     
     end_experiment_code.setText(code);
+    end_experiment_key.keys = undefined;
+    end_experiment_key.rt = undefined;
+    _end_experiment_key_allKeys = [];
     // keep track of which components have finished
     end_experimentComponents = [];
     end_experimentComponents.push(end_experiment_text);
     end_experimentComponents.push(end_experiment_code);
     end_experimentComponents.push(end_experiment_continue);
+    end_experimentComponents.push(end_experiment_key);
     
     for (const thisComponent of end_experimentComponents)
       if ('status' in thisComponent)
@@ -6122,7 +5938,7 @@ function end_experimentRoutineEachFrame(trials) {
     }
     
     // *end_experiment_continue* updates
-    if (t >= 10.0 && end_experiment_continue.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 2.0 && end_experiment_continue.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       end_experiment_continue.tStart = t;  // (not accounting for frame time here)
       end_experiment_continue.frameNStart = frameN;  // exact frame index
@@ -6130,10 +5946,39 @@ function end_experimentRoutineEachFrame(trials) {
       end_experiment_continue.setAutoDraw(true);
     }
 
-    frameRemains = 10.0 + 290.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 2.0 + 298.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_experiment_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_experiment_continue.setAutoDraw(false);
     }
+    
+    // *end_experiment_key* updates
+    if (t >= 2.0 && end_experiment_key.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      end_experiment_key.tStart = t;  // (not accounting for frame time here)
+      end_experiment_key.frameNStart = frameN;  // exact frame index
+      
+      // keyboard checking is just starting
+      psychoJS.window.callOnFlip(function() { end_experiment_key.clock.reset(); });  // t=0 on next screen flip
+      psychoJS.window.callOnFlip(function() { end_experiment_key.start(); }); // start on screen flip
+      psychoJS.window.callOnFlip(function() { end_experiment_key.clearEvents(); });
+    }
+
+    frameRemains = 2.0 + 298.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (end_experiment_key.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      end_experiment_key.status = PsychoJS.Status.FINISHED;
+  }
+
+    if (end_experiment_key.status === PsychoJS.Status.STARTED) {
+      let theseKeys = end_experiment_key.getKeys({keyList: ['right'], waitRelease: false});
+      _end_experiment_key_allKeys = _end_experiment_key_allKeys.concat(theseKeys);
+      if (_end_experiment_key_allKeys.length > 0) {
+        end_experiment_key.keys = _end_experiment_key_allKeys[_end_experiment_key_allKeys.length - 1].name;  // just the last key pressed
+        end_experiment_key.rt = _end_experiment_key_allKeys[_end_experiment_key_allKeys.length - 1].rt;
+        // a response ends the routine
+        continueRoutine = false;
+      }
+    }
+    
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
       return quitPsychoJS('The [Escape] key was pressed. Goodbye!', false);
@@ -6169,6 +6014,13 @@ function end_experimentRoutineEnd(trials) {
         thisComponent.setAutoDraw(false);
       }
     }
+    psychoJS.experiment.addData('end_experiment_key.keys', end_experiment_key.keys);
+    if (typeof end_experiment_key.keys !== 'undefined') {  // we had a response
+        psychoJS.experiment.addData('end_experiment_key.rt', end_experiment_key.rt);
+        routineTimer.reset();
+        }
+    
+    end_experiment_key.stop();
     return Scheduler.Event.NEXT;
   };
 }

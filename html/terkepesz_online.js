@@ -889,7 +889,7 @@ function experimentInit() {
     text: "'Kép' alfeladat",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -926,7 +926,7 @@ function experimentInit() {
     text: "'Hely' alfeladat",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.4], height: 0.1,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.4], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1173,8 +1173,8 @@ function experimentInit() {
     name: 'rec_fx_text_block',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
-    pos: [(- 0.65), 0.0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1184,8 +1184,8 @@ function experimentInit() {
     name: 'rec_fx_instructions_text',
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
-    units: undefined, 
-    pos: [0.65, 0.0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [600, 0.0], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1217,8 +1217,8 @@ function experimentInit() {
     name: 'rec_trial_text_block',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
-    pos: [(- 0.65), 0.0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1228,8 +1228,8 @@ function experimentInit() {
     name: 'rec_trial_instructions_text',
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
-    units: undefined, 
-    pos: [0.65, 0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [600, 0], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1328,8 +1328,8 @@ function experimentInit() {
     name: 'rec_fx_text_block',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
-    pos: [(- 0.65), 0.0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1339,8 +1339,8 @@ function experimentInit() {
     name: 'rec_fx_instructions_text',
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
-    units: undefined, 
-    pos: [0.65, 0.0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [600, 0.0], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1372,8 +1372,8 @@ function experimentInit() {
     name: 'rec_trial_text_block',
     text: 'default text',
     font: 'Arial',
-    units: undefined, 
-    pos: [(- 0.65), 0.0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1383,8 +1383,8 @@ function experimentInit() {
     name: 'rec_trial_instructions_text',
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
-    units: undefined, 
-    pos: [0.65, 0], height: 0.045,  wrapWidth: undefined, ori: 0,
+    units: 'pix', 
+    pos: [600, 0], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });

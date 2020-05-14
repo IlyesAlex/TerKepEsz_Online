@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Thu 14 May 2020 11:14:58 AM CEST
+    on Thu 14 May 2020 12:22:57 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -153,9 +153,9 @@ consentClock = core.Clock()
 # Initialize components for Routine "lab_introduction"
 lab_introductionClock = core.Clock()
 lab_thanks = visual.TextStim(win=win, name='lab_thanks',
-    text="Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n(Image of lab members would come here - if you consent/think it's ok)\n\n",
+    text='Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n',
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0.2), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -167,6 +167,14 @@ lab_introduction_continue = visual.TextStim(win=win, name='lab_introduction_cont
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
+image = visual.ImageStim(
+    win=win,
+    name='image', units='pix', 
+    image='stimuli/lab_members.jpg', mask=None,
+    ori=0, pos=(0, -200), size=(1087, 604),
+    color=[1,1,1], colorSpace='rgb', opacity=1,
+    flipHoriz=False, flipVert=False,
+    texRes=128, interpolate=True, depth=-3.0)
 
 # Initialize components for Routine "start_encoding"
 start_encodingClock = core.Clock()
@@ -240,7 +248,7 @@ enc_instructions_3Clock = core.Clock()
 enc_instructions_3_text = visual.TextStim(win=win, name='enc_instructions_3_text',
     text="Az első feladat nagyjából 20 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nMost a gyakorló feladat következik. \n",
     font='Arial',
-    pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
+    pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
@@ -1268,7 +1276,7 @@ for thisComprehension_question_1 in comprehension_questions_1:
     
     # ------Prepare to start Routine "comprehension_feedback"-------
     continueRoutine = True
-    routineTimer.add(1.500000)
+    routineTimer.add(2.000000)
     # update component parameters for each repeat
     comprehension_repeat = 300.0
     comprehension_feedback = IncorrectAnswer
@@ -1310,7 +1318,7 @@ for thisComprehension_question_1 in comprehension_questions_1:
             comprehension_feedback_text.setAutoDraw(True)
         if comprehension_feedback_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 1.5-frameTolerance:
+            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 2.0-frameTolerance:
                 # keep track of stop time/frame for later
                 comprehension_feedback_text.tStop = t  # not accounting for scr refresh
                 comprehension_feedback_text.frameNStop = frameN  # exact frame index
@@ -1587,7 +1595,7 @@ lab_key.keys = []
 lab_key.rt = []
 _lab_key_allKeys = []
 # keep track of which components have finished
-lab_introductionComponents = [lab_thanks, lab_key, lab_introduction_continue]
+lab_introductionComponents = [lab_thanks, lab_key, lab_introduction_continue, image]
 for thisComponent in lab_introductionComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1674,6 +1682,23 @@ while continueRoutine and routineTimer.getTime() > 0:
             win.timeOnFlip(lab_introduction_continue, 'tStopRefresh')  # time at next scr refresh
             lab_introduction_continue.setAutoDraw(False)
     
+    # *image* updates
+    if image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # keep track of start time/frame for later
+        image.frameNStart = frameN  # exact frame index
+        image.tStart = t  # local t and not account for scr refresh
+        image.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
+        image.setAutoDraw(True)
+    if image.status == STARTED:
+        # is it time to stop? (based on global clock, using actual start)
+        if tThisFlipGlobal > image.tStartRefresh + 120.0-frameTolerance:
+            # keep track of stop time/frame for later
+            image.tStop = t  # not accounting for scr refresh
+            image.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(image, 'tStopRefresh')  # time at next scr refresh
+            image.setAutoDraw(False)
+    
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
         core.quit()
@@ -1708,6 +1733,8 @@ thisExp.addData('lab_key.stopped', lab_key.tStopRefresh)
 thisExp.nextEntry()
 thisExp.addData('lab_introduction_continue.started', lab_introduction_continue.tStartRefresh)
 thisExp.addData('lab_introduction_continue.stopped', lab_introduction_continue.tStopRefresh)
+thisExp.addData('image.started', image.tStartRefresh)
+thisExp.addData('image.stopped', image.tStopRefresh)
 
 # ------Prepare to start Routine "start_encoding"-------
 continueRoutine = True
@@ -2376,7 +2403,7 @@ for thisComprehension_question_2 in comprehension_questions_2:
     
     # ------Prepare to start Routine "comprehension_feedback"-------
     continueRoutine = True
-    routineTimer.add(1.500000)
+    routineTimer.add(2.000000)
     # update component parameters for each repeat
     comprehension_repeat = 300.0
     comprehension_feedback = IncorrectAnswer
@@ -2418,7 +2445,7 @@ for thisComprehension_question_2 in comprehension_questions_2:
             comprehension_feedback_text.setAutoDraw(True)
         if comprehension_feedback_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 1.5-frameTolerance:
+            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 2.0-frameTolerance:
                 # keep track of stop time/frame for later
                 comprehension_feedback_text.tStop = t  # not accounting for scr refresh
                 comprehension_feedback_text.frameNStop = frameN  # exact frame index
@@ -3726,7 +3753,7 @@ for thisEnc_run in enc_runs:
         
         # ------Prepare to start Routine "comprehension_feedback"-------
         continueRoutine = True
-        routineTimer.add(1.500000)
+        routineTimer.add(2.000000)
         # update component parameters for each repeat
         comprehension_repeat = 300.0
         comprehension_feedback = IncorrectAnswer
@@ -3768,7 +3795,7 @@ for thisEnc_run in enc_runs:
                 comprehension_feedback_text.setAutoDraw(True)
             if comprehension_feedback_text.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 1.5-frameTolerance:
+                if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 2.0-frameTolerance:
                     # keep track of stop time/frame for later
                     comprehension_feedback_text.tStop = t  # not accounting for scr refresh
                     comprehension_feedback_text.frameNStop = frameN  # exact frame index
@@ -4814,7 +4841,7 @@ thisExp.addData('rec_instructions_4_continue.stopped', rec_instructions_4_contin
 # set up handler to look after randomisation of conditions etc
 comprehension_questions_3 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='4:6'),
+    trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='6:8'),
     seed=None, name='comprehension_questions_3')
 thisExp.addLoop(comprehension_questions_3)  # add the loop to the experiment
 thisComprehension_question_3 = comprehension_questions_3.trialList[0]  # so we can initialise stimuli with some values
@@ -4975,7 +5002,7 @@ for thisComprehension_question_3 in comprehension_questions_3:
     
     # ------Prepare to start Routine "comprehension_feedback"-------
     continueRoutine = True
-    routineTimer.add(1.500000)
+    routineTimer.add(2.000000)
     # update component parameters for each repeat
     comprehension_repeat = 300.0
     comprehension_feedback = IncorrectAnswer
@@ -5017,7 +5044,7 @@ for thisComprehension_question_3 in comprehension_questions_3:
             comprehension_feedback_text.setAutoDraw(True)
         if comprehension_feedback_text.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 1.5-frameTolerance:
+            if tThisFlipGlobal > comprehension_feedback_text.tStartRefresh + 2.0-frameTolerance:
                 # keep track of stop time/frame for later
                 comprehension_feedback_text.tStop = t  # not accounting for scr refresh
                 comprehension_feedback_text.frameNStop = frameN  # exact frame index
@@ -7075,7 +7102,7 @@ while continueRoutine and routineTimer.getTime() > 0:
             end_experiment_code.setAutoDraw(False)
     
     # *end_experiment_continue* updates
-    if end_experiment_continue.status == NOT_STARTED and tThisFlip >= 2.0-frameTolerance:
+    if end_experiment_continue.status == NOT_STARTED and tThisFlip >= 3.0-frameTolerance:
         # keep track of start time/frame for later
         end_experiment_continue.frameNStart = frameN  # exact frame index
         end_experiment_continue.tStart = t  # local t and not account for scr refresh
@@ -7084,7 +7111,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         end_experiment_continue.setAutoDraw(True)
     if end_experiment_continue.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_experiment_continue.tStartRefresh + 298.0-frameTolerance:
+        if tThisFlipGlobal > end_experiment_continue.tStartRefresh + 297.0-frameTolerance:
             # keep track of stop time/frame for later
             end_experiment_continue.tStop = t  # not accounting for scr refresh
             end_experiment_continue.frameNStop = frameN  # exact frame index
@@ -7093,7 +7120,7 @@ while continueRoutine and routineTimer.getTime() > 0:
     
     # *end_experiment_key* updates
     waitOnFlip = False
-    if end_experiment_key.status == NOT_STARTED and tThisFlip >= 2.0-frameTolerance:
+    if end_experiment_key.status == NOT_STARTED and tThisFlip >= 4.0-frameTolerance:
         # keep track of start time/frame for later
         end_experiment_key.frameNStart = frameN  # exact frame index
         end_experiment_key.tStart = t  # local t and not account for scr refresh
@@ -7106,7 +7133,7 @@ while continueRoutine and routineTimer.getTime() > 0:
         win.callOnFlip(end_experiment_key.clearEvents, eventType='keyboard')  # clear events on next screen flip
     if end_experiment_key.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > end_experiment_key.tStartRefresh + 298.0-frameTolerance:
+        if tThisFlipGlobal > end_experiment_key.tStartRefresh + 294.0-frameTolerance:
             # keep track of stop time/frame for later
             end_experiment_key.tStop = t  # not accounting for scr refresh
             end_experiment_key.frameNStop = frameN  # exact frame index

@@ -188,6 +188,7 @@ var lab_introductionClock;
 var lab_thanks;
 var lab_key;
 var lab_introduction_continue;
+var image;
 var start_encodingClock;
 var start_encoding_text;
 var tables;
@@ -402,10 +403,10 @@ function experimentInit() {
   lab_thanks = new visual.TextStim({
     win: psychoJS.window,
     name: 'lab_thanks',
-    text: "Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n(Image of lab members would come here - if you consent/think it's ok)\n\n",
+    text: 'Köszönjük, hogy hozzájárul kutatócsoportunk munkájához azzal, hogy részt vesz vizsgálatunkban!\n\n',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.2], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -423,6 +424,15 @@ function experimentInit() {
     depth: -2.0 
   });
   
+  image = new visual.ImageStim({
+    win : psychoJS.window,
+    name : 'image', units : 'pix', 
+    image : 'stimuli/lab_members.jpg', mask : undefined,
+    ori : 0, pos : [0, (- 200)], size : [1087, 604],
+    color : new util.Color([1, 1, 1]), opacity : 1,
+    flipHoriz : false, flipVert : false,
+    texRes : 128, interpolate : true, depth : -3.0 
+  });
   // Initialize components for Routine "start_encoding"
   start_encodingClock = new util.Clock();
   start_encoding_text = new visual.TextStim({
@@ -2727,6 +2737,7 @@ function lab_introductionRoutineBegin(trials) {
     lab_introductionComponents.push(lab_thanks);
     lab_introductionComponents.push(lab_key);
     lab_introductionComponents.push(lab_introduction_continue);
+    lab_introductionComponents.push(image);
     
     for (const thisComponent of lab_introductionComponents)
       if ('status' in thisComponent)
@@ -2801,6 +2812,20 @@ function lab_introductionRoutineEachFrame(trials) {
     frameRemains = 1.0 + 119.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (lab_introduction_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       lab_introduction_continue.setAutoDraw(false);
+    }
+    
+    // *image* updates
+    if (t >= 0.0 && image.status === PsychoJS.Status.NOT_STARTED) {
+      // keep track of start time/frame for later
+      image.tStart = t;  // (not accounting for frame time here)
+      image.frameNStart = frameN;  // exact frame index
+      
+      image.setAutoDraw(true);
+    }
+
+    frameRemains = 0.0 + 120.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    if (image.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      image.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {

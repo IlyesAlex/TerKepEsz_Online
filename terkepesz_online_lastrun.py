@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Thu 14 May 2020 05:49:37 PM CEST
+    on Thu 14 May 2020 07:00:04 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -622,7 +622,7 @@ rec_instruction_3_title = visual.TextStim(win=win, name='rec_instruction_3_title
 # Initialize components for Routine "rec_instructions_4"
 rec_instructions_4Clock = core.Clock()
 rec_instructions_4_text = visual.TextStim(win=win, name='rec_instructions_4_text',
-    text='A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek. ',
+    text='A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet a hasonló és régi párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -2745,7 +2745,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_practice_trials = data.TrialHandler(nReps=1, method='random', 
+enc_practice_trials = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/encoding_practice_trials.csv'),
     seed=None, name='enc_practice_trials')

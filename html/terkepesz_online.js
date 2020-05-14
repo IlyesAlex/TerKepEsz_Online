@@ -25,7 +25,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'terkepesz_online';  // from the Builder filename that created this script
-let expInfo = {'A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
+let expInfo = {'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -339,7 +339,7 @@ function experimentInit() {
   });
   
   proceed = false;
-  consent = expInfo["A vizsg\u00e1lati felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem)."];
+  consent = expInfo["A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem)."];
   dataprotection = expInfo["Az adatkezel\u00e9si felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem)."];
   consent_ok = false;
   data_ok = false;

@@ -353,7 +353,7 @@ function experimentInit() {
       proceed = true;
   }
   if ((! proceed)) {
-      core.quit();
+      psychoJS.quit('Nem fogadta el a feltételeket. A vizsgálat elvégzéséhez el kell fogania az adatkezelési feltételeket és a beleegyező nyilatkozatot.', false)
   }
   
   // Initialize components for Routine "comprehension_question"

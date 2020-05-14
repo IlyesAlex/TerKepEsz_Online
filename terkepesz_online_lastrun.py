@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Thu 14 May 2020 01:25:33 PM CEST
+    on Thu 14 May 2020 05:49:37 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.0'
 expName = 'TRK-online'  # from the Builder filename that created this script
-expInfo = {'A feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam és megértettem. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam és megértettem. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}
+expInfo = {'A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -97,6 +97,23 @@ experiment_information_continue = visual.TextStim(win=win, name='experiment_info
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
+proceed = False
+consent = expInfo['A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']
+dataprotection = expInfo['Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']
+consent_ok = False
+data_ok = False
+
+if consent == 'igen' or consent == 'i' or consent == 'Igen' or consent == 'I':
+    consent_ok = True
+
+if dataprotection == 'igen' or dataprotection == 'i' or dataprotection == 'Igen' or dataprotection == 'I':
+    data_ok = True
+
+if consent_ok & data_ok:
+    proceed = True
+
+if not proceed:
+    core.quit()
 
 # Initialize components for Routine "comprehension_question"
 comprehension_questionClock = core.Clock()
@@ -167,11 +184,11 @@ lab_introduction_continue = visual.TextStim(win=win, name='lab_introduction_cont
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);
-image = visual.ImageStim(
+lab_members = visual.ImageStim(
     win=win,
-    name='image', units='pix', 
+    name='lab_members', units='pix', 
     image='stimuli/lab_members.jpg', mask=None,
-    ori=0, pos=(0, -200), size=(1087, 604),
+    ori=0, pos=(0, -200), size=(908, 540),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -246,7 +263,7 @@ instructions_2_continue = visual.TextStim(win=win, name='instructions_2_continue
 # Initialize components for Routine "enc_instructions_3"
 enc_instructions_3Clock = core.Clock()
 enc_instructions_3_text = visual.TextStim(win=win, name='enc_instructions_3_text',
-    text="Az első feladat nagyjából 20 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nMost a gyakorló feladat következik. \n",
+    text="Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nMost a gyakorló feladat következik. \n",
     font='Arial',
     pos=(0, 0), height=0.04, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -1641,7 +1658,7 @@ lab_key.keys = []
 lab_key.rt = []
 _lab_key_allKeys = []
 # keep track of which components have finished
-lab_introductionComponents = [lab_thanks, lab_key, lab_introduction_continue, image]
+lab_introductionComponents = [lab_thanks, lab_key, lab_introduction_continue, lab_members]
 for thisComponent in lab_introductionComponents:
     thisComponent.tStart = None
     thisComponent.tStop = None
@@ -1728,22 +1745,22 @@ while continueRoutine and routineTimer.getTime() > 0:
             win.timeOnFlip(lab_introduction_continue, 'tStopRefresh')  # time at next scr refresh
             lab_introduction_continue.setAutoDraw(False)
     
-    # *image* updates
-    if image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+    # *lab_members* updates
+    if lab_members.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
         # keep track of start time/frame for later
-        image.frameNStart = frameN  # exact frame index
-        image.tStart = t  # local t and not account for scr refresh
-        image.tStartRefresh = tThisFlipGlobal  # on global time
-        win.timeOnFlip(image, 'tStartRefresh')  # time at next scr refresh
-        image.setAutoDraw(True)
-    if image.status == STARTED:
+        lab_members.frameNStart = frameN  # exact frame index
+        lab_members.tStart = t  # local t and not account for scr refresh
+        lab_members.tStartRefresh = tThisFlipGlobal  # on global time
+        win.timeOnFlip(lab_members, 'tStartRefresh')  # time at next scr refresh
+        lab_members.setAutoDraw(True)
+    if lab_members.status == STARTED:
         # is it time to stop? (based on global clock, using actual start)
-        if tThisFlipGlobal > image.tStartRefresh + 120.0-frameTolerance:
+        if tThisFlipGlobal > lab_members.tStartRefresh + 120.0-frameTolerance:
             # keep track of stop time/frame for later
-            image.tStop = t  # not accounting for scr refresh
-            image.frameNStop = frameN  # exact frame index
-            win.timeOnFlip(image, 'tStopRefresh')  # time at next scr refresh
-            image.setAutoDraw(False)
+            lab_members.tStop = t  # not accounting for scr refresh
+            lab_members.frameNStop = frameN  # exact frame index
+            win.timeOnFlip(lab_members, 'tStopRefresh')  # time at next scr refresh
+            lab_members.setAutoDraw(False)
     
     # check for quit (typically the Esc key)
     if endExpNow or defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1779,8 +1796,8 @@ thisExp.addData('lab_key.stopped', lab_key.tStopRefresh)
 thisExp.nextEntry()
 thisExp.addData('lab_introduction_continue.started', lab_introduction_continue.tStartRefresh)
 thisExp.addData('lab_introduction_continue.stopped', lab_introduction_continue.tStopRefresh)
-thisExp.addData('image.started', image.tStartRefresh)
-thisExp.addData('image.stopped', image.tStopRefresh)
+thisExp.addData('lab_members.started', lab_members.tStartRefresh)
+thisExp.addData('lab_members.stopped', lab_members.tStopRefresh)
 
 # ------Prepare to start Routine "start_encoding"-------
 continueRoutine = True
@@ -3281,7 +3298,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 2
+    end = start + 84
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -6529,7 +6546,7 @@ for thisRec_run in rec_runs:
         routineTimer.add(1.500000)
         # update component parameters for each repeat
         start = end
-        end = start + 3
+        end = start + 18
         selection = np.arange(start,end, step)
         if block_counter == 0:
             block_name = "Kép"

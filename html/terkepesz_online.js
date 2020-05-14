@@ -25,7 +25,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'terkepesz_online';  // from the Builder filename that created this script
-let expInfo = {'A feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam, megértettem és elfogadom. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam, megértettem és elfogadom. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
+let expInfo = {'A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -176,6 +176,11 @@ var experiment_informationClock;
 var experiment_information_text;
 var experiment_information_key;
 var experiment_information_continue;
+var proceed;
+var consent;
+var dataprotection;
+var consent_ok;
+var data_ok;
 var comprehension_questionClock;
 var comprehension_question_text;
 var comprehension_question_answers;
@@ -192,7 +197,7 @@ var lab_introductionClock;
 var lab_thanks;
 var lab_key;
 var lab_introduction_continue;
-var image;
+var lab_members;
 var start_encodingClock;
 var start_encoding_text;
 var tables;
@@ -333,6 +338,24 @@ function experimentInit() {
     depth: -2.0 
   });
   
+  proceed = false;
+  consent = expInfo["A vizsg\u00e1lati felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem)."];
+  dataprotection = expInfo["Az adatkezel\u00e9si felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem)."];
+  consent_ok = false;
+  data_ok = false;
+  if (((((consent === "igen") || (consent === "i")) || (consent === "Igen")) || (consent === "I"))) {
+      consent_ok = true;
+  }
+  if (((((dataprotection === "igen") || (dataprotection === "i")) || (dataprotection === "Igen")) || (dataprotection === "I"))) {
+      data_ok = true;
+  }
+  if ((consent_ok & data_ok)) {
+      proceed = true;
+  }
+  if ((! proceed)) {
+      core.quit();
+  }
+  
   // Initialize components for Routine "comprehension_question"
   comprehension_questionClock = new util.Clock();
   comprehension_question_text = new visual.TextStim({
@@ -428,11 +451,11 @@ function experimentInit() {
     depth: -2.0 
   });
   
-  image = new visual.ImageStim({
+  lab_members = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'image', units : 'pix', 
+    name : 'lab_members', units : 'pix', 
     image : 'stimuli/lab_members.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 200)], size : [1087, 604],
+    ori : 0, pos : [0, (- 200)], size : [908, 540],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
@@ -1015,7 +1038,7 @@ function experimentInit() {
   rec_instructions_4_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions_4_text',
-    text: 'A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek. ',
+    text: 'A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet a hasonló és régi párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -2846,7 +2869,7 @@ function lab_introductionRoutineBegin(trials) {
     lab_introductionComponents.push(lab_thanks);
     lab_introductionComponents.push(lab_key);
     lab_introductionComponents.push(lab_introduction_continue);
-    lab_introductionComponents.push(image);
+    lab_introductionComponents.push(lab_members);
     
     for (const thisComponent of lab_introductionComponents)
       if ('status' in thisComponent)
@@ -2923,18 +2946,18 @@ function lab_introductionRoutineEachFrame(trials) {
       lab_introduction_continue.setAutoDraw(false);
     }
     
-    // *image* updates
-    if (t >= 0.0 && image.status === PsychoJS.Status.NOT_STARTED) {
+    // *lab_members* updates
+    if (t >= 0.0 && lab_members.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      image.tStart = t;  // (not accounting for frame time here)
-      image.frameNStart = frameN;  // exact frame index
+      lab_members.tStart = t;  // (not accounting for frame time here)
+      lab_members.frameNStart = frameN;  // exact frame index
       
-      image.setAutoDraw(true);
+      lab_members.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + 120.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (image.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      image.setAutoDraw(false);
+    if (lab_members.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      lab_members.setAutoDraw(false);
     }
     // check for quit (typically the Esc key)
     if (psychoJS.experiment.experimentEnded || psychoJS.eventManager.getKeys({keyList:['escape']}).length > 0) {
@@ -4177,7 +4200,7 @@ function start_enc_runRoutineBegin(trials) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 2);
+    end = (start + 84);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat";
@@ -6266,7 +6289,7 @@ function start_rec_blockRoutineBegin(trials) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 3);
+    end = (start + 18);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     if ((block_counter === 0)) {
         block_name = "K\u00e9p";
@@ -6674,6 +6697,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   

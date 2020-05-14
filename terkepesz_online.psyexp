@@ -6,7 +6,7 @@
     <Param name="Completed URL" updates="None" val="https://docs.google.com/forms/d/e/1FAIpQLSe-JyQOJB2rcwl0jYrK_pOr_J8RNK4YRzq_I4WmRa4Pfox_aA/viewform?usp=sf_link" valType="str"/>
     <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % ('pilot', expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'A feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam, megértettem és elfogadom. (igen/nem)*': '', 'Az adatkezelési tájékoztatót (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elolvastam, megértettem és elfogadom. (igen/nem)*': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>
@@ -217,9 +217,9 @@
       <CodeComponent name="create_enc_run">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 2);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 2&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 84);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 84&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -475,7 +475,7 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
-      <ImageComponent name="image">
+      <ImageComponent name="lab_members">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
         <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
@@ -485,12 +485,12 @@
         <Param name="image" updates="constant" val="stimuli/lab_members.jpg" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
-        <Param name="name" updates="None" val="image" valType="code"/>
+        <Param name="name" updates="None" val="lab_members" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1087, 604)" valType="code"/>
+        <Param name="size" updates="constant" val="(908, 540)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1661,7 +1661,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek. " valType="str"/>
+        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek.&amp;#10;&amp;#10;A bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet a hasonló és régi párjával.&amp;#10;A Képfelismerés feladat alatt azonban már csak egy képet fog látni." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1923,8 +1923,8 @@
       <CodeComponent name="start_block_code">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 3);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 3&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Hely&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Kép&quot;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 18);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 18&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Hely&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Kép&quot;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2179,6 +2179,21 @@
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
+      <CodeComponent name="consent_check">
+        <Param name="Begin Experiment" updates="constant" val="proceed = False&amp;#10;consent = expInfo['A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']&amp;#10;dataprotection = expInfo['Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']&amp;#10;consent_ok = False&amp;#10;data_ok = False&amp;#10;&amp;#10;if consent == 'igen' or consent == 'i' or consent == 'Igen' or consent == 'I':&amp;#10;    consent_ok = True&amp;#10;&amp;#10;if dataprotection == 'igen' or dataprotection == 'i' or dataprotection == 'Igen' or dataprotection == 'I':&amp;#10;    data_ok = True&amp;#10;&amp;#10;if consent_ok &amp; data_ok:&amp;#10;    proceed = True&amp;#10;&amp;#10;if not proceed:&amp;#10;    core.quit()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="proceed = false;&amp;#10;consent = expInfo[&quot;A vizsg\u00e1lati felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem).&quot;];&amp;#10;dataprotection = expInfo[&quot;Az adatkezel\u00e9si felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem).&quot;];&amp;#10;consent_ok = false;&amp;#10;data_ok = false;&amp;#10;if (((((consent === &quot;igen&quot;) || (consent === &quot;i&quot;)) || (consent === &quot;Igen&quot;)) || (consent === &quot;I&quot;))) {&amp;#10;    consent_ok = true;&amp;#10;}&amp;#10;if (((((dataprotection === &quot;igen&quot;) || (dataprotection === &quot;i&quot;)) || (dataprotection === &quot;Igen&quot;)) || (dataprotection === &quot;I&quot;))) {&amp;#10;    data_ok = true;&amp;#10;}&amp;#10;if ((consent_ok &amp; data_ok)) {&amp;#10;    proceed = true;&amp;#10;}&amp;#10;if ((! proceed)) {&amp;#10;    core.quit();&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="consent_check" valType="code"/>
+      </CodeComponent>
     </Routine>
     <Routine name="comprehension_question">
       <TextComponent name="comprehension_question_text">

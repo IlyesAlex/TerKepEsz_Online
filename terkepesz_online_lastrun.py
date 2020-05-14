@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Thu 14 May 2020 12:22:57 PM CEST
+    on Thu 14 May 2020 12:33:53 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -163,7 +163,7 @@ lab_key = keyboard.Keyboard()
 lab_introduction_continue = visual.TextStim(win=win, name='lab_introduction_continue',
     text='A folytatáshoz nyomja le a jobb nyilat. ',
     font='Arial',
-    pos=(0, -0.4), height=0.03, wrapWidth=None, ori=0, 
+    pos=(0, 0.4), height=0.03, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-2.0);

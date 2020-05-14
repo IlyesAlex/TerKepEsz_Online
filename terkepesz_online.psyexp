@@ -1220,7 +1220,7 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="0.05" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="0.04" valType="code"/>
         <Param name="name" updates="None" val="enc_instructions_3_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
@@ -2257,7 +2257,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="2.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="set every repeat" val="$comprehension_feedback" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -2344,9 +2344,9 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="startVal" updates="None" val="3.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="298.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="297.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="text" updates="constant" val="A jobb nyíl lenyomásával megjelenik a vizsgálat végét jelző üzenet. Ezt fogadja el az OK gombbal, majd átirányítjuk egy felületre, ahol a kód megadásával igazolni tudja a részvételét.&amp;#10;Probléma esetén írjon nekünk a terkep@ttk.hu email címen. " valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
@@ -2363,9 +2363,9 @@
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="2.0" valType="code"/>
+        <Param name="startVal" updates="None" val="4.0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="stopVal" updates="constant" val="298.0" valType="code"/>
+        <Param name="stopVal" updates="constant" val="294.0" valType="code"/>
         <Param name="store" updates="constant" val="last key" valType="str"/>
         <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
@@ -2572,7 +2572,7 @@
     <Routine name="rec_instructions_3"/>
     <Routine name="rec_instructions_4"/>
     <LoopInitiator loopType="TrialHandler" name="comprehension_questions_3">
-      <Param name="Selected rows" updates="None" val="4:6" valType="str"/>
+      <Param name="Selected rows" updates="None" val="6:8" valType="str"/>
       <Param name="conditions" updates="None" val="[OrderedDict([('Question', 'Mennyi időt vesz igénybe a vizsgálat? Válaszát jelölje a megadott billentyűk egyikével. '), ('Answer', 'D:20-30 perc    F: 50-60 perc    J: 70-80 perc'), ('CorrectResponse', 'b'), ('CorrectAnswer', 'A helyes válasz: 50-60 perc')]), OrderedDict([('Question', 'Megbizonyosodott róla, hogy biztosítottak a vizsgálat elvégzéséhez szükséges feltételek? Válaszát jelölje a megadott billentyűk egyikével. '), ('Answer', 'D: Igen, körülményeim nyugodtak, az internet kapcsolat stabil, a feladatokra tudok szánni 60 percet.    F: Nem, nincs lehetőségem nyugodt körülmények között elvégezni a feladatot.'), ('CorrectResponse', 'd'), ('CorrectAnswer', 'Köszönjük!')]), OrderedDict([('Question', 'Mely billentyű jelzi azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen?'), ('Answer', 'D billentyű    F billentyű   J billentyű    K billentyű'), ('CorrectResponse', 'j'), ('CorrectAnswer', 'A helyes válasz: J billentyű.')]), OrderedDict([('Question', 'Mely billentyű jelzi azokat a képeket, amelyek nem maradhatnak a bemutatott helyen?'), ('Answer', 'D billentyű    F billentyű   J billentyű    K billentyű'), ('CorrectResponse', 'f'), ('CorrectAnswer', 'A helyes válasz: F billentyű')]), OrderedDict([('Question', 'Hány másodperce lesz a döntésre egy-egy képről?'), ('Answer', 'D: 2mp    F: 3mp J: 4mp   K: 5mp'), ('CorrectResponse', 'f'), ('CorrectAnswer', 'A helyes válasz 3 mp. ')]), OrderedDict([('Question', 'Mely billenytűvel jelzi azokat a képeket, amely hasonlít egy, az első feladatban látott képhez? '), ('Answer', 'D billentyű    F billentyű   J billentyű    K billentyű'), ('CorrectResponse', 'j'), ('CorrectAnswer', 'A helyes válasz: J billentyű.')]), OrderedDict([('Question', 'Mely billentyű jelzi azokat a k\\u00e9peket, amelyek nem maradhatnak a bemutatott helyen?'), ('Answer', None), ('CorrectResponse', None), ('CorrectAnswer', None)]), OrderedDict([('Question', 'Hány másodperce lesz a döntésre egy-egy képről?'), ('Answer', None), ('CorrectResponse', None), ('CorrectAnswer', None)])]" valType="str"/>
       <Param name="conditionsFile" updates="None" val="stimuli_tables/comprehension_questions.xlsx" valType="str"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>

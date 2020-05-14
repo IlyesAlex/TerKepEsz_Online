@@ -519,7 +519,7 @@ function experimentInit() {
     text: "Az első feladat nagyjából 20 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. \n\nMost a gyakorló feladat következik. \n",
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0], height: 0.04,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -2338,7 +2338,7 @@ function comprehension_feedbackRoutineBegin(trials) {
     t = 0;
     comprehension_feedbackClock.reset(); // clock
     frameN = -1;
-    routineTimer.add(1.500000);
+    routineTimer.add(2.000000);
     // update component parameters for each repeat
     comprehension_repeat = 300.0;
     comprehension_feedback = IncorrectAnswer;
@@ -2379,7 +2379,7 @@ function comprehension_feedbackRoutineEachFrame(trials) {
       comprehension_feedback_text.setAutoDraw(true);
     }
 
-    frameRemains = 0 + 1.5 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 0 + 2.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (comprehension_feedback_text.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       comprehension_feedback_text.setAutoDraw(false);
     }
@@ -6416,7 +6416,7 @@ function end_experimentRoutineEachFrame(trials) {
     }
     
     // *end_experiment_continue* updates
-    if (t >= 2.0 && end_experiment_continue.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 3.0 && end_experiment_continue.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       end_experiment_continue.tStart = t;  // (not accounting for frame time here)
       end_experiment_continue.frameNStart = frameN;  // exact frame index
@@ -6424,13 +6424,13 @@ function end_experimentRoutineEachFrame(trials) {
       end_experiment_continue.setAutoDraw(true);
     }
 
-    frameRemains = 2.0 + 298.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 3.0 + 297.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_experiment_continue.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_experiment_continue.setAutoDraw(false);
     }
     
     // *end_experiment_key* updates
-    if (t >= 2.0 && end_experiment_key.status === PsychoJS.Status.NOT_STARTED) {
+    if (t >= 4.0 && end_experiment_key.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
       end_experiment_key.tStart = t;  // (not accounting for frame time here)
       end_experiment_key.frameNStart = frameN;  // exact frame index
@@ -6441,7 +6441,7 @@ function end_experimentRoutineEachFrame(trials) {
       psychoJS.window.callOnFlip(function() { end_experiment_key.clearEvents(); });
     }
 
-    frameRemains = 2.0 + 298.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
+    frameRemains = 4.0 + 294.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
     if (end_experiment_key.status === PsychoJS.Status.STARTED && t >= frameRemains) {
       end_experiment_key.status = PsychoJS.Status.FINISHED;
   }

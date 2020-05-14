@@ -371,7 +371,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   comprehension_repeat_text = new visual.TextStim({
@@ -580,7 +580,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   comprehension_repeat_text = new visual.TextStim({
@@ -768,6 +768,71 @@ function experimentInit() {
     texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_trial_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "comprehension_question"
+  comprehension_questionClock = new util.Clock();
+  comprehension_question_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_question_text',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.3], height: 0.04,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: 0.0 
+  });
+  
+  comprehension_question_answers = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_question_answers',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.3)], height: 0.04,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  comprehension_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  // Initialize components for Routine "comprehension_feedback"
+  comprehension_feedbackClock = new util.Clock();
+  comprehension_feedback_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_feedback_text',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0.0], height: 0.06,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  // Initialize components for Routine "comprehension_repeat"
+  comprehension_repeatClock = new util.Clock();
+  comprehension_continue_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  comprehension_continue_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_continue_text',
+    text: 'A folytatáshoz nyomja le a jobb nyilat. ',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -1.0 
+  });
+  
+  comprehension_repeat_text = new visual.TextStim({
+    win: psychoJS.window,
+    name: 'comprehension_repeat_text',
+    text: 'default text',
+    font: 'Arial',
+    units: undefined, 
+    pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
+    color: new util.Color('black'),  opacity: 1,
+    depth: -2.0 
+  });
   
   // Initialize components for Routine "end_enc_run"
   end_enc_runClock = new util.Clock();
@@ -1000,7 +1065,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, (- 0.4)], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -2.0 
+    depth: -1.0 
   });
   
   comprehension_repeat_text = new visual.TextStim({
@@ -1024,7 +1089,7 @@ function experimentInit() {
     units: undefined, 
     pos: [0, 0], height: 0.06,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
-    depth: -5.0 
+    depth: 0.0 
   });
   
   // Initialize components for Routine "demo"
@@ -1737,6 +1802,10 @@ function enc_runsLoopBegin(thisScheduler) {
     thisScheduler.add(enc_trialsLoopBegin, enc_trialsLoopScheduler);
     thisScheduler.add(enc_trialsLoopScheduler);
     thisScheduler.add(enc_trialsLoopEnd);
+    const comprehension_enc_runLoopScheduler = new Scheduler(psychoJS);
+    thisScheduler.add(comprehension_enc_runLoopBegin, comprehension_enc_runLoopScheduler);
+    thisScheduler.add(comprehension_enc_runLoopScheduler);
+    thisScheduler.add(comprehension_enc_runLoopEnd);
     thisScheduler.add(end_enc_runRoutineBegin(snapshot));
     thisScheduler.add(end_enc_runRoutineEachFrame(snapshot));
     thisScheduler.add(end_enc_runRoutineEnd(snapshot));
@@ -1785,6 +1854,47 @@ function enc_trialsLoopEnd() {
 }
 
 
+var comprehension_enc_run;
+function comprehension_enc_runLoopBegin(thisScheduler) {
+  // set up handler to look after randomisation of conditions etc
+  comprehension_enc_run = new TrialHandler({
+    psychoJS: psychoJS,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
+    extraInfo: expInfo, originPath: undefined,
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4:6'),
+    seed: undefined, name: 'comprehension_enc_run'
+  });
+  psychoJS.experiment.addLoop(comprehension_enc_run); // add the loop to the experiment
+  currentLoop = comprehension_enc_run;  // we're now the current loop
+
+  // Schedule all the trials in the trialList:
+  comprehension_enc_run.forEach(function() {
+    const snapshot = comprehension_enc_run.getSnapshot();
+
+    thisScheduler.add(importConditions(snapshot));
+    thisScheduler.add(comprehension_questionRoutineBegin(snapshot));
+    thisScheduler.add(comprehension_questionRoutineEachFrame(snapshot));
+    thisScheduler.add(comprehension_questionRoutineEnd(snapshot));
+    thisScheduler.add(comprehension_feedbackRoutineBegin(snapshot));
+    thisScheduler.add(comprehension_feedbackRoutineEachFrame(snapshot));
+    thisScheduler.add(comprehension_feedbackRoutineEnd(snapshot));
+    thisScheduler.add(comprehension_repeatRoutineBegin(snapshot));
+    thisScheduler.add(comprehension_repeatRoutineEachFrame(snapshot));
+    thisScheduler.add(comprehension_repeatRoutineEnd(snapshot));
+    thisScheduler.add(endLoopIteration(thisScheduler, snapshot));
+  });
+
+  return Scheduler.Event.NEXT;
+}
+
+
+function comprehension_enc_runLoopEnd() {
+  psychoJS.experiment.removeLoop(comprehension_enc_run);
+
+  return Scheduler.Event.NEXT;
+}
+
+
 function enc_runsLoopEnd() {
   psychoJS.experiment.removeLoop(enc_runs);
 
@@ -1799,7 +1909,7 @@ function comprehension_questions_3LoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '4:6'),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '6:8'),
     seed: undefined, name: 'comprehension_questions_3'
   });
   psychoJS.experiment.addLoop(comprehension_questions_3); // add the loop to the experiment

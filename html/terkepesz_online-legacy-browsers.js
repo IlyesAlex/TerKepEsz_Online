@@ -6338,6 +6338,7 @@ function start_rec_blockRoutineBegin(trials) {
             block_name = "K\u00e9p";
         }
     }
+    block_counter = (block_counter + 1);
     
     start_rec_block_text.setText(block_name);
     // keep track of which components have finished

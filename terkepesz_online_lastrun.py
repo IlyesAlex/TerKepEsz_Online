@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Thu 14 May 2020 07:00:04 PM CEST
+    on Fri 15 May 2020 02:31:30 AM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.0'
 expName = 'TRK-online'  # from the Builder filename that created this script
-expInfo = {'A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem': '', 'Kor': '', 'Oktatás éve': ''}
+expInfo = {'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem*': '', 'Kor*': '', 'Oktatás éve (oktatási intézményben eltöltött összes évek száma)*': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -98,7 +98,7 @@ experiment_information_continue = visual.TextStim(win=win, name='experiment_info
     languageStyle='LTR',
     depth=-2.0);
 proceed = False
-consent = expInfo['A vizsgálati feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']
+consent = expInfo['A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).']
 dataprotection = expInfo['Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']
 consent_ok = False
 data_ok = False
@@ -202,7 +202,7 @@ start_encoding_text = visual.TextStim(win=win, name='start_encoding_text',
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=0.0);
-tables = [0]
+tables = [0,1,2]
 selected = np.random.choice(tables)
 selected = str(selected)
 stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'
@@ -3298,7 +3298,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 84
+    end = start + 1
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -6552,9 +6552,10 @@ for thisRec_run in rec_runs:
             block_name = "Kép"
         else:
             if TrialType == "LOC":
-                block_name = "Hely"
-            else: 
                 block_name = "Kép"
+            else: 
+                block_name = "Hely"
+        block_counter = block_counter + 1
         start_rec_block_text.setText(block_name)
         # keep track of which components have finished
         start_rec_blockComponents = [start_rec_block_text]

@@ -473,7 +473,7 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  tables = [0];
+  tables = [0,1,2];
   selected = tables[Math.floor(Math.random() * tables.length)];
   selected = selected.toString();
   stimuli_table = (("stimuli_tables/encoding_trials_" + selected) + ".csv");

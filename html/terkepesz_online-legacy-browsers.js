@@ -6333,9 +6333,9 @@ function start_rec_blockRoutineBegin(trials) {
         block_name = "K\u00e9p";
     } else {
         if ((TrialType === "LOC")) {
-            block_name = "Hely";
-        } else {
             block_name = "K\u00e9p";
+        } else {
+            block_name = "Hely";
         }
     }
     block_counter = (block_counter + 1);

@@ -4586,7 +4586,7 @@ function start_recognitionRoutineBegin(trials) {
     start = 0;
     end = 0;
     step = 1;
-    n_runs = 3;
+    n_runs = 4;
     run_counter = 0;
     
     stimuli_table = (("stimuli_tables/recognition_trials_" + selected) + ".csv");

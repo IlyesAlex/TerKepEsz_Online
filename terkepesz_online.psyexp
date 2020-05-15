@@ -161,8 +161,8 @@
       <CodeComponent name="recognition_run_setup">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = 0;&amp;#10;end = 0;&amp;#10;step = 1;&amp;#10;n_runs = 3;&amp;#10;run_counter = 0;&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = 0&amp;#10;end = 0&amp;#10;step = 1&amp;#10;n_runs = 3&amp;#10;run_counter = 0" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = 0;&amp;#10;end = 0;&amp;#10;step = 1;&amp;#10;n_runs = 4;&amp;#10;run_counter = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = 0&amp;#10;end = 0&amp;#10;step = 1&amp;#10;n_runs = 4&amp;#10;run_counter = 0" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2678,7 +2678,7 @@
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="isTrials" updates="None" val="False" valType="bool"/>
       <Param name="loopType" updates="None" val="sequential" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="nReps" updates="None" val="4" valType="code"/>
       <Param name="name" updates="None" val="rec_runs" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>

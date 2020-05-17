@@ -1297,7 +1297,7 @@ function experimentInit() {
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'rec_trial_interior', units : 'pix', 
-    image : 'stimuli/GalleryInterior', mask : undefined,
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
     ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
@@ -1452,7 +1452,7 @@ function experimentInit() {
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'rec_trial_interior', units : 'pix', 
-    image : 'stimuli/GalleryInterior', mask : undefined,
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
     ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,

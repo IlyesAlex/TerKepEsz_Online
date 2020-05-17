@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Fri 15 May 2020 02:31:30 AM CEST
+    on Mon 18 May 2020 01:20:11 AM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -211,7 +211,7 @@ stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'
 # Initialize components for Routine "enc_instructions_1"
 enc_instructions_1Clock = core.Clock()
 enc_instructions_1_text = visual.TextStim(win=win, name='enc_instructions_1_text',
-    text='Ön ennek a modern képgalériának a kurátora. \n\nA legújabb kiállításra a vártnál több kép érkezett.\n\nKurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára. \n\nAz Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz.',
+    text='Ön ennek a modern képgalériának a kurátora. \n\nA legújabb kiállításra a vártnál több kép érkezett.\nKurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára.\n\nAz Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz.',
     font='Arial',
     pos=(-0.3, 0), height=0.03, wrapWidth=0.65, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -237,7 +237,7 @@ instructions_1_continue = visual.TextStim(win=win, name='instructions_1_continue
 # Initialize components for Routine "enc_instructions_2"
 enc_instructions_2Clock = core.Clock()
 enc_instructions_2_text = visual.TextStim(win=win, name='enc_instructions_2_text',
-    text='Ez a galéria térképe felülről, nézze meg figyelmesen. \n\nA feladat során a képek a térképre vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
+    text='Ez a kiállítóterem belülről, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
     font='Arial',
     pos=(-0.35, 0), height=0.03, wrapWidth=0.5, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -246,8 +246,8 @@ enc_instructions_2_text = visual.TextStim(win=win, name='enc_instructions_2_text
 enc_instructions_2_image = visual.ImageStim(
     win=win,
     name='enc_instructions_2_image', units='pix', 
-    image='stimuli/GalleryInfo.jpg', mask=None,
-    ori=0, pos=(425, 0), size=(1000,750),
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(425, 0), size=(730,442),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -336,11 +336,11 @@ start_practice_text = visual.TextStim(win=win, name='start_practice_text',
 
 # Initialize components for Routine "enc_fx"
 enc_fxClock = core.Clock()
-enc_fx_map = visual.ImageStim(
+enc_fx_interior = visual.ImageStim(
     win=win,
-    name='enc_fx_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='enc_fx_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -355,11 +355,11 @@ enc_fx_key = keyboard.Keyboard()
 
 # Initialize components for Routine "enc_trial"
 enc_trialClock = core.Clock()
-enc_trial_map = visual.ImageStim(
+enc_trial_interior = visual.ImageStim(
     win=win,
-    name='enc_trial_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='enc_trial_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -375,11 +375,11 @@ enc_trial_key = keyboard.Keyboard()
 
 # Initialize components for Routine "enc_practice_feedback"
 enc_practice_feedbackClock = core.Clock()
-enc_practice_feedback_map = visual.ImageStim(
+enc_practice_feedback_interior = visual.ImageStim(
     win=win,
-    name='enc_practice_feedback_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='enc_practice_feedback_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -429,11 +429,11 @@ start_enc_run_text = visual.TextStim(win=win, name='start_enc_run_text',
 
 # Initialize components for Routine "enc_fx"
 enc_fxClock = core.Clock()
-enc_fx_map = visual.ImageStim(
+enc_fx_interior = visual.ImageStim(
     win=win,
-    name='enc_fx_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='enc_fx_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -448,11 +448,11 @@ enc_fx_key = keyboard.Keyboard()
 
 # Initialize components for Routine "enc_trial"
 enc_trialClock = core.Clock()
-enc_trial_map = visual.ImageStim(
+enc_trial_interior = visual.ImageStim(
     win=win,
-    name='enc_trial_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='enc_trial_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -695,11 +695,11 @@ demo_start_text = visual.TextStim(win=win, name='demo_start_text',
 
 # Initialize components for Routine "demo"
 demoClock = core.Clock()
-demo_map = visual.ImageStim(
+demo_interior = visual.ImageStim(
     win=win,
-    name='demo_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='demo_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -778,11 +778,11 @@ rec_practice_block_text = visual.TextStim(win=win, name='rec_practice_block_text
 
 # Initialize components for Routine "rec_fx"
 rec_fxClock = core.Clock()
-rec_fx_map = visual.ImageStim(
+rec_fx_interior = visual.ImageStim(
     win=win,
-    name='rec_fx_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0,-25), size=(1040, 1000),
+    name='rec_fx_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0,0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -797,25 +797,25 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-600, 0.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
     text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 0.0), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(600, 250.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
 
 # Initialize components for Routine "rec_trial"
 rec_trialClock = core.Clock()
-rec_trial_map = visual.ImageStim(
+rec_trial_interior = visual.ImageStim(
     win=win,
-    name='rec_trial_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='rec_trial_interior', units='pix', 
+    image='stimuli/GalleryInterior', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -831,14 +831,14 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-600, 0.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
     text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 0), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(600, 250), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -893,11 +893,11 @@ start_rec_block_text = visual.TextStim(win=win, name='start_rec_block_text',
 
 # Initialize components for Routine "rec_fx"
 rec_fxClock = core.Clock()
-rec_fx_map = visual.ImageStim(
+rec_fx_interior = visual.ImageStim(
     win=win,
-    name='rec_fx_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0,-25), size=(1040, 1000),
+    name='rec_fx_interior', units='pix', 
+    image='stimuli/GalleryInterior.png', mask=None,
+    ori=0, pos=(0,0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -912,25 +912,25 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-600, 0.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
     text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 0.0), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(600, 250.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
 
 # Initialize components for Routine "rec_trial"
 rec_trialClock = core.Clock()
-rec_trial_map = visual.ImageStim(
+rec_trial_interior = visual.ImageStim(
     win=win,
-    name='rec_trial_map', units='pix', 
-    image='stimuli/GalleryPlanInside.jpg', mask=None,
-    ori=0, pos=(0, -25), size=(1040, 1000),
+    name='rec_trial_interior', units='pix', 
+    image='stimuli/GalleryInterior', mask=None,
+    ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -946,14 +946,14 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-600, 0.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
     text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 0), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(600, 250), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -2771,7 +2771,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     enc_fx_key.rt = []
     _enc_fx_key_allKeys = []
     # keep track of which components have finished
-    enc_fxComponents = [enc_fx_map, enc_fx_cross, enc_fx_key]
+    enc_fxComponents = [enc_fx_interior, enc_fx_cross, enc_fx_key]
     for thisComponent in enc_fxComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2794,22 +2794,22 @@ for thisEnc_practice_trial in enc_practice_trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *enc_fx_map* updates
-        if enc_fx_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *enc_fx_interior* updates
+        if enc_fx_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            enc_fx_map.frameNStart = frameN  # exact frame index
-            enc_fx_map.tStart = t  # local t and not account for scr refresh
-            enc_fx_map.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(enc_fx_map, 'tStartRefresh')  # time at next scr refresh
-            enc_fx_map.setAutoDraw(True)
-        if enc_fx_map.status == STARTED:
+            enc_fx_interior.frameNStart = frameN  # exact frame index
+            enc_fx_interior.tStart = t  # local t and not account for scr refresh
+            enc_fx_interior.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(enc_fx_interior, 'tStartRefresh')  # time at next scr refresh
+            enc_fx_interior.setAutoDraw(True)
+        if enc_fx_interior.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > enc_fx_map.tStartRefresh + Jitter/1000-frameTolerance:
+            if tThisFlipGlobal > enc_fx_interior.tStartRefresh + Jitter/1000-frameTolerance:
                 # keep track of stop time/frame for later
-                enc_fx_map.tStop = t  # not accounting for scr refresh
-                enc_fx_map.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(enc_fx_map, 'tStopRefresh')  # time at next scr refresh
-                enc_fx_map.setAutoDraw(False)
+                enc_fx_interior.tStop = t  # not accounting for scr refresh
+                enc_fx_interior.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(enc_fx_interior, 'tStopRefresh')  # time at next scr refresh
+                enc_fx_interior.setAutoDraw(False)
         
         # *enc_fx_cross* updates
         if enc_fx_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -2877,8 +2877,8 @@ for thisEnc_practice_trial in enc_practice_trials:
     for thisComponent in enc_fxComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    enc_practice_trials.addData('enc_fx_map.started', enc_fx_map.tStartRefresh)
-    enc_practice_trials.addData('enc_fx_map.stopped', enc_fx_map.tStopRefresh)
+    enc_practice_trials.addData('enc_fx_interior.started', enc_fx_interior.tStartRefresh)
+    enc_practice_trials.addData('enc_fx_interior.stopped', enc_fx_interior.tStopRefresh)
     enc_practice_trials.addData('enc_fx_cross.started', enc_fx_cross.tStartRefresh)
     enc_practice_trials.addData('enc_fx_cross.stopped', enc_fx_cross.tStopRefresh)
     # check responses
@@ -2902,7 +2902,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     enc_trial_key.rt = []
     _enc_trial_key_allKeys = []
     # keep track of which components have finished
-    enc_trialComponents = [enc_trial_map, enc_trial_main_image, enc_trial_key]
+    enc_trialComponents = [enc_trial_interior, enc_trial_main_image, enc_trial_key]
     for thisComponent in enc_trialComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -2925,22 +2925,22 @@ for thisEnc_practice_trial in enc_practice_trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *enc_trial_map* updates
-        if enc_trial_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *enc_trial_interior* updates
+        if enc_trial_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            enc_trial_map.frameNStart = frameN  # exact frame index
-            enc_trial_map.tStart = t  # local t and not account for scr refresh
-            enc_trial_map.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(enc_trial_map, 'tStartRefresh')  # time at next scr refresh
-            enc_trial_map.setAutoDraw(True)
-        if enc_trial_map.status == STARTED:
+            enc_trial_interior.frameNStart = frameN  # exact frame index
+            enc_trial_interior.tStart = t  # local t and not account for scr refresh
+            enc_trial_interior.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(enc_trial_interior, 'tStartRefresh')  # time at next scr refresh
+            enc_trial_interior.setAutoDraw(True)
+        if enc_trial_interior.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > enc_trial_map.tStartRefresh + 3.0-frameTolerance:
+            if tThisFlipGlobal > enc_trial_interior.tStartRefresh + 3.0-frameTolerance:
                 # keep track of stop time/frame for later
-                enc_trial_map.tStop = t  # not accounting for scr refresh
-                enc_trial_map.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(enc_trial_map, 'tStopRefresh')  # time at next scr refresh
-                enc_trial_map.setAutoDraw(False)
+                enc_trial_interior.tStop = t  # not accounting for scr refresh
+                enc_trial_interior.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(enc_trial_interior, 'tStopRefresh')  # time at next scr refresh
+                enc_trial_interior.setAutoDraw(False)
         
         # *enc_trial_main_image* updates
         if enc_trial_main_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3008,8 +3008,8 @@ for thisEnc_practice_trial in enc_practice_trials:
     for thisComponent in enc_trialComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    enc_practice_trials.addData('enc_trial_map.started', enc_trial_map.tStartRefresh)
-    enc_practice_trials.addData('enc_trial_map.stopped', enc_trial_map.tStopRefresh)
+    enc_practice_trials.addData('enc_trial_interior.started', enc_trial_interior.tStartRefresh)
+    enc_practice_trials.addData('enc_trial_interior.stopped', enc_trial_interior.tStopRefresh)
     enc_practice_trials.addData('enc_trial_main_image.started', enc_trial_main_image.tStartRefresh)
     enc_practice_trials.addData('enc_trial_main_image.stopped', enc_trial_main_image.tStopRefresh)
     # check responses
@@ -3037,7 +3037,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     enc_practice_feedback_image.setImage(CurrentImage)
     enc_practice_feedback_text.setText(feedback_text)
     # keep track of which components have finished
-    enc_practice_feedbackComponents = [enc_practice_feedback_map, enc_practice_feedback_image, enc_practice_feedback_text]
+    enc_practice_feedbackComponents = [enc_practice_feedback_interior, enc_practice_feedback_image, enc_practice_feedback_text]
     for thisComponent in enc_practice_feedbackComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -3060,22 +3060,22 @@ for thisEnc_practice_trial in enc_practice_trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *enc_practice_feedback_map* updates
-        if enc_practice_feedback_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *enc_practice_feedback_interior* updates
+        if enc_practice_feedback_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            enc_practice_feedback_map.frameNStart = frameN  # exact frame index
-            enc_practice_feedback_map.tStart = t  # local t and not account for scr refresh
-            enc_practice_feedback_map.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(enc_practice_feedback_map, 'tStartRefresh')  # time at next scr refresh
-            enc_practice_feedback_map.setAutoDraw(True)
-        if enc_practice_feedback_map.status == STARTED:
+            enc_practice_feedback_interior.frameNStart = frameN  # exact frame index
+            enc_practice_feedback_interior.tStart = t  # local t and not account for scr refresh
+            enc_practice_feedback_interior.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(enc_practice_feedback_interior, 'tStartRefresh')  # time at next scr refresh
+            enc_practice_feedback_interior.setAutoDraw(True)
+        if enc_practice_feedback_interior.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > enc_practice_feedback_map.tStartRefresh + 1.0-frameTolerance:
+            if tThisFlipGlobal > enc_practice_feedback_interior.tStartRefresh + 1.0-frameTolerance:
                 # keep track of stop time/frame for later
-                enc_practice_feedback_map.tStop = t  # not accounting for scr refresh
-                enc_practice_feedback_map.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(enc_practice_feedback_map, 'tStopRefresh')  # time at next scr refresh
-                enc_practice_feedback_map.setAutoDraw(False)
+                enc_practice_feedback_interior.tStop = t  # not accounting for scr refresh
+                enc_practice_feedback_interior.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(enc_practice_feedback_interior, 'tStopRefresh')  # time at next scr refresh
+                enc_practice_feedback_interior.setAutoDraw(False)
         
         # *enc_practice_feedback_image* updates
         if enc_practice_feedback_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3132,8 +3132,8 @@ for thisEnc_practice_trial in enc_practice_trials:
     for thisComponent in enc_practice_feedbackComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    enc_practice_trials.addData('enc_practice_feedback_map.started', enc_practice_feedback_map.tStartRefresh)
-    enc_practice_trials.addData('enc_practice_feedback_map.stopped', enc_practice_feedback_map.tStopRefresh)
+    enc_practice_trials.addData('enc_practice_feedback_interior.started', enc_practice_feedback_interior.tStartRefresh)
+    enc_practice_trials.addData('enc_practice_feedback_interior.stopped', enc_practice_feedback_interior.tStopRefresh)
     enc_practice_trials.addData('enc_practice_feedback_image.started', enc_practice_feedback_image.tStartRefresh)
     enc_practice_trials.addData('enc_practice_feedback_image.stopped', enc_practice_feedback_image.tStopRefresh)
     enc_practice_trials.addData('enc_practice_feedback_text.started', enc_practice_feedback_text.tStartRefresh)
@@ -3298,7 +3298,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 1
+    end = start + 2
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -3398,7 +3398,7 @@ for thisEnc_run in enc_runs:
         enc_fx_key.rt = []
         _enc_fx_key_allKeys = []
         # keep track of which components have finished
-        enc_fxComponents = [enc_fx_map, enc_fx_cross, enc_fx_key]
+        enc_fxComponents = [enc_fx_interior, enc_fx_cross, enc_fx_key]
         for thisComponent in enc_fxComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3421,22 +3421,22 @@ for thisEnc_run in enc_runs:
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *enc_fx_map* updates
-            if enc_fx_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *enc_fx_interior* updates
+            if enc_fx_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                enc_fx_map.frameNStart = frameN  # exact frame index
-                enc_fx_map.tStart = t  # local t and not account for scr refresh
-                enc_fx_map.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(enc_fx_map, 'tStartRefresh')  # time at next scr refresh
-                enc_fx_map.setAutoDraw(True)
-            if enc_fx_map.status == STARTED:
+                enc_fx_interior.frameNStart = frameN  # exact frame index
+                enc_fx_interior.tStart = t  # local t and not account for scr refresh
+                enc_fx_interior.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(enc_fx_interior, 'tStartRefresh')  # time at next scr refresh
+                enc_fx_interior.setAutoDraw(True)
+            if enc_fx_interior.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > enc_fx_map.tStartRefresh + Jitter/1000-frameTolerance:
+                if tThisFlipGlobal > enc_fx_interior.tStartRefresh + Jitter/1000-frameTolerance:
                     # keep track of stop time/frame for later
-                    enc_fx_map.tStop = t  # not accounting for scr refresh
-                    enc_fx_map.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(enc_fx_map, 'tStopRefresh')  # time at next scr refresh
-                    enc_fx_map.setAutoDraw(False)
+                    enc_fx_interior.tStop = t  # not accounting for scr refresh
+                    enc_fx_interior.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(enc_fx_interior, 'tStopRefresh')  # time at next scr refresh
+                    enc_fx_interior.setAutoDraw(False)
             
             # *enc_fx_cross* updates
             if enc_fx_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3504,8 +3504,8 @@ for thisEnc_run in enc_runs:
         for thisComponent in enc_fxComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        enc_trials.addData('enc_fx_map.started', enc_fx_map.tStartRefresh)
-        enc_trials.addData('enc_fx_map.stopped', enc_fx_map.tStopRefresh)
+        enc_trials.addData('enc_fx_interior.started', enc_fx_interior.tStartRefresh)
+        enc_trials.addData('enc_fx_interior.stopped', enc_fx_interior.tStopRefresh)
         enc_trials.addData('enc_fx_cross.started', enc_fx_cross.tStartRefresh)
         enc_trials.addData('enc_fx_cross.stopped', enc_fx_cross.tStopRefresh)
         # check responses
@@ -3529,7 +3529,7 @@ for thisEnc_run in enc_runs:
         enc_trial_key.rt = []
         _enc_trial_key_allKeys = []
         # keep track of which components have finished
-        enc_trialComponents = [enc_trial_map, enc_trial_main_image, enc_trial_key]
+        enc_trialComponents = [enc_trial_interior, enc_trial_main_image, enc_trial_key]
         for thisComponent in enc_trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -3552,22 +3552,22 @@ for thisEnc_run in enc_runs:
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *enc_trial_map* updates
-            if enc_trial_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *enc_trial_interior* updates
+            if enc_trial_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                enc_trial_map.frameNStart = frameN  # exact frame index
-                enc_trial_map.tStart = t  # local t and not account for scr refresh
-                enc_trial_map.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(enc_trial_map, 'tStartRefresh')  # time at next scr refresh
-                enc_trial_map.setAutoDraw(True)
-            if enc_trial_map.status == STARTED:
+                enc_trial_interior.frameNStart = frameN  # exact frame index
+                enc_trial_interior.tStart = t  # local t and not account for scr refresh
+                enc_trial_interior.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(enc_trial_interior, 'tStartRefresh')  # time at next scr refresh
+                enc_trial_interior.setAutoDraw(True)
+            if enc_trial_interior.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > enc_trial_map.tStartRefresh + 3.0-frameTolerance:
+                if tThisFlipGlobal > enc_trial_interior.tStartRefresh + 3.0-frameTolerance:
                     # keep track of stop time/frame for later
-                    enc_trial_map.tStop = t  # not accounting for scr refresh
-                    enc_trial_map.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(enc_trial_map, 'tStopRefresh')  # time at next scr refresh
-                    enc_trial_map.setAutoDraw(False)
+                    enc_trial_interior.tStop = t  # not accounting for scr refresh
+                    enc_trial_interior.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(enc_trial_interior, 'tStopRefresh')  # time at next scr refresh
+                    enc_trial_interior.setAutoDraw(False)
             
             # *enc_trial_main_image* updates
             if enc_trial_main_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -3635,8 +3635,8 @@ for thisEnc_run in enc_runs:
         for thisComponent in enc_trialComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        enc_trials.addData('enc_trial_map.started', enc_trial_map.tStartRefresh)
-        enc_trials.addData('enc_trial_map.stopped', enc_trial_map.tStopRefresh)
+        enc_trials.addData('enc_trial_interior.started', enc_trial_interior.tStartRefresh)
+        enc_trials.addData('enc_trial_interior.stopped', enc_trial_interior.tStopRefresh)
         enc_trials.addData('enc_trial_main_image.started', enc_trial_main_image.tStartRefresh)
         enc_trials.addData('enc_trial_main_image.stopped', enc_trial_main_image.tStopRefresh)
         # check responses
@@ -4273,7 +4273,7 @@ routineTimer.add(2.000000)
 start = 0
 end = 0
 step = 1
-n_runs = 3
+n_runs = 4
 run_counter = 0
 stimuli_table = 'stimuli_tables/recognition_trials_'+ selected + '.csv'
 # keep track of which components have finished
@@ -5373,7 +5373,7 @@ for thisDemo_trial in demo_trials:
     demo_key.rt = []
     _demo_key_allKeys = []
     # keep track of which components have finished
-    demoComponents = [demo_map, demo_main_image, demo_image, demo_text, demo_key, demo_continue]
+    demoComponents = [demo_interior, demo_main_image, demo_image, demo_text, demo_key, demo_continue]
     for thisComponent in demoComponents:
         thisComponent.tStart = None
         thisComponent.tStop = None
@@ -5396,22 +5396,22 @@ for thisDemo_trial in demo_trials:
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *demo_map* updates
-        if demo_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+        # *demo_interior* updates
+        if demo_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
             # keep track of start time/frame for later
-            demo_map.frameNStart = frameN  # exact frame index
-            demo_map.tStart = t  # local t and not account for scr refresh
-            demo_map.tStartRefresh = tThisFlipGlobal  # on global time
-            win.timeOnFlip(demo_map, 'tStartRefresh')  # time at next scr refresh
-            demo_map.setAutoDraw(True)
-        if demo_map.status == STARTED:
+            demo_interior.frameNStart = frameN  # exact frame index
+            demo_interior.tStart = t  # local t and not account for scr refresh
+            demo_interior.tStartRefresh = tThisFlipGlobal  # on global time
+            win.timeOnFlip(demo_interior, 'tStartRefresh')  # time at next scr refresh
+            demo_interior.setAutoDraw(True)
+        if demo_interior.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > demo_map.tStartRefresh + 300.0-frameTolerance:
+            if tThisFlipGlobal > demo_interior.tStartRefresh + 300.0-frameTolerance:
                 # keep track of stop time/frame for later
-                demo_map.tStop = t  # not accounting for scr refresh
-                demo_map.frameNStop = frameN  # exact frame index
-                win.timeOnFlip(demo_map, 'tStopRefresh')  # time at next scr refresh
-                demo_map.setAutoDraw(False)
+                demo_interior.tStop = t  # not accounting for scr refresh
+                demo_interior.frameNStop = frameN  # exact frame index
+                win.timeOnFlip(demo_interior, 'tStopRefresh')  # time at next scr refresh
+                demo_interior.setAutoDraw(False)
         
         # *demo_main_image* updates
         if demo_main_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -5532,8 +5532,8 @@ for thisDemo_trial in demo_trials:
     for thisComponent in demoComponents:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
-    demo_trials.addData('demo_map.started', demo_map.tStartRefresh)
-    demo_trials.addData('demo_map.stopped', demo_map.tStopRefresh)
+    demo_trials.addData('demo_interior.started', demo_interior.tStartRefresh)
+    demo_trials.addData('demo_interior.stopped', demo_interior.tStopRefresh)
     demo_trials.addData('demo_main_image.started', demo_main_image.tStartRefresh)
     demo_trials.addData('demo_main_image.stopped', demo_main_image.tStopRefresh)
     demo_trials.addData('demo_image.started', demo_image.tStartRefresh)
@@ -5877,7 +5877,7 @@ for thisRec_practice_block in rec_practice_blocks:
         rec_fx_text_block.setText(block_name
 )
         # keep track of which components have finished
-        rec_fxComponents = [rec_fx_map, rec_fx_cross, rec_fx_key, rec_fx_text_block, rec_fx_instructions_text]
+        rec_fxComponents = [rec_fx_interior, rec_fx_cross, rec_fx_key, rec_fx_text_block, rec_fx_instructions_text]
         for thisComponent in rec_fxComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -5900,22 +5900,22 @@ for thisRec_practice_block in rec_practice_blocks:
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *rec_fx_map* updates
-            if rec_fx_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *rec_fx_interior* updates
+            if rec_fx_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                rec_fx_map.frameNStart = frameN  # exact frame index
-                rec_fx_map.tStart = t  # local t and not account for scr refresh
-                rec_fx_map.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(rec_fx_map, 'tStartRefresh')  # time at next scr refresh
-                rec_fx_map.setAutoDraw(True)
-            if rec_fx_map.status == STARTED:
+                rec_fx_interior.frameNStart = frameN  # exact frame index
+                rec_fx_interior.tStart = t  # local t and not account for scr refresh
+                rec_fx_interior.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(rec_fx_interior, 'tStartRefresh')  # time at next scr refresh
+                rec_fx_interior.setAutoDraw(True)
+            if rec_fx_interior.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_fx_map.tStartRefresh + Jitter/1000-frameTolerance:
+                if tThisFlipGlobal > rec_fx_interior.tStartRefresh + Jitter/1000-frameTolerance:
                     # keep track of stop time/frame for later
-                    rec_fx_map.tStop = t  # not accounting for scr refresh
-                    rec_fx_map.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(rec_fx_map, 'tStopRefresh')  # time at next scr refresh
-                    rec_fx_map.setAutoDraw(False)
+                    rec_fx_interior.tStop = t  # not accounting for scr refresh
+                    rec_fx_interior.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(rec_fx_interior, 'tStopRefresh')  # time at next scr refresh
+                    rec_fx_interior.setAutoDraw(False)
             
             # *rec_fx_cross* updates
             if rec_fx_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -6017,8 +6017,8 @@ for thisRec_practice_block in rec_practice_blocks:
         for thisComponent in rec_fxComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        rec_practice_trials.addData('rec_fx_map.started', rec_fx_map.tStartRefresh)
-        rec_practice_trials.addData('rec_fx_map.stopped', rec_fx_map.tStopRefresh)
+        rec_practice_trials.addData('rec_fx_interior.started', rec_fx_interior.tStartRefresh)
+        rec_practice_trials.addData('rec_fx_interior.stopped', rec_fx_interior.tStopRefresh)
         rec_practice_trials.addData('rec_fx_cross.started', rec_fx_cross.tStartRefresh)
         rec_practice_trials.addData('rec_fx_cross.stopped', rec_fx_cross.tStopRefresh)
         # check responses
@@ -6047,7 +6047,7 @@ for thisRec_practice_block in rec_practice_blocks:
         _rec_trial_key_allKeys = []
         rec_trial_text_block.setText(block_name)
         # keep track of which components have finished
-        rec_trialComponents = [rec_trial_map, rec_trial_main_image, rec_trial_key, rec_trial_text_block, rec_trial_instructions_text]
+        rec_trialComponents = [rec_trial_interior, rec_trial_main_image, rec_trial_key, rec_trial_text_block, rec_trial_instructions_text]
         for thisComponent in rec_trialComponents:
             thisComponent.tStart = None
             thisComponent.tStop = None
@@ -6070,22 +6070,22 @@ for thisRec_practice_block in rec_practice_blocks:
             frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
             # update/draw components on each frame
             
-            # *rec_trial_map* updates
-            if rec_trial_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+            # *rec_trial_interior* updates
+            if rec_trial_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                 # keep track of start time/frame for later
-                rec_trial_map.frameNStart = frameN  # exact frame index
-                rec_trial_map.tStart = t  # local t and not account for scr refresh
-                rec_trial_map.tStartRefresh = tThisFlipGlobal  # on global time
-                win.timeOnFlip(rec_trial_map, 'tStartRefresh')  # time at next scr refresh
-                rec_trial_map.setAutoDraw(True)
-            if rec_trial_map.status == STARTED:
+                rec_trial_interior.frameNStart = frameN  # exact frame index
+                rec_trial_interior.tStart = t  # local t and not account for scr refresh
+                rec_trial_interior.tStartRefresh = tThisFlipGlobal  # on global time
+                win.timeOnFlip(rec_trial_interior, 'tStartRefresh')  # time at next scr refresh
+                rec_trial_interior.setAutoDraw(True)
+            if rec_trial_interior.status == STARTED:
                 # is it time to stop? (based on global clock, using actual start)
-                if tThisFlipGlobal > rec_trial_map.tStartRefresh + 4.0-frameTolerance:
+                if tThisFlipGlobal > rec_trial_interior.tStartRefresh + 4.0-frameTolerance:
                     # keep track of stop time/frame for later
-                    rec_trial_map.tStop = t  # not accounting for scr refresh
-                    rec_trial_map.frameNStop = frameN  # exact frame index
-                    win.timeOnFlip(rec_trial_map, 'tStopRefresh')  # time at next scr refresh
-                    rec_trial_map.setAutoDraw(False)
+                    rec_trial_interior.tStop = t  # not accounting for scr refresh
+                    rec_trial_interior.frameNStop = frameN  # exact frame index
+                    win.timeOnFlip(rec_trial_interior, 'tStopRefresh')  # time at next scr refresh
+                    rec_trial_interior.setAutoDraw(False)
             
             # *rec_trial_main_image* updates
             if rec_trial_main_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -6187,8 +6187,8 @@ for thisRec_practice_block in rec_practice_blocks:
         for thisComponent in rec_trialComponents:
             if hasattr(thisComponent, "setAutoDraw"):
                 thisComponent.setAutoDraw(False)
-        rec_practice_trials.addData('rec_trial_map.started', rec_trial_map.tStartRefresh)
-        rec_practice_trials.addData('rec_trial_map.stopped', rec_trial_map.tStopRefresh)
+        rec_practice_trials.addData('rec_trial_interior.started', rec_trial_interior.tStartRefresh)
+        rec_practice_trials.addData('rec_trial_interior.stopped', rec_trial_interior.tStopRefresh)
         rec_practice_trials.addData('rec_trial_main_image.started', rec_trial_main_image.tStartRefresh)
         rec_practice_trials.addData('rec_trial_main_image.stopped', rec_trial_main_image.tStopRefresh)
         # check responses
@@ -6430,7 +6430,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_runs = data.TrialHandler(nReps=3, method='sequential', 
+rec_runs = data.TrialHandler(nReps=4, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_runs')
@@ -6651,7 +6651,7 @@ for thisRec_run in rec_runs:
             rec_fx_text_block.setText(block_name
 )
             # keep track of which components have finished
-            rec_fxComponents = [rec_fx_map, rec_fx_cross, rec_fx_key, rec_fx_text_block, rec_fx_instructions_text]
+            rec_fxComponents = [rec_fx_interior, rec_fx_cross, rec_fx_key, rec_fx_text_block, rec_fx_instructions_text]
             for thisComponent in rec_fxComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -6674,22 +6674,22 @@ for thisRec_run in rec_runs:
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
                 
-                # *rec_fx_map* updates
-                if rec_fx_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # *rec_fx_interior* updates
+                if rec_fx_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                     # keep track of start time/frame for later
-                    rec_fx_map.frameNStart = frameN  # exact frame index
-                    rec_fx_map.tStart = t  # local t and not account for scr refresh
-                    rec_fx_map.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(rec_fx_map, 'tStartRefresh')  # time at next scr refresh
-                    rec_fx_map.setAutoDraw(True)
-                if rec_fx_map.status == STARTED:
+                    rec_fx_interior.frameNStart = frameN  # exact frame index
+                    rec_fx_interior.tStart = t  # local t and not account for scr refresh
+                    rec_fx_interior.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(rec_fx_interior, 'tStartRefresh')  # time at next scr refresh
+                    rec_fx_interior.setAutoDraw(True)
+                if rec_fx_interior.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_fx_map.tStartRefresh + Jitter/1000-frameTolerance:
+                    if tThisFlipGlobal > rec_fx_interior.tStartRefresh + Jitter/1000-frameTolerance:
                         # keep track of stop time/frame for later
-                        rec_fx_map.tStop = t  # not accounting for scr refresh
-                        rec_fx_map.frameNStop = frameN  # exact frame index
-                        win.timeOnFlip(rec_fx_map, 'tStopRefresh')  # time at next scr refresh
-                        rec_fx_map.setAutoDraw(False)
+                        rec_fx_interior.tStop = t  # not accounting for scr refresh
+                        rec_fx_interior.frameNStop = frameN  # exact frame index
+                        win.timeOnFlip(rec_fx_interior, 'tStopRefresh')  # time at next scr refresh
+                        rec_fx_interior.setAutoDraw(False)
                 
                 # *rec_fx_cross* updates
                 if rec_fx_cross.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -6791,8 +6791,8 @@ for thisRec_run in rec_runs:
             for thisComponent in rec_fxComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            rec_trials.addData('rec_fx_map.started', rec_fx_map.tStartRefresh)
-            rec_trials.addData('rec_fx_map.stopped', rec_fx_map.tStopRefresh)
+            rec_trials.addData('rec_fx_interior.started', rec_fx_interior.tStartRefresh)
+            rec_trials.addData('rec_fx_interior.stopped', rec_fx_interior.tStopRefresh)
             rec_trials.addData('rec_fx_cross.started', rec_fx_cross.tStartRefresh)
             rec_trials.addData('rec_fx_cross.stopped', rec_fx_cross.tStopRefresh)
             # check responses
@@ -6821,7 +6821,7 @@ for thisRec_run in rec_runs:
             _rec_trial_key_allKeys = []
             rec_trial_text_block.setText(block_name)
             # keep track of which components have finished
-            rec_trialComponents = [rec_trial_map, rec_trial_main_image, rec_trial_key, rec_trial_text_block, rec_trial_instructions_text]
+            rec_trialComponents = [rec_trial_interior, rec_trial_main_image, rec_trial_key, rec_trial_text_block, rec_trial_instructions_text]
             for thisComponent in rec_trialComponents:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
@@ -6844,22 +6844,22 @@ for thisRec_run in rec_runs:
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
                 
-                # *rec_trial_map* updates
-                if rec_trial_map.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                # *rec_trial_interior* updates
+                if rec_trial_interior.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
                     # keep track of start time/frame for later
-                    rec_trial_map.frameNStart = frameN  # exact frame index
-                    rec_trial_map.tStart = t  # local t and not account for scr refresh
-                    rec_trial_map.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(rec_trial_map, 'tStartRefresh')  # time at next scr refresh
-                    rec_trial_map.setAutoDraw(True)
-                if rec_trial_map.status == STARTED:
+                    rec_trial_interior.frameNStart = frameN  # exact frame index
+                    rec_trial_interior.tStart = t  # local t and not account for scr refresh
+                    rec_trial_interior.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(rec_trial_interior, 'tStartRefresh')  # time at next scr refresh
+                    rec_trial_interior.setAutoDraw(True)
+                if rec_trial_interior.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > rec_trial_map.tStartRefresh + 4.0-frameTolerance:
+                    if tThisFlipGlobal > rec_trial_interior.tStartRefresh + 4.0-frameTolerance:
                         # keep track of stop time/frame for later
-                        rec_trial_map.tStop = t  # not accounting for scr refresh
-                        rec_trial_map.frameNStop = frameN  # exact frame index
-                        win.timeOnFlip(rec_trial_map, 'tStopRefresh')  # time at next scr refresh
-                        rec_trial_map.setAutoDraw(False)
+                        rec_trial_interior.tStop = t  # not accounting for scr refresh
+                        rec_trial_interior.frameNStop = frameN  # exact frame index
+                        win.timeOnFlip(rec_trial_interior, 'tStopRefresh')  # time at next scr refresh
+                        rec_trial_interior.setAutoDraw(False)
                 
                 # *rec_trial_main_image* updates
                 if rec_trial_main_image.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
@@ -6961,8 +6961,8 @@ for thisRec_run in rec_runs:
             for thisComponent in rec_trialComponents:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            rec_trials.addData('rec_trial_map.started', rec_trial_map.tStartRefresh)
-            rec_trials.addData('rec_trial_map.stopped', rec_trial_map.tStopRefresh)
+            rec_trials.addData('rec_trial_interior.started', rec_trial_interior.tStartRefresh)
+            rec_trials.addData('rec_trial_interior.stopped', rec_trial_interior.tStopRefresh)
             rec_trials.addData('rec_trial_main_image.started', rec_trial_main_image.tStartRefresh)
             rec_trials.addData('rec_trial_main_image.stopped', rec_trial_main_image.tStopRefresh)
             # check responses
@@ -7094,7 +7094,7 @@ for thisRec_run in rec_runs:
         rec_runs.addData('end_rec_run_key.rt', end_rec_run_key.rt)
     rec_runs.addData('end_rec_run_key.started', end_rec_run_key.tStartRefresh)
     rec_runs.addData('end_rec_run_key.stopped', end_rec_run_key.tStopRefresh)
-# completed 3 repeats of 'rec_runs'
+# completed 4 repeats of 'rec_runs'
 
 
 # set up handler to look after randomisation of conditions etc

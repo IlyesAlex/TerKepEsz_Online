@@ -212,15 +212,15 @@ var enc_instructions_3_continue;
 var start_practiceClock;
 var start_practice_text;
 var enc_fxClock;
-var enc_fx_map;
+var enc_fx_interior;
 var enc_fx_cross;
 var enc_fx_key;
 var enc_trialClock;
-var enc_trial_map;
+var enc_trial_interior;
 var enc_trial_main_image;
 var enc_trial_key;
 var enc_practice_feedbackClock;
-var enc_practice_feedback_map;
+var enc_practice_feedback_interior;
 var enc_practice_feedback_image;
 var enc_practice_feedback_text;
 var end_practiceClock;
@@ -259,7 +259,7 @@ var rec_instructions_4_continue;
 var demo_startClock;
 var demo_start_text;
 var demoClock;
-var demo_map;
+var demo_interior;
 var demo_main_image;
 var demo_image;
 var demo_text;
@@ -275,13 +275,13 @@ var block_name;
 var block_counter;
 var rec_practice_block_text;
 var rec_fxClock;
-var rec_fx_map;
+var rec_fx_interior;
 var rec_fx_cross;
 var rec_fx_key;
 var rec_fx_text_block;
 var rec_fx_instructions_text;
 var rec_trialClock;
-var rec_trial_map;
+var rec_trial_interior;
 var rec_trial_main_image;
 var rec_trial_key;
 var rec_trial_text_block;
@@ -475,7 +475,7 @@ function experimentInit() {
   enc_instructions_1_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_1_text',
-    text: 'Ön ennek a modern képgalériának a kurátora. \n\nA legújabb kiállításra a vártnál több kép érkezett.\n\nKurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára. \n\nAz Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz.',
+    text: 'Ön ennek a modern képgalériának a kurátora. \n\nA legújabb kiállításra a vártnál több kép érkezett.\nKurátorként az Ön feladata lesz eldönteni, mely képeket válogatjuk be a kiállított darabok közé, és hogy a kép illeszkedik-e a galéria adott pontjára.\n\nAz Ön ideje nagyon drága a galériának, így a döntésre egy-egy képről csak 3 másodperce lesz.',
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.3), 0], height: 0.03,  wrapWidth: 0.65, ori: 0,
@@ -510,7 +510,7 @@ function experimentInit() {
   enc_instructions_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text',
-    text: 'Ez a galéria térképe felülről, nézze meg figyelmesen. \n\nA feladat során a képek a térképre vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. \n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
+    text: 'Ez a kiállítóterem belülről, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -521,8 +521,8 @@ function experimentInit() {
   enc_instructions_2_image = new visual.ImageStim({
     win : psychoJS.window,
     name : 'enc_instructions_2_image', units : 'pix', 
-    image : 'stimuli/GalleryInfo.jpg', mask : undefined,
-    ori : 0, pos : [425, 0], size : [1000, 750],
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [425, 0], size : [730, 442],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -646,11 +646,11 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_fx"
   enc_fxClock = new util.Clock();
-  enc_fx_map = new visual.ImageStim({
+  enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'enc_fx_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -670,11 +670,11 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_trial"
   enc_trialClock = new util.Clock();
-  enc_trial_map = new visual.ImageStim({
+  enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'enc_trial_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -692,11 +692,11 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_practice_feedback"
   enc_practice_feedbackClock = new util.Clock();
-  enc_practice_feedback_map = new visual.ImageStim({
+  enc_practice_feedback_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_practice_feedback_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'enc_practice_feedback_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -762,11 +762,11 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_fx"
   enc_fxClock = new util.Clock();
-  enc_fx_map = new visual.ImageStim({
+  enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'enc_fx_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -786,11 +786,11 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_trial"
   enc_trialClock = new util.Clock();
-  enc_trial_map = new visual.ImageStim({
+  enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'enc_trial_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1131,11 +1131,11 @@ function experimentInit() {
   
   // Initialize components for Routine "demo"
   demoClock = new util.Clock();
-  demo_map = new visual.ImageStim({
+  demo_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'demo_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'demo_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1240,11 +1240,11 @@ function experimentInit() {
   
   // Initialize components for Routine "rec_fx"
   rec_fxClock = new util.Clock();
-  rec_fx_map = new visual.ImageStim({
+  rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'rec_fx_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1268,7 +1268,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1279,18 +1279,18 @@ function experimentInit() {
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 0.0], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [600, 250.0], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
   
   // Initialize components for Routine "rec_trial"
   rec_trialClock = new util.Clock();
-  rec_trial_map = new visual.ImageStim({
+  rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'rec_trial_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1312,7 +1312,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1323,7 +1323,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 0], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [600, 250], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1395,11 +1395,11 @@ function experimentInit() {
   
   // Initialize components for Routine "rec_fx"
   rec_fxClock = new util.Clock();
-  rec_fx_map = new visual.ImageStim({
+  rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'rec_fx_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior.png', mask : undefined,
+    ori : 0, pos : [0, 0], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1423,7 +1423,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1434,18 +1434,18 @@ function experimentInit() {
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 0.0], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [600, 250.0], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
   
   // Initialize components for Routine "rec_trial"
   rec_trialClock = new util.Clock();
-  rec_trial_map = new visual.ImageStim({
+  rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_map', units : 'pix', 
-    image : 'stimuli/GalleryPlanInside.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 25)], size : [1040, 1000],
+    name : 'rec_trial_interior', units : 'pix', 
+    image : 'stimuli/GalleryInterior', mask : undefined,
+    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1467,7 +1467,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [(- 600), 0.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1478,7 +1478,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 0], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [600, 250], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -3669,7 +3669,7 @@ function enc_fxRoutineBegin(trials) {
     _enc_fx_key_allKeys = [];
     // keep track of which components have finished
     enc_fxComponents = [];
-    enc_fxComponents.push(enc_fx_map);
+    enc_fxComponents.push(enc_fx_interior);
     enc_fxComponents.push(enc_fx_cross);
     enc_fxComponents.push(enc_fx_key);
     
@@ -3692,18 +3692,18 @@ function enc_fxRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *enc_fx_map* updates
-    if (t >= 0.0 && enc_fx_map.status === PsychoJS.Status.NOT_STARTED) {
+    // *enc_fx_interior* updates
+    if (t >= 0.0 && enc_fx_interior.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      enc_fx_map.tStart = t;  // (not accounting for frame time here)
-      enc_fx_map.frameNStart = frameN;  // exact frame index
+      enc_fx_interior.tStart = t;  // (not accounting for frame time here)
+      enc_fx_interior.frameNStart = frameN;  // exact frame index
       
-      enc_fx_map.setAutoDraw(true);
+      enc_fx_interior.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + (Jitter / 1000) - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc_fx_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      enc_fx_map.setAutoDraw(false);
+    if (enc_fx_interior.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      enc_fx_interior.setAutoDraw(false);
     }
     
     // *enc_fx_cross* updates
@@ -3812,7 +3812,7 @@ function enc_trialRoutineBegin(trials) {
     _enc_trial_key_allKeys = [];
     // keep track of which components have finished
     enc_trialComponents = [];
-    enc_trialComponents.push(enc_trial_map);
+    enc_trialComponents.push(enc_trial_interior);
     enc_trialComponents.push(enc_trial_main_image);
     enc_trialComponents.push(enc_trial_key);
     
@@ -3835,18 +3835,18 @@ function enc_trialRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *enc_trial_map* updates
-    if (t >= 0.0 && enc_trial_map.status === PsychoJS.Status.NOT_STARTED) {
+    // *enc_trial_interior* updates
+    if (t >= 0.0 && enc_trial_interior.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      enc_trial_map.tStart = t;  // (not accounting for frame time here)
-      enc_trial_map.frameNStart = frameN;  // exact frame index
+      enc_trial_interior.tStart = t;  // (not accounting for frame time here)
+      enc_trial_interior.frameNStart = frameN;  // exact frame index
       
-      enc_trial_map.setAutoDraw(true);
+      enc_trial_interior.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + 3.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc_trial_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      enc_trial_map.setAutoDraw(false);
+    if (enc_trial_interior.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      enc_trial_interior.setAutoDraw(false);
     }
     
     // *enc_trial_main_image* updates
@@ -3963,7 +3963,7 @@ function enc_practice_feedbackRoutineBegin(trials) {
     enc_practice_feedback_text.setText(feedback_text);
     // keep track of which components have finished
     enc_practice_feedbackComponents = [];
-    enc_practice_feedbackComponents.push(enc_practice_feedback_map);
+    enc_practice_feedbackComponents.push(enc_practice_feedback_interior);
     enc_practice_feedbackComponents.push(enc_practice_feedback_image);
     enc_practice_feedbackComponents.push(enc_practice_feedback_text);
     
@@ -3986,18 +3986,18 @@ function enc_practice_feedbackRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *enc_practice_feedback_map* updates
-    if (t >= 0.0 && enc_practice_feedback_map.status === PsychoJS.Status.NOT_STARTED) {
+    // *enc_practice_feedback_interior* updates
+    if (t >= 0.0 && enc_practice_feedback_interior.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      enc_practice_feedback_map.tStart = t;  // (not accounting for frame time here)
-      enc_practice_feedback_map.frameNStart = frameN;  // exact frame index
+      enc_practice_feedback_interior.tStart = t;  // (not accounting for frame time here)
+      enc_practice_feedback_interior.frameNStart = frameN;  // exact frame index
       
-      enc_practice_feedback_map.setAutoDraw(true);
+      enc_practice_feedback_interior.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + 1.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (enc_practice_feedback_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      enc_practice_feedback_map.setAutoDraw(false);
+    if (enc_practice_feedback_interior.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      enc_practice_feedback_interior.setAutoDraw(false);
     }
     
     // *enc_practice_feedback_image* updates
@@ -4222,7 +4222,7 @@ function start_enc_runRoutineBegin(trials) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 84);
+    end = (start + 2);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat";
@@ -5366,7 +5366,7 @@ function demoRoutineBegin(trials) {
     _demo_key_allKeys = [];
     // keep track of which components have finished
     demoComponents = [];
-    demoComponents.push(demo_map);
+    demoComponents.push(demo_interior);
     demoComponents.push(demo_main_image);
     demoComponents.push(demo_image);
     demoComponents.push(demo_text);
@@ -5392,18 +5392,18 @@ function demoRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *demo_map* updates
-    if (t >= 0.0 && demo_map.status === PsychoJS.Status.NOT_STARTED) {
+    // *demo_interior* updates
+    if (t >= 0.0 && demo_interior.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      demo_map.tStart = t;  // (not accounting for frame time here)
-      demo_map.frameNStart = frameN;  // exact frame index
+      demo_interior.tStart = t;  // (not accounting for frame time here)
+      demo_interior.frameNStart = frameN;  // exact frame index
       
-      demo_map.setAutoDraw(true);
+      demo_interior.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + 300.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (demo_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      demo_map.setAutoDraw(false);
+    if (demo_interior.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      demo_interior.setAutoDraw(false);
     }
     
     // *demo_main_image* updates
@@ -5786,7 +5786,7 @@ function rec_fxRoutineBegin(trials) {
     rec_fx_text_block.setText(block_name);
     // keep track of which components have finished
     rec_fxComponents = [];
-    rec_fxComponents.push(rec_fx_map);
+    rec_fxComponents.push(rec_fx_interior);
     rec_fxComponents.push(rec_fx_cross);
     rec_fxComponents.push(rec_fx_key);
     rec_fxComponents.push(rec_fx_text_block);
@@ -5811,18 +5811,18 @@ function rec_fxRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *rec_fx_map* updates
-    if (t >= 0.0 && rec_fx_map.status === PsychoJS.Status.NOT_STARTED) {
+    // *rec_fx_interior* updates
+    if (t >= 0.0 && rec_fx_interior.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      rec_fx_map.tStart = t;  // (not accounting for frame time here)
-      rec_fx_map.frameNStart = frameN;  // exact frame index
+      rec_fx_interior.tStart = t;  // (not accounting for frame time here)
+      rec_fx_interior.frameNStart = frameN;  // exact frame index
       
-      rec_fx_map.setAutoDraw(true);
+      rec_fx_interior.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + (Jitter / 1000) - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (rec_fx_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      rec_fx_map.setAutoDraw(false);
+    if (rec_fx_interior.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      rec_fx_interior.setAutoDraw(false);
     }
     
     // *rec_fx_cross* updates
@@ -5960,7 +5960,7 @@ function rec_trialRoutineBegin(trials) {
     rec_trial_text_block.setText(block_name);
     // keep track of which components have finished
     rec_trialComponents = [];
-    rec_trialComponents.push(rec_trial_map);
+    rec_trialComponents.push(rec_trial_interior);
     rec_trialComponents.push(rec_trial_main_image);
     rec_trialComponents.push(rec_trial_key);
     rec_trialComponents.push(rec_trial_text_block);
@@ -5985,18 +5985,18 @@ function rec_trialRoutineEachFrame(trials) {
     frameN = frameN + 1;// number of completed frames (so 0 is the first frame)
     // update/draw components on each frame
     
-    // *rec_trial_map* updates
-    if (t >= 0.0 && rec_trial_map.status === PsychoJS.Status.NOT_STARTED) {
+    // *rec_trial_interior* updates
+    if (t >= 0.0 && rec_trial_interior.status === PsychoJS.Status.NOT_STARTED) {
       // keep track of start time/frame for later
-      rec_trial_map.tStart = t;  // (not accounting for frame time here)
-      rec_trial_map.frameNStart = frameN;  // exact frame index
+      rec_trial_interior.tStart = t;  // (not accounting for frame time here)
+      rec_trial_interior.frameNStart = frameN;  // exact frame index
       
-      rec_trial_map.setAutoDraw(true);
+      rec_trial_interior.setAutoDraw(true);
     }
 
     frameRemains = 0.0 + 4.0 - psychoJS.window.monitorFramePeriod * 0.75;  // most of one frame period left
-    if (rec_trial_map.status === PsychoJS.Status.STARTED && t >= frameRemains) {
-      rec_trial_map.setAutoDraw(false);
+    if (rec_trial_interior.status === PsychoJS.Status.STARTED && t >= frameRemains) {
+      rec_trial_interior.setAutoDraw(false);
     }
     
     // *rec_trial_main_image* updates

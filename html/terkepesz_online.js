@@ -1276,7 +1276,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1320,7 +1320,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1431,7 +1431,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1475,7 +1475,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, 450.0], height: 50,  wrapWidth: undefined, ori: 0,
+    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -4200,7 +4200,7 @@ function start_enc_runRoutineBegin(trials) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 2);
+    end = (start + 84);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat";

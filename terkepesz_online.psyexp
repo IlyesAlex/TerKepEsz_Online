@@ -217,9 +217,9 @@
       <CodeComponent name="create_enc_run">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 2);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 2&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 84);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 84&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -917,11 +917,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="50" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
         <Param name="name" updates="None" val="rec_fx_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 450.0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 470.0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -966,7 +966,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryInterior" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="rec_trial_interior" valType="code"/>
@@ -1035,11 +1035,11 @@
         <Param name="flip" updates="constant" val="" valType="str"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
-        <Param name="letterHeight" updates="constant" val="50" valType="code"/>
+        <Param name="letterHeight" updates="constant" val="30" valType="code"/>
         <Param name="name" updates="None" val="rec_trial_text_block" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 450.0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 470.0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>

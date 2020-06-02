@@ -146,7 +146,7 @@ var frameDur;
 function updateInfo() {
   expInfo['date'] = util.MonotonicClock.getDateStr();  // add a simple timestamp
   expInfo['expName'] = expName;
-  expInfo['psychopyVersion'] = '2020.1.0';
+  expInfo['psychopyVersion'] = '2020.1.3';
   expInfo['OS'] = window.navigator.platform;
 
   // store frame rate of monitor if we can measure it successfully
@@ -956,7 +956,7 @@ function experimentInit() {
   rec_instructions2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions2_text',
-    text: "A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nHárom csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Hasonló: Ezek a képek nagyon hasonlítanak a 'Galéria berendezés' feladatban látott képek egyikéhez.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, melyik hasonló, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nHasonló - J\nÚj - K",
+    text: "A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nÚj - K",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 1, ori: 0,
@@ -993,7 +993,7 @@ function experimentInit() {
   rec_instrauction_3_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instrauction_3_text',
-    text: "A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban három csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Hasonló: Egy hasonló helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nHasonló - J\nÚj - K",
+    text: "A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban két csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nÚj - K",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 1, ori: 0,
@@ -1030,7 +1030,7 @@ function experimentInit() {
   rec_instructions_4_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions_4_text',
-    text: 'A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet a hasonló és régi párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
+    text: 'A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet az új párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1276,7 +1276,7 @@ function experimentInit() {
   rec_fx_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_fx_instructions_text',
-    text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [600, 250.0], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1320,7 +1320,7 @@ function experimentInit() {
   rec_trial_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_trial_instructions_text',
-    text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [600, 250], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1431,7 +1431,7 @@ function experimentInit() {
   rec_fx_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_fx_instructions_text',
-    text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [600, 250.0], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1475,7 +1475,7 @@ function experimentInit() {
   rec_trial_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_trial_instructions_text',
-    text: '[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [600, 250], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1761,7 +1761,7 @@ function comprehension_questions_1LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   comprehension_questions_1 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '0:2'),
     seed: undefined, name: 'comprehension_questions_1'
@@ -1802,7 +1802,7 @@ function comprehension_questions_2LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   comprehension_questions_2 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.RANDOM,
+    nReps: 0, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '2:4'),
     seed: undefined, name: 'comprehension_questions_2'
@@ -1843,7 +1843,7 @@ function enc_practice_trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_practice_trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'stimuli_tables/encoding_practice_trials.csv',
     seed: undefined, name: 'enc_practice_trials'
@@ -1884,7 +1884,7 @@ function enc_runsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_runs = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 3, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'enc_runs'
@@ -2165,7 +2165,7 @@ function rec_runsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   rec_runs = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 4, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'rec_runs'
@@ -5857,7 +5857,7 @@ function rec_fxRoutineEachFrame(trials) {
   }
 
     if (rec_fx_key.status === PsychoJS.Status.STARTED) {
-      let theseKeys = rec_fx_key.getKeys({keyList: ['f', 'j', 'k'], waitRelease: false});
+      let theseKeys = rec_fx_key.getKeys({keyList: ['f', 'k'], waitRelease: false});
       _rec_fx_key_allKeys = _rec_fx_key_allKeys.concat(theseKeys);
       if (_rec_fx_key_allKeys.length > 0) {
         rec_fx_key.keys = _rec_fx_key_allKeys[_rec_fx_key_allKeys.length - 1].name;  // just the last key pressed
@@ -6031,7 +6031,7 @@ function rec_trialRoutineEachFrame(trials) {
   }
 
     if (rec_trial_key.status === PsychoJS.Status.STARTED) {
-      let theseKeys = rec_trial_key.getKeys({keyList: ['f', 'j', 'k'], waitRelease: false});
+      let theseKeys = rec_trial_key.getKeys({keyList: ['f', 'k'], waitRelease: false});
       _rec_trial_key_allKeys = _rec_trial_key_allKeys.concat(theseKeys);
       if (_rec_trial_key_allKeys.length > 0) {
         rec_trial_key.keys = _rec_trial_key_allKeys[_rec_trial_key_allKeys.length - 1].name;  // just the last key pressed
@@ -6128,7 +6128,7 @@ function rec_practice_feedbackRoutineBegin(trials) {
         correct_response = "A helyes v\u00e1lasz: \u00daj";
     } else {
         if ((StimType === "LURE")) {
-            correct_response = "A helyes v\u00e1lasz: Hasonl\u00f3";
+            correct_response = "A helyes v\u00e1lasz: \u00daj";
         } else {
             if ((StimType === "TARGET")) {
                 correct_response = "A helyes v\u00e1lasz: R\u00e9gi";
@@ -6139,12 +6139,8 @@ function rec_practice_feedbackRoutineBegin(trials) {
     if ((rec_trial_key.keys === "f")) {
         response = "Az \u00d6n v\u00e1lasza: R\u00e9gi";
     } else {
-        if ((rec_trial_key.keys === "j")) {
-            response = "Az \u00d6n v\u00e1lasza: Hasonl\u00f3";
-        } else {
-            if ((rec_trial_key.keys === "k")) {
-                response = "Az \u00d6n v\u00e1lasza: \u00daj";
-            }
+        if ((rec_trial_key.keys === "k")) {
+            response = "Az \u00d6n v\u00e1lasza: \u00daj";
         }
     }
     feedback_text = ((correct_response + "\n") + response);

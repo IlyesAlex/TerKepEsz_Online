@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
-    on Mon 18 May 2020 01:20:11 AM CEST
+This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
+    on június 02, 2020, at 13:18
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.1.0'
+psychopyVersion = '2020.1.3'
 expName = 'TRK-online'  # from the Builder filename that created this script
 expInfo = {'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem*': '', 'Kor*': '', 'Oktatás éve (oktatási intézményben eltöltött összes évek száma)*': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % ('pilot', expName, expInfo['da
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='/home/zsuzsanna/Documents/TRK/experiment/terkepesz_online/terkepesz_online_lastrun.py',
+    originPath='C:\\_ALEX_\\_Munka\\MTA\\programming\\main_task_online\\TerKepEsz_Online\\terkepesz_online_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -572,7 +572,7 @@ rec_instructions_1_continue = visual.TextStim(win=win, name='rec_instructions_1_
 # Initialize components for Routine "rec_instructions_2"
 rec_instructions_2Clock = core.Clock()
 rec_instructions2_text = visual.TextStim(win=win, name='rec_instructions2_text',
-    text="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nHárom csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Hasonló: Ezek a képek nagyon hasonlítanak a 'Galéria berendezés' feladatban látott képek egyikéhez.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, melyik hasonló, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nHasonló - J\nÚj - K",
+    text="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nÚj - K",
     font='Arial',
     pos=(0, 0), height=0.025, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -597,7 +597,7 @@ rec_instruction_2_title = visual.TextStim(win=win, name='rec_instruction_2_title
 # Initialize components for Routine "rec_instructions_3"
 rec_instructions_3Clock = core.Clock()
 rec_instrauction_3_text = visual.TextStim(win=win, name='rec_instrauction_3_text',
-    text="A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban három csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Hasonló: Egy hasonló helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, hasonló, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nHasonló - J\nÚj - K",
+    text="A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban két csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nÚj - K",
     font='Arial',
     pos=(0, 0), height=0.025, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -622,7 +622,7 @@ rec_instruction_3_title = visual.TextStim(win=win, name='rec_instruction_3_title
 # Initialize components for Routine "rec_instructions_4"
 rec_instructions_4Clock = core.Clock()
 rec_instructions_4_text = visual.TextStim(win=win, name='rec_instructions_4_text',
-    text='A következőkben bemutatjuk Önnek, milyenek a hasonló, régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet a hasonló és régi párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
+    text='A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet az új párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -797,12 +797,12 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
-    text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text='[F - Régi]\n\n[K - Új]',
     font='Arial',
     units='pix', pos=(600, 250.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -814,7 +814,7 @@ rec_trialClock = core.Clock()
 rec_trial_interior = visual.ImageStim(
     win=win,
     name='rec_trial_interior', units='pix', 
-    image='stimuli/GalleryInterior', mask=None,
+    image='stimuli/GalleryInterior.png', mask=None,
     ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -831,12 +831,12 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
-    text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text='[F - Régi]\n\n[K - Új]',
     font='Arial',
     units='pix', pos=(600, 250), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -912,12 +912,12 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
-    text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text='[F - Régi]\n\n[K - Új]',
     font='Arial',
     units='pix', pos=(600, 250.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -929,7 +929,7 @@ rec_trialClock = core.Clock()
 rec_trial_interior = visual.ImageStim(
     win=win,
     name='rec_trial_interior', units='pix', 
-    image='stimuli/GalleryInterior', mask=None,
+    image='stimuli/GalleryInterior.png', mask=None,
     ori=0, pos=(0, -0), size=(1885, 1260),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -946,12 +946,12 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(-550, -500.0), height=50, wrapWidth=None, ori=0, 
+    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
-    text='[F - Régi]\n\n[J - Hasonló]\n\n[K - Új]',
+    text='[F - Régi]\n\n[K - Új]',
     font='Arial',
     units='pix', pos=(600, 250), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -1176,7 +1176,7 @@ thisExp.addData('experiment_information_continue.started', experiment_informatio
 thisExp.addData('experiment_information_continue.stopped', experiment_information_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-comprehension_questions_1 = data.TrialHandler(nReps=1, method='sequential', 
+comprehension_questions_1 = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='0:2'),
     seed=None, name='comprehension_questions_1')
@@ -1545,7 +1545,7 @@ for thisComprehension_question_1 in comprehension_questions_1:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'comprehension_questions_1'
+# completed 0 repeats of 'comprehension_questions_1'
 
 
 # ------Prepare to start Routine "data_protection"-------
@@ -2303,7 +2303,7 @@ thisExp.addData('enc_instructions_3_continue.started', enc_instructions_3_contin
 thisExp.addData('enc_instructions_3_continue.stopped', enc_instructions_3_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-comprehension_questions_2 = data.TrialHandler(nReps=1, method='random', 
+comprehension_questions_2 = data.TrialHandler(nReps=0, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='2:4'),
     seed=None, name='comprehension_questions_2')
@@ -2672,7 +2672,7 @@ for thisComprehension_question_2 in comprehension_questions_2:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'comprehension_questions_2'
+# completed 0 repeats of 'comprehension_questions_2'
 
 
 # ------Prepare to start Routine "start_practice"-------
@@ -2745,7 +2745,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_practice_trials = data.TrialHandler(nReps=1, method='sequential', 
+enc_practice_trials = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/encoding_practice_trials.csv'),
     seed=None, name='enc_practice_trials')
@@ -3140,7 +3140,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     enc_practice_trials.addData('enc_practice_feedback_text.stopped', enc_practice_feedback_text.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 1 repeats of 'enc_practice_trials'
+# completed 0 repeats of 'enc_practice_trials'
 
 
 # ------Prepare to start Routine "end_practice"-------
@@ -3275,7 +3275,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_runs = data.TrialHandler(nReps=3, method='sequential', 
+enc_runs = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='enc_runs')
@@ -3298,7 +3298,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 2
+    end = start + 84
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -4133,7 +4133,7 @@ for thisEnc_run in enc_runs:
         enc_runs.addData('enc_run_end_key.rt', enc_run_end_key.rt)
     enc_runs.addData('enc_run_end_key.started', enc_run_end_key.tStartRefresh)
     enc_runs.addData('enc_run_end_key.stopped', enc_run_end_key.tStopRefresh)
-# completed 3 repeats of 'enc_runs'
+# completed 0 repeats of 'enc_runs'
 
 
 # ------Prepare to start Routine "inter_task_break"-------
@@ -5956,7 +5956,7 @@ for thisRec_practice_block in rec_practice_blocks:
                     win.timeOnFlip(rec_fx_key, 'tStopRefresh')  # time at next scr refresh
                     rec_fx_key.status = FINISHED
             if rec_fx_key.status == STARTED and not waitOnFlip:
-                theseKeys = rec_fx_key.getKeys(keyList=['f', 'j', 'k'], waitRelease=False)
+                theseKeys = rec_fx_key.getKeys(keyList=['f', 'k'], waitRelease=False)
                 _rec_fx_key_allKeys.extend(theseKeys)
                 if len(_rec_fx_key_allKeys):
                     rec_fx_key.keys = _rec_fx_key_allKeys[-1].name  # just the last key pressed
@@ -6126,7 +6126,7 @@ for thisRec_practice_block in rec_practice_blocks:
                     win.timeOnFlip(rec_trial_key, 'tStopRefresh')  # time at next scr refresh
                     rec_trial_key.status = FINISHED
             if rec_trial_key.status == STARTED and not waitOnFlip:
-                theseKeys = rec_trial_key.getKeys(keyList=['f', 'j', 'k'], waitRelease=False)
+                theseKeys = rec_trial_key.getKeys(keyList=['f', 'k'], waitRelease=False)
                 _rec_trial_key_allKeys.extend(theseKeys)
                 if len(_rec_trial_key_allKeys):
                     rec_trial_key.keys = _rec_trial_key_allKeys[-1].name  # just the last key pressed
@@ -6212,15 +6212,14 @@ for thisRec_practice_block in rec_practice_blocks:
         if StimType == 'FOIL':
             correct_response = 'A helyes válasz: Új'
         elif StimType == 'LURE':
-            correct_response = 'A helyes válasz: Hasonló'
+            correct_response = 'A helyes válasz: Új'
         elif StimType == 'TARGET':
             correct_response = 'A helyes válasz: Régi'
         
         response = ''
         if rec_trial_key.keys == 'f':
             response = 'Az Ön válasza: Régi'
-        elif rec_trial_key.keys == 'j':
-            response = 'Az Ön válasza: Hasonló'
+        
         elif rec_trial_key.keys == 'k':
             response = 'Az Ön válasza: Új'
             
@@ -6430,7 +6429,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_runs = data.TrialHandler(nReps=4, method='sequential', 
+rec_runs = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_runs')
@@ -6730,7 +6729,7 @@ for thisRec_run in rec_runs:
                         win.timeOnFlip(rec_fx_key, 'tStopRefresh')  # time at next scr refresh
                         rec_fx_key.status = FINISHED
                 if rec_fx_key.status == STARTED and not waitOnFlip:
-                    theseKeys = rec_fx_key.getKeys(keyList=['f', 'j', 'k'], waitRelease=False)
+                    theseKeys = rec_fx_key.getKeys(keyList=['f', 'k'], waitRelease=False)
                     _rec_fx_key_allKeys.extend(theseKeys)
                     if len(_rec_fx_key_allKeys):
                         rec_fx_key.keys = _rec_fx_key_allKeys[-1].name  # just the last key pressed
@@ -6900,7 +6899,7 @@ for thisRec_run in rec_runs:
                         win.timeOnFlip(rec_trial_key, 'tStopRefresh')  # time at next scr refresh
                         rec_trial_key.status = FINISHED
                 if rec_trial_key.status == STARTED and not waitOnFlip:
-                    theseKeys = rec_trial_key.getKeys(keyList=['f', 'j', 'k'], waitRelease=False)
+                    theseKeys = rec_trial_key.getKeys(keyList=['f', 'k'], waitRelease=False)
                     _rec_trial_key_allKeys.extend(theseKeys)
                     if len(_rec_trial_key_allKeys):
                         rec_trial_key.keys = _rec_trial_key_allKeys[-1].name  # just the last key pressed
@@ -7094,7 +7093,7 @@ for thisRec_run in rec_runs:
         rec_runs.addData('end_rec_run_key.rt', end_rec_run_key.rt)
     rec_runs.addData('end_rec_run_key.started', end_rec_run_key.tStartRefresh)
     rec_runs.addData('end_rec_run_key.stopped', end_rec_run_key.tStopRefresh)
-# completed 4 repeats of 'rec_runs'
+# completed 1 repeats of 'rec_runs'
 
 
 # set up handler to look after randomisation of conditions etc

@@ -1,11 +1,4 @@
 Task,TrialType,StimType,CurrentImage,DemoImage,CurrentX,CurrentY,DemoX,DemoY,InPractice,DemoText,Jitter
-Demo,OBJ,LURE,stimuli/fractals/149a.jpg,stimuli/fractals/149b.jpg,300,0,-300,0,-,Hasonló Képek,1000
-Demo,OBJ,LURE,stimuli/fractals/181b.jpg,stimuli/fractals/181c.jpg,300,0,-300,0,-,Hasonló Képek,2300
-Demo,OBJ,LURE,stimuli/fractals/177b.jpg,stimuli/fractals/177c.jpg,300,0,-300,0,-,Hasonló Képek,800
-Demo,OBJ,LURE,stimuli/fractals/167a.jpg,stimuli/fractals/167b.jpg,300,0,-300,0,OBJ-TARGET,Hasonló Képek,1500
 Demo,OBJ,FOIL,stimuli/fractals/163a.jpg,stimuli/fractals/173c.jpg,300,0,-300,0,-,Új Képek,600
-Demo,LOC,LURE,stimuli/fractals/166a.jpg,stimuli/fractals/166a.jpg,-300,0,-212.1320344,-212.1320344,"LOC-TARGET, OBJ-LURE",Hasonló Helyek,800
-Demo,LOC,LURE,stimuli/fractals/159a.jpg,stimuli/fractals/159a.jpg,0,300,-212.1320344,212.1320344,LOC-LURE,Hasonló Helyek,1500
-Demo,LOC,LURE,stimuli/fractals/148b.jpg,stimuli/fractals/148b.jpg,212.1320344,212.1320344,0,300,LOC-FOIL,Hasonló Helyek,800
 Demo,LOC,FOIL,stimuli/fractals/177b.jpg,stimuli/fractals/177b.jpg,300,0,-212.1320344,212.1320344,OBJ-LURE,Új Helyek,800
 Demo,LOC,FOIL,stimuli/fractals/177b.jpg,stimuli/fractals/177b.jpg,300,0,-300,0,OBJ-LURE,Új Helyek,1200

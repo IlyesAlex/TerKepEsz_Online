@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on június 02, 2020, at 13:18
+    on június 04, 2020, at 15:59
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -237,7 +237,7 @@ instructions_1_continue = visual.TextStim(win=win, name='instructions_1_continue
 # Initialize components for Routine "enc_instructions_2"
 enc_instructions_2Clock = core.Clock()
 enc_instructions_2_text = visual.TextStim(win=win, name='enc_instructions_2_text',
-    text='Ez a kiállítóterem belülről, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
+    text='Ez a kiállítóterem belső fala, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
     font='Arial',
     pos=(-0.35, 0), height=0.03, wrapWidth=0.5, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -246,7 +246,7 @@ enc_instructions_2_text = visual.TextStim(win=win, name='enc_instructions_2_text
 enc_instructions_2_image = visual.ImageStim(
     win=win,
     name='enc_instructions_2_image', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
+    image='stimuli/GalleryNew.png', mask=None,
     ori=0, pos=(425, 0), size=(730,442),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
@@ -339,8 +339,8 @@ enc_fxClock = core.Clock()
 enc_fx_interior = visual.ImageStim(
     win=win,
     name='enc_fx_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -358,8 +358,8 @@ enc_trialClock = core.Clock()
 enc_trial_interior = visual.ImageStim(
     win=win,
     name='enc_trial_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -378,8 +378,8 @@ enc_practice_feedbackClock = core.Clock()
 enc_practice_feedback_interior = visual.ImageStim(
     win=win,
     name='enc_practice_feedback_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -432,8 +432,8 @@ enc_fxClock = core.Clock()
 enc_fx_interior = visual.ImageStim(
     win=win,
     name='enc_fx_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -451,8 +451,8 @@ enc_trialClock = core.Clock()
 enc_trial_interior = visual.ImageStim(
     win=win,
     name='enc_trial_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -698,8 +698,8 @@ demoClock = core.Clock()
 demo_interior = visual.ImageStim(
     win=win,
     name='demo_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -781,8 +781,8 @@ rec_fxClock = core.Clock()
 rec_fx_interior = visual.ImageStim(
     win=win,
     name='rec_fx_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0,0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0,0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -804,7 +804,7 @@ rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
     text='[F - Régi]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 250.0), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(700, 250.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -814,8 +814,8 @@ rec_trialClock = core.Clock()
 rec_trial_interior = visual.ImageStim(
     win=win,
     name='rec_trial_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -838,7 +838,7 @@ rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
     text='[F - Régi]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 250), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(700, 250), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -896,8 +896,8 @@ rec_fxClock = core.Clock()
 rec_fx_interior = visual.ImageStim(
     win=win,
     name='rec_fx_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0,0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0,0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -919,7 +919,7 @@ rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
     text='[F - Régi]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 250.0), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(700, 250.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -929,8 +929,8 @@ rec_trialClock = core.Clock()
 rec_trial_interior = visual.ImageStim(
     win=win,
     name='rec_trial_interior', units='pix', 
-    image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1885, 1260),
+    image='stimuli/GalleryNew.png', mask=None,
+    ori=0, pos=(0, -0), size=(1100, 800),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -953,7 +953,7 @@ rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
     text='[F - Régi]\n\n[K - Új]',
     font='Arial',
-    units='pix', pos=(600, 250), height=25, wrapWidth=None, ori=0, 
+    units='pix', pos=(700, 250), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -5755,7 +5755,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_practice_blocks = data.TrialHandler(nReps=2, method='sequential', 
+rec_practice_blocks = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_practice_blocks')
@@ -6294,7 +6294,7 @@ for thisRec_practice_block in rec_practice_blocks:
         
     # completed 1 repeats of 'rec_practice_trials'
     
-# completed 2 repeats of 'rec_practice_blocks'
+# completed 0 repeats of 'rec_practice_blocks'
 
 
 # ------Prepare to start Routine "end_practice"-------
@@ -6429,7 +6429,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_runs = data.TrialHandler(nReps=1, method='sequential', 
+rec_runs = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_runs')
@@ -7093,7 +7093,7 @@ for thisRec_run in rec_runs:
         rec_runs.addData('end_rec_run_key.rt', end_rec_run_key.rt)
     rec_runs.addData('end_rec_run_key.started', end_rec_run_key.tStartRefresh)
     rec_runs.addData('end_rec_run_key.stopped', end_rec_run_key.tStopRefresh)
-# completed 1 repeats of 'rec_runs'
+# completed 0 repeats of 'rec_runs'
 
 
 # set up handler to look after randomisation of conditions etc

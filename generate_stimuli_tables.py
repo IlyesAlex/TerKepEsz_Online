@@ -7,7 +7,7 @@ import trk_module as trk
 import os.path as op
 
 n_files = 3 # define number of stimuli files to be created
-encoding_fname = 'StimuliTable-Encoding_3-runs_40-pairs_8-discrete-loc_12345-delays.xlsx'
+encoding_fname = 'StimuliTable-Encoding_3-runs_40-pairs_8-discrete-loc_12345-delays_new.xlsx'
 recognition_fname = 'StimuliTable-Recognition_3-runs_40-pairs_8-discrete-loc_12345-delays.xlsx'
 encoding_table = pd.read_excel(encoding_fname)
 recognition_table = pd.read_excel(recognition_fname)

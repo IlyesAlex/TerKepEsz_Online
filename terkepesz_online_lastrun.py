@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on június 04, 2020, at 15:59
+    on június 23, 2020, at 14:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -622,7 +622,7 @@ rec_instruction_3_title = visual.TextStim(win=win, name='rec_instruction_3_title
 # Initialize components for Routine "rec_instructions_4"
 rec_instructions_4Clock = core.Clock()
 rec_instructions_4_text = visual.TextStim(win=win, name='rec_instructions_4_text',
-    text='A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet az új párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
+    text='A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban elsőként egy korábbi gyakorlásban látott képet mutatunk meg\na Galéria berendezés feladatból. Ezután vagy egy új kép, vagy egy új helyszín bemutatása fog következni.\n\nA Képfelismerés feladat alatt is hasonlóan mindig csak egy képet fogsz látni.',
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -4900,7 +4900,7 @@ thisExp.addData('rec_instructions_4_continue.started', rec_instructions_4_contin
 thisExp.addData('rec_instructions_4_continue.stopped', rec_instructions_4_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-comprehension_questions_3 = data.TrialHandler(nReps=1, method='sequential', 
+comprehension_questions_3 = data.TrialHandler(nReps=0, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='6:8'),
     seed=None, name='comprehension_questions_3')
@@ -5269,7 +5269,7 @@ for thisComprehension_question_3 in comprehension_questions_3:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 1 repeats of 'comprehension_questions_3'
+# completed 0 repeats of 'comprehension_questions_3'
 
 
 # ------Prepare to start Routine "demo_start"-------
@@ -5755,7 +5755,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_practice_blocks = data.TrialHandler(nReps=0, method='sequential', 
+rec_practice_blocks = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_practice_blocks')
@@ -6294,7 +6294,7 @@ for thisRec_practice_block in rec_practice_blocks:
         
     # completed 1 repeats of 'rec_practice_trials'
     
-# completed 0 repeats of 'rec_practice_blocks'
+# completed 1 repeats of 'rec_practice_blocks'
 
 
 # ------Prepare to start Routine "end_practice"-------
@@ -6429,7 +6429,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_runs = data.TrialHandler(nReps=0, method='sequential', 
+rec_runs = data.TrialHandler(nReps=4, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_runs')
@@ -7093,7 +7093,7 @@ for thisRec_run in rec_runs:
         rec_runs.addData('end_rec_run_key.rt', end_rec_run_key.rt)
     rec_runs.addData('end_rec_run_key.started', end_rec_run_key.tStartRefresh)
     rec_runs.addData('end_rec_run_key.stopped', end_rec_run_key.tStopRefresh)
-# completed 0 repeats of 'rec_runs'
+# completed 4 repeats of 'rec_runs'
 
 
 # set up handler to look after randomisation of conditions etc

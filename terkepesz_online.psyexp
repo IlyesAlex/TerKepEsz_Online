@@ -1661,7 +1661,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.&amp;#10;&amp;#10;A bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet az új párjával.&amp;#10;A Képfelismerés feladat alatt azonban már csak egy képet fog látni." valType="str"/>
+        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.&amp;#10;&amp;#10;A bemutatóban elsőként egy korábbi gyakorlásban látott képet mutatunk meg&amp;#10;a Galéria berendezés feladatból. Ezután vagy egy új kép, vagy egy új helyszín bemutatása fog következni.&amp;#10;&amp;#10;A Képfelismerés feladat alatt is hasonlóan mindig csak egy képet fogsz látni." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>

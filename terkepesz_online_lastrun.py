@@ -1,8 +1,8 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on június 23, 2020, at 14:05
+This experiment was created using PsychoPy3 Experiment Builder (v2020.1.0),
+    on Wed 24 Jun 2020 01:48:48 PM CEST
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -35,7 +35,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__))
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-psychopyVersion = '2020.1.3'
+psychopyVersion = '2020.1.0'
 expName = 'TRK-online'  # from the Builder filename that created this script
 expInfo = {'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem*': '', 'Kor*': '', 'Oktatás éve (oktatási intézményben eltöltött összes évek száma)*': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % ('pilot', expName, expInfo['da
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\_ALEX_\\_Munka\\MTA\\programming\\main_task_online\\TerKepEsz_Online\\terkepesz_online_lastrun.py',
+    originPath='/home/zsuzsanna/Documents/TRK/experiment/trk_alex/TerKepEsz_Online/terkepesz_online_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -1176,7 +1176,7 @@ thisExp.addData('experiment_information_continue.started', experiment_informatio
 thisExp.addData('experiment_information_continue.stopped', experiment_information_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-comprehension_questions_1 = data.TrialHandler(nReps=0, method='sequential', 
+comprehension_questions_1 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='0:2'),
     seed=None, name='comprehension_questions_1')
@@ -1545,7 +1545,7 @@ for thisComprehension_question_1 in comprehension_questions_1:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'comprehension_questions_1'
+# completed 1 repeats of 'comprehension_questions_1'
 
 
 # ------Prepare to start Routine "data_protection"-------
@@ -2303,7 +2303,7 @@ thisExp.addData('enc_instructions_3_continue.started', enc_instructions_3_contin
 thisExp.addData('enc_instructions_3_continue.stopped', enc_instructions_3_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-comprehension_questions_2 = data.TrialHandler(nReps=0, method='random', 
+comprehension_questions_2 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='2:4'),
     seed=None, name='comprehension_questions_2')
@@ -2672,7 +2672,7 @@ for thisComprehension_question_2 in comprehension_questions_2:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'comprehension_questions_2'
+# completed 1 repeats of 'comprehension_questions_2'
 
 
 # ------Prepare to start Routine "start_practice"-------
@@ -2745,7 +2745,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_practice_trials = data.TrialHandler(nReps=0, method='sequential', 
+enc_practice_trials = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/encoding_practice_trials.csv'),
     seed=None, name='enc_practice_trials')
@@ -3140,7 +3140,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     enc_practice_trials.addData('enc_practice_feedback_text.stopped', enc_practice_feedback_text.tStopRefresh)
     thisExp.nextEntry()
     
-# completed 0 repeats of 'enc_practice_trials'
+# completed 1 repeats of 'enc_practice_trials'
 
 
 # ------Prepare to start Routine "end_practice"-------
@@ -3275,7 +3275,7 @@ thisExp.addData('end_practice_continue.started', end_practice_continue.tStartRef
 thisExp.addData('end_practice_continue.stopped', end_practice_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-enc_runs = data.TrialHandler(nReps=0, method='sequential', 
+enc_runs = data.TrialHandler(nReps=3, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='enc_runs')
@@ -3298,7 +3298,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 84
+    end = start + 2
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -4133,7 +4133,7 @@ for thisEnc_run in enc_runs:
         enc_runs.addData('enc_run_end_key.rt', enc_run_end_key.rt)
     enc_runs.addData('enc_run_end_key.started', enc_run_end_key.tStartRefresh)
     enc_runs.addData('enc_run_end_key.stopped', enc_run_end_key.tStopRefresh)
-# completed 0 repeats of 'enc_runs'
+# completed 3 repeats of 'enc_runs'
 
 
 # ------Prepare to start Routine "inter_task_break"-------
@@ -4900,7 +4900,7 @@ thisExp.addData('rec_instructions_4_continue.started', rec_instructions_4_contin
 thisExp.addData('rec_instructions_4_continue.stopped', rec_instructions_4_continue.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-comprehension_questions_3 = data.TrialHandler(nReps=0, method='sequential', 
+comprehension_questions_3 = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=data.importConditions('stimuli_tables/comprehension_questions.xlsx', selection='6:8'),
     seed=None, name='comprehension_questions_3')
@@ -5269,7 +5269,7 @@ for thisComprehension_question_3 in comprehension_questions_3:
     routineTimer.reset()
     thisExp.nextEntry()
     
-# completed 0 repeats of 'comprehension_questions_3'
+# completed 1 repeats of 'comprehension_questions_3'
 
 
 # ------Prepare to start Routine "demo_start"-------
@@ -5755,7 +5755,7 @@ thisExp.addData('start_practice_text.started', start_practice_text.tStartRefresh
 thisExp.addData('start_practice_text.stopped', start_practice_text.tStopRefresh)
 
 # set up handler to look after randomisation of conditions etc
-rec_practice_blocks = data.TrialHandler(nReps=1, method='sequential', 
+rec_practice_blocks = data.TrialHandler(nReps=2, method='sequential', 
     extraInfo=expInfo, originPath=-1,
     trialList=[None],
     seed=None, name='rec_practice_blocks')
@@ -6294,7 +6294,7 @@ for thisRec_practice_block in rec_practice_blocks:
         
     # completed 1 repeats of 'rec_practice_trials'
     
-# completed 1 repeats of 'rec_practice_blocks'
+# completed 2 repeats of 'rec_practice_blocks'
 
 
 # ------Prepare to start Routine "end_practice"-------
@@ -6545,7 +6545,7 @@ for thisRec_run in rec_runs:
         routineTimer.add(1.500000)
         # update component parameters for each repeat
         start = end
-        end = start + 18
+        end = start + 2
         selection = np.arange(start,end, step)
         if block_counter == 0:
             block_name = "Kép"

@@ -216,8 +216,8 @@
       <CodeComponent name="create_enc_run">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 2);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 2&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 84);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 84&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1922,8 +1922,8 @@
       <CodeComponent name="start_block_code">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 2);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    }&amp;#10;}&amp;#10;block_counter = (block_counter + 1);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 2&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Kép&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Hely&quot;&amp;#10;block_counter = block_counter + 1" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 18);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    }&amp;#10;}&amp;#10;block_counter = (block_counter + 1);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 18&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Kép&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Hely&quot;&amp;#10;block_counter = block_counter + 1" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>

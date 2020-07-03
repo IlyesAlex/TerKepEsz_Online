@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" ?>
-<PsychoPy2experiment encoding="utf-8" version="2020.1.0">
+<PsychoPy2experiment encoding="utf-8" version="2020.1.3">
   <Settings>
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
@@ -277,7 +277,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="enc_trial_interior" valType="code"/>
@@ -285,7 +285,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1100, 800)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -293,7 +293,7 @@
         <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="enc_trial_main_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -626,7 +626,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="enc_instructions_2_image" valType="code"/>
@@ -695,7 +695,7 @@
         <Param name="durationEstim" updates="None" val="1.5" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="enc_fx_interior" valType="code"/>
@@ -703,7 +703,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1100, 800)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -711,7 +711,7 @@
         <Param name="stopVal" updates="constant" val="$Jitter/1000" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <TextComponent name="enc_fx_cross">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -849,7 +849,7 @@
         <Param name="durationEstim" updates="None" val="1.5" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="rec_fx_interior" valType="code"/>
@@ -857,7 +857,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1100, 800)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -865,7 +865,7 @@
         <Param name="stopVal" updates="constant" val="$Jitter/1000" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <TextComponent name="rec_fx_cross">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -945,7 +945,7 @@
         <Param name="name" updates="None" val="rec_fx_instructions_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(700, 250.0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -430.0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -966,7 +966,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="rec_trial_interior" valType="code"/>
@@ -974,7 +974,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1100, 800)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -982,7 +982,7 @@
         <Param name="stopVal" updates="constant" val="4.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="rec_trial_main_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -1063,7 +1063,7 @@
         <Param name="name" updates="None" val="rec_trial_instructions_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(700, 250)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -430.0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -1436,7 +1436,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="enc_practice_feedback_interior" valType="code"/>
@@ -1444,7 +1444,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1100, 800)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1452,7 +1452,7 @@
         <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="enc_practice_feedback_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -1716,7 +1716,7 @@
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="flipVert" updates="constant" val="False" valType="bool"/>
-        <Param name="image" updates="constant" val="stimuli/GalleryNew.png" valType="str"/>
+        <Param name="image" updates="constant" val="stimuli/GalleryInterior.png" valType="str"/>
         <Param name="interpolate" updates="constant" val="linear" valType="str"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="name" updates="None" val="demo_interior" valType="code"/>
@@ -1724,7 +1724,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1100, 800)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1732,7 +1732,7 @@
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="demo_main_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -2317,7 +2317,7 @@
         <Param name="name" updates="None" val="end_experiment_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0.2)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0.15)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>

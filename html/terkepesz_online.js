@@ -518,7 +518,7 @@ function experimentInit() {
   enc_instructions_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text',
-    text: 'Ez a kiállítóterem belülről, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
+    text: 'Ez a kiállítóterem belső fala, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,
@@ -656,9 +656,9 @@ function experimentInit() {
   enc_fxClock = new util.Clock();
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_interior', units : 'pix', 
+    name : 'enc_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -680,9 +680,9 @@ function experimentInit() {
   enc_trialClock = new util.Clock();
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_interior', units : 'pix', 
+    name : 'enc_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -702,9 +702,9 @@ function experimentInit() {
   enc_practice_feedbackClock = new util.Clock();
   enc_practice_feedback_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_practice_feedback_interior', units : 'pix', 
+    name : 'enc_practice_feedback_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -772,9 +772,9 @@ function experimentInit() {
   enc_fxClock = new util.Clock();
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_interior', units : 'pix', 
+    name : 'enc_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -796,9 +796,9 @@ function experimentInit() {
   enc_trialClock = new util.Clock();
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_interior', units : 'pix', 
+    name : 'enc_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1038,7 +1038,7 @@ function experimentInit() {
   rec_instructions_4_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions_4_text',
-    text: 'A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban egyszerre nézheti meg a Galéria berendezés alatt bemutatott képet az új párjával.\nA Képfelismerés feladat alatt azonban már csak egy képet fog látni.',
+    text: 'A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban elsőként egy korábbi gyakorlásban látott képet mutatunk meg\na Galéria berendezés feladatból. Ezután vagy egy új kép, vagy egy új helyszín bemutatása fog következni.\n\nA Képfelismerés feladat alatt is hasonlóan mindig csak egy képet fogsz látni.',
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1141,9 +1141,9 @@ function experimentInit() {
   demoClock = new util.Clock();
   demo_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'demo_interior', units : 'pix', 
+    name : 'demo_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1250,9 +1250,9 @@ function experimentInit() {
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_interior', units : 'pix', 
+    name : 'rec_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [1885, 1260],
+    ori : 0, pos : [0, 0], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1287,7 +1287,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 250.0], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1296,9 +1296,9 @@ function experimentInit() {
   rec_trialClock = new util.Clock();
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_interior', units : 'pix', 
+    name : 'rec_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1331,7 +1331,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 250], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1405,9 +1405,9 @@ function experimentInit() {
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_interior', units : 'pix', 
+    name : 'rec_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [1885, 1260],
+    ori : 0, pos : [0, 0], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1442,7 +1442,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 250.0], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1451,9 +1451,9 @@ function experimentInit() {
   rec_trialClock = new util.Clock();
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_interior', units : 'pix', 
+    name : 'rec_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1885, 1260],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1486,7 +1486,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [600, 250], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1579,7 +1579,7 @@ function experimentInit() {
     text: 'Köszönjük a részvételt!\n\nJegyezze fel az alábbi kódot, amellyel a részvételét igazolja:',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.2], height: 0.03,  wrapWidth: undefined, ori: 0,
+    pos: [0, 0.15], height: 0.03,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: 0.0 
   });
@@ -1768,7 +1768,7 @@ function comprehension_questions_1LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   comprehension_questions_1 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '0:2'),
     seed: undefined, name: 'comprehension_questions_1'
@@ -1808,7 +1808,7 @@ function comprehension_questions_2LoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   comprehension_questions_2 = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.RANDOM,
+    nReps: 1, method: TrialHandler.Method.RANDOM,
     extraInfo: expInfo, originPath: undefined,
     trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/comprehension_questions.xlsx', '2:4'),
     seed: undefined, name: 'comprehension_questions_2'
@@ -1848,7 +1848,7 @@ function enc_practice_trialsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_practice_trials = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: 'stimuli_tables/encoding_practice_trials.csv',
     seed: undefined, name: 'enc_practice_trials'
@@ -1888,7 +1888,7 @@ function enc_runsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   enc_runs = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 0, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 3, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'enc_runs'
@@ -2162,7 +2162,7 @@ function rec_runsLoopBegin(thisScheduler) {
   // set up handler to look after randomisation of conditions etc
   rec_runs = new TrialHandler({
     psychoJS: psychoJS,
-    nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
+    nReps: 4, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
     trialList: undefined,
     seed: undefined, name: 'rec_runs'
@@ -4200,7 +4200,7 @@ function start_enc_runRoutineBegin(trials) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 84);
+    end = (start + 2);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat";
@@ -6285,7 +6285,7 @@ function start_rec_blockRoutineBegin(trials) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 18);
+    end = (start + 2);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     if ((block_counter === 0)) {
         block_name = "K\u00e9p";

@@ -1276,7 +1276,7 @@ function experimentInit() {
   rec_fx_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_fx_instructions_text',
-    text: '[F - Régi]\n\n[K - Új]',
+    text: '[F - Régi]      [K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1320,7 +1320,7 @@ function experimentInit() {
   rec_trial_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_trial_instructions_text',
-    text: '[F - Régi]\n\n[K - Új]',
+    text: '[F - Régi]      [K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1431,7 +1431,7 @@ function experimentInit() {
   rec_fx_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_fx_instructions_text',
-    text: '[F - Régi]\n\n[K - Új]',
+    text: '[F - Régi]      [K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1475,7 +1475,7 @@ function experimentInit() {
   rec_trial_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_trial_instructions_text',
-    text: '[F - Régi]\n\n[K - Új]',
+    text: '[F - Régi]      [K - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,

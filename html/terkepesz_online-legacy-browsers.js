@@ -1279,7 +1279,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1323,7 +1323,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1434,7 +1434,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1478,7 +1478,7 @@ function experimentInit() {
     text: '[F - Régi]\n\n[K - Új]',
     font: 'Arial',
     units: 'pix', 
-    pos: [0, (- 430.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });

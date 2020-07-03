@@ -32,7 +32,6 @@
     <Param name="logging level" updates="None" val="exp" valType="code"/>
   </Settings>
   <Routines>
-    <Routine name="break_2"/>
     <Routine name="inter_task_break">
       <TextComponent name="inter_task_break_continue">
         <Param name="color" updates="constant" val="black" valType="str"/>

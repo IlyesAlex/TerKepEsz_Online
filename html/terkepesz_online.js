@@ -656,9 +656,9 @@ function experimentInit() {
   enc_fxClock = new util.Clock();
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_interior', units : 'norm', 
+    name : 'enc_fx_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -680,9 +680,9 @@ function experimentInit() {
   enc_trialClock = new util.Clock();
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_interior', units : 'norm', 
+    name : 'enc_trial_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -772,9 +772,9 @@ function experimentInit() {
   enc_fxClock = new util.Clock();
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_interior', units : 'norm', 
+    name : 'enc_fx_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -796,9 +796,9 @@ function experimentInit() {
   enc_trialClock = new util.Clock();
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_interior', units : 'norm', 
+    name : 'enc_trial_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1141,9 +1141,9 @@ function experimentInit() {
   demoClock = new util.Clock();
   demo_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'demo_interior', units : 'norm', 
+    name : 'demo_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1250,9 +1250,9 @@ function experimentInit() {
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_interior', units : 'norm', 
+    name : 'rec_fx_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [2, 2],
+    ori : 0, pos : [0, 0], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1296,9 +1296,9 @@ function experimentInit() {
   rec_trialClock = new util.Clock();
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_interior', units : 'norm', 
+    name : 'rec_trial_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1405,9 +1405,9 @@ function experimentInit() {
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_interior', units : 'norm', 
+    name : 'rec_fx_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [2, 2],
+    ori : 0, pos : [0, 0], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1451,9 +1451,9 @@ function experimentInit() {
   rec_trialClock = new util.Clock();
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_interior', units : 'norm', 
+    name : 'rec_trial_interior', units : 'pix', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 

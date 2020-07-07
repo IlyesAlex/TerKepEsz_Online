@@ -4224,7 +4224,7 @@ function start_enc_runRoutineBegin(trials) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 2);
+    end = (start + 84);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat";
@@ -6325,7 +6325,7 @@ function start_rec_blockRoutineBegin(trials) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 2);
+    end = (start + 18);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     if ((block_counter === 0)) {
         block_name = "K\u00e9p";

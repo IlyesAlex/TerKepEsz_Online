@@ -194,7 +194,6 @@ var start_encodingClock;
 var start_encoding_text;
 var tables;
 var table_ind;
-var trial_table;
 var stimuli_table;
 var enc_instructions_1Clock;
 var enc_instructions_1_text;
@@ -466,10 +465,9 @@ function experimentInit() {
     depth: 0.0 
   });
   
-  tables = [0,1,2];
+  tables = ["0","1","2"];
   table_ind = tables[Math.floor(Math.random() * tables.length)];
-  trial_table = table_ind.toString();
-  stimuli_table = (("stimuli_tables/encoding_trials_" + trial_table) + ".csv");
+  stimuli_table = (("stimuli_tables/encoding_trials_" + table_ind) + ".csv");
   
   // Initialize components for Routine "enc_instructions_1"
   enc_instructions_1Clock = new util.Clock();

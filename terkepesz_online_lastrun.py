@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 03, 2020, at 15:17
+    on July 07, 2020, at 13:54
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -396,7 +396,7 @@ enc_practice_feedback_image = visual.ImageStim(
 enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedback_text',
     text='default text',
     font='Arial',
-    pos=(0, 0), height=0.03, wrapWidth=None, ori=0, 
+    units='pix', pos=[0,0], height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -574,7 +574,7 @@ rec_instructions_1_continue = visual.TextStim(win=win, name='rec_instructions_1_
 # Initialize components for Routine "rec_instructions_2"
 rec_instructions_2Clock = core.Clock()
 rec_instructions2_text = visual.TextStim(win=win, name='rec_instructions2_text',
-    text="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nRégi - F\nÚj - K",
+    text="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nDöntését így jelölje:\nRégi - F\nÚj - K",
     font='Arial',
     pos=(0, 0), height=0.025, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -804,7 +804,7 @@ rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
-    text='[F - Régi]\n\n[K - Új]',
+    text='[F - Régi]      [K - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -838,7 +838,7 @@ rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
-    text='[F - Régi]\n\n[K - Új]',
+    text='[F - Régi]      [K - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -919,7 +919,7 @@ rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
-    text='[F - Régi]\n\n[K - Új]',
+    text='[F - Régi]      [K - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -953,7 +953,7 @@ rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
-    text='[F - Régi]\n\n[K - Új]',
+    text='[F - Régi]      [K - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -3037,6 +3037,7 @@ for thisEnc_practice_trial in enc_practice_trials:
         feedback_text = 'Nem adott választ.'
     enc_practice_feedback_image.setPos((CurrentX, CurrentY))
     enc_practice_feedback_image.setImage(CurrentImage)
+    enc_practice_feedback_text.setPos((CurrentX, CurrentY - 200))
     enc_practice_feedback_text.setText(feedback_text)
     # keep track of which components have finished
     enc_practice_feedbackComponents = [enc_practice_feedback_interior, enc_practice_feedback_image, enc_practice_feedback_text]
@@ -3300,7 +3301,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 2
+    end = start + 84
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -6547,7 +6548,7 @@ for thisRec_run in rec_runs:
         routineTimer.add(1.500000)
         # update component parameters for each repeat
         start = end
-        end = start + 2
+        end = start + 18
         selection = np.arange(start,end, step)
         if block_counter == 0:
             block_name = "Kép"

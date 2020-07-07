@@ -1,0 +1,454 @@
+0.6667 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+0.6668 	WARNING 	Requested audio device 'Speakers (Realtek HD Audio output)' that is not available on this hardware. The 'audioDevice' preference should be one of ['24P1W1 (2- NVIDIA High Definiti']
+14.2430 	WARNING 	Monitor specification not found. Creating a temporary one...
+15.2227 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([0.804, 0.804, 0.961]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000241EF36E8D0>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000241EF6AD6A0>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='height', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+15.2228 	EXP 	window1: recordFrameIntervals = False
+15.3890 	EXP 	window1: recordFrameIntervals = True
+15.5723 	EXP 	window1: recordFrameIntervals = False
+15.7821 	EXP 	Created experiment_information_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='experiment_information_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.7842 	EXP 	Created experiment_information_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='experiment_information_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+15.7901 	EXP 	Created comprehension_question_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_text', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.7918 	EXP 	Created comprehension_question_answers = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_answers', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.8007 	EXP 	Created comprehension_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='comprehension_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.8066 	EXP 	Created comprehension_continue_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_continue_text', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+15.8084 	EXP 	Created comprehension_repeat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_repeat_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.8254 	EXP 	Created lab_thanks = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='lab_thanks', opacity=1.0, ori=0, pos=array([0. , 0.2]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+15.8297 	EXP 	Created lab_introduction_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='lab_introduction_continue', opacity=1.0, ori=0, pos=array([0. , 0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+15.9083 	EXP 	Created lab_members = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, image='stimuli/lab_members.jpg', interpolate=True, mask=None, maskParams=None, name='lab_members', opacity=1.0, ori=0.0, pos=array([   0., -200.]), size=array([908., 540.]), texRes=128, units='pix', win=Window(...))
+15.9205 	EXP 	Created start_encoding_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_encoding_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+15.9413 	EXP 	Created enc_instructions_1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='enc_instructions_1_text', opacity=1.0, ori=0, pos=array([-0.3,  0. ]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=0.65)
+16.0079 	EXP 	Created enc_instructions_1_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryBuildingFromOutside.jpg', interpolate=True, mask=None, maskParams=None, name='enc_instructions_1_image', opacity=1.0, ori=0.0, pos=array([450.,   0.]), size=array([600., 450.]), texRes=128, units='pix', win=Window(...))
+16.0100 	EXP 	Created instructions_1_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instructions_1_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.0278 	EXP 	Created enc_instructions_2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='enc_instructions_2_text', opacity=1.0, ori=0, pos=array([-0.35,  0.  ]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=0.5)
+16.1377 	EXP 	Created enc_instructions_2_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_instructions_2_image', opacity=1.0, ori=0.0, pos=array([425.,   0.]), size=array([730., 442.]), texRes=128, units='pix', win=Window(...))
+16.1400 	EXP 	Created instructions_2_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='instructions_2_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.1600 	EXP 	Created enc_instructions_3_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='enc_instructions_3_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.1650 	EXP 	Created enc_instructions_3_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='enc_instructions_3_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.1671 	EXP 	Created comprehension_question_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_text', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.1684 	EXP 	Created comprehension_question_answers = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_answers', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.1723 	EXP 	Created comprehension_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='comprehension_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.1744 	EXP 	Created comprehension_continue_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_continue_text', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.1760 	EXP 	Created comprehension_repeat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_repeat_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.1879 	EXP 	Created start_practice_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_practice_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kezdődik a gyakorlás...', units='height', win=Window(...), wrapWidth=1)
+16.2884 	EXP 	Created enc_fx_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_fx_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+16.2927 	EXP 	Created enc_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=60, italic=False, languageStyle='LTR', name='enc_fx_cross', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='pix', win=Window(...), wrapWidth=500)
+16.3932 	EXP 	Created enc_trial_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_trial_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+16.4012 	EXP 	Created enc_trial_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='enc_trial_main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+16.5011 	EXP 	Created enc_practice_feedback_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_practice_feedback_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([2., 2.]), texRes=128, units='norm', win=Window(...))
+16.5033 	EXP 	Created enc_practice_feedback_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='enc_practice_feedback_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+16.5075 	EXP 	Created enc_practice_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='enc_practice_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.5195 	EXP 	Created end_practice_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_practice_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=0.8)
+16.5232 	EXP 	Created end_practice_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='end_practice_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.5285 	EXP 	Created start_enc_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='start_enc_run_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kezdődik a feladat...', units='height', win=Window(...), wrapWidth=1)
+16.6269 	EXP 	Created enc_fx_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_fx_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+16.6290 	EXP 	Created enc_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=60, italic=False, languageStyle='LTR', name='enc_fx_cross', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='pix', win=Window(...), wrapWidth=500)
+16.7283 	EXP 	Created enc_trial_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='enc_trial_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+16.7308 	EXP 	Created enc_trial_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='enc_trial_main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+16.7361 	EXP 	Created comprehension_question_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_text', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.7374 	EXP 	Created comprehension_question_answers = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_answers', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.7395 	EXP 	Created comprehension_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='comprehension_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.7453 	EXP 	Created comprehension_continue_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_continue_text', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.7472 	EXP 	Created comprehension_repeat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_repeat_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.7510 	EXP 	Created end_enc_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='end_enc_run_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.7547 	EXP 	Created inter_task_break_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='inter_task_break_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.7636 	EXP 	Created inter_task_break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='inter_task_break_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.7766 	EXP 	Created start_recognition_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_recognition_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Második feladat\nKépfelismerés', units='height', win=Window(...), wrapWidth=1)
+16.7879 	EXP 	Created rec_instructions_1_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rec_instructions_1_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.7900 	EXP 	Created rec_instructions_1_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rec_instructions_1_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.8176 	EXP 	Created rec_instructions2_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='rec_instructions2_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.8229 	EXP 	Created rec_instructions_2_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rec_instructions_2_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.8270 	EXP 	Created rec_instruction_2_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_instruction_2_title', opacity=1.0, ori=0, pos=array([0. , 0.4]), rgb=array([0., 0., 0.]), text="'Kép' alfeladat", units='height', win=Window(...), wrapWidth=1)
+16.8479 	EXP 	Created rec_instrauction_3_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.025, italic=False, languageStyle='LTR', name='rec_instrauction_3_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.8499 	EXP 	Created rec_instructions_3_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rec_instructions_3_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.8522 	EXP 	Created rec_instruction_3_title = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_instruction_3_title', opacity=1.0, ori=0, pos=array([0. , 0.4]), rgb=array([0., 0., 0.]), text="'Hely' alfeladat", units='height', win=Window(...), wrapWidth=1)
+16.8736 	EXP 	Created rec_instructions_4_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_instructions_4_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+16.8757 	EXP 	Created rec_instructions_4_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='rec_instructions_4_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.8797 	EXP 	Created comprehension_question_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_text', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.8813 	EXP 	Created comprehension_question_answers = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_answers', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.8857 	EXP 	Created comprehension_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='comprehension_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.8907 	EXP 	Created comprehension_continue_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_continue_text', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+16.8927 	EXP 	Created comprehension_repeat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_repeat_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+16.8967 	EXP 	Created demo_start_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='demo_start_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kezdődik a bemutató...', units='height', win=Window(...), wrapWidth=1)
+16.9977 	EXP 	Created demo_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='demo_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+17.0001 	EXP 	Created demo_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='demo_main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+17.0015 	EXP 	Created demo_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='demo_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+17.0058 	EXP 	Created demo_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo_text', opacity=1.0, ori=0, pos=array([0.  , 0.45]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.0095 	EXP 	Created demo_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-5.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='demo_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+17.0156 	EXP 	Created demo_end_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='demo_end_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.0174 	EXP 	Created demo_end_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='demo_end_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+17.0288 	EXP 	Created start_practice_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_practice_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kezdődik a gyakorlás...', units='height', win=Window(...), wrapWidth=1)
+17.0331 	EXP 	Created rec_practice_block_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='rec_practice_block_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.1311 	EXP 	Created rec_fx_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_fx_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+17.1332 	EXP 	Created rec_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=60, italic=False, languageStyle='LTR', name='rec_fx_cross', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='pix', win=Window(...), wrapWidth=500)
+17.1380 	EXP 	Created rec_fx_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, languageStyle='LTR', name='rec_fx_text_block', opacity=1.0, ori=0, pos=array([  0., 470.]), rgb=array([0., 0., 0.]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+17.1451 	EXP 	Created rec_fx_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=25, italic=False, languageStyle='LTR', name='rec_fx_instructions_text', opacity=1.0, ori=0, pos=array([   0., -450.]), rgb=array([0., 0., 0.]), text='[F - Régi]      [K - Új]', units='pix', win=Window(...), wrapWidth=500)
+17.2438 	EXP 	Created rec_trial_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_trial_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+17.2461 	EXP 	Created rec_trial_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='rec_trial_main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+17.2488 	EXP 	Created rec_trial_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, languageStyle='LTR', name='rec_trial_text_block', opacity=1.0, ori=0, pos=array([  0., 470.]), rgb=array([0., 0., 0.]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+17.2503 	EXP 	Created rec_trial_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=25, italic=False, languageStyle='LTR', name='rec_trial_instructions_text', opacity=1.0, ori=0, pos=array([   0., -450.]), rgb=array([0., 0., 0.]), text='[F - Régi]      [K - Új]', units='pix', win=Window(...), wrapWidth=500)
+17.2542 	EXP 	Created rec_practice_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='rec_practice_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.2636 	EXP 	Created end_practice_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.05, italic=False, languageStyle='LTR', name='end_practice_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=0.8)
+17.2683 	EXP 	Created end_practice_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='end_practice_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+17.2734 	EXP 	Created start_rec_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='start_rec_run_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='Kezdődik a feladat...', units='height', win=Window(...), wrapWidth=1)
+17.2805 	EXP 	Created start_rec_block_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.1, italic=False, languageStyle='LTR', name='start_rec_block_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.3810 	EXP 	Created rec_fx_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_fx_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+17.3830 	EXP 	Created rec_fx_cross = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=60, italic=False, languageStyle='LTR', name='rec_fx_cross', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='+', units='pix', win=Window(...), wrapWidth=500)
+17.3861 	EXP 	Created rec_fx_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, languageStyle='LTR', name='rec_fx_text_block', opacity=1.0, ori=0, pos=array([  0., 470.]), rgb=array([0., 0., 0.]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+17.3905 	EXP 	Created rec_fx_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=25, italic=False, languageStyle='LTR', name='rec_fx_instructions_text', opacity=1.0, ori=0, pos=array([   0., -450.]), rgb=array([0., 0., 0.]), text='[F - Régi]      [K - Új]', units='pix', win=Window(...), wrapWidth=500)
+17.4907 	EXP 	Created rec_trial_interior = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, image='stimuli/GalleryInterior.png', interpolate=True, mask=None, maskParams=None, name='rec_trial_interior', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([1920., 1080.]), texRes=128, units='pix', win=Window(...))
+17.4930 	EXP 	Created rec_trial_main_image = ImageStim(__class__=<class 'psychopy.visual.image.ImageStim'>, autoLog=True, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, image='sin', interpolate=True, mask=None, maskParams=None, name='rec_trial_main_image', opacity=1.0, ori=0.0, pos=array([0., 0.]), size=array([300., 300.]), texRes=128, units='pix', win=Window(...))
+17.4961 	EXP 	Created rec_trial_text_block = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=30, italic=False, languageStyle='LTR', name='rec_trial_text_block', opacity=1.0, ori=0, pos=array([  0., 470.]), rgb=array([0., 0., 0.]), text='default text', units='pix', win=Window(...), wrapWidth=500)
+17.4986 	EXP 	Created rec_trial_instructions_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-4.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=25, italic=False, languageStyle='LTR', name='rec_trial_instructions_text', opacity=1.0, ori=0, pos=array([   0., -450.]), rgb=array([0., 0., 0.]), text='[F - Régi]      [K - Új]', units='pix', win=Window(...), wrapWidth=500)
+17.5025 	EXP 	Created end_rec_run_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='end_rec_run_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.5057 	EXP 	Created comprehension_question_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_text', opacity=1.0, ori=0, pos=array([0. , 0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.5072 	EXP 	Created comprehension_question_answers = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.04, italic=False, languageStyle='LTR', name='comprehension_question_answers', opacity=1.0, ori=0, pos=array([ 0. , -0.3]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.5085 	EXP 	Created comprehension_feedback_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='comprehension_feedback_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.5142 	EXP 	Created comprehension_continue_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_continue_text', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text='A folytatáshoz nyomja le a jobb nyilat. ', units='height', win=Window(...), wrapWidth=1)
+17.5160 	EXP 	Created comprehension_repeat_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='comprehension_repeat_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.5219 	EXP 	Created end_experiment_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='end_experiment_text', opacity=1.0, ori=0, pos=array([0.  , 0.15]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.5319 	EXP 	Created end_experiment_code = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-2.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.06, italic=False, languageStyle='LTR', name='end_experiment_code', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([0., 0., 0.]), text='default text', units='height', win=Window(...), wrapWidth=1)
+17.5482 	EXP 	Created end_experiment_continue = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='black', colorSpace='named', contrast=1.0, depth=-3.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=0.03, italic=False, languageStyle='LTR', name='end_experiment_continue', opacity=1.0, ori=0, pos=array([ 0. , -0.4]), rgb=array([0., 0., 0.]), text=str(...), units='height', win=Window(...), wrapWidth=1)
+17.6271 	EXP 	experiment_information_text: autoDraw = True
+27.5552 	EXP 	experiment_information_continue: autoDraw = True
+28.3112 	EXP 	Imported stimuli_tables/comprehension_questions.xlsx as conditions, 2 conditions, 6 params
+28.3114 	EXP 	Created sequence: sequential, trialTypes=2, nReps=1, seed=None
+28.3116 	EXP 	New trial (rep=0, index=0): OrderedDict([('Question', 'Mennyi időt vesz igénybe a vizsgálat? Válaszát jelölje a megadott billentyűk egyikével. '), ('Answer', 'D:20-30 perc    F: 50-60 perc    J: 70-80 perc'), ('CorrectResponse', 'f'), ('CorrectAnswer', 'A helyes válasz: 50-60 perc'), ('IncorrectAnswer', 'A helyes válasz: 50-60 perc'), ('InfoRepeated', 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. Kérjük, használja a teljes képernyő módot.\nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. ')])
+28.3274 	DATA 	Keypress: right
+28.3385 	EXP 	experiment_information_text: autoDraw = False
+28.3385 	EXP 	experiment_information_continue: autoDraw = False
+28.3385 	EXP 	comprehension_question_text: text = 'Mennyi időt vesz igénybe a vizsgálat? Válaszát jelölje a megadott billentyűk egyikével. '
+28.3385 	EXP 	comprehension_question_answers: text = 'D:20-30 perc    F: 50-60 perc    J: 70-80 perc'
+28.3385 	EXP 	comprehension_question_text: autoDraw = True
+28.3385 	EXP 	comprehension_question_answers: autoDraw = True
+31.8765 	DATA 	Keypress: right
+35.9931 	DATA 	Keypress: f
+36.0217 	EXP 	comprehension_question_text: autoDraw = False
+36.0217 	EXP 	comprehension_question_answers: autoDraw = False
+36.0217 	EXP 	comprehension_feedback_text: text = 'A helyes válasz: 50-60 perc'
+36.0217 	EXP 	comprehension_feedback_text: autoDraw = True
+38.0384 	EXP 	comprehension_feedback_text: autoDraw = False
+38.0384 	EXP 	comprehension_feedback_text: autoDraw = False
+38.0384 	EXP 	comprehension_repeat_text: pos = array([0., 0.])
+38.0384 	EXP 	comprehension_repeat_text: text = 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. Kérjük, használja a teljes képernyő módot.\nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. '
+38.0384 	EXP 	comprehension_repeat_text: autoDraw = True
+38.0384 	EXP 	comprehension_repeat_text: autoDraw = False
+39.0244 	EXP 	New trial (rep=0, index=1): OrderedDict([('Question', 'Megbizonyosodott róla, hogy biztosítottak a vizsgálat elvégzéséhez szükséges feltételek? Válaszát jelölje a megadott billentyűk egyikével. '), ('Answer', 'F: Nem, nincs lehetőségem nyugodt körülmények között elvégezni a feladatot.    J: Igen, körülményeim nyugodtak, az internet kapcsolat stabil, a feladatokra tudok szánni 60 percet.'), ('CorrectResponse', 'j'), ('CorrectAnswer', 'Köszönjük!'), ('IncorrectAnswer', 'Bizonyosodjon meg róla, hogy elég időt tud a vizsgálatra szánni. '), ('InfoRepeated', 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. Kérjük, használja a teljes képernyő módot.\nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. ')])
+39.0551 	EXP 	comprehension_continue_text: autoDraw = True
+39.0551 	EXP 	comprehension_continue_text: autoDraw = False
+39.0551 	EXP 	comprehension_continue_text: autoDraw = False
+39.0551 	EXP 	comprehension_repeat_text: autoDraw = False
+39.0551 	EXP 	comprehension_question_text: text = 'Megbizonyosodott róla, hogy biztosítottak a vizsgálat elvégzéséhez szükséges feltételek? Válaszát jelölje a megadott billentyűk egyikével. '
+39.0551 	EXP 	comprehension_question_answers: text = 'F: Nem, nincs lehetőségem nyugodt körülmények között elvégezni a feladatot.    J: Igen, körülményeim nyugodtak, az internet kapcsolat stabil, a feladatokra tudok szánni 60 percet.'
+39.0551 	EXP 	comprehension_question_text: autoDraw = True
+39.0551 	EXP 	comprehension_question_answers: autoDraw = True
+51.0889 	DATA 	Keypress: j
+51.1050 	EXP 	comprehension_question_text: autoDraw = False
+51.1050 	EXP 	comprehension_question_answers: autoDraw = False
+51.1050 	EXP 	comprehension_feedback_text: text = 'Köszönjük!'
+51.1050 	EXP 	comprehension_feedback_text: autoDraw = True
+53.1050 	EXP 	comprehension_feedback_text: autoDraw = False
+53.1050 	EXP 	comprehension_feedback_text: autoDraw = False
+53.1050 	EXP 	comprehension_repeat_text: pos = array([0., 0.])
+53.1050 	EXP 	comprehension_repeat_text: text = 'Kérjük, figyelmesen olvassa végig az alábbi instrukciókat!\n\nA vizsgálathoz használjon asztali számítógépet vagy laptopot. A vizsgálat nem végezhető el mobil eszközön, például okostelefonon vagy táblagépen. A feladatok elvégzéséhez szüksége lesz működő billentyűzetre és stabil internet kapcsolatra. Az optimális eredmény elérése érdekében Google Chrome, Firefox vagy Safari böngésző használata javasolt. Kérjük, használja a teljes képernyő módot.\nA kísérlet teljes körű, zavartalan figyelmet igényel. A vizsgálat két feladatból áll, és elvégzése 50-60 percet vesz igénybe. Bizonyosodjon meg róla, hogy elég időt tud szánni a vizsgálatra. Ügyeljen arra, hogy telefont, vagy más eszközöket közben ne használjon, és kerülje a másokkal való interakciót.\n\nA vizsgálat két feladatból áll, melyek során absztrakt képeket kell kiválogatnia a megadott szempontok szerint. A feladatok alatt és a feladatok között is lesz lehetősége rövid pihenőt tartani. '
+53.1050 	EXP 	comprehension_repeat_text: autoDraw = True
+53.1050 	EXP 	comprehension_repeat_text: autoDraw = False
+54.1050 	EXP 	comprehension_continue_text: autoDraw = True
+54.1050 	EXP 	comprehension_continue_text: autoDraw = False
+54.1050 	EXP 	comprehension_continue_text: autoDraw = False
+54.1050 	EXP 	comprehension_repeat_text: autoDraw = False
+54.1050 	EXP 	lab_thanks: autoDraw = True
+54.1050 	EXP 	lab_members: autoDraw = True
+55.0716 	EXP 	lab_introduction_continue: autoDraw = True
+56.3375 	DATA 	Keypress: right
+56.3549 	EXP 	lab_thanks: autoDraw = False
+56.3549 	EXP 	lab_introduction_continue: autoDraw = False
+56.3549 	EXP 	lab_members: autoDraw = False
+56.3549 	EXP 	start_encoding_text: text = 'Első feladat\nGaléria berendezés'
+56.3549 	EXP 	start_encoding_text: autoDraw = True
+57.8549 	EXP 	start_encoding_text: autoDraw = False
+57.8549 	EXP 	start_encoding_text: autoDraw = False
+57.8549 	EXP 	enc_instructions_1_text: autoDraw = True
+57.8549 	EXP 	enc_instructions_1_image: autoDraw = True
+62.8381 	EXP 	instructions_1_continue: autoDraw = True
+63.6947 	DATA 	Keypress: right
+63.7047 	EXP 	enc_instructions_1_text: autoDraw = False
+63.7047 	EXP 	enc_instructions_1_image: autoDraw = False
+63.7047 	EXP 	instructions_1_continue: autoDraw = False
+63.7047 	EXP 	enc_instructions_2_text: autoDraw = True
+63.7047 	EXP 	enc_instructions_2_image: autoDraw = True
+68.6879 	EXP 	instructions_2_continue: autoDraw = True
+69.2283 	DATA 	Keypress: right
+69.2379 	EXP 	enc_instructions_2_text: autoDraw = False
+69.2379 	EXP 	enc_instructions_2_image: autoDraw = False
+69.2379 	EXP 	instructions_2_continue: autoDraw = False
+69.2379 	EXP 	enc_instructions_3_text: autoDraw = True
+74.2211 	EXP 	enc_instructions_3_continue: autoDraw = True
+75.4420 	DATA 	Keypress: right
+75.4626 	EXP 	Imported stimuli_tables/comprehension_questions.xlsx as conditions, 2 conditions, 6 params
+75.4682 	EXP 	Created sequence: random, trialTypes=2, nReps=1, seed=None
+75.4690 	EXP 	New trial (rep=0, index=0): OrderedDict([('Question', 'Mely billentyű jelzi azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen?'), ('Answer', 'D billentyű    F billentyű   J billentyű    K billentyű'), ('CorrectResponse', 'j'), ('CorrectAnswer', 'A helyes válasz: J billentyű.'), ('IncorrectAnswer', 'A helyes válasz: J billentyű.'), ('InfoRepeated', "Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. ")])
+75.5044 	EXP 	enc_instructions_3_text: autoDraw = False
+75.5044 	EXP 	enc_instructions_3_continue: autoDraw = False
+75.5044 	EXP 	comprehension_question_text: text = 'Mely billentyű jelzi azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen?'
+75.5044 	EXP 	comprehension_question_answers: text = 'D billentyű    F billentyű   J billentyű    K billentyű'
+75.5044 	EXP 	comprehension_question_text: autoDraw = True
+75.5044 	EXP 	comprehension_question_answers: autoDraw = True
+81.4210 	DATA 	Keypress: j
+81.4376 	EXP 	comprehension_question_text: autoDraw = False
+81.4376 	EXP 	comprehension_question_answers: autoDraw = False
+81.4376 	EXP 	comprehension_feedback_text: text = 'A helyes válasz: J billentyű.'
+81.4376 	EXP 	comprehension_feedback_text: autoDraw = True
+83.4542 	EXP 	comprehension_feedback_text: autoDraw = False
+83.4542 	EXP 	comprehension_feedback_text: autoDraw = False
+83.4542 	EXP 	comprehension_repeat_text: pos = array([0., 0.])
+83.4542 	EXP 	comprehension_repeat_text: text = "Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. "
+83.4542 	EXP 	comprehension_repeat_text: autoDraw = True
+83.4542 	EXP 	comprehension_repeat_text: autoDraw = False
+84.4238 	EXP 	New trial (rep=0, index=1): OrderedDict([('Question', 'Mely billentyű jelzi azokat a képeket, amelyek nem maradhatnak a bemutatott helyen?'), ('Answer', 'D billentyű    F billentyű   J billentyű    K billentyű'), ('CorrectResponse', 'f'), ('CorrectAnswer', 'A helyes válasz: F billentyű'), ('IncorrectAnswer', 'A helyes válasz: F billentyű'), ('InfoRepeated', "Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. ")])
+84.4375 	EXP 	comprehension_continue_text: autoDraw = True
+84.4375 	EXP 	comprehension_continue_text: autoDraw = False
+84.4375 	EXP 	comprehension_continue_text: autoDraw = False
+84.4375 	EXP 	comprehension_repeat_text: autoDraw = False
+84.4375 	EXP 	comprehension_question_text: text = 'Mely billentyű jelzi azokat a képeket, amelyek nem maradhatnak a bemutatott helyen?'
+84.4375 	EXP 	comprehension_question_answers: text = 'D billentyű    F billentyű   J billentyű    K billentyű'
+84.4375 	EXP 	comprehension_question_text: autoDraw = True
+84.4375 	EXP 	comprehension_question_answers: autoDraw = True
+88.4150 	DATA 	Keypress: f
+88.4208 	EXP 	comprehension_question_text: autoDraw = False
+88.4208 	EXP 	comprehension_question_answers: autoDraw = False
+88.4208 	EXP 	comprehension_feedback_text: text = 'A helyes válasz: F billentyű'
+88.4208 	EXP 	comprehension_feedback_text: autoDraw = True
+90.4207 	EXP 	comprehension_feedback_text: autoDraw = False
+90.4207 	EXP 	comprehension_feedback_text: autoDraw = False
+90.4207 	EXP 	comprehension_repeat_text: pos = array([0., 0.])
+90.4207 	EXP 	comprehension_repeat_text: text = "Az első feladat nagyjából 25 percet vesz igénybe, közben két rövid szünettel. Ügyeljen, hogy ezek a szünetek ne legyenek 2 percnél hosszabbak. \n\nA 'J' billentyűvel jelölje azokat a képeket, amelyek maradhatnak a galériában, a bemutatott helyen.\n\nAz 'F' billentyűvel jelölje a képeket, amelyek nem maradnak kiállítva a bemutatott helyen. "
+90.4207 	EXP 	comprehension_repeat_text: autoDraw = True
+90.4207 	EXP 	comprehension_repeat_text: autoDraw = False
+91.4040 	EXP 	comprehension_continue_text: autoDraw = True
+91.4040 	EXP 	comprehension_continue_text: autoDraw = False
+91.4040 	EXP 	comprehension_continue_text: autoDraw = False
+91.4040 	EXP 	comprehension_repeat_text: autoDraw = False
+91.4040 	EXP 	start_practice_text: autoDraw = True
+92.3989 	EXP 	Imported stimuli_tables/encoding_practice_trials.csv as conditions, 9 conditions, 9 params
+92.3993 	EXP 	Created sequence: sequential, trialTypes=9, nReps=1, seed=None
+92.3998 	EXP 	New trial (rep=0, index=0): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/166a.jpg'), ('CurrentX', -75), ('CurrentY', 225), ('Jitter', 1500), ('Section', 'Encoding')])
+92.4207 	EXP 	start_practice_text: autoDraw = False
+92.4207 	EXP 	start_practice_text: autoDraw = False
+92.4207 	EXP 	enc_fx_cross: pos = array([-75., 225.])
+92.4207 	EXP 	enc_fx_interior: autoDraw = True
+92.4207 	EXP 	enc_fx_cross: autoDraw = True
+93.9869 	EXP 	enc_fx_interior: autoDraw = False
+93.9869 	EXP 	enc_fx_cross: autoDraw = False
+93.9869 	EXP 	enc_fx_interior: autoDraw = False
+93.9869 	EXP 	enc_fx_cross: autoDraw = False
+93.9869 	EXP 	enc_trial_main_image: pos = array([-75., 225.])
+93.9869 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/166a.jpg'
+93.9869 	EXP 	enc_trial_interior: autoDraw = True
+93.9869 	EXP 	enc_trial_main_image: autoDraw = True
+96.9703 	EXP 	enc_trial_interior: autoDraw = False
+96.9703 	EXP 	enc_trial_main_image: autoDraw = False
+96.9703 	EXP 	enc_practice_feedback_image: pos = array([-75., 225.])
+96.9703 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/166a.jpg'
+96.9703 	EXP 	enc_practice_feedback_text: text = 'Nem adott választ.'
+96.9703 	EXP 	enc_practice_feedback_interior: autoDraw = True
+96.9703 	EXP 	enc_practice_feedback_image: autoDraw = True
+96.9703 	EXP 	enc_practice_feedback_text: autoDraw = True
+97.9212 	EXP 	New trial (rep=0, index=1): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'OBJ'), ('StimType', 'TARGET'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/167a.jpg'), ('CurrentX', 225), ('CurrentY', 225), ('Jitter', 500), ('Section', 'Encoding')])
+97.9370 	EXP 	enc_practice_feedback_interior: autoDraw = False
+97.9370 	EXP 	enc_practice_feedback_image: autoDraw = False
+97.9370 	EXP 	enc_practice_feedback_text: autoDraw = False
+97.9370 	EXP 	enc_fx_cross: pos = array([225., 225.])
+97.9370 	EXP 	enc_fx_interior: autoDraw = True
+97.9370 	EXP 	enc_fx_cross: autoDraw = True
+98.4703 	EXP 	enc_fx_interior: autoDraw = False
+98.4703 	EXP 	enc_fx_cross: autoDraw = False
+98.4703 	EXP 	enc_fx_interior: autoDraw = False
+98.4703 	EXP 	enc_fx_cross: autoDraw = False
+98.4703 	EXP 	enc_trial_main_image: pos = array([225., 225.])
+98.4703 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/167a.jpg'
+98.4703 	EXP 	enc_trial_interior: autoDraw = True
+98.4703 	EXP 	enc_trial_main_image: autoDraw = True
+99.7570 	DATA 	Keypress: f
+101.4702 	EXP 	enc_trial_interior: autoDraw = False
+101.4702 	EXP 	enc_trial_main_image: autoDraw = False
+101.4702 	EXP 	enc_practice_feedback_image: pos = array([225., 225.])
+101.4702 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/167a.jpg'
+101.4702 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép nem marad.'
+101.4702 	EXP 	enc_practice_feedback_interior: autoDraw = True
+101.4702 	EXP 	enc_practice_feedback_image: autoDraw = True
+101.4702 	EXP 	enc_practice_feedback_text: autoDraw = True
+102.4373 	EXP 	New trial (rep=0, index=2): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'OBJ'), ('StimType', 'FOIL'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/149a.jpg'), ('CurrentX', 225), ('CurrentY', -75), ('Jitter', 1000), ('Section', 'Encoding')])
+102.4535 	EXP 	enc_practice_feedback_interior: autoDraw = False
+102.4535 	EXP 	enc_practice_feedback_image: autoDraw = False
+102.4535 	EXP 	enc_practice_feedback_text: autoDraw = False
+102.4535 	EXP 	enc_fx_cross: pos = array([225., -75.])
+102.4535 	EXP 	enc_fx_interior: autoDraw = True
+102.4535 	EXP 	enc_fx_cross: autoDraw = True
+103.5368 	EXP 	enc_fx_interior: autoDraw = False
+103.5368 	EXP 	enc_fx_cross: autoDraw = False
+103.5368 	EXP 	enc_fx_interior: autoDraw = False
+103.5368 	EXP 	enc_fx_cross: autoDraw = False
+103.5368 	EXP 	enc_trial_main_image: pos = array([225., -75.])
+103.5368 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/149a.jpg'
+103.5368 	EXP 	enc_trial_interior: autoDraw = True
+103.5368 	EXP 	enc_trial_main_image: autoDraw = True
+104.6572 	DATA 	Keypress: f
+106.4868 	EXP 	enc_trial_interior: autoDraw = False
+106.4868 	EXP 	enc_trial_main_image: autoDraw = False
+106.4868 	EXP 	enc_practice_feedback_image: pos = array([225., -75.])
+106.4868 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/149a.jpg'
+106.4868 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép nem marad.'
+106.4868 	EXP 	enc_practice_feedback_interior: autoDraw = True
+106.4868 	EXP 	enc_practice_feedback_image: autoDraw = True
+106.4868 	EXP 	enc_practice_feedback_text: autoDraw = True
+107.4539 	EXP 	New trial (rep=0, index=3): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'LOC'), ('StimType', 'FOIL'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/148b.jpg'), ('CurrentX', 225), ('CurrentY', -75), ('Jitter', 1000), ('Section', 'Encoding')])
+107.4700 	EXP 	enc_practice_feedback_interior: autoDraw = False
+107.4700 	EXP 	enc_practice_feedback_image: autoDraw = False
+107.4700 	EXP 	enc_practice_feedback_text: autoDraw = False
+107.4700 	EXP 	enc_fx_cross: pos = array([225., -75.])
+107.4700 	EXP 	enc_fx_interior: autoDraw = True
+107.4700 	EXP 	enc_fx_cross: autoDraw = True
+108.4867 	EXP 	enc_fx_interior: autoDraw = False
+108.4867 	EXP 	enc_fx_cross: autoDraw = False
+108.4867 	EXP 	enc_fx_interior: autoDraw = False
+108.4867 	EXP 	enc_fx_cross: autoDraw = False
+108.4867 	EXP 	enc_trial_main_image: pos = array([225., -75.])
+108.4867 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/148b.jpg'
+108.4867 	EXP 	enc_trial_interior: autoDraw = True
+108.4867 	EXP 	enc_trial_main_image: autoDraw = True
+111.5033 	EXP 	enc_trial_interior: autoDraw = False
+111.5033 	EXP 	enc_trial_main_image: autoDraw = False
+111.5033 	EXP 	enc_practice_feedback_image: pos = array([225., -75.])
+111.5033 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/148b.jpg'
+111.5033 	EXP 	enc_practice_feedback_text: text = 'Nem adott választ.'
+111.5033 	EXP 	enc_practice_feedback_interior: autoDraw = True
+111.5033 	EXP 	enc_practice_feedback_image: autoDraw = True
+111.5033 	EXP 	enc_practice_feedback_text: autoDraw = True
+111.8065 	DATA 	Keypress: f
+112.4705 	EXP 	New trial (rep=0, index=4): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'LOC'), ('StimType', 'LURE'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/159a.jpg'), ('CurrentX', -375), ('CurrentY', 225), ('Jitter', 5000), ('Section', 'Encoding')])
+112.4866 	EXP 	enc_practice_feedback_interior: autoDraw = False
+112.4866 	EXP 	enc_practice_feedback_image: autoDraw = False
+112.4866 	EXP 	enc_practice_feedback_text: autoDraw = False
+112.4866 	EXP 	enc_fx_cross: pos = array([-375.,  225.])
+112.4866 	EXP 	enc_fx_interior: autoDraw = True
+112.4866 	EXP 	enc_fx_cross: autoDraw = True
+117.5198 	EXP 	enc_fx_interior: autoDraw = False
+117.5198 	EXP 	enc_fx_cross: autoDraw = False
+117.5198 	EXP 	enc_fx_interior: autoDraw = False
+117.5198 	EXP 	enc_fx_cross: autoDraw = False
+117.5198 	EXP 	enc_trial_main_image: pos = array([-375.,  225.])
+117.5198 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/159a.jpg'
+117.5198 	EXP 	enc_trial_interior: autoDraw = True
+117.5198 	EXP 	enc_trial_main_image: autoDraw = True
+118.4738 	DATA 	Keypress: j
+120.5197 	EXP 	enc_trial_interior: autoDraw = False
+120.5197 	EXP 	enc_trial_main_image: autoDraw = False
+120.5197 	EXP 	enc_practice_feedback_image: pos = array([-375.,  225.])
+120.5197 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/159a.jpg'
+120.5197 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép marad.'
+120.5197 	EXP 	enc_practice_feedback_interior: autoDraw = True
+120.5197 	EXP 	enc_practice_feedback_image: autoDraw = True
+120.5197 	EXP 	enc_practice_feedback_text: autoDraw = True
+121.4869 	EXP 	New trial (rep=0, index=5): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'OBJ'), ('StimType', 'LURE'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/177b.jpg'), ('CurrentX', -375), ('CurrentY', 225), ('Jitter', 800), ('Section', 'Encoding')])
+121.5030 	EXP 	enc_practice_feedback_interior: autoDraw = False
+121.5030 	EXP 	enc_practice_feedback_image: autoDraw = False
+121.5030 	EXP 	enc_practice_feedback_text: autoDraw = False
+121.5030 	EXP 	enc_fx_cross: pos = array([-375.,  225.])
+121.5030 	EXP 	enc_fx_interior: autoDraw = True
+121.5030 	EXP 	enc_fx_cross: autoDraw = True
+122.3363 	EXP 	enc_fx_interior: autoDraw = False
+122.3363 	EXP 	enc_fx_cross: autoDraw = False
+122.3363 	EXP 	enc_fx_interior: autoDraw = False
+122.3363 	EXP 	enc_fx_cross: autoDraw = False
+122.3363 	EXP 	enc_trial_main_image: pos = array([-375.,  225.])
+122.3363 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/177b.jpg'
+122.3363 	EXP 	enc_trial_interior: autoDraw = True
+122.3363 	EXP 	enc_trial_main_image: autoDraw = True
+124.2070 	DATA 	Keypress: j
+125.3363 	EXP 	enc_trial_interior: autoDraw = False
+125.3363 	EXP 	enc_trial_main_image: autoDraw = False
+125.3363 	EXP 	enc_practice_feedback_image: pos = array([-375.,  225.])
+125.3363 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/177b.jpg'
+125.3363 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép marad.'
+125.3363 	EXP 	enc_practice_feedback_interior: autoDraw = True
+125.3363 	EXP 	enc_practice_feedback_image: autoDraw = True
+125.3363 	EXP 	enc_practice_feedback_text: autoDraw = True
+126.3034 	EXP 	New trial (rep=0, index=6): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', '-'), ('StimType', '-'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/181c.jpg'), ('CurrentX', -75), ('CurrentY', -75), ('Jitter', 3000), ('Section', 'Encoding')])
+126.3196 	EXP 	enc_practice_feedback_interior: autoDraw = False
+126.3196 	EXP 	enc_practice_feedback_image: autoDraw = False
+126.3196 	EXP 	enc_practice_feedback_text: autoDraw = False
+126.3196 	EXP 	enc_fx_cross: pos = array([-75., -75.])
+126.3196 	EXP 	enc_fx_interior: autoDraw = True
+126.3196 	EXP 	enc_fx_cross: autoDraw = True
+129.3528 	EXP 	enc_fx_interior: autoDraw = False
+129.3528 	EXP 	enc_fx_cross: autoDraw = False
+129.3528 	EXP 	enc_fx_interior: autoDraw = False
+129.3528 	EXP 	enc_fx_cross: autoDraw = False
+129.3528 	EXP 	enc_trial_main_image: pos = array([-75., -75.])
+129.3528 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/181c.jpg'
+129.3528 	EXP 	enc_trial_interior: autoDraw = True
+129.3528 	EXP 	enc_trial_main_image: autoDraw = True
+130.1731 	DATA 	Keypress: f
+132.3528 	EXP 	enc_trial_interior: autoDraw = False
+132.3528 	EXP 	enc_trial_main_image: autoDraw = False
+132.3528 	EXP 	enc_practice_feedback_image: pos = array([-75., -75.])
+132.3528 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/181c.jpg'
+132.3528 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép nem marad.'
+132.3528 	EXP 	enc_practice_feedback_interior: autoDraw = True
+132.3528 	EXP 	enc_practice_feedback_image: autoDraw = True
+132.3528 	EXP 	enc_practice_feedback_text: autoDraw = True
+133.3203 	EXP 	New trial (rep=0, index=7): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', '-'), ('StimType', '-'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/163a.jpg'), ('CurrentX', -225), ('CurrentY', -225), ('Jitter', 800), ('Section', 'Encoding')])
+133.3361 	EXP 	enc_practice_feedback_interior: autoDraw = False
+133.3361 	EXP 	enc_practice_feedback_image: autoDraw = False
+133.3361 	EXP 	enc_practice_feedback_text: autoDraw = False
+133.3361 	EXP 	enc_fx_cross: pos = array([-225., -225.])
+133.3361 	EXP 	enc_fx_interior: autoDraw = True
+133.3361 	EXP 	enc_fx_cross: autoDraw = True
+134.1527 	EXP 	enc_fx_interior: autoDraw = False
+134.1527 	EXP 	enc_fx_cross: autoDraw = False
+134.1527 	EXP 	enc_fx_interior: autoDraw = False
+134.1527 	EXP 	enc_fx_cross: autoDraw = False
+134.1527 	EXP 	enc_trial_main_image: pos = array([-225., -225.])
+134.1527 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/163a.jpg'
+134.1527 	EXP 	enc_trial_interior: autoDraw = True
+134.1527 	EXP 	enc_trial_main_image: autoDraw = True
+134.9735 	DATA 	Keypress: j
+137.1693 	EXP 	enc_trial_interior: autoDraw = False
+137.1693 	EXP 	enc_trial_main_image: autoDraw = False
+137.1693 	EXP 	enc_practice_feedback_image: pos = array([-225., -225.])
+137.1693 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/163a.jpg'
+137.1693 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép marad.'
+137.1693 	EXP 	enc_practice_feedback_interior: autoDraw = True
+137.1693 	EXP 	enc_practice_feedback_image: autoDraw = True
+137.1693 	EXP 	enc_practice_feedback_text: autoDraw = True
+138.1364 	EXP 	New trial (rep=0, index=8): OrderedDict([('Task', 'EncodingPractice'), ('TrialType', 'LOC'), ('StimType', 'TARGET'), ('Order', 1), ('CurrentImage', 'stimuli/fractals/166a.jpg'), ('CurrentX', -75), ('CurrentY', 225), ('Jitter', 1500), ('Section', 'Encoding')])
+138.1526 	EXP 	enc_practice_feedback_interior: autoDraw = False
+138.1526 	EXP 	enc_practice_feedback_image: autoDraw = False
+138.1526 	EXP 	enc_practice_feedback_text: autoDraw = False
+138.1526 	EXP 	enc_fx_cross: pos = array([-75., 225.])
+138.1526 	EXP 	enc_fx_interior: autoDraw = True
+138.1526 	EXP 	enc_fx_cross: autoDraw = True
+139.6692 	EXP 	enc_fx_interior: autoDraw = False
+139.6692 	EXP 	enc_fx_cross: autoDraw = False
+139.6692 	EXP 	enc_fx_interior: autoDraw = False
+139.6692 	EXP 	enc_fx_cross: autoDraw = False
+139.6692 	EXP 	enc_trial_main_image: pos = array([-75., 225.])
+139.6692 	EXP 	enc_trial_main_image: image = 'stimuli/fractals/166a.jpg'
+139.6692 	EXP 	enc_trial_interior: autoDraw = True
+139.6692 	EXP 	enc_trial_main_image: autoDraw = True
+140.1404 	DATA 	Keypress: f
+142.6858 	EXP 	enc_trial_interior: autoDraw = False
+142.6858 	EXP 	enc_trial_main_image: autoDraw = False
+142.6858 	EXP 	enc_practice_feedback_image: pos = array([-75., 225.])
+142.6858 	EXP 	enc_practice_feedback_image: image = 'stimuli/fractals/166a.jpg'
+142.6858 	EXP 	enc_practice_feedback_text: text = 'Az Ön válasza:\nA kép nem marad.'
+142.6858 	EXP 	enc_practice_feedback_interior: autoDraw = True
+142.6858 	EXP 	enc_practice_feedback_image: autoDraw = True
+142.6858 	EXP 	enc_practice_feedback_text: autoDraw = True
+143.6691 	EXP 	enc_practice_feedback_interior: autoDraw = False
+143.6691 	EXP 	enc_practice_feedback_image: autoDraw = False
+143.6691 	EXP 	enc_practice_feedback_text: autoDraw = False
+143.6691 	EXP 	end_practice_text: autoDraw = True
+144.6358 	EXP 	end_practice_continue: autoDraw = True
+146.9408 	DATA 	Keypress: escape
+147.1953 	EXP 	window1: mouseVisible = True

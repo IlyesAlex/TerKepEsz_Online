@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 07, 2020, at 13:54
+    on July 07, 2020, at 15:49
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -574,7 +574,7 @@ rec_instructions_1_continue = visual.TextStim(win=win, name='rec_instructions_1_
 # Initialize components for Routine "rec_instructions_2"
 rec_instructions_2Clock = core.Clock()
 rec_instructions2_text = visual.TextStim(win=win, name='rec_instructions2_text',
-    text="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nDöntését így jelölje:\nRégi - F\nÚj - K",
+    text="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban. Ezek a képek lehetnek hasonlóak a korábban látottakhoz.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nDöntését így jelölje:\nRégi - F\nÚj - J",
     font='Arial',
     pos=(0, 0), height=0.025, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -599,7 +599,7 @@ rec_instruction_2_title = visual.TextStim(win=win, name='rec_instruction_2_title
 # Initialize components for Routine "rec_instructions_3"
 rec_instructions_3Clock = core.Clock()
 rec_instrauction_3_text = visual.TextStim(win=win, name='rec_instrauction_3_text',
-    text="A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban két csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nÚj - K",
+    text="A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban két csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban. Ez a hely lehet közeli az eredeti helyhez.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és melyik új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nÚj - J",
     font='Arial',
     pos=(0, 0), height=0.025, wrapWidth=1, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -624,7 +624,7 @@ rec_instruction_3_title = visual.TextStim(win=win, name='rec_instruction_3_title
 # Initialize components for Routine "rec_instructions_4"
 rec_instructions_4Clock = core.Clock()
 rec_instructions_4_text = visual.TextStim(win=win, name='rec_instructions_4_text',
-    text='A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban elsőként egy korábbi gyakorlásban látott képet mutatunk meg\na Galéria berendezés feladatból. Ezután vagy egy új kép, vagy egy új helyszín bemutatása fog következni.\n\nA Képfelismerés feladat alatt is hasonlóan mindig csak egy képet fogsz látni.',
+    text="A következőkben pár példával mutatjuk be Önnek, milyen hasonlóak lehetnek az új képek és helyek.\n\nA bemutatóban elsőként egy, a Galéria berendezés gyakorlása során már látott képet/helyet mutatunk Önnek, 'Régi' felirattal. \nA régi képet/helyet mindig egy új kép/hely követi a bemutatóban, 'Új' felirattal.\n\nA Képfelismerés feladat alatt szintén egyesével mutatjuk be a képeket, amelyekről el kell döntenie, hogy újak vagy régiek.",
     font='Arial',
     pos=(0, 0), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -724,7 +724,7 @@ demo_image = visual.ImageStim(
 demo_text = visual.TextStim(win=win, name='demo_text',
     text='default text',
     font='Arial',
-    pos=(0, 0.45), height=0.05, wrapWidth=None, ori=0, 
+    pos=(-0.025, 0.45), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -804,7 +804,7 @@ rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
-    text='[F - Régi]      [K - Új]',
+    text='[F - Régi]      [J - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -838,7 +838,7 @@ rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
-    text='[F - Régi]      [K - Új]',
+    text='[F - Régi]      [J - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -919,7 +919,7 @@ rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
-    text='[F - Régi]      [K - Új]',
+    text='[F - Régi]      [J - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -953,7 +953,7 @@ rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
-    text='[F - Régi]      [K - Új]',
+    text='[F - Régi]      [J - Új]',
     font='Arial',
     units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
@@ -3037,7 +3037,7 @@ for thisEnc_practice_trial in enc_practice_trials:
         feedback_text = 'Nem adott választ.'
     enc_practice_feedback_image.setPos((CurrentX, CurrentY))
     enc_practice_feedback_image.setImage(CurrentImage)
-    enc_practice_feedback_text.setPos((CurrentX, CurrentY - 200))
+    enc_practice_feedback_text.setPos((CurrentX, CurrentY - 210))
     enc_practice_feedback_text.setText(feedback_text)
     # keep track of which components have finished
     enc_practice_feedbackComponents = [enc_practice_feedback_interior, enc_practice_feedback_image, enc_practice_feedback_text]
@@ -3301,7 +3301,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 84
+    end = start + 1
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -5959,7 +5959,7 @@ for thisRec_practice_block in rec_practice_blocks:
                     win.timeOnFlip(rec_fx_key, 'tStopRefresh')  # time at next scr refresh
                     rec_fx_key.status = FINISHED
             if rec_fx_key.status == STARTED and not waitOnFlip:
-                theseKeys = rec_fx_key.getKeys(keyList=['f', 'k'], waitRelease=False)
+                theseKeys = rec_fx_key.getKeys(keyList=['f', 'j'], waitRelease=False)
                 _rec_fx_key_allKeys.extend(theseKeys)
                 if len(_rec_fx_key_allKeys):
                     rec_fx_key.keys = _rec_fx_key_allKeys[-1].name  # just the last key pressed
@@ -6129,7 +6129,7 @@ for thisRec_practice_block in rec_practice_blocks:
                     win.timeOnFlip(rec_trial_key, 'tStopRefresh')  # time at next scr refresh
                     rec_trial_key.status = FINISHED
             if rec_trial_key.status == STARTED and not waitOnFlip:
-                theseKeys = rec_trial_key.getKeys(keyList=['f', 'k'], waitRelease=False)
+                theseKeys = rec_trial_key.getKeys(keyList=['f', 'j'], waitRelease=False)
                 _rec_trial_key_allKeys.extend(theseKeys)
                 if len(_rec_trial_key_allKeys):
                     rec_trial_key.keys = _rec_trial_key_allKeys[-1].name  # just the last key pressed
@@ -6223,7 +6223,7 @@ for thisRec_practice_block in rec_practice_blocks:
         if rec_trial_key.keys == 'f':
             response = 'Az Ön válasza: Régi'
         
-        elif rec_trial_key.keys == 'k':
+        elif rec_trial_key.keys == 'j':
             response = 'Az Ön válasza: Új'
             
         feedback_text = correct_response +'\n'+ response
@@ -6548,7 +6548,7 @@ for thisRec_run in rec_runs:
         routineTimer.add(1.500000)
         # update component parameters for each repeat
         start = end
-        end = start + 18
+        end = start + 1
         selection = np.arange(start,end, step)
         if block_counter == 0:
             block_name = "Kép"
@@ -6732,7 +6732,7 @@ for thisRec_run in rec_runs:
                         win.timeOnFlip(rec_fx_key, 'tStopRefresh')  # time at next scr refresh
                         rec_fx_key.status = FINISHED
                 if rec_fx_key.status == STARTED and not waitOnFlip:
-                    theseKeys = rec_fx_key.getKeys(keyList=['f', 'k'], waitRelease=False)
+                    theseKeys = rec_fx_key.getKeys(keyList=['f', 'j'], waitRelease=False)
                     _rec_fx_key_allKeys.extend(theseKeys)
                     if len(_rec_fx_key_allKeys):
                         rec_fx_key.keys = _rec_fx_key_allKeys[-1].name  # just the last key pressed
@@ -6902,7 +6902,7 @@ for thisRec_run in rec_runs:
                         win.timeOnFlip(rec_trial_key, 'tStopRefresh')  # time at next scr refresh
                         rec_trial_key.status = FINISHED
                 if rec_trial_key.status == STARTED and not waitOnFlip:
-                    theseKeys = rec_trial_key.getKeys(keyList=['f', 'k'], waitRelease=False)
+                    theseKeys = rec_trial_key.getKeys(keyList=['f', 'j'], waitRelease=False)
                     _rec_trial_key_allKeys.extend(theseKeys)
                     if len(_rec_trial_key_allKeys):
                         rec_trial_key.keys = _rec_trial_key_allKeys[-1].name  # just the last key pressed

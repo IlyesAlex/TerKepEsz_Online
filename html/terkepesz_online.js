@@ -938,7 +938,7 @@ function experimentInit() {
   rec_instructions_1_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions_1_text',
-    text: 'A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, műalkotás válogató feladataban, és hogy ugyanott látta-e őket.\n\nA feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.',
+    text: "A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, 'Galéria berendezés' feladataban, és hogy ugyanott látta-e őket.\n\nA feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie.",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.03,  wrapWidth: undefined, ori: 0,
@@ -964,7 +964,7 @@ function experimentInit() {
   rec_instructions2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions2_text',
-    text: "A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nDöntését így jelölje:\nRégi - F\nÚj - K",
+    text: "A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.\n\nKét csoportba oszthatóak a megjelenő képek:\n - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.\n - Új: Képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban. Ezek a képek lehetnek hasonlóak a korábban látottakhoz.\n\nAz Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. \nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nDöntését így jelölje:\nRégi - F\nÚj - J",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 1, ori: 0,
@@ -1001,7 +1001,7 @@ function experimentInit() {
   rec_instrauction_3_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instrauction_3_text',
-    text: "A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban két csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és teljesen új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nÚj - K",
+    text: "A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.\nEbben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. \n\nA helyek azonban két csoportba oszthatóak:\n - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.\n - Új: Egy másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban. Ez a hely lehet közeli az eredeti helyhez.\n\nAz Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és melyik új helyen.\nA döntésre 4 másodperce lesz.\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.\n\nA döntését így jelölje:\nRégi - F\nÚj - J",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.025,  wrapWidth: 1, ori: 0,
@@ -1038,7 +1038,7 @@ function experimentInit() {
   rec_instructions_4_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_instructions_4_text',
-    text: 'A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.\n\nA bemutatóban elsőként egy korábbi gyakorlásban látott képet mutatunk meg\na Galéria berendezés feladatból. Ezután vagy egy új kép, vagy egy új helyszín bemutatása fog következni.\n\nA Képfelismerés feladat alatt is hasonlóan mindig csak egy képet fogsz látni.',
+    text: "A következőkben pár példával mutatjuk be Önnek, milyen hasonlóak lehetnek az új képek és helyek.\n\nA bemutatóban elsőként egy, a 'Galéria berendezés' feladat során már látott képet/helyet mutatunk Önnek, 'Régi' felirattal. \nA régi képet/helyet mindig egy új kép/hely követi a bemutatóban, 'Új' felirattal.\n",
     font: 'Arial',
     units: undefined, 
     pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
@@ -1172,7 +1172,7 @@ function experimentInit() {
     text: 'default text',
     font: 'Arial',
     units: undefined, 
-    pos: [0, 0.45], height: 0.05,  wrapWidth: undefined, ori: 0,
+    pos: [(- 0.025), 0.45], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1284,7 +1284,7 @@ function experimentInit() {
   rec_fx_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_fx_instructions_text',
-    text: '[F - Régi]      [K - Új]',
+    text: '[F - Régi]      [J - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1328,7 +1328,7 @@ function experimentInit() {
   rec_trial_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_trial_instructions_text',
-    text: '[F - Régi]      [K - Új]',
+    text: '[F - Régi]      [J - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1439,7 +1439,7 @@ function experimentInit() {
   rec_fx_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_fx_instructions_text',
-    text: '[F - Régi]      [K - Új]',
+    text: '[F - Régi]      [J - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -1483,7 +1483,7 @@ function experimentInit() {
   rec_trial_instructions_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'rec_trial_instructions_text',
-    text: '[F - Régi]      [K - Új]',
+    text: '[F - Régi]      [J - Új]',
     font: 'Arial',
     units: 'pix', 
     pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
@@ -4201,7 +4201,7 @@ function start_enc_runRoutineBegin(trials) {
     routineTimer.add(2.000000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 84);
+    end = (start + 1);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     run_counter = (run_counter + 1);
     end_run_text = "R\u00f6vid sz\u00fcnet\nA feladat folytat\u00e1shoz nyomja le a jobb nyilat";
@@ -5823,7 +5823,7 @@ function rec_fxRoutineEachFrame(trials) {
   }
 
     if (rec_fx_key.status === PsychoJS.Status.STARTED) {
-      let theseKeys = rec_fx_key.getKeys({keyList: ['f', 'k'], waitRelease: false});
+      let theseKeys = rec_fx_key.getKeys({keyList: ['f', 'j'], waitRelease: false});
       _rec_fx_key_allKeys = _rec_fx_key_allKeys.concat(theseKeys);
       if (_rec_fx_key_allKeys.length > 0) {
         rec_fx_key.keys = _rec_fx_key_allKeys[_rec_fx_key_allKeys.length - 1].name;  // just the last key pressed
@@ -5996,7 +5996,7 @@ function rec_trialRoutineEachFrame(trials) {
   }
 
     if (rec_trial_key.status === PsychoJS.Status.STARTED) {
-      let theseKeys = rec_trial_key.getKeys({keyList: ['f', 'k'], waitRelease: false});
+      let theseKeys = rec_trial_key.getKeys({keyList: ['f', 'j'], waitRelease: false});
       _rec_trial_key_allKeys = _rec_trial_key_allKeys.concat(theseKeys);
       if (_rec_trial_key_allKeys.length > 0) {
         rec_trial_key.keys = _rec_trial_key_allKeys[_rec_trial_key_allKeys.length - 1].name;  // just the last key pressed
@@ -6104,7 +6104,7 @@ function rec_practice_feedbackRoutineBegin(trials) {
     if ((rec_trial_key.keys === "f")) {
         response = "Az \u00d6n v\u00e1lasza: R\u00e9gi";
     } else {
-        if ((rec_trial_key.keys === "k")) {
+        if ((rec_trial_key.keys === "j")) {
             response = "Az \u00d6n v\u00e1lasza: \u00daj";
         }
     }
@@ -6286,7 +6286,7 @@ function start_rec_blockRoutineBegin(trials) {
     routineTimer.add(1.500000);
     // update component parameters for each repeat
     start = end;
-    end = (start + 18);
+    end = (start + 1);
     selection = Array.from({length: end - start}, (_, index) => index + start)
     if ((block_counter === 0)) {
         block_name = "K\u00e9p";

@@ -216,8 +216,8 @@
       <CodeComponent name="create_enc_run">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 84);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 84&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 1);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 1&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -891,7 +891,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <KeyboardComponent name="rec_fx_key">
-        <Param name="allowedKeys" updates="constant" val="'f','k'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -952,7 +952,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="Jitter/1000" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="[F - Régi]      [K - Új]" valType="str"/>
+        <Param name="text" updates="constant" val="[F - Régi]      [J - Új]" valType="str"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1009,7 +1009,7 @@
         <Param name="units" updates="None" val="pix" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="rec_trial_key">
-        <Param name="allowedKeys" updates="constant" val="'f','k'" valType="code"/>
+        <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
         <Param name="correctAns" updates="constant" val="" valType="str"/>
         <Param name="disabled" updates="None" val="False" valType="bool"/>
         <Param name="discard previous" updates="constant" val="True" valType="bool"/>
@@ -1070,7 +1070,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="4.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="[F - Régi]      [K - Új]" valType="str"/>
+        <Param name="text" updates="constant" val="[F - Régi]      [J - Új]" valType="str"/>
         <Param name="units" updates="None" val="pix" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1164,7 +1164,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.&amp;#10;&amp;#10;Két csoportba oszthatóak a megjelenő képek:&amp;#10; - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.&amp;#10; - Új: Teljesen új képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. &amp;#10;A döntésre 4 másodperce lesz.&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;Döntését így jelölje:&amp;#10;Régi - F&amp;#10;Új - K" valType="str"/>
+        <Param name="text" updates="constant" val="A Kép nevű alfeladatban azt kell eldöntenie, látta-e már ezeket a képeket a 'Galéria berendezés' feladataban.&amp;#10;&amp;#10;Két csoportba oszthatóak a megjelenő képek:&amp;#10; - Régi: Ezek a képek pontosan megegyeznek a 'Galéria berendezés' feladatban látott képek egyikével.&amp;#10; - Új: Képek, amelyek nem jelentek meg a 'Galéria berendezés' feladatban. Ezek a képek lehetnek hasonlóak a korábban látottakhoz.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép ugyanaz, mint a 'Galéria berendezés' feladatban, és melyik új. &amp;#10;A döntésre 4 másodperce lesz.&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;Döntését így jelölje:&amp;#10;Régi - F&amp;#10;Új - J" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1" valType="code"/>
       </TextComponent>
@@ -1568,7 +1568,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.&amp;#10;Ebben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. &amp;#10;&amp;#10;A helyek azonban két csoportba oszthatóak:&amp;#10; - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.&amp;#10; - Új: Egy teljesen másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és teljesen új helyen.&amp;#10;A döntésre 4 másodperce lesz.&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;A döntését így jelölje:&amp;#10;Régi - F&amp;#10;Új - K" valType="str"/>
+        <Param name="text" updates="constant" val="A Hely nevű alfeladatban azt kell eldöntenie, a képek a képernyő ugyanazon pontján jelennek-e meg, mint a 'Galéria berendezés' feladataban.&amp;#10;Ebben az alfeladatban minden kép pontos mása annak, amit az első feladatban látott. &amp;#10;&amp;#10;A helyek azonban két csoportba oszthatóak:&amp;#10; - Régi: Pontosan ugyanitt jelent meg ez a kép a 'Galéria berendezés' feladatban.&amp;#10; - Új: Egy másik helyen jelent meg ez a kép a 'Galéria berendezés' feladatban. Ez a hely lehet közeli az eredeti helyhez.&amp;#10;&amp;#10;Az Ön feladata, hogy eldöntse, melyik kép jelent meg ugyanott, és melyik új helyen.&amp;#10;A döntésre 4 másodperce lesz.&amp;#10;Minden képet nézzen meg figyelmesen, és minden képre adjon választ, akkor is, ha a döntés nehéz.&amp;#10;&amp;#10;A döntését így jelölje:&amp;#10;Régi - F&amp;#10;Új - J" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="1" valType="code"/>
       </TextComponent>
@@ -1660,7 +1660,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következőkben bemutatjuk Önnek, milyenek a régi és új, képek/helyek.&amp;#10;&amp;#10;A bemutatóban elsőként egy korábbi gyakorlásban látott képet mutatunk meg&amp;#10;a Galéria berendezés feladatból. Ezután vagy egy új kép, vagy egy új helyszín bemutatása fog következni.&amp;#10;&amp;#10;A Képfelismerés feladat alatt is hasonlóan mindig csak egy képet fogsz látni." valType="str"/>
+        <Param name="text" updates="constant" val="A következőkben pár példával mutatjuk be Önnek, milyen hasonlóak lehetnek az új képek és helyek.&amp;#10;&amp;#10;A bemutatóban elsőként egy, a Galéria berendezés gyakorlása során már látott képet/helyet mutatunk Önnek, 'Régi' felirattal. &amp;#10;A régi képet/helyet mindig egy új kép/hely követi a bemutatóban, 'Új' felirattal.&amp;#10;&amp;#10;A Képfelismerés feladat alatt szintén egyesével mutatjuk be a képeket, amelyekről el kell döntenie, hogy újak vagy régiek." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1795,7 +1795,7 @@
         <Param name="name" updates="None" val="demo_text" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, 0.45)" valType="code"/>
+        <Param name="pos" updates="constant" val="(-0.025, 0.45)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
@@ -1922,8 +1922,8 @@
       <CodeComponent name="start_block_code">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 18);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    }&amp;#10;}&amp;#10;block_counter = (block_counter + 1);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 18&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Kép&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Hely&quot;&amp;#10;block_counter = block_counter + 1" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 1);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    }&amp;#10;}&amp;#10;block_counter = (block_counter + 1);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 1&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Kép&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Hely&quot;&amp;#10;block_counter = block_counter + 1" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -2006,8 +2006,8 @@
       <CodeComponent name="rec_practice_feedback_code">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="correct_response = &quot;&quot;;&amp;#10;if ((StimType === &quot;FOIL&quot;)) {&amp;#10;    correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;} else {&amp;#10;    if ((StimType === &quot;LURE&quot;)) {&amp;#10;        correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;    } else {&amp;#10;        if ((StimType === &quot;TARGET&quot;)) {&amp;#10;            correct_response = &quot;A helyes v\u00e1lasz: R\u00e9gi&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;response = &quot;&quot;;&amp;#10;if ((rec_trial_key.keys === &quot;f&quot;)) {&amp;#10;    response = &quot;Az \u00d6n v\u00e1lasza: R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((rec_trial_key.keys === &quot;k&quot;)) {&amp;#10;        response = &quot;Az \u00d6n v\u00e1lasza: \u00daj&quot;;&amp;#10;    }&amp;#10;}&amp;#10;feedback_text = ((correct_response + &quot;\n&quot;) + response);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="correct_response = ''&amp;#10;if StimType == 'FOIL':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'LURE':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'TARGET':&amp;#10;    correct_response = 'A helyes válasz: Régi'&amp;#10;&amp;#10;response = ''&amp;#10;if rec_trial_key.keys == 'f':&amp;#10;    response = 'Az Ön válasza: Régi'&amp;#10;&amp;#10;elif rec_trial_key.keys == 'k':&amp;#10;    response = 'Az Ön válasza: Új'&amp;#10;    &amp;#10;feedback_text = correct_response +'\n'+ response&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="correct_response = &quot;&quot;;&amp;#10;if ((StimType === &quot;FOIL&quot;)) {&amp;#10;    correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;} else {&amp;#10;    if ((StimType === &quot;LURE&quot;)) {&amp;#10;        correct_response = &quot;A helyes v\u00e1lasz: \u00daj&quot;;&amp;#10;    } else {&amp;#10;        if ((StimType === &quot;TARGET&quot;)) {&amp;#10;            correct_response = &quot;A helyes v\u00e1lasz: R\u00e9gi&quot;;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;response = &quot;&quot;;&amp;#10;if ((rec_trial_key.keys === &quot;f&quot;)) {&amp;#10;    response = &quot;Az \u00d6n v\u00e1lasza: R\u00e9gi&quot;;&amp;#10;} else {&amp;#10;    if ((rec_trial_key.keys === &quot;j&quot;)) {&amp;#10;        response = &quot;Az \u00d6n v\u00e1lasza: \u00daj&quot;;&amp;#10;    }&amp;#10;}&amp;#10;feedback_text = ((correct_response + &quot;\n&quot;) + response);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="correct_response = ''&amp;#10;if StimType == 'FOIL':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'LURE':&amp;#10;    correct_response = 'A helyes válasz: Új'&amp;#10;elif StimType == 'TARGET':&amp;#10;    correct_response = 'A helyes válasz: Régi'&amp;#10;&amp;#10;response = ''&amp;#10;if rec_trial_key.keys == 'f':&amp;#10;    response = 'Az Ön válasza: Régi'&amp;#10;&amp;#10;elif rec_trial_key.keys == 'j':&amp;#10;    response = 'Az Ön válasza: Új'&amp;#10;    &amp;#10;feedback_text = correct_response +'\n'+ response&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>

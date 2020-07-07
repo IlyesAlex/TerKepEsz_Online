@@ -126,8 +126,8 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <CodeComponent name="select_encoding_trials">
-        <Param name="Begin Experiment" updates="constant" val="tables = [0,1,2]&amp;#10;np.random.shuffle(tables)&amp;#10;selected = tables.pop()&amp;#10;print('selected file {}'.format(selected))&amp;#10;selected = str(selected)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="tables = [0,1,2];&amp;#10;selected = tables[Math.floor(Math.random() * tables.length)];&amp;#10;selected = selected.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="tables = [0,1,2]&amp;#10;shuffle(tables)&amp;#10;trial_table = tables.pop()&amp;#10;print('selected file {}'.format(trial_table))&amp;#10;trial_table = str(trial_table)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="tables = [0,1,2];&amp;#10;table_ind = tables[Math.floor(Math.random() * tables.length)];&amp;#10;trial_table = table_ind.toString();&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + trial_table) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
@@ -1096,7 +1096,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, műalkotás válogató feladataban, és hogy ugyanott látta-e őket.&amp;#10;&amp;#10;A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie." valType="str"/>
+        <Param name="text" updates="constant" val="A következő feladatban ismét absztrakt képeket fog látni, és ezekről kell eldöntenie, látta-e őket az első, 'Galéria berendezés' feladataban, és hogy ugyanott látta-e őket.&amp;#10;&amp;#10;A feladatot két alfeladatra bontottuk. Az egyikben a képekről, a másikban a képek pozíciójáról kell döntenie." valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
@@ -1660,7 +1660,7 @@
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
-        <Param name="text" updates="constant" val="A következőkben pár példával mutatjuk be Önnek, milyen hasonlóak lehetnek az új képek és helyek.&amp;#10;&amp;#10;A bemutatóban elsőként egy, a Galéria berendezés gyakorlása során már látott képet/helyet mutatunk Önnek, 'Régi' felirattal. &amp;#10;A régi képet/helyet mindig egy új kép/hely követi a bemutatóban, 'Új' felirattal.&amp;#10;&amp;#10;A Képfelismerés feladat alatt szintén egyesével mutatjuk be a képeket, amelyekről el kell döntenie, hogy újak vagy régiek." valType="str"/>
+        <Param name="text" updates="constant" val="A következőkben pár példával mutatjuk be Önnek, milyen hasonlóak lehetnek az új képek és helyek.&amp;#10;&amp;#10;A bemutatóban elsőként egy, a 'Galéria berendezés' feladat során már látott képet/helyet mutatunk Önnek, 'Régi' felirattal. &amp;#10;A régi képet/helyet mindig egy új kép/hely követi a bemutatóban, 'Új' felirattal.&amp;#10;" valType="str"/>
         <Param name="units" updates="None" val="from exp settings" valType="str"/>
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>

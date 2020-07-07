@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 07, 2020, at 16:27
+    on July 07, 2020, at 16:05
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % ('pilot', expName, expInfo['da
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz_grid\\TerKepEsz_Online\\terkepesz_online_lastrun.py',
+    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz_grid\\TerKepEsz_Online\\terkepesz_online.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -203,11 +203,11 @@ start_encoding_text = visual.TextStim(win=win, name='start_encoding_text',
     languageStyle='LTR',
     depth=0.0);
 tables = [0,1,2]
-shuffle(tables)
-trial_table = tables.pop()
-print('selected file {}'.format(trial_table))
-trial_table = str(trial_table)
-stimuli_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'
+np.random.shuffle(tables)
+selected = tables.pop()
+print('selected file {}'.format(selected))
+selected = str(selected)
+stimuli_table = 'stimuli_tables/encoding_trials_'+ selected + '.csv'
 
 
 # Initialize components for Routine "enc_instructions_1"

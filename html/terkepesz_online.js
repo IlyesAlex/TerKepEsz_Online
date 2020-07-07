@@ -201,7 +201,8 @@ var lab_members;
 var start_encodingClock;
 var start_encoding_text;
 var tables;
-var selected;
+var table_ind;
+var trial_table;
 var stimuli_table;
 var enc_instructions_1Clock;
 var enc_instructions_1_text;
@@ -474,9 +475,9 @@ function experimentInit() {
   });
   
   tables = [0,1,2];
-  selected = tables[Math.floor(Math.random() * tables.length)];
-  selected = selected.toString();
-  stimuli_table = (("stimuli_tables/encoding_trials_" + selected) + ".csv");
+  table_ind = tables[Math.floor(Math.random() * tables.length)];
+  trial_table = table_ind.toString();
+  stimuli_table = (("stimuli_tables/encoding_trials_" + trial_table) + ".csv");
   
   // Initialize components for Routine "enc_instructions_1"
   enc_instructions_1Clock = new util.Clock();
@@ -518,7 +519,7 @@ function experimentInit() {
   enc_instructions_2_text = new visual.TextStim({
     win: psychoJS.window,
     name: 'enc_instructions_2_text',
-    text: 'Ez a kiállítóterem belső fala, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
+    text: 'Ez a kiállítóterem, nézze meg figyelmesen. \n\nA feladat során a képek a falra vetítve jelennek meg, azon a helyen, ahol kiállításra kerülhetnek. A képek előtt egy keresztet fog látni, ami jelzi a képek pontos helyét.\n\nDöntse el a képekről, hogy ki legyenek-e állítva a bemutatott helyen. A beválogatott képek száma nincsen korlátozva. Minden egyes képről Ön dönt. Ha több képet válogat be, mint amennyi a galériában elfér, akkor a képeket az év során felváltva állítjuk ki.\n\nMinden képet nézzen meg figyelmesen, és minden képre adjon választ. ',
     font: 'Arial',
     units: undefined, 
     pos: [(- 0.35), 0], height: 0.03,  wrapWidth: 0.5, ori: 0,

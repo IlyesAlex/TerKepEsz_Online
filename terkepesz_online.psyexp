@@ -4,9 +4,9 @@
     <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
     <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
     <Param name="Completed URL" updates="None" val="https://docs.google.com/forms/d/e/1FAIpQLSe-JyQOJB2rcwl0jYrK_pOr_J8RNK4YRzq_I4WmRa4Pfox_aA/viewform?usp=sf_link" valType="str"/>
-    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % ('pilot', expName, expInfo['date'])" valType="code"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s_%s' % (expInfo['Azonosító kód*'],'pilot', expName, expInfo['date'])" valType="code"/>
     <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
-    <Param name="Experiment info" updates="None" val="{'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': '', 'Nem*': '', 'Kor*': '', 'Oktatás éve (oktatási intézményben eltöltött összes évek száma)*': ''}" valType="code"/>
+    <Param name="Experiment info" updates="None" val="{'Azonosító kód*': '', 'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': ''}" valType="code"/>
     <Param name="Force stereo" updates="None" val="True" valType="bool"/>
     <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
     <Param name="HTML path" updates="None" val="html" valType="str"/>

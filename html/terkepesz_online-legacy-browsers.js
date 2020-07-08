@@ -17,7 +17,7 @@ psychoJS.openWindow({
 
 // store info about the experiment session:
 let expName = 'terkepesz_online';  // from the Builder filename that created this script
-let expInfo = {'Azonosító kód*': '', 'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': ''};
+let expInfo = {'Azonosító kód*': '', 'A vizsgálat feltételeibe beleegyezem. (igen/nem)*': '', 'Az adatkezelési feltételeket elfogadom. (igen/nem)*': ''};
 
 // schedule the experiment:
 psychoJS.schedule(psychoJS.gui.DlgFromDict({
@@ -331,8 +331,8 @@ function experimentInit() {
   });
   
   proceed = false;
-  consent = expInfo["A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem)."];
-  dataprotection = expInfo["Az adatkezel\u00e9si felt\u00e9teleket (https://sites.google.com/view/magnesesrezonancia/vizsg\u00e1latok/online-vizsg\u00e1lat) elfogadom (igen/nem)."];
+  consent = expInfo["A vizsg\u00e1lat felt\u00e9teleibe beleegyezem. (igen/nem)*"];
+  dataprotection = expInfo["Az adatkezel\u00e9si felt\u00e9teleket elfogadom. (igen/nem)*"];
   consent_ok = false;
   data_ok = false;
   if (((((consent === "igen") || (consent === "i")) || (consent === "Igen")) || (consent === "I"))) {
@@ -345,7 +345,7 @@ function experimentInit() {
       proceed = true;
   }
   if ((! proceed)) {
-      psychoJS.quit('Nem fogadta el a feltételeket. A vizsgálat elvégzéséhez el kell fogania az adatkezelési feltételeket és a beleegyező nyilatkozatot.', false)
+      core.quit();
   }
   
   // Initialize components for Routine "comprehension_question"

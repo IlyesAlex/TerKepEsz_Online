@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 08, 2020, at 16:54
+    on July 08, 2020, at 17:34
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -37,7 +37,7 @@ os.chdir(_thisDir)
 # Store info about the experiment session
 psychopyVersion = '2020.1.3'
 expName = 'TRK-online'  # from the Builder filename that created this script
-expInfo = {'Azonosító kód*': '', 'A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).': '', 'Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).': ''}
+expInfo = {'Azonosító kód*': '', 'A vizsgálat feltételeibe beleegyezem. (igen/nem)*': '', 'Az adatkezelési feltételeket elfogadom. (igen/nem)*': ''}
 dlg = gui.DlgFromDict(dictionary=expInfo, sortKeys=False, title=expName)
 if dlg.OK == False:
     core.quit()  # user pressed cancel
@@ -98,8 +98,8 @@ experiment_information_continue = visual.TextStim(win=win, name='experiment_info
     languageStyle='LTR',
     depth=-2.0);
 proceed = False
-consent = expInfo['A vizsgálat feltételeibe (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) beleegyezem (igen/nem).']
-dataprotection = expInfo['Az adatkezelési feltételeket (https://sites.google.com/view/magnesesrezonancia/vizsgálatok/online-vizsgálat) elfogadom (igen/nem).']
+consent = expInfo['A vizsgálat feltételeibe beleegyezem. (igen/nem)*']
+dataprotection = expInfo['Az adatkezelési feltételeket elfogadom. (igen/nem)*']
 consent_ok = False
 data_ok = False
 

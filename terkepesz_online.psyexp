@@ -127,7 +127,7 @@
       </TextComponent>
       <CodeComponent name="select_encoding_trials">
         <Param name="Begin Experiment" updates="constant" val="tables = [0,1,2]&amp;#10;shuffle(tables)&amp;#10;trial_table = tables.pop()&amp;#10;print('selected file {}'.format(trial_table))&amp;#10;trial_table = str(trial_table)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="tables = [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;];&amp;#10;table_ind = tables[Math.floor(Math.random() * tables.length)];&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + table_ind) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="tables = [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;];&amp;#10;trial_table = tables[Math.floor(Math.random() * tables.length)];&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + trial_table) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
@@ -175,8 +175,8 @@
       <CodeComponent name="select_recognition_trials">
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Routine" updates="constant" val="stimuli_table = ((&quot;stimuli_tables/recognition_trials_&quot; + selected) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="stimuli_table = 'stimuli_tables/recognition_trials_'+ selected + '.csv'" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="stimuli_table = ((&quot;stimuli_tables/recognition_trials_&quot; + trial_table) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="stimuli_table = 'stimuli_tables/recognition_trials_'+ trial_table + '.csv'" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -217,7 +217,7 @@
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 84);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 84&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 3&amp;#10;selection = np.arange(start, end, step)&amp;#10;" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
@@ -1923,7 +1923,7 @@
         <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="start = end;&amp;#10;end = (start + 18);&amp;#10;selection = Array.from({length: end - start}, (_, index) =&gt; index + start)&amp;#10;if ((block_counter === 0)) {&amp;#10;    block_name = &quot;K\u00e9p&quot;;&amp;#10;} else {&amp;#10;    if ((TrialType === &quot;LOC&quot;)) {&amp;#10;        block_name = &quot;K\u00e9p&quot;;&amp;#10;    } else {&amp;#10;        block_name = &quot;Hely&quot;;&amp;#10;    }&amp;#10;}&amp;#10;block_counter = (block_counter + 1);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 18&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Kép&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Hely&quot;&amp;#10;block_counter = block_counter + 1" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="start = end&amp;#10;end = start + 3&amp;#10;selection = np.arange(start,end, step)&amp;#10;if block_counter == 0:&amp;#10;    block_name = &quot;Kép&quot;&amp;#10;else:&amp;#10;    if TrialType == &quot;LOC&quot;:&amp;#10;        block_name = &quot;Kép&quot;&amp;#10;    else: &amp;#10;        block_name = &quot;Hely&quot;&amp;#10;block_counter = block_counter + 1" valType="extendedCode"/>
         <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>

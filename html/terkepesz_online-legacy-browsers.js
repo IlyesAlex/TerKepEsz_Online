@@ -193,7 +193,7 @@ var lab_members;
 var start_encodingClock;
 var start_encoding_text;
 var tables;
-var table_ind;
+var trial_table;
 var stimuli_table;
 var enc_instructions_1Clock;
 var enc_instructions_1_text;
@@ -466,8 +466,8 @@ function experimentInit() {
   });
   
   tables = ["0","1","2"];
-  table_ind = tables[Math.floor(Math.random() * tables.length)];
-  stimuli_table = (("stimuli_tables/encoding_trials_" + table_ind) + ".csv");
+  trial_table = tables[Math.floor(Math.random() * tables.length)];
+  stimuli_table = (("stimuli_tables/encoding_trials_" + trial_table) + ".csv");
   
   // Initialize components for Routine "enc_instructions_1"
   enc_instructions_1Clock = new util.Clock();
@@ -4589,7 +4589,7 @@ function start_recognitionRoutineBegin(trials) {
     n_runs = 4;
     run_counter = 0;
     
-    stimuli_table = (("stimuli_tables/recognition_trials_" + selected) + ".csv");
+    stimuli_table = (("stimuli_tables/recognition_trials_" + trial_table) + ".csv");
     
     // keep track of which components have finished
     start_recognitionComponents = [];

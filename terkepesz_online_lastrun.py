@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 07, 2020, at 16:50
+    on July 08, 2020, at 16:32
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -3301,7 +3301,7 @@ for thisEnc_run in enc_runs:
     routineTimer.add(2.000000)
     # update component parameters for each repeat
     start = end
-    end = start + 1
+    end = start + 84
     selection = np.arange(start, end, step)
     
     run_counter = run_counter + 1
@@ -6548,7 +6548,7 @@ for thisRec_run in rec_runs:
         routineTimer.add(1.500000)
         # update component parameters for each repeat
         start = end
-        end = start + 1
+        end = start + 18
         selection = np.arange(start,end, step)
         if block_counter == 0:
             block_name = "Kép"

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 08, 2020, at 19:16
+    on July 09, 2020, at 12:11
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -379,9 +379,9 @@ enc_trial_key = keyboard.Keyboard()
 enc_practice_feedbackClock = core.Clock()
 enc_practice_feedback_interior = visual.ImageStim(
     win=win,
-    name='enc_practice_feedback_interior', units='norm', 
+    name='enc_practice_feedback_interior', units='pix', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(2, 2),
+    ori=0, pos=(0, -0), size=(1920, 1080),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)

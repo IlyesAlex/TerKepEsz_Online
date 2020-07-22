@@ -284,7 +284,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1920, 1080)" valType="code"/>
+        <Param name="size" updates="constant" val="(2.0, 2.0)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -292,7 +292,7 @@
         <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="enc_trial_main_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -309,7 +309,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(300, 300)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.3125, 0.5556)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -317,7 +317,7 @@
         <Param name="stopVal" updates="constant" val="3.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="enc_trial_key">
         <Param name="allowedKeys" updates="constant" val="'f', 'j'" valType="code"/>
@@ -487,9 +487,9 @@
         <Param name="name" updates="None" val="lab_members" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(0, -200)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.3704)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(908, 540)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.9458, 1.0)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -497,7 +497,7 @@
         <Param name="stopVal" updates="constant" val="120.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
     </Routine>
     <Routine name="enc_instructions_1">
@@ -538,9 +538,9 @@
         <Param name="name" updates="None" val="enc_instructions_1_image" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(450, 0.0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.4688, 0.0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(600, 450)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.625, 0.8333)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -548,7 +548,7 @@
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="enc_instructions_1_key">
         <Param name="allowedKeys" updates="constant" val="'right'" valType="code"/>
@@ -631,9 +631,9 @@
         <Param name="name" updates="None" val="enc_instructions_2_image" valType="code"/>
         <Param name="opacity" updates="constant" val="1" valType="code"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
-        <Param name="pos" updates="constant" val="(425, 0)" valType="code"/>
+        <Param name="pos" updates="constant" val="(0.4427, 0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(730,442)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.7604, 0.8185)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -641,7 +641,7 @@
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="enc_instructions_2_key">
         <Param name="allowedKeys" updates="constant" val="'right'" valType="code"/>
@@ -702,7 +702,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1920, 1080)" valType="code"/>
+        <Param name="size" updates="constant" val="(2.0, 2.0)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -710,7 +710,7 @@
         <Param name="stopVal" updates="constant" val="$Jitter/1000" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <TextComponent name="enc_fx_cross">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -856,7 +856,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0,0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1920, 1080)" valType="code"/>
+        <Param name="size" updates="constant" val="(2.0, 2.0)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -864,7 +864,7 @@
         <Param name="stopVal" updates="constant" val="$Jitter/1000" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <TextComponent name="rec_fx_cross">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -973,7 +973,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1920, 1080)" valType="code"/>
+        <Param name="size" updates="constant" val="(2.0, 2.0)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -981,7 +981,7 @@
         <Param name="stopVal" updates="constant" val="4.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="rec_trial_main_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -998,7 +998,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(300,300)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.3125, 0.5556)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1006,7 +1006,7 @@
         <Param name="stopVal" updates="constant" val="4.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <KeyboardComponent name="rec_trial_key">
         <Param name="allowedKeys" updates="constant" val="'f','j'" valType="code"/>
@@ -1443,7 +1443,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1920, 1080)" valType="code"/>
+        <Param name="size" updates="constant" val="(2, 2)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1451,7 +1451,7 @@
         <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="enc_practice_feedback_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -1468,7 +1468,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(300,300)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.3125, 0.5556)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1476,7 +1476,7 @@
         <Param name="stopVal" updates="constant" val="1.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <TextComponent name="enc_practice_feedback_text">
         <Param name="color" updates="constant" val="black" valType="str"/>
@@ -1723,7 +1723,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(1920, 1080)" valType="code"/>
+        <Param name="size" updates="constant" val="(2.0, 2.0)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1731,7 +1731,7 @@
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="demo_main_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -1748,7 +1748,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(300, 300)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.3125, 0.5556)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1756,7 +1756,7 @@
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <ImageComponent name="demo_image">
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
@@ -1773,7 +1773,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(DemoX, DemoY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(300, 300)" valType="code"/>
+        <Param name="size" updates="constant" val="(0.3125, 0.5556)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1781,7 +1781,7 @@
         <Param name="stopVal" updates="constant" val="300.0" valType="code"/>
         <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
         <Param name="texture resolution" updates="constant" val="128" valType="code"/>
-        <Param name="units" updates="None" val="pix" valType="str"/>
+        <Param name="units" updates="None" val="norm" valType="str"/>
       </ImageComponent>
       <TextComponent name="demo_text">
         <Param name="color" updates="constant" val="black" valType="str"/>

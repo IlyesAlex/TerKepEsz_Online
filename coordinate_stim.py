@@ -87,17 +87,28 @@ def coordinate_maker (base, grid_len, coord, coord_type):
     coordinate = base + coord*grid_len
 
     if coord_type == "x":
-        coordinate -= 550
+        coordinate -= grid_whole_x//2
     elif coord_type == "y":
-        coordinate -= 400
+        coordinate -= grid_whole_y//2
 
     return coordinate
 
+def pix_to_norm (coord, xy):
+    if xy == "x":
+        coord_new = coord/screen_len
+    else:
+        coord_new = coord/screen_height
+
+    return coord_new
 
 ### Code
 #Pixel-values:
 base = 25
 grid_len = 150
+grid_whole_x = 1100
+grid_whole_y = 800
+screen_height = 1080
+screen_len = 1920
 
 #preparing stimulus list
 stim_fname = "StimuliTable-Encoding_3-runs_40-pairs_8-discrete-loc_12345-delays.xlsx"
@@ -139,27 +150,36 @@ for trial in stim_table.index:
         #making a Trial type object
         trial_curr = Trial(trial, combo)
 
+    trial_x = coordinate_maker(base, grid_len, trial_curr.target_x, "x")
+    trial_y = coordinate_maker(base, grid_len, trial_curr.target_y, "y")
+    lure1_x = coordinate_maker(base, grid_len, trial_curr.lure1_coord_x, "x")
+    lure1_y = coordinate_maker(base, grid_len, trial_curr.lure1_coord_y, "y")
+    lure2_x = coordinate_maker(base, grid_len, trial_curr.lure2_coord_x, "x")
+    lure2_y = coordinate_maker(base, grid_len, trial_curr.lure2_coord_y, "y")
+    foil_x = coordinate_maker(base, grid_len, trial_curr.foil_coord_x, "x")
+    foil_y = coordinate_maker(base, grid_len, trial_curr.foil_coord_y, "y")
+
     #choosing target coordinates
-    stim_table.at[trial, "Xcoordinate"] = coordinate_maker(base, grid_len, trial_curr.target_x, "x")
-    stim_table.at[trial, "Ycoordinate"] = coordinate_maker(base, grid_len, trial_curr.target_y, "y")
+    stim_table.at[trial, "Xcoordinate"] = pix_to_norm(trial_x, "x")
+    stim_table.at[trial, "Ycoordinate"] = pix_to_norm(trial_y, "y")
 
     #assigning them to table
-    stim_table.at[trial, "Xcoordinate_lure1"] = coordinate_maker(base, grid_len, trial_curr.lure1_coord_x, "x")
-    stim_table.at[trial, "Ycoordinate_lure1"] = coordinate_maker(base, grid_len, trial_curr.lure1_coord_y, "y")
-    stim_table.at[trial, "Xcoordinate_lure2"] = coordinate_maker(base, grid_len, trial_curr.lure2_coord_x, "x")
-    stim_table.at[trial, "Ycoordinate_lure2"] = coordinate_maker(base, grid_len, trial_curr.lure2_coord_y, "y")
-    stim_table.at[trial, "Xcoordinate_foil"] = coordinate_maker(base, grid_len, trial_curr.foil_coord_x, "x")
-    stim_table.at[trial, "Ycoordinate_foil"] = coordinate_maker(base, grid_len, trial_curr.foil_coord_y, "y")
+    stim_table.at[trial, "Xcoordinate_lure1"] = pix_to_norm(lure1_x, "x")
+    stim_table.at[trial, "Ycoordinate_lure1"] = pix_to_norm(lure1_y, "y")
+    stim_table.at[trial, "Xcoordinate_lure2"] = pix_to_norm(lure2_x, "x")
+    stim_table.at[trial, "Ycoordinate_lure2"] = pix_to_norm(lure2_y, "y")
+    stim_table.at[trial, "Xcoordinate_foil"] = pix_to_norm(foil_x, "x")
+    stim_table.at[trial, "Ycoordinate_foil"] = pix_to_norm(foil_y, "y")
 
     #assigning to delayed pairs
-    stim_table.at[trial + delay_val, "Xcoordinate"] = coordinate_maker(base, grid_len, trial_curr.target_x, "x")
-    stim_table.at[trial + delay_val, "Ycoordinate"] = coordinate_maker(base, grid_len, trial_curr.target_y, "y")
-    stim_table.at[trial + delay_val, "Xcoordinate_lure1"] = coordinate_maker(base, grid_len, trial_curr.lure1_coord_x, "x")
-    stim_table.at[trial + delay_val, "Ycoordinate_lure1"] = coordinate_maker(base, grid_len, trial_curr.lure1_coord_y, "y")
-    stim_table.at[trial + delay_val, "Xcoordinate_lure2"] = coordinate_maker(base, grid_len, trial_curr.lure2_coord_x, "x")
-    stim_table.at[trial + delay_val, "Ycoordinate_lure2"] = coordinate_maker(base, grid_len, trial_curr.lure2_coord_y, "y")
-    stim_table.at[trial + delay_val, "Xcoordinate_foil"] = coordinate_maker(base, grid_len, trial_curr.foil_coord_x, "x")
-    stim_table.at[trial + delay_val, "Ycoordinate_foil"] = coordinate_maker(base, grid_len, trial_curr.foil_coord_y, "y")
+    stim_table.at[trial + delay_val, "Xcoordinate"] = pix_to_norm(trial_x, "x")
+    stim_table.at[trial + delay_val, "Ycoordinate"] = pix_to_norm(trial_y, "y")
+    stim_table.at[trial + delay_val, "Xcoordinate_lure1"] = pix_to_norm(lure1_x, "x")
+    stim_table.at[trial + delay_val, "Ycoordinate_lure1"] = pix_to_norm(lure1_y, "y")
+    stim_table.at[trial + delay_val, "Xcoordinate_lure2"] = pix_to_norm(lure2_x, "x")
+    stim_table.at[trial + delay_val, "Ycoordinate_lure2"] = pix_to_norm(lure2_y, "y")
+    stim_table.at[trial + delay_val, "Xcoordinate_foil"] = pix_to_norm(foil_x, "x")
+    stim_table.at[trial + delay_val, "Ycoordinate_foil"] = pix_to_norm(foil_y, "y")
 
 
 #print for fun

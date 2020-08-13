@@ -445,9 +445,9 @@ function experimentInit() {
   
   lab_members = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'lab_members', units : 'pix', 
+    name : 'lab_members', units : 'norm', 
     image : 'stimuli/lab_members.jpg', mask : undefined,
-    ori : 0, pos : [0, (- 200)], size : [908, 540],
+    ori : 0, pos : [0, (- 0.3704)], size : [0.9458, 1.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
@@ -484,9 +484,9 @@ function experimentInit() {
   
   enc_instructions_1_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_instructions_1_image', units : 'pix', 
+    name : 'enc_instructions_1_image', units : 'norm', 
     image : 'stimuli/GalleryBuildingFromOutside.jpg', mask : undefined,
-    ori : 0, pos : [450, 0.0], size : [600, 450],
+    ori : 0, pos : [0.4688, 0.0], size : [0.625, 0.8333],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -519,9 +519,9 @@ function experimentInit() {
   
   enc_instructions_2_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_instructions_2_image', units : 'pix', 
+    name : 'enc_instructions_2_image', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [425, 0], size : [730, 442],
+    ori : 0, pos : [0.4427, 0], size : [0.7604, 0.8185],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -647,9 +647,9 @@ function experimentInit() {
   enc_fxClock = new util.Clock();
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_interior', units : 'pix', 
+    name : 'enc_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -671,18 +671,18 @@ function experimentInit() {
   enc_trialClock = new util.Clock();
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_interior', units : 'pix', 
+    name : 'enc_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
   enc_trial_main_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_main_image', units : 'pix', 
+    name : 'enc_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -693,18 +693,18 @@ function experimentInit() {
   enc_practice_feedbackClock = new util.Clock();
   enc_practice_feedback_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_practice_feedback_interior', units : 'pix', 
+    name : 'enc_practice_feedback_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2, 2],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_practice_feedback_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_practice_feedback_image', units : 'pix', 
+    name : 'enc_practice_feedback_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -714,8 +714,8 @@ function experimentInit() {
     name: 'enc_practice_feedback_text',
     text: 'default text',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 0], height: 25,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -763,9 +763,9 @@ function experimentInit() {
   enc_fxClock = new util.Clock();
   enc_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_fx_interior', units : 'pix', 
+    name : 'enc_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -787,18 +787,18 @@ function experimentInit() {
   enc_trialClock = new util.Clock();
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_interior', units : 'pix', 
+    name : 'enc_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
   enc_trial_main_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'enc_trial_main_image', units : 'pix', 
+    name : 'enc_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1132,27 +1132,27 @@ function experimentInit() {
   demoClock = new util.Clock();
   demo_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'demo_interior', units : 'pix', 
+    name : 'demo_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
   demo_main_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'demo_main_image', units : 'pix', 
+    name : 'demo_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
   demo_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'demo_image', units : 'pix', 
+    name : 'demo_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -1241,9 +1241,9 @@ function experimentInit() {
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_interior', units : 'pix', 
+    name : 'rec_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [1920, 1080],
+    ori : 0, pos : [0, 0], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1266,8 +1266,8 @@ function experimentInit() {
     name: 'rec_fx_text_block',
     text: 'default text',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1277,8 +1277,8 @@ function experimentInit() {
     name: 'rec_fx_instructions_text',
     text: '[F - Régi]      [J - Új]',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1287,18 +1287,18 @@ function experimentInit() {
   rec_trialClock = new util.Clock();
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_interior', units : 'pix', 
+    name : 'rec_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
   rec_trial_main_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_main_image', units : 'pix', 
+    name : 'rec_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1310,8 +1310,8 @@ function experimentInit() {
     name: 'rec_trial_text_block',
     text: 'default text',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1321,8 +1321,8 @@ function experimentInit() {
     name: 'rec_trial_instructions_text',
     text: '[F - Régi]      [J - Új]',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1396,9 +1396,9 @@ function experimentInit() {
   rec_fxClock = new util.Clock();
   rec_fx_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_fx_interior', units : 'pix', 
+    name : 'rec_fx_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, 0], size : [1920, 1080],
+    ori : 0, pos : [0, 0], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
@@ -1421,8 +1421,8 @@ function experimentInit() {
     name: 'rec_fx_text_block',
     text: 'default text',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1432,8 +1432,8 @@ function experimentInit() {
     name: 'rec_fx_instructions_text',
     text: '[F - Régi]      [J - Új]',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -1442,18 +1442,18 @@ function experimentInit() {
   rec_trialClock = new util.Clock();
   rec_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_interior', units : 'pix', 
+    name : 'rec_trial_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [1920, 1080],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : 0.0 
   });
   rec_trial_main_image = new visual.ImageStim({
     win : psychoJS.window,
-    name : 'rec_trial_main_image', units : 'pix', 
+    name : 'rec_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [300, 300],
+    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1465,8 +1465,8 @@ function experimentInit() {
     name: 'rec_trial_text_block',
     text: 'default text',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 470.0], height: 30,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0.87], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -3.0 
   });
@@ -1476,8 +1476,8 @@ function experimentInit() {
     name: 'rec_trial_instructions_text',
     text: '[F - Régi]      [J - Új]',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, (- 450.0)], height: 25,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, (- 0.833)], height: 0.05,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -4.0 
   });
@@ -3959,7 +3959,7 @@ function enc_practice_feedbackRoutineBegin(trials) {
     
     enc_practice_feedback_image.setPos([CurrentX, CurrentY]);
     enc_practice_feedback_image.setImage(CurrentImage);
-    enc_practice_feedback_text.setPos([CurrentX, (CurrentY - 210)]);
+    enc_practice_feedback_text.setPos([CurrentX, (CurrentY - 0.4)]);
     enc_practice_feedback_text.setText(feedback_text);
     // keep track of which components have finished
     enc_practice_feedbackComponents = [];

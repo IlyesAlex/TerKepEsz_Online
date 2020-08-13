@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on July 09, 2020, at 12:11
+    on August 13, 2020, at 18:01
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -186,9 +186,9 @@ lab_introduction_continue = visual.TextStim(win=win, name='lab_introduction_cont
     depth=-2.0);
 lab_members = visual.ImageStim(
     win=win,
-    name='lab_members', units='pix', 
+    name='lab_members', units='norm', 
     image='stimuli/lab_members.jpg', mask=None,
-    ori=0, pos=(0, -200), size=(908, 540),
+    ori=0, pos=(0, -0.3704), size=(0.9458, 1.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-3.0)
@@ -221,9 +221,9 @@ enc_instructions_1_text = visual.TextStim(win=win, name='enc_instructions_1_text
     depth=0.0);
 enc_instructions_1_image = visual.ImageStim(
     win=win,
-    name='enc_instructions_1_image', units='pix', 
+    name='enc_instructions_1_image', units='norm', 
     image='stimuli/GalleryBuildingFromOutside.jpg', mask=None,
-    ori=0, pos=(450, 0.0), size=(600, 450),
+    ori=0, pos=(0.4688, 0.0), size=(0.625, 0.8333),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -247,9 +247,9 @@ enc_instructions_2_text = visual.TextStim(win=win, name='enc_instructions_2_text
     depth=0.0);
 enc_instructions_2_image = visual.ImageStim(
     win=win,
-    name='enc_instructions_2_image', units='pix', 
+    name='enc_instructions_2_image', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(425, 0), size=(730,442),
+    ori=0, pos=(0.4427, 0), size=(0.7604, 0.8185),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -340,9 +340,9 @@ start_practice_text = visual.TextStim(win=win, name='start_practice_text',
 enc_fxClock = core.Clock()
 enc_fx_interior = visual.ImageStim(
     win=win,
-    name='enc_fx_interior', units='pix', 
+    name='enc_fx_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -359,17 +359,17 @@ enc_fx_key = keyboard.Keyboard()
 enc_trialClock = core.Clock()
 enc_trial_interior = visual.ImageStim(
     win=win,
-    name='enc_trial_interior', units='pix', 
+    name='enc_trial_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 enc_trial_main_image = visual.ImageStim(
     win=win,
-    name='enc_trial_main_image', units='pix', 
+    name='enc_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300, 300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -379,24 +379,24 @@ enc_trial_key = keyboard.Keyboard()
 enc_practice_feedbackClock = core.Clock()
 enc_practice_feedback_interior = visual.ImageStim(
     win=win,
-    name='enc_practice_feedback_interior', units='pix', 
+    name='enc_practice_feedback_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2, 2),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 enc_practice_feedback_image = visual.ImageStim(
     win=win,
-    name='enc_practice_feedback_image', units='pix', 
+    name='enc_practice_feedback_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300,300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 enc_practice_feedback_text = visual.TextStim(win=win, name='enc_practice_feedback_text',
     text='default text',
     font='Arial',
-    units='pix', pos=[0,0], height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=[0,0], height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
@@ -433,9 +433,9 @@ start_enc_run_text = visual.TextStim(win=win, name='start_enc_run_text',
 enc_fxClock = core.Clock()
 enc_fx_interior = visual.ImageStim(
     win=win,
-    name='enc_fx_interior', units='pix', 
+    name='enc_fx_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -452,17 +452,17 @@ enc_fx_key = keyboard.Keyboard()
 enc_trialClock = core.Clock()
 enc_trial_interior = visual.ImageStim(
     win=win,
-    name='enc_trial_interior', units='pix', 
+    name='enc_trial_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 enc_trial_main_image = visual.ImageStim(
     win=win,
-    name='enc_trial_main_image', units='pix', 
+    name='enc_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300, 300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -699,25 +699,25 @@ demo_start_text = visual.TextStim(win=win, name='demo_start_text',
 demoClock = core.Clock()
 demo_interior = visual.ImageStim(
     win=win,
-    name='demo_interior', units='pix', 
+    name='demo_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 demo_main_image = visual.ImageStim(
     win=win,
-    name='demo_main_image', units='pix', 
+    name='demo_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300, 300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 demo_image = visual.ImageStim(
     win=win,
-    name='demo_image', units='pix', 
+    name='demo_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300, 300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -782,9 +782,9 @@ rec_practice_block_text = visual.TextStim(win=win, name='rec_practice_block_text
 rec_fxClock = core.Clock()
 rec_fx_interior = visual.ImageStim(
     win=win,
-    name='rec_fx_interior', units='pix', 
+    name='rec_fx_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0,0), size=(1920, 1080),
+    ori=0, pos=(0,0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -799,14 +799,14 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
     text='[F - Régi]      [J - Új]',
     font='Arial',
-    units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -815,17 +815,17 @@ rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_te
 rec_trialClock = core.Clock()
 rec_trial_interior = visual.ImageStim(
     win=win,
-    name='rec_trial_interior', units='pix', 
+    name='rec_trial_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 rec_trial_main_image = visual.ImageStim(
     win=win,
-    name='rec_trial_main_image', units='pix', 
+    name='rec_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300,300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -833,14 +833,14 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
     text='[F - Régi]      [J - Új]',
     font='Arial',
-    units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -897,9 +897,9 @@ start_rec_block_text = visual.TextStim(win=win, name='start_rec_block_text',
 rec_fxClock = core.Clock()
 rec_fx_interior = visual.ImageStim(
     win=win,
-    name='rec_fx_interior', units='pix', 
+    name='rec_fx_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0,0), size=(1920, 1080),
+    ori=0, pos=(0,0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
@@ -914,14 +914,14 @@ rec_fx_key = keyboard.Keyboard()
 rec_fx_text_block = visual.TextStim(win=win, name='rec_fx_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_text',
     text='[F - Régi]      [J - Új]',
     font='Arial',
-    units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -930,17 +930,17 @@ rec_fx_instructions_text = visual.TextStim(win=win, name='rec_fx_instructions_te
 rec_trialClock = core.Clock()
 rec_trial_interior = visual.ImageStim(
     win=win,
-    name='rec_trial_interior', units='pix', 
+    name='rec_trial_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(1920, 1080),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=0.0)
 rec_trial_main_image = visual.ImageStim(
     win=win,
-    name='rec_trial_main_image', units='pix', 
+    name='rec_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(300,300),
+    ori=0, pos=[0,0], size=(0.3125, 0.5556),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -948,14 +948,14 @@ rec_trial_key = keyboard.Keyboard()
 rec_trial_text_block = visual.TextStim(win=win, name='rec_trial_text_block',
     text='default text',
     font='Arial',
-    units='pix', pos=(0, 470.0), height=30, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, 0.87), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-3.0);
 rec_trial_instructions_text = visual.TextStim(win=win, name='rec_trial_instructions_text',
     text='[F - Régi]      [J - Új]',
     font='Arial',
-    units='pix', pos=(0, -450.0), height=25, wrapWidth=None, ori=0, 
+    units='norm', pos=(0, -0.833), height=0.05, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-4.0);
@@ -3037,7 +3037,7 @@ for thisEnc_practice_trial in enc_practice_trials:
         feedback_text = 'Nem adott választ.'
     enc_practice_feedback_image.setPos((CurrentX, CurrentY))
     enc_practice_feedback_image.setImage(CurrentImage)
-    enc_practice_feedback_text.setPos((CurrentX, CurrentY - 210))
+    enc_practice_feedback_text.setPos((CurrentX, CurrentY - 0.4))
     enc_practice_feedback_text.setText(feedback_text)
     # keep track of which components have finished
     enc_practice_feedbackComponents = [enc_practice_feedback_interior, enc_practice_feedback_image, enc_practice_feedback_text]

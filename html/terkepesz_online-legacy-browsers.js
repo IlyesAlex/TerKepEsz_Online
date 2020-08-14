@@ -659,8 +659,8 @@ function experimentInit() {
     name: 'enc_fx_cross',
     text: '+',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -775,8 +775,8 @@ function experimentInit() {
     name: 'enc_fx_cross',
     text: '+',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -1253,8 +1253,8 @@ function experimentInit() {
     name: 'rec_fx_cross',
     text: '+',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });
@@ -1408,8 +1408,8 @@ function experimentInit() {
     name: 'rec_fx_cross',
     text: '+',
     font: 'Arial',
-    units: 'pix', 
-    pos: [0, 0], height: 60,  wrapWidth: undefined, ori: 0,
+    units: 'norm', 
+    pos: [0, 0], height: 0.1,  wrapWidth: undefined, ori: 0,
     color: new util.Color('black'),  opacity: 1,
     depth: -1.0 
   });

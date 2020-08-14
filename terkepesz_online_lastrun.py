@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 13, 2020, at 18:26
+    on August 14, 2020, at 13:52
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -349,7 +349,7 @@ enc_fx_interior = visual.ImageStim(
 enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
+    units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -442,7 +442,7 @@ enc_fx_interior = visual.ImageStim(
 enc_fx_cross = visual.TextStim(win=win, name='enc_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
+    units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -791,7 +791,7 @@ rec_fx_interior = visual.ImageStim(
 rec_fx_cross = visual.TextStim(win=win, name='rec_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
+    units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);
@@ -906,7 +906,7 @@ rec_fx_interior = visual.ImageStim(
 rec_fx_cross = visual.TextStim(win=win, name='rec_fx_cross',
     text='+',
     font='Arial',
-    units='pix', pos=[0,0], height=60, wrapWidth=None, ori=0, 
+    units='norm', pos=[0,0], height=0.1, wrapWidth=None, ori=0, 
     color='black', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-1.0);

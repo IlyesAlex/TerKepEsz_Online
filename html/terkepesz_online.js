@@ -224,13 +224,13 @@ var enc_fx_interior;
 var enc_fx_cross;
 var enc_fx_key;
 var enc_trialClock;
-var enc_trial_interior;
-var enc_trial_main_image;
-var enc_trial_key;
 var w_size;
 var x_size;
 var y_size;
 var scr_resolution;
+var enc_trial_interior;
+var enc_trial_main_image;
+var enc_trial_key;
 var enc_practice_feedbackClock;
 var enc_practice_feedback_interior;
 var enc_practice_feedback_image;
@@ -681,6 +681,13 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_trial"
   enc_trialClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'enc_trial_interior', units : 'norm', 
@@ -688,7 +695,7 @@ function experimentInit() {
     ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_trial_main_image = new visual.ImageStim({
     win : psychoJS.window,
@@ -697,16 +704,9 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : -2.0 
   });
   enc_trial_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  w_size = psychoJS.window.size;
-  
-  x_size = w_size[0];
-  y_size = w_size[1];
-  
-  scr_resolution = (x_size / y_size);
   
   // Initialize components for Routine "enc_practice_feedback"
   enc_practice_feedbackClock = new util.Clock();
@@ -804,6 +804,13 @@ function experimentInit() {
   
   // Initialize components for Routine "enc_trial"
   enc_trialClock = new util.Clock();
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   enc_trial_interior = new visual.ImageStim({
     win : psychoJS.window,
     name : 'enc_trial_interior', units : 'norm', 
@@ -811,7 +818,7 @@ function experimentInit() {
     ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : 0.0 
+    texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_trial_main_image = new visual.ImageStim({
     win : psychoJS.window,
@@ -820,16 +827,9 @@ function experimentInit() {
     ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
-    texRes : 128, interpolate : true, depth : -1.0 
+    texRes : 128, interpolate : true, depth : -2.0 
   });
   enc_trial_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
-  
-  w_size = psychoJS.window.size;
-  
-  x_size = w_size[0];
-  y_size = w_size[1];
-  
-  scr_resolution = (x_size / y_size);
   
   // Initialize components for Routine "comprehension_question"
   comprehension_questionClock = new util.Clock();
@@ -3803,12 +3803,6 @@ function enc_trialRoutineBegin(trials) {
     frameN = -1;
     routineTimer.add(3.000000);
     // update component parameters for each repeat
-    enc_trial_main_image.setPos([CurrentX, CurrentY]);
-    enc_trial_main_image.setSize([0.3125, (0.3125 * scr_resolution)]);
-    enc_trial_main_image.setImage(CurrentImage);
-    enc_trial_key.keys = undefined;
-    enc_trial_key.rt = undefined;
-    _enc_trial_key_allKeys = [];
     w_size = psychoJS.window.size;
     
     x_size = w_size[0];
@@ -3816,6 +3810,12 @@ function enc_trialRoutineBegin(trials) {
     
     scr_resolution = (x_size / y_size);
     
+    enc_trial_main_image.setPos([CurrentX, CurrentY]);
+    enc_trial_main_image.setSize([0.3125, (0.3125 * scr_resolution)]);
+    enc_trial_main_image.setImage(CurrentImage);
+    enc_trial_key.keys = undefined;
+    enc_trial_key.rt = undefined;
+    _enc_trial_key_allKeys = [];
     // keep track of which components have finished
     enc_trialComponents = [];
     enc_trialComponents.push(enc_trial_interior);

@@ -1862,7 +1862,7 @@ function enc_practice_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: 'stimuli_tables/encoding_practice_trials.csv',
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/encoding_practice_trials.csv', '[1:3]'),
     seed: undefined, name: 'enc_practice_trials'
   });
   psychoJS.experiment.addLoop(enc_practice_trials); // add the loop to the experiment
@@ -1942,7 +1942,7 @@ function enc_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, selection),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, '[1:4]'),
     seed: undefined, name: 'enc_trials'
   });
   psychoJS.experiment.addLoop(enc_trials); // add the loop to the experiment
@@ -2136,7 +2136,7 @@ function rec_practice_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', rec_practice_block),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, 'stimuli_tables/recognition_practice_trials.csv', '[1:3]'),
     seed: undefined, name: 'rec_practice_trials'
   });
   psychoJS.experiment.addLoop(rec_practice_trials); // add the loop to the experiment
@@ -2251,7 +2251,7 @@ function rec_trialsLoopBegin(thisScheduler) {
     psychoJS: psychoJS,
     nReps: 1, method: TrialHandler.Method.SEQUENTIAL,
     extraInfo: expInfo, originPath: undefined,
-    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, selection),
+    trialList: TrialHandler.importConditions(psychoJS.serverManager, stimuli_table, '[1:4]'),
     seed: undefined, name: 'rec_trials'
   });
   psychoJS.experiment.addLoop(rec_trials); // add the loop to the experiment

@@ -706,7 +706,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_practice_feedback_interior', units : 'norm', 
     image : 'stimuli/GalleryInterior.png', mask : undefined,
-    ori : 0, pos : [0, (- 0)], size : [2, 2],
+    ori : 0, pos : [0, (- 0)], size : [2.0, 2.0],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 

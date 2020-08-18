@@ -190,6 +190,10 @@ var lab_thanks;
 var lab_key;
 var lab_introduction_continue;
 var lab_members;
+var w_size;
+var x_size;
+var y_size;
+var scr_resolution;
 var start_encodingClock;
 var start_encoding_text;
 var tables;
@@ -452,6 +456,13 @@ function experimentInit() {
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -3.0 
   });
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
+  
   // Initialize components for Routine "start_encoding"
   start_encodingClock = new util.Clock();
   start_encoding_text = new visual.TextStim({
@@ -682,7 +693,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -704,7 +715,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_practice_feedback_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -798,7 +809,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1143,7 +1154,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'demo_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1152,7 +1163,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'demo_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -1298,7 +1309,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rec_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1453,7 +1464,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rec_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, 0.5556],
+    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -6735,6 +6746,8 @@ function quitPsychoJS(message, isCompleted) {
   if (psychoJS.experiment.isEntryEmpty()) {
     psychoJS.experiment.nextEntry();
   }
+  
+  
   
   
   

@@ -2851,10 +2851,6 @@ function consentRoutineEnd(trials) {
 
 
 var _lab_key_allKeys;
-var w_size;
-var x_size;
-var y_size;
-var scr_resolution;
 var lab_introductionComponents;
 function lab_introductionRoutineBegin(trials) {
   return function () {
@@ -2867,13 +2863,6 @@ function lab_introductionRoutineBegin(trials) {
     lab_key.keys = undefined;
     lab_key.rt = undefined;
     _lab_key_allKeys = [];
-    w_size = psychoJS.window.size;
-    
-    x_size = w_size[0];
-    y_size = w_size[1];
-    
-    scr_resolution = (x_size / y_size);
-    
     // keep track of which components have finished
     lab_introductionComponents = [];
     lab_introductionComponents.push(lab_thanks);
@@ -3787,6 +3776,10 @@ function enc_fxRoutineEnd(trials) {
 
 
 var _enc_trial_key_allKeys;
+var w_size;
+var x_size;
+var y_size;
+var scr_resolution;
 var enc_trialComponents;
 function enc_trialRoutineBegin(trials) {
   return function () {
@@ -3801,6 +3794,13 @@ function enc_trialRoutineBegin(trials) {
     enc_trial_key.keys = undefined;
     enc_trial_key.rt = undefined;
     _enc_trial_key_allKeys = [];
+    w_size = psychoJS.window.size;
+    
+    x_size = w_size[0];
+    y_size = w_size[1];
+    
+    scr_resolution = (x_size / y_size);
+    
     // keep track of which components have finished
     enc_trialComponents = [];
     enc_trialComponents.push(enc_trial_interior);

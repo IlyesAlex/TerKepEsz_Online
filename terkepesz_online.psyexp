@@ -309,7 +309,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -338,11 +338,11 @@
         <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
       </KeyboardComponent>
       <CodeComponent name="get_size">
-        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
-        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="w_size = psychoJS.window.size;&amp;#10;&amp;#10;x_size = w_size[0];&amp;#10;y_size = w_size[1];&amp;#10;&amp;#10;scr_resolution = (x_size / y_size);&amp;#10;" valType="extendedCode"/>
-        <Param name="Begin Routine" updates="constant" val="w_size = Window.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
-        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Begin Routine" updates="constant" val="w_size = win.size&amp;#10;&amp;#10;x_size = w_size[0]&amp;#10;y_size = w_size[1]&amp;#10;&amp;#10;scr_resolution = x_size/y_size" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Both" valType="str"/>
         <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
         <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
@@ -1013,7 +1013,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1483,7 +1483,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1763,7 +1763,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(CurrentX, CurrentY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>
@@ -1788,7 +1788,7 @@
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="pos" updates="set every repeat" val="(DemoX, DemoY)" valType="code"/>
         <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
-        <Param name="size" updates="constant" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
+        <Param name="size" updates="set every repeat" val="(0.3125, 0.3125*scr_resolution)" valType="code"/>
         <Param name="startEstim" updates="None" val="" valType="code"/>
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="startVal" updates="None" val="0.0" valType="code"/>

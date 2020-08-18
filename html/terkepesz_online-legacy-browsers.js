@@ -219,6 +219,10 @@ var enc_trialClock;
 var enc_trial_interior;
 var enc_trial_main_image;
 var enc_trial_key;
+var w_size;
+var x_size;
+var y_size;
+var scr_resolution;
 var enc_practice_feedbackClock;
 var enc_practice_feedback_interior;
 var enc_practice_feedback_image;
@@ -682,12 +686,19 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_trial_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
   
   // Initialize components for Routine "enc_practice_feedback"
   enc_practice_feedbackClock = new util.Clock();
@@ -704,7 +715,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_practice_feedback_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -798,12 +809,19 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'enc_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
   });
   enc_trial_key = new core.Keyboard({psychoJS: psychoJS, clock: new util.Clock(), waitForStart: true});
+  
+  w_size = psychoJS.window.size;
+  
+  x_size = w_size[0];
+  y_size = w_size[1];
+  
+  scr_resolution = (x_size / y_size);
   
   // Initialize components for Routine "comprehension_question"
   comprehension_questionClock = new util.Clock();
@@ -1143,7 +1161,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'demo_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1152,7 +1170,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'demo_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -2.0 
@@ -1298,7 +1316,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rec_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -1453,7 +1471,7 @@ function experimentInit() {
     win : psychoJS.window,
     name : 'rec_trial_main_image', units : 'norm', 
     image : undefined, mask : undefined,
-    ori : 0, pos : [0, 0], size : [0.3125, (0.3125 * scr_resolution)],
+    ori : 0, pos : [0, 0], size : 1.0,
     color : new util.Color([1, 1, 1]), opacity : 1,
     flipHoriz : false, flipVert : false,
     texRes : 128, interpolate : true, depth : -1.0 
@@ -3795,10 +3813,6 @@ function enc_fxRoutineEnd(trials) {
 
 
 var _enc_trial_key_allKeys;
-var w_size;
-var x_size;
-var y_size;
-var scr_resolution;
 var enc_trialComponents;
 function enc_trialRoutineBegin(trials) {
   return function () {
@@ -3809,6 +3823,7 @@ function enc_trialRoutineBegin(trials) {
     routineTimer.add(3.000000);
     // update component parameters for each repeat
     enc_trial_main_image.setPos([CurrentX, CurrentY]);
+    enc_trial_main_image.setSize([0.3125, (0.3125 * scr_resolution)]);
     enc_trial_main_image.setImage(CurrentImage);
     enc_trial_key.keys = undefined;
     enc_trial_key.rt = undefined;
@@ -3969,6 +3984,7 @@ function enc_practice_feedbackRoutineBegin(trials) {
     }
     
     enc_practice_feedback_image.setPos([CurrentX, CurrentY]);
+    enc_practice_feedback_image.setSize([0.3125, (0.3125 * scr_resolution)]);
     enc_practice_feedback_image.setImage(CurrentImage);
     enc_practice_feedback_text.setPos([CurrentX, (CurrentY - 0.4)]);
     enc_practice_feedback_text.setText(feedback_text);
@@ -5368,8 +5384,10 @@ function demoRoutineBegin(trials) {
     routineTimer.add(300.000000);
     // update component parameters for each repeat
     demo_main_image.setPos([CurrentX, CurrentY]);
+    demo_main_image.setSize([0.3125, (0.3125 * scr_resolution)]);
     demo_main_image.setImage(CurrentImage);
     demo_image.setPos([DemoX, DemoY]);
+    demo_image.setSize([0.3125, (0.3125 * scr_resolution)]);
     demo_image.setImage(DemoImage);
     demo_text.setText(DemoText);
     demo_key.keys = undefined;
@@ -5964,6 +5982,7 @@ function rec_trialRoutineBegin(trials) {
     routineTimer.add(4.000000);
     // update component parameters for each repeat
     rec_trial_main_image.setPos([CurrentX, CurrentY]);
+    rec_trial_main_image.setSize([0.3125, (0.3125 * scr_resolution)]);
     rec_trial_main_image.setImage(CurrentImage);
     rec_trial_key.keys = undefined;
     rec_trial_key.rt = undefined;

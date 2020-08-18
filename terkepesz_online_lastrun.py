@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.1.3),
-    on August 14, 2020, at 13:52
+    on augusztus 18, 2020, at 11:55
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -51,7 +51,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s_%s' % (expInfo['Azonosító kód*
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='D:\\Zsuzsa\\HCCCL\\experiment\\computer_based_tasks\\terkepesz_grid\\TerKepEsz_Online\\terkepesz_online_lastrun.py',
+    originPath='C:\\_ALEX_\\_Munka\\MTA\\programming\\main_task_online\\terkepesz\\terkepesz_online_lastrun.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -369,11 +369,17 @@ enc_trial_main_image = visual.ImageStim(
     win=win,
     name='enc_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 enc_trial_key = keyboard.Keyboard()
+w_size = win.size
+
+x_size = w_size[0]
+y_size = w_size[1]
+
+scr_resolution = x_size/y_size
 
 # Initialize components for Routine "enc_practice_feedback"
 enc_practice_feedbackClock = core.Clock()
@@ -381,7 +387,7 @@ enc_practice_feedback_interior = visual.ImageStim(
     win=win,
     name='enc_practice_feedback_interior', units='norm', 
     image='stimuli/GalleryInterior.png', mask=None,
-    ori=0, pos=(0, -0), size=(2, 2),
+    ori=0, pos=(0, -0), size=(2.0, 2.0),
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -389,7 +395,7 @@ enc_practice_feedback_image = visual.ImageStim(
     win=win,
     name='enc_practice_feedback_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -462,11 +468,17 @@ enc_trial_main_image = visual.ImageStim(
     win=win,
     name='enc_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
 enc_trial_key = keyboard.Keyboard()
+w_size = win.size
+
+x_size = w_size[0]
+y_size = w_size[1]
+
+scr_resolution = x_size/y_size
 
 # Initialize components for Routine "comprehension_question"
 comprehension_questionClock = core.Clock()
@@ -709,7 +721,7 @@ demo_main_image = visual.ImageStim(
     win=win,
     name='demo_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -717,7 +729,7 @@ demo_image = visual.ImageStim(
     win=win,
     name='demo_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
@@ -825,7 +837,7 @@ rec_trial_main_image = visual.ImageStim(
     win=win,
     name='rec_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -940,7 +952,7 @@ rec_trial_main_image = visual.ImageStim(
     win=win,
     name='rec_trial_main_image', units='norm', 
     image='sin', mask=None,
-    ori=0, pos=[0,0], size=(0.3125, 0.5556),
+    ori=0, pos=[0,0], size=1.0,
     color=[1,1,1], colorSpace='rgb', opacity=1,
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-1.0)
@@ -2899,10 +2911,17 @@ for thisEnc_practice_trial in enc_practice_trials:
     routineTimer.add(3.000000)
     # update component parameters for each repeat
     enc_trial_main_image.setPos((CurrentX, CurrentY))
+    enc_trial_main_image.setSize((0.3125, 0.3125*scr_resolution))
     enc_trial_main_image.setImage(CurrentImage)
     enc_trial_key.keys = []
     enc_trial_key.rt = []
     _enc_trial_key_allKeys = []
+    w_size = win.size
+    
+    x_size = w_size[0]
+    y_size = w_size[1]
+    
+    scr_resolution = x_size/y_size
     # keep track of which components have finished
     enc_trialComponents = [enc_trial_interior, enc_trial_main_image, enc_trial_key]
     for thisComponent in enc_trialComponents:
@@ -3036,6 +3055,7 @@ for thisEnc_practice_trial in enc_practice_trials:
     else:
         feedback_text = 'Nem adott választ.'
     enc_practice_feedback_image.setPos((CurrentX, CurrentY))
+    enc_practice_feedback_image.setSize((0.3125, 0.3125*scr_resolution))
     enc_practice_feedback_image.setImage(CurrentImage)
     enc_practice_feedback_text.setPos((CurrentX, CurrentY - 0.4))
     enc_practice_feedback_text.setText(feedback_text)
@@ -3527,10 +3547,17 @@ for thisEnc_run in enc_runs:
         routineTimer.add(3.000000)
         # update component parameters for each repeat
         enc_trial_main_image.setPos((CurrentX, CurrentY))
+        enc_trial_main_image.setSize((0.3125, 0.3125*scr_resolution))
         enc_trial_main_image.setImage(CurrentImage)
         enc_trial_key.keys = []
         enc_trial_key.rt = []
         _enc_trial_key_allKeys = []
+        w_size = win.size
+        
+        x_size = w_size[0]
+        y_size = w_size[1]
+        
+        scr_resolution = x_size/y_size
         # keep track of which components have finished
         enc_trialComponents = [enc_trial_interior, enc_trial_main_image, enc_trial_key]
         for thisComponent in enc_trialComponents:
@@ -5368,8 +5395,10 @@ for thisDemo_trial in demo_trials:
     routineTimer.add(300.000000)
     # update component parameters for each repeat
     demo_main_image.setPos((CurrentX, CurrentY))
+    demo_main_image.setSize((0.3125, 0.3125*scr_resolution))
     demo_main_image.setImage(CurrentImage)
     demo_image.setPos((DemoX, DemoY))
+    demo_image.setSize((0.3125, 0.3125*scr_resolution))
     demo_image.setImage(DemoImage)
     demo_text.setText(DemoText)
     demo_key.keys = []
@@ -6044,6 +6073,7 @@ for thisRec_practice_block in rec_practice_blocks:
         routineTimer.add(4.000000)
         # update component parameters for each repeat
         rec_trial_main_image.setPos((CurrentX, CurrentY))
+        rec_trial_main_image.setSize((0.3125, 0.3125*scr_resolution))
         rec_trial_main_image.setImage(CurrentImage)
         rec_trial_key.keys = []
         rec_trial_key.rt = []
@@ -6817,6 +6847,7 @@ for thisRec_run in rec_runs:
             routineTimer.add(4.000000)
             # update component parameters for each repeat
             rec_trial_main_image.setPos((CurrentX, CurrentY))
+            rec_trial_main_image.setSize((0.3125, 0.3125*scr_resolution))
             rec_trial_main_image.setImage(CurrentImage)
             rec_trial_key.keys = []
             rec_trial_key.rt = []

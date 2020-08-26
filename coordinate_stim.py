@@ -111,7 +111,7 @@ screen_height = 1080
 screen_len = 1920
 
 #preparing stimulus list
-stim_fname = "StimuliTable-Encoding_3-runs_40-pairs_8-discrete-loc_12345-delays.xlsx"
+stim_fname = "StimuliTable-Encoding_8-blocks_40-pairs_grid-loc_12345-delays.xlsx"
 stim_table = pd.read_excel(stim_fname)
 
 #making a dictionary of possible x-y coordinate combinations
@@ -188,7 +188,4 @@ with pd.option_context('display.max_rows', None, 'display.max_columns', None):
 
 #export to excel
 stim_new_filename = stim_fname.split(".")[0] + "_new." + stim_fname.split(".")[1]
-stim_table.to_excel(stim_new_filename, sheet_name='Stimuli', index = False)
-
-
-
+stim_table.to_excel(stim_fname, index = False)

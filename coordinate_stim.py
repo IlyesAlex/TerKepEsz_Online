@@ -98,7 +98,6 @@ def pix_to_norm (coord, xy):
         coord_new = coord/screen_len
     else:
         coord_new = coord/screen_height
-
     return coord_new
 
 ### Code
@@ -184,8 +183,8 @@ for trial in stim_table.index:
 
 #print for fun
 with pd.option_context('display.max_rows', None, 'display.max_columns', None):
-    print(stim_table)
+     print(stim_table)
 
 #export to excel
 stim_new_filename = stim_fname.split(".")[0] + "_new." + stim_fname.split(".")[1]
-stim_table.to_excel(stim_fname, index = False)
+stim_table.to_excel(stim_fname, index=False)

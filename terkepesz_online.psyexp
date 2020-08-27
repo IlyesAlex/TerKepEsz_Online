@@ -126,7 +126,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
       </TextComponent>
       <CodeComponent name="select_encoding_trials">
-        <Param name="Begin Experiment" updates="constant" val="tables = [0,1,2]&amp;#10;shuffle(tables)&amp;#10;trial_table = tables.pop()&amp;#10;print('selected file {}'.format(trial_table))&amp;#10;trial_table = str(trial_table)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="tables = [0]&amp;#10;shuffle(tables)&amp;#10;trial_table = tables.pop()&amp;#10;print('selected file {}'.format(trial_table))&amp;#10;trial_table = str(trial_table)&amp;#10;stimuli_table = 'stimuli_tables/encoding_trials_'+ trial_table + '.csv'&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Experiment" updates="constant" val="tables = [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;];&amp;#10;trial_table = tables[Math.floor(Math.random() * tables.length)];&amp;#10;stimuli_table = ((&quot;stimuli_tables/encoding_trials_&quot; + trial_table) + &quot;.csv&quot;);&amp;#10;" valType="extendedCode"/>
         <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
         <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>

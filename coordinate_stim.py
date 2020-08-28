@@ -95,9 +95,10 @@ def coordinate_maker (base, grid_len, coord, coord_type):
 
 def pix_to_norm (coord, xy):
     if xy == "x":
-        coord_new = coord/screen_len
+        coord_new = coord / (screen_len // 2)
     else:
-        coord_new = coord/screen_height
+        coord_new = coord / (screen_height // 2)
+
     return coord_new
 
 ### Code
@@ -157,6 +158,7 @@ for trial in stim_table.index:
     lure2_y = coordinate_maker(base, grid_len, trial_curr.lure2_coord_y, "y")
     foil_x = coordinate_maker(base, grid_len, trial_curr.foil_coord_x, "x")
     foil_y = coordinate_maker(base, grid_len, trial_curr.foil_coord_y, "y")
+    print(trial_x)
 
     #choosing target coordinates
     stim_table.at[trial, "Xcoordinate"] = pix_to_norm(trial_x, "x")
